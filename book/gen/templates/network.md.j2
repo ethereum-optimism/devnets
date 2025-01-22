@@ -1,0 +1,44 @@
+<!-- generated file, do not edit -->
+
+<h1 style="display: flex; align-items: center">{{ network.name | title }} <a href="{{ network.scope }}" style="margin-left: auto; font-size: 1.5rem;">Scoping Issue ↗️</a></h1>
+
+<p><strong>Status:</strong> {% if network.status == 'online' %}🟢 Online{% else %}⏸️ Offline{% endif %}</p>
+
+{{ network.description }}
+
+It was deployed on {{ network.deployed_on }}.
+
+## Chains
+
+| Type                               | Name  | Chain ID                    | Config | Rollup | Genesis |
+|------------------------------------|-------|-----------------------------|--------|--------|---------|
+| L1 | {{ network.l1.name | title }}  | `{{ network.l1.chain_id }}` | - | - | - |
+{% for chain in network.l2.chains %}
+| L2 | {{ chain.name }} | `{{ chain.chain_id }}` | [View](https://github.com/ethereum-optimism/devnets/blob/main/alphanets/{{ network.name }}/{{ chain.name }}/chain.yaml) | [View](https://github.com/ethereum-optimism/devnets/blob/main/alphanets/{{ network.name }}/{{ chain.name }}/rollup.json) | [Download](https://raw.githubusercontent.com/ethereum-optimism/devnets/refs/heads/main/alphanets/{{ network.name }}/{{ chain.name }}/genesis.json)
+{% endfor %}
+
+## Deployment Details
+
+| Parameter | Value                                                  |
+|-----------|--------------------------------------------------------|
+| OP Deployer Version | `{{ network.l2.deployment["op-deployer"].version }}`   |
+| L1 Contracts Version | `{{ network.l2.deployment["l1-contracts"].version }}` |
+| L2 Contracts Version | `{{ network.l2.deployment["l2-contracts"].version }}` |
+
+{% if network.l2.deployment.overrides %}
+## Deployment Overrides
+
+| Parameter | Value |
+|-----------|-------|
+{% for key, value in network.l2.deployment.overrides.items() %}
+| {{ key | replace('_', ' ') | title }} | {{ value }} |
+{% endfor %}
+{% endif %}
+
+## Components
+
+| Component | Version |
+|-----------|---------|
+{% for component, details in network.l2.components.items() %}
+| {{ component }} | `{{ details.version }}` |
+{% endfor %}

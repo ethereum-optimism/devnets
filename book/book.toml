@@ -1,0 +1,6 @@
+[book]
+authors = ["OP Labs Team"]
+language = "en"
+multilingual = false
+src = "src"
+title = "OP Stack Devnets"

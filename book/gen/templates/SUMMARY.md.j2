@@ -1,0 +1,18 @@
+<!-- generated file, do not edit -->
+
+# Summary
+
+[Introduction](./README.md)
+
+# Chain List
+
+- [Alphanets]()
+    {% for network in networks.alphanets %}
+    * [{{ network.name | title }}](./{{ network.name }}.md)
+    {% endfor %}
+{% if networks.betanets %}
+- [Betanets]()
+    {% for network in networks.betanets %}
+    * [{{ network.name | title }}](./{{ network.name }}.md)
+    {% endfor %}
+{% endif %}

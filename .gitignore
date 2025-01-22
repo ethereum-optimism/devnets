@@ -1,0 +1,8 @@
+# MacOS dust
+.DS_Store
+
+book/book
+book/src
+!book/src/README.md
+
+.venv

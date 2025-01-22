@@ -1,6 +1,10 @@
 name: alpaca
 type: alphanet
 scope: https://github.com/ethereum-optimism/devnets/issues/1
+status: online
+deployed_on: 01-14-2025
+description: |
+  Alpaca contains changes to OP Contracts Manager.
 l1:
   name: sepolia
   chain_id: 11155111

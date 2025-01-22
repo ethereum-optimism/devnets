@@ -1,0 +1,71 @@
+version: 2.1
+
+jobs:
+  docs-build:
+    docker:
+      - image: cimg/rust:1.84.0
+    resource_class: medium
+    steps:
+      - checkout
+      - run:
+          name: Install deps
+          command: |
+            curl -o /tmp/mdbook.tgz -L https://github.com/rust-lang/mdBook/releases/download/v0.4.43/mdbook-v0.4.43-x86_64-unknown-linux-gnu.tar.gz
+            tar -xzvf /tmp/mdbook.tgz -C /tmp
+            sudo mv /tmp/mdbook /usr/local/bin/mdbook
+            curl -LsSf https://astral.sh/uv/install.sh | sh
+      - run:
+          name: Generate book source
+          command: uv run gen.py
+          working_directory: book/gen
+      - run:
+          name: Build book
+          command: mdbook build
+          working_directory: book
+      - persist_to_workspace:
+          root: book
+          paths:
+            - book
+
+  docs-deploy:
+    docker:
+      - image: cimg/rust:1.84.0
+    resource_class: medium
+    steps:
+      - attach_workspace:
+          at: /tmp/workspace
+      - add_ssh_keys:
+          fingerprints:
+            - "SHA256:dXP2B12YLfrLIQiu+iyCYL3QyNK0dSPpucy+TA+0qtg"
+      - checkout
+      - run:
+          name: Set up Git
+          command: |
+            git config --global user.email "optibot@oplabs.co"
+            git config --global user.name "OptiBot"
+            git rev-parse --short HEAD > COMMIT.txt
+            git checkout gh-pages
+      - run:
+          name: Copy contents
+          command: cp -r /tmp/workspace/book/* .
+      - run:
+          name: Commit changes
+          command: |
+            COMMIT=$(cat COMMIT.txt)
+            rm COMMIT.txt
+            git status
+            git add .
+            git commit -m "Update book based on $COMMIT"
+            git push origin gh-pages
+
+workflows:
+  pr:
+    jobs:
+      - docs-build
+      - docs-deploy:
+          filters:
+            branches:
+              only:
+                - main
+          requires:
+            - docs-build
