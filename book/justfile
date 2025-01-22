@@ -1,0 +1,8 @@
+generate:
+    cd gen && uv run gen.py
+
+serve:
+    mdbook serve
+
+build:
+    mdbook build
