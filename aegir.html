@@ -3,8 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>OP Stack Devnets</title>
-        <meta name="robots" content="noindex">
+        <title>Aegir - OP Stack Devnets</title>
 
 
         <!-- Custom HTML head -->
@@ -153,41 +152,25 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="devnet-process"><a class="header" href="#devnet-process">Devnet Process</a></h1>
-<p>The OP Labs team maintains two parallel devnets. Protocol upgrades promote from one network to the next, until they
-are eventually deployed to our production Sepolia testnet. The devnets are:</p>
-<ul>
-<li><strong>Alphanet:</strong> Contains production-bound protocol upgrades that will be scheduled in <em>some</em> upcoming hardfork. All
-updates are active at genesis. The purpose of this devnet is to deploy protocol upgrades earlier, and to decouple
-deployment from hardfork scheduling. Protocol upgrades <strong>must</strong> be deployed on Alphanet before being deployed on the
-Betanet.</li>
-<li><strong>Betanet:</strong> Contains production-bound protocol upgrades that will be scheduled in the <em>next</em> hardfork. Upgrades are
-activated after genesis using hardfork timestamps. The purpose of this hardfork is to validate the upgrade process,
-and solidify the scope of a hardfork before activating it on our production testnet. Protocol upgrades <strong>must</strong> be
-deployed on the betanet before being deployed on testnet.</li>
-</ul>
-<p>The Alphanet is deployed on a monthly basis. The Alphanet will be redeployed even if there are no changes to prevent a
-devnet from becoming someone’s production network. The Betanet is deployed on an ad-hoc basis when we’re ready to cut
-the next hardfork, and will persist until the next Betanet is cut.</p>
-<h1 id="about-this-site"><a class="header" href="#about-this-site">About This Site</a></h1>
-<p>This site contains documentation and network configuration information for all devnets. Network documentation is
-generated from the chain manifest files in the <code>alphanets</code> and <code>betanets</code> directory. See
-the <a href="https://github.com/ethereum-optimism/devnets">source</a> for more information.</p>
-<div style="break-before: page; page-break-before: always;"></div><!-- generated file, do not edit -->
-<h1 style="display: flex; align-items: center">Alpaca <a href="https://github.com/ethereum-optimism/devnets/issues/1" style="margin-left: auto; font-size: 1.5rem;">Scoping Issue ↗️</a></h1>
+                        <!-- generated file, do not edit -->
+<h1 style="display: flex; align-items: center">Aegir <a href="https://github.com/ethereum-optimism/devnets/issues/5" style="margin-left: auto; font-size: 1.5rem;">Scoping Issue ↗️</a></h1>
 <p><strong>Status:</strong> 🟢 Online</p>
-<p>Alpaca contains changes to OP Contracts Manager.</p>
-<p>It was deployed on 01-14-2025.</p>
+<ul>
+<li>OPCM Upgrades</li>
+<li>MT-Cannon</li>
+<li>Pause Improvements</li>
+</ul>
+<p>It was deployed on 01-29-2025.</p>
 <h2 id="chains"><a class="header" href="#chains">Chains</a></h2>
 <div class="table-wrapper"><table><thead><tr><th>Type</th><th>Name</th><th>Chain ID</th><th>Config</th><th>Rollup</th><th>Genesis</th></tr></thead><tbody>
 <tr><td>L1</td><td>Sepolia</td><td><code>11155111</code></td><td>-</td><td>-</td><td>-</td></tr>
-<tr><td>L2</td><td>alpaca-0</td><td><code>11155111100000</code></td><td><a href="https://github.com/ethereum-optimism/devnets/blob/main/alphanets/alpaca/alpaca-0/chain.yaml">View</a></td><td><a href="https://github.com/ethereum-optimism/devnets/blob/main/alphanets/alpaca/alpaca-0/rollup.json">View</a></td><td><a href="https://raw.githubusercontent.com/ethereum-optimism/devnets/refs/heads/main/alphanets/alpaca/alpaca-0/genesis.json">Download</a></td></tr>
+<tr><td>L2</td><td>aegir-0</td><td><code>420110000</code></td><td><a href="https://github.com/ethereum-optimism/devnets/blob/main/alphanets/aegir/aegir-0/chain.yaml">View</a></td><td><a href="https://github.com/ethereum-optimism/devnets/blob/main/alphanets/aegir/aegir-0/rollup.json">View</a></td><td><a href="https://raw.githubusercontent.com/ethereum-optimism/devnets/refs/heads/main/alphanets/aegir/aegir-0/genesis.json">Download</a></td></tr>
 </tbody></table>
 </div>
 <h2 id="deployment-details"><a class="header" href="#deployment-details">Deployment Details</a></h2>
 <div class="table-wrapper"><table><thead><tr><th>Parameter</th><th>Value</th></tr></thead><tbody>
 <tr><td>OP Deployer Version</td><td><code>op-deployer/v0.0.11</code></td></tr>
-<tr><td>L1 Contracts Version</td><td><code>984bae9146398a2997ec13757bfe2438ca8f92eb</code></td></tr>
+<tr><td>L1 Contracts Version</td><td><code>op-contracts/v1.8.0-rc.4</code></td></tr>
 <tr><td>L2 Contracts Version</td><td><code>op-contracts/v1.7.0-beta.1+l2-contracts</code></td></tr>
 </tbody></table>
 </div>
@@ -200,45 +183,6 @@ the <a href="https://github.com/ethereum-optimism/devnets">source</a> for more i
 </tbody></table>
 </div>
 <h2 id="components"><a class="header" href="#components">Components</a></h2>
-<div class="table-wrapper"><table><thead><tr><th>Component</th><th>Version</th></tr></thead><tbody>
-<tr><td>op-node</td><td><code>op-node/v1.10.2</code></td></tr>
-<tr><td>op-geth</td><td><code>op-geth/v1.101411.4-rc.4</code></td></tr>
-<tr><td>op-reth</td><td><code>op-reth/v1.1.5</code></td></tr>
-<tr><td>op-proposer</td><td><code>op-proposer/v1.10.0-rc.2</code></td></tr>
-<tr><td>op-batcher</td><td><code>op-batcher/v1.10.0</code></td></tr>
-<tr><td>op-challenger</td><td><code>op-challenger/v1.3.1-rc.4</code></td></tr>
-</tbody></table>
-</div><div style="break-before: page; page-break-before: always;"></div><!-- generated file, do not edit -->
-<h1 style="display: flex; align-items: center">Aegir <a href="https://github.com/ethereum-optimism/devnets/issues/5" style="margin-left: auto; font-size: 1.5rem;">Scoping Issue ↗️</a></h1>
-<p><strong>Status:</strong> 🟢 Online</p>
-<ul>
-<li>OPCM Upgrades</li>
-<li>MT-Cannon</li>
-<li>Pause Improvements</li>
-</ul>
-<p>It was deployed on 01-29-2025.</p>
-<h2 id="chains-1"><a class="header" href="#chains-1">Chains</a></h2>
-<div class="table-wrapper"><table><thead><tr><th>Type</th><th>Name</th><th>Chain ID</th><th>Config</th><th>Rollup</th><th>Genesis</th></tr></thead><tbody>
-<tr><td>L1</td><td>Sepolia</td><td><code>11155111</code></td><td>-</td><td>-</td><td>-</td></tr>
-<tr><td>L2</td><td>aegir-0</td><td><code>420110000</code></td><td><a href="https://github.com/ethereum-optimism/devnets/blob/main/alphanets/aegir/aegir-0/chain.yaml">View</a></td><td><a href="https://github.com/ethereum-optimism/devnets/blob/main/alphanets/aegir/aegir-0/rollup.json">View</a></td><td><a href="https://raw.githubusercontent.com/ethereum-optimism/devnets/refs/heads/main/alphanets/aegir/aegir-0/genesis.json">Download</a></td></tr>
-</tbody></table>
-</div>
-<h2 id="deployment-details-1"><a class="header" href="#deployment-details-1">Deployment Details</a></h2>
-<div class="table-wrapper"><table><thead><tr><th>Parameter</th><th>Value</th></tr></thead><tbody>
-<tr><td>OP Deployer Version</td><td><code>op-deployer/v0.0.11</code></td></tr>
-<tr><td>L1 Contracts Version</td><td><code>op-contracts/v1.8.0-rc.4</code></td></tr>
-<tr><td>L2 Contracts Version</td><td><code>op-contracts/v1.7.0-beta.1+l2-contracts</code></td></tr>
-</tbody></table>
-</div>
-<h2 id="deployment-overrides-1"><a class="header" href="#deployment-overrides-1">Deployment Overrides</a></h2>
-<div class="table-wrapper"><table><thead><tr><th>Parameter</th><th>Value</th></tr></thead><tbody>
-<tr><td>Seconds Per Slot</td><td>2</td></tr>
-<tr><td>Fjord Time Offset</td><td>0</td></tr>
-<tr><td>Granite Time Offset</td><td>0</td></tr>
-<tr><td>Holocene Time Offset</td><td>0</td></tr>
-</tbody></table>
-</div>
-<h2 id="components-1"><a class="header" href="#components-1">Components</a></h2>
 <div class="table-wrapper"><table><thead><tr><th>Component</th><th>Version</th></tr></thead><tbody>
 <tr><td>op-node</td><td><code>op-node/v1.10.3</code></td></tr>
 <tr><td>op-geth</td><td><code>op-geth/v1.101411.5</code></td></tr>
@@ -253,6 +197,9 @@ the <a href="https://github.com/ethereum-optimism/devnets">source</a> for more i
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="alpaca.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
 
 
                         <div style="clear: both"></div>
@@ -261,6 +208,9 @@ the <a href="https://github.com/ethereum-optimism/devnets">source</a> for more i
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="alpaca.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
 
             </nav>
 
@@ -284,11 +234,6 @@ the <a href="https://github.com/ethereum-optimism/devnets">source</a> for more i
 
         <!-- Custom JS scripts -->
 
-        <script>
-        window.addEventListener('load', function() {
-            window.setTimeout(window.print, 100);
-        });
-        </script>
 
     </div>
     </body>
