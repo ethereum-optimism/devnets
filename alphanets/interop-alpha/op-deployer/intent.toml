@@ -1,0 +1,52 @@
+configType = "custom"
+l1ChainID = 11155111
+fundDevAccounts = false
+useInterop = true
+l1ContractsLocator = "file:///Users/zach/op/optimism/packages/contracts-bedrock/forge-artifacts/"
+l2ContractsLocator = "file:///Users/zach/op/optimism/packages/contracts-bedrock/forge-artifacts/"
+
+[globalDeployOverrides]
+l2GenesisFjordTimeOffset = '0x0'
+l2GenesisGraniteTimeOffset = '0x0'
+l2GenesisHoloceneTimeOffset = '0x0'
+l2GenesisInteropTimeOffset = '0x0'
+
+[superchainRoles]
+  proxyAdminOwner = "0x2a29C6556e2a9DD88bCa53879998b3aAD4E65969"
+  protocolVersionsOwner = "0xe02a96edff5D658327af103f4c15B6D0a18b1093"
+  guardian = "0x0bDF0c63d3D8BEbB680b8CA02f0440b2f02de74A"
+
+[[chains]]
+  id = "0x00000000000000000000000000000000000000000000000000000000190a85c0"
+  baseFeeVaultRecipient = "0x1e1a3488746b28f6835770b6ec20435dd553e1b7"
+  l1FeeVaultRecipient = "0xa5b26f17b03e1891825909651426c46b7e1181b7"
+  sequencerFeeVaultRecipient = "0xe8ec728fb3cc61341af65d6b6f4019606623187a"
+  eip1559DenominatorCanyon = 250
+  eip1559Denominator = 50
+  eip1559Elasticity = 6
+  [chains.roles]
+    l1ProxyAdminOwner = "0xc8ee00bc8198bb29d0cd21fc23e7cef5b344065d"
+    l2ProxyAdminOwner = "0xd0e04b034a1a9f63f268c7ef5ceff5c1e42b6aac"
+    systemConfigOwner = "0x275ab4e260ad7f22827e9bf49348b06e431efa0f"
+    unsafeBlockSigner = "0x6e39fba2262278b35e739ff9572a33d281397e5f"
+    batcher = "0x569008e518f3851aefe684108ef7daf98cce856c"
+    proposer = "0x76e4430b9057539f8461cac0ebc4de43f53c9a1c"
+    challenger = "0x3912356733c059e6dc0a6983448c7201cc1a3371"
+
+[[chains]]
+  id = "0x00000000000000000000000000000000000000000000000000000000190a85c1"
+  baseFeeVaultRecipient = "0xad522df5ca57279a41adeb0dd89d3aaef67a2769"
+  l1FeeVaultRecipient = "0x5ff3e2852b9db3a7365b0c8102ca307445f9417a"
+  sequencerFeeVaultRecipient = "0x0efc2d8451f62cc97be3b0caa0e8ec64b1e099fb"
+  eip1559DenominatorCanyon = 250
+  eip1559Denominator = 50
+  eip1559Elasticity = 6
+  [chains.roles]
+    l1ProxyAdminOwner = "0x6b0db4b5b54c785d0f7941f4a10aac3aee4e0e0a"
+    l2ProxyAdminOwner = "0x8685828176cc3fdb90ae7fc482ba127c2b8ba022"
+    systemConfigOwner = "0x82a5ccd6c03f1d392f67d74bdc50c68d7306b490"
+    unsafeBlockSigner = "0x24cbe2a0574a894ef6b84f1934fc5b1382360b45"
+    batcher = "0x4453ba1972d597ee78387363ca8a6cc838ea9ee1"
+    proposer = "0xe621c3ad853ae080f1bbcae203e4fcf03ab45674"
+    challenger = "0x0a775d2d585d5cb1175f3d9fdca911d9c3bc4233"
+
