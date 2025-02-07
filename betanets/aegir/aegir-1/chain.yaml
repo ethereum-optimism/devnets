@@ -20,10 +20,10 @@ contracts:
     disputeGameFactoryProxyAddress: "0x63e95bf5a26e0d3ff0a8ed6fc31e0e2149937b6f"
     anchorStateRegistryProxyAddress: "0x3d26a2511cfed6be38b26327b5a6e850152cee4f"
     anchorStateRegistryImplAddress: "0x925210984c0cc81905d4cf2816079aa15be085a7"
-    faultDisputeGameAddress: "0x0000000000000000000000000000000000000000"
+    faultDisputeGameAddress: "0xD5f5262DF10Ce1aFc5C4D2E00999435896bbFcBd"
     permissionedDisputeGameAddress: "0xfa798ad6ac27c6ef07ca0056629ec88d65729b6f"
     delayedWETHPermissionedGameProxyAddress: "0x50c8cb50b59a993c2a0748fdab319b81214538d2"
-    delayedWETHPermissionlessGameProxyAddress: "0x0000000000000000000000000000000000000000"
+    delayedWETHPermissionlessGameProxyAddress: "0x407f2fD5bae0926E1D9d4cb3112D79B84cE91ae8"
     dataAvailabilityChallengeProxyAddress: "0x0000000000000000000000000000000000000000"
     dataAvailabilityChallengeImplAddress: "0x0000000000000000000000000000000000000000"
   implementationsDeployment:
