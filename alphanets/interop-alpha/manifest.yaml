@@ -23,9 +23,9 @@ l2:
       holocene_time_offset: 0
   components:
     op-node:
-      version: op-node/v1.11.0-rc.1
+      version: d554eeb3b0b490b05361f87ac39100708450b47b
     op-geth:
-      version: op-geth/v1.101500.0-rc.2
+      version: op-geth/v1.101500.0-rc.1
     op-proposer:
       version: op-proposer/v1.10.0-rc.2
     op-batcher:
@@ -33,7 +33,7 @@ l2:
     op-challenger:
       version: op-challenger/v1.3.1-rc.4
     op-supervisor:
-      version: op-supervisor/0.1.0-rc.1
+      version: d554eeb3b0b490b05361f87ac39100708450b47b
   bootnodes:
     - enode://e63f16f93b44938a43ba8304d9948da3304e47c7a14fb1ce9d75194f2bd6784665aab18a8b38dc7772cd9a7fa71dd51997cc6cd8af0fc8915bc2fddcb68dfc87@34.123.30.27:0?discport=30305
     - enode://524958a8fc12140491f59a78442d38d1f3cb96765136379dca2ce569f0d770de25931fc11ad1bcfe1af3d4db025d23c25a401e23c91f5f53ff281f25bd36e733@34.27.92.24:0?discport=30305

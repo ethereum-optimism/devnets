@@ -34,6 +34,11 @@
   "batch_inbox_address": "0x00347eb38d82f0b783d6dcc8bbf674c61d599e1b",
   "deposit_contract_address": "0x7385d89d38ab79984e7c84fab9ce5e6f4815468a",
   "l1_system_config_address": "0xf8ad68d102824e41e319afa79968e6ec1d538fa9",
-  "protocol_versions_address": "0x763bbbd9d5b7f27879028f094fc8e86cc33e53a8"
+  "protocol_versions_address": "0x763bbbd9d5b7f27879028f094fc8e86cc33e53a8",
+  "chain_op_config": {
+    "eip1559Elasticity": 6,
+    "eip1559Denominator": 50,
+    "eip1559DenominatorCanyon": 250
+  }
 }
 
