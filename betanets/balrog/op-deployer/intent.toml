@@ -2,8 +2,8 @@ configType = "custom"
 l1ChainID = 17000
 fundDevAccounts = false
 useInterop = false
-l1ContractsLocator = "tag://op-contracts/v1.8.0-rc.4"
-l2ContractsLocator = "tag://op-contracts/v1.7.0-beta.1+l2-contracts"
+l1ContractsLocator = "https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-361ebf1f520c20d932695b00babfff6923ce2530cd05b2776eb74e07038898a6.tar.gz"
+l2ContractsLocator = "https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-b0fb1f6f674519d637cff39a22187a5993d7f81a6d7b7be6507a0b50a5e38597.tar.gz"
 
 [superchainRoles]
   proxyAdminOwner = "0xa6afc9612b504202e0a5f6cf3c8e89c49ea06037"
