@@ -1,7 +1,7 @@
 name: alpaca
 type: alphanet
 scope: https://github.com/ethereum-optimism/devnets/issues/1
-status: online
+status: offline
 deployed_on: 01-14-2025
 description: |
   Alpaca contains changes to OP Contracts Manager and incident response improvements.
