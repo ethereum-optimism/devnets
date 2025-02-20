@@ -21,7 +21,7 @@ l2ContractsLocator = "tag://op-contracts/v1.7.0-beta.1+l2-contracts"
   [chains.roles]
     l1ProxyAdminOwner = "0xa6afc9612b504202e0a5f6cf3c8e89c49ea06037"
     l2ProxyAdminOwner = "0x948f4527947f544bf8a94f21cb0c5bce7976308f"
-    systemConfigOwner = "0x7c12d7ab676a14a668e1ef4aab2d283e1343eb0e"
+    systemConfigOwner = "0xd4DB64A1f774B250240C8F94703fFDCf2F973FdE"
     unsafeBlockSigner = "0x402f41e38b60b67584cbdd6773858213d26b246e"
     batcher = "0x02b38182349fa730826353324635d4c906f60622"
     proposer = "0x07041921961950084922c9143aa0830ba1774213"
