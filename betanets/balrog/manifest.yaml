@@ -25,9 +25,9 @@ l2:
       holocene_time_offset: 0
   components:
     op-node:
-      version: op-node:v1.11.1
+      version: op-node/v1.11.1
     op-geth:
-      version: op-geth/v1.101500.0-rc.3
+      version: op-geth/v1.101500.1
     op-reth:
       version: op-reth/v1.2.0
     op-proposer:
