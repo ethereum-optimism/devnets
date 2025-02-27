@@ -5,7 +5,7 @@ The Platforms team maintains two parallel devnets. Protocol upgrades promote fro
 - **Alphanet:** Contains production-bound protocol upgrades that will be scheduled in *some* upcoming hardfork. All updates are active at genesis. The purpose of this devnet is to deploy protocol upgrades earlier, and to decouple deployment from hardfork scheduling. Protocol upgrades **must** be deployed on Alphanet before being deployed on the Betanet.
 - **Betanet:** Contains production-bound protocol upgrades that will be scheduled in the *next* hardfork. Upgrades are activated after genesis using hardfork timestamps. The purpose of this hardfork is to validate the upgrade process, and solidify the scope of a hardfork before activating it on our production testnet. Protocol upgrades **must** be deployed on the betanet before being deployed on testnet.
 
-The Alphanet is deployed on a monthly basis. The Alphanet will be redeployed even if there are no changes to prevent a devnet from becoming someone’s production network. The Betanet is deployed on an ad-hoc basis when we’re ready to cut the next hardfork, and will persist until the next Betanet is cut.
+Alphanets are deployed every 3 weeks. The Alphanet will be redeployed even if there are no changes to prevent a devnet from becoming someone’s production network. The Betanet is deployed on an ad-hoc basis when we’re ready to cut the next hardfork, and will persist until the next Betanet is cut.
 
 # Operations
 
@@ -55,9 +55,9 @@ After the devnet is deployed we publish a deployment artifacts file, including:
 
 ## Timeline
 
-The Alphanet be deployed **on the third Wednesday of each month**, so we have time to coordinate (accounting for Monday holidays). The Betanet is deployed on an as-needed basis, but following the schedule described below.
+The Alphanet will be deployed **on wednesday every 3 weeks**. The Betanet is deployed on an as-needed basis, but following the schedule described below.
 
-The Alphanet lasts for 5 weeks, at which point it is replaced by the next one. We are deliberately limiting the amount of time devnets stick around so folks do not rely on them long-term.
+The Alphanet lasts for 3 weeks, at which point it is replaced by the next one. We are deliberately limiting the amount of time devnets stick around so folks do not rely on them long-term.
 
 Here's the table converted to markdown format:
 
@@ -70,5 +70,3 @@ Here's the table converted to markdown format:
 | W1 | - Feature acceptance testing (prioritize feedback on feature quality so bug fixes can be made) |
 | W2 | - Feature acceptance testing<br>- Fault injection testing (looking to see how we can break the network, test incident response runbooks, ensure monitoring and alerting is working) |
 | W3 | - Feature acceptance testing<br>- Load testing (validate performance under stress) |
-| W4 | - Final feature set acceptance testing |
-| W5 | - Retrospective & cleanup |
