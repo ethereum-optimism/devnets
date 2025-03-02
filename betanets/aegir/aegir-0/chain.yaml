@@ -1,5 +1,5 @@
 name: aegir-0
-chain_id: 420110000
+chain_id: 420110004
 rpc_url: https://aegir-0.optimism.io
 contracts:
   superchainDeployment:
@@ -9,20 +9,20 @@ contracts:
     protocolVersionsProxyAddress: "0x79add5713b383daa0a138d3c4780c7a1804a8090"
     protocolVersionsImplAddress: "0x0000000000000000000000000000000000000000"
   opChainDeployment:
-    proxyAdminAddress: "0xce64dd6a5c6116917557d6678f772d0b270ac62b"
-    addressManagerAddress: "0x180645570ff5fbdea852b9cd12924add4983c5e7"
-    l1ERC721BridgeProxyAddress: "0x195e9d2007d8f90662dcf6e377226731a7bcac36"
-    systemConfigProxyAddress: "0x438c10c35eff63df4ff9f065da4d3219bf4cf8f9"
-    optimismMintableERC20FactoryProxyAddress: "0xeff702dbd419bc54e72a93a0690cea34bc9a0490"
-    l1StandardBridgeProxyAddress: "0x8feda0e1da17eae42948131074d35056c94a31ea"
-    l1CrossDomainMessengerProxyAddress: "0x0930cc3b3c32daeaf4b95f4a39edeaf6f7fc971b"
-    optimismPortalProxyAddress: "0x2b4cbace88035a8dda909b9142f705b547ce00f2"
-    disputeGameFactoryProxyAddress: "0xc61626f427a32a07d6289df13b0c0ccb610c9464"
-    anchorStateRegistryProxyAddress: "0xeedad39681a6c7058f2564b6c9d13c320a4b5306"
-    anchorStateRegistryImplAddress: "0x9a07fd29fdcf54843f069bec31ad9812bfbd50f2"
+    proxyAdminAddress: "0xe323c57b8966dd6ed845715303ddded832b2672c"
+    addressManagerAddress: "0x97cde4e3b78a983c97934363026e942e75598d00"
+    l1ERC721BridgeProxyAddress: "0x4ca08286430274e959337ff12dd79ba517c13ccf"
+    systemConfigProxyAddress: "0xc75d8c4e995fb29a4bd6ccef7db3a35e069ccf07"
+    optimismMintableERC20FactoryProxyAddress: "0x84b0766c8d9ad527ede43f24ff630e4c9bb2635f"
+    l1StandardBridgeProxyAddress: "0x9488504ff191ce4bb58023eb6faec224a729fe0f"
+    l1CrossDomainMessengerProxyAddress: "0x0902688efefd8e4d8bcf9b3f50e6a1066c790d76"
+    optimismPortalProxyAddress: "0x966ee15265c77f98584eec1f784103e0bbcd305c"
+    disputeGameFactoryProxyAddress: "0x04d4b775cc4b9f0d61db2009be37052fc2fa7615"
+    anchorStateRegistryProxyAddress: "0x88d84fdaa3a0a1fa1a1e5efc2704a0cb8ea44501"
+    anchorStateRegistryImplAddress: "0x20757026b12123b9cb7c3c194a5e058db585a719"
     faultDisputeGameAddress: "0x0000000000000000000000000000000000000000"
-    permissionedDisputeGameAddress: "0x1021e664cbe76bfc39930492b196c49ee43e09fc"
-    delayedWETHPermissionedGameProxyAddress: "0x107d288385398daa04930ad8b464fbb88f041e7c"
+    permissionedDisputeGameAddress: "0xfb7e65eb85caf8eb0af876972d3a9ba899cc97a1"
+    delayedWETHPermissionedGameProxyAddress: "0xbe5441e13eb70576970c784a152b245ea1701c4a"
     delayedWETHPermissionlessGameProxyAddress: "0x0000000000000000000000000000000000000000"
     dataAvailabilityChallengeProxyAddress: "0x0000000000000000000000000000000000000000"
     dataAvailabilityChallengeImplAddress: "0x0000000000000000000000000000000000000000"
