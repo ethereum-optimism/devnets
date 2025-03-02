@@ -2,11 +2,9 @@ name: aegir
 type: betanet
 scope: https://github.com/ethereum-optimism/devnets/issues/5
 status: online
-deployed_on: 01-29-2025
+deployed_on: 03-02-2025 # re-deploy, original was 01-29-2025
 description: |
   * OPCM Upgrades
-  * MT-Cannon
-  * Pause Improvements
 l1:
   name: sepolia
   chain_id: 11155111
@@ -25,17 +23,17 @@ l2:
       holocene_time_offset: 0
   components:
     op-node:
-      version: op-node/v1.10.3
+      version: op-node/v1.11.1
     op-geth:
-      version: op-geth/v1.101411.5
+      version: op-geth/v1.101500.1
     op-reth:
-      version: op-reth/v1.1.5
+      version: op-reth/v1.2.0
     op-proposer:
       version: op-proposer/v1.10.0-rc.2
     op-batcher:
-      version: op-batcher/v1.10.0
+      version: op-batcher/v1.11.1
     op-challenger:
-      version: op-challenger/v1.3.1-rc.6
+      version: op-challenger/v1.3.1
     op-dispute-mon:
       version: op-dispute-mon/v1.3.0
   bootnodes:
@@ -44,6 +42,6 @@ l2:
     - enode://7353cf20a38a59c67139ccceaf4fa94be3487f0ace88ca368c24026f0825ff6983493a6b7c6e4286e18394880f3f450987ca1f26d848b7057e7dfdf3eb6b71a5@34.28.88.99:0?discport=30305
   chains:
   - name: aegir-0 # permissioned
-    chain_id: 420110000
+    chain_id: 420110004
   - name: aegir-1 # permissionless
-    chain_id: 420110002
+    chain_id: 420110005

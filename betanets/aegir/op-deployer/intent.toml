@@ -1,0 +1,45 @@
+configType = "standard-overrides"
+l1ChainID = 11155111
+fundDevAccounts = false
+useInterop = false
+l1ContractsLocator = "tag://op-contracts/v1.8.0-rc.4"
+l2ContractsLocator = "tag://op-contracts/v1.7.0-beta.1+l2-contracts"
+
+[superchainRoles]
+  proxyAdminOwner = "0xa6afc9612b504202e0a5f6cf3c8e89c49ea06037"
+  protocolVersionsOwner = "0xfd1d2e729ae8eee2e146c033bf4400fe75284301"
+  guardian = "0xa6afc9612b504202e0a5f6cf3c8e89c49ea06037"
+
+[[chains]]
+  id = "0x00000000000000000000000000000000000000000000000000000000190a5eb4"
+  baseFeeVaultRecipient = "0x3d48a86dd29a7febbeaf5095cc048dc880c98562"
+  l1FeeVaultRecipient = "0xcf783e32730f833a3595b79439f826c1d64bb4d1"
+  sequencerFeeVaultRecipient = "0xf18767db6e2bf4ea57b264cfedd70e0ec370e897"
+  eip1559DenominatorCanyon = 250
+  eip1559Denominator = 50
+  eip1559Elasticity = 6
+  [chains.roles]
+    l1ProxyAdminOwner = "0xa6afc9612b504202e0a5f6cf3c8e89c49ea06037"
+    l2ProxyAdminOwner = "0x9c5002e1f707ac9ad24e89d0c149901873479e68"
+    systemConfigOwner = "0xa6afc9612b504202e0a5f6cf3c8e89c49ea06037"
+    unsafeBlockSigner = "0xe2db502efcca56f20fe0a8e0f30d4968dc8bb80b"
+    batcher = "0xf1c84aacbe0bc46ea2900ae5b730611277418500"
+    proposer = "0xbdbd0266a02c4f559410a3c2c32eb349712cdada"
+    challenger = "0xd7751de01340d412505192bb245fbfb55fa42d55"
+
+[[chains]]
+  id = "0x00000000000000000000000000000000000000000000000000000000190a5eb5"
+  baseFeeVaultRecipient = "0x7e8003b97fd0a0376b417205359aed2a229d3142"
+  l1FeeVaultRecipient = "0x86f141122b7f8ce4c42328d22cb5360bbfce8cfa"
+  sequencerFeeVaultRecipient = "0xa30a665f42e9d64ce97925f492cc25235b2ae2d6"
+  eip1559DenominatorCanyon = 250
+  eip1559Denominator = 50
+  eip1559Elasticity = 6
+  [chains.roles]
+    l1ProxyAdminOwner = "0xa6afc9612b504202e0a5f6cf3c8e89c49ea06037"
+    l2ProxyAdminOwner = "0x36eb28b5d9a65655ba7579700e1c96d17b04e539"
+    systemConfigOwner = "0xa6afc9612b504202e0a5f6cf3c8e89c49ea06037"
+    unsafeBlockSigner = "0xbc2f0b4264b2d6719306ebef2d146a62710f4425"
+    batcher = "0x7449ed07c326900a15642183b824f07e6f9ab0a0"
+    proposer = "0xef39a3f33ec8dac685d05f5fb128842c89d3b65f"
+    challenger = "0x62059911a0b740ee2f1ed8bce5cc8ce28e243e0f"
