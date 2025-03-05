@@ -29,11 +29,11 @@ l2:
     op-reth:
       version: op-reth/v1.2.0
     op-proposer:
-      version: op-proposer/v1.10.0-rc.2
+      version: op-proposer/v1.10.0
     op-batcher:
-      version: op-batcher/v1.11.1
+      version: op-batcher/v1.11.4
     op-challenger:
-      version: op-challenger/v1.3.1
+      version: op-challenger/v1.3.2
     op-dispute-mon:
       version: op-dispute-mon/v1.3.0
   bootnodes:
