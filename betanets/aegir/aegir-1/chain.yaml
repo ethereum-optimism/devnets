@@ -1,5 +1,5 @@
 name: aegir-1
-chain_id: 420110002
+chain_id: 420110005
 rpc_url: https://aegir-1.optimism.io
 contracts:
   superchainDeployment:
