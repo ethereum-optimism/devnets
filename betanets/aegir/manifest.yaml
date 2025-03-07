@@ -41,7 +41,9 @@ l2:
     - enode://524958a8fc12140491f59a78442d38d1f3cb96765136379dca2ce569f0d770de25931fc11ad1bcfe1af3d4db025d23c25a401e23c91f5f53ff281f25bd36e733@34.27.92.24:0?discport=30305
     - enode://7353cf20a38a59c67139ccceaf4fa94be3487f0ace88ca368c24026f0825ff6983493a6b7c6e4286e18394880f3f450987ca1f26d848b7057e7dfdf3eb6b71a5@34.28.88.99:0?discport=30305
   chains:
-  - name: aegir-0 # permissioned
+  - name: aegir-0
     chain_id: 420110004
-  - name: aegir-1 # permissionless
+  - name: aegir-1
     chain_id: 420110005
+    features:
+      - "fp-permissionless"
