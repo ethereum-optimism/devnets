@@ -1,0 +1,34 @@
+configType = "custom"
+l1ChainID = 11155111
+fundDevAccounts = false
+useInterop = false
+l1ContractsLocator = "tag://op-contracts/v3.0.0-rc.1"
+l2ContractsLocator = "tag://op-contracts/v3.0.0-rc.1"
+
+[globalDeployOverrides]
+  l2GenesisIsthmusTimeOffset = "0x0"
+
+[superchainRoles]
+  proxyAdminOwner = "0xa6afc9612b504202e0a5f6cf3c8e89c49ea06037"
+  protocolVersionsOwner = "0xfd1d2e729ae8eee2e146c033bf4400fe75284301"
+  guardian = "0xa6afc9612b504202e0a5f6cf3c8e89c49ea06037"
+
+[[chains]]
+  id = "0x00000000000000000000000000000000000000000000000000000000190a37a1"
+  baseFeeVaultRecipient = "0x9ddbfbeeea216c6adcb2430bf9a73d7ec90c0bbd"
+  l1FeeVaultRecipient = "0xcd56d57a4b4ef9af696569d425e1e1928545b0bd"
+  sequencerFeeVaultRecipient = "0x7635bb8bb9af2f07ff92a493d47d1482ef63f940"
+  eip1559DenominatorCanyon = 250
+  eip1559Denominator = 50
+  eip1559Elasticity = 6
+  operatorFeeScalar = 0
+  operatorFeeConstant = 0
+  [chains.roles]
+    l1ProxyAdminOwner = "0x4b9d57a0852698253e4d38f6bb4d4e4c6598693b"
+    l2ProxyAdminOwner = "0x2494ef0ba2daa647b6342fcc1c0c8f542259eca2"
+    systemConfigOwner = "0xc5bed47ff0c32eab8c25ef27094cc5c786a3cde9"
+    unsafeBlockSigner = "0x104abde9857f356b1e07a6b89fe2d4a359446157"
+    batcher = "0x810f48287a5e45c875179ccf6b8513d55506a2c3"
+    proposer = "0x3e69f956c7000705ddbff45a38d87ae7f70ac708"
+    challenger = "0x1625c24f7698fa2d375446a83964cb72b246a6e6"
+
