@@ -1,0 +1,7 @@
+name: cheetah-0
+chain_id: 420100001
+rpc_url: https://cheetah-0.optimism.io
+contracts:
+  superchainDeployment:
+  opChainDeployment:
+  implementationsDeployment:
