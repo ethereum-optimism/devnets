@@ -7,6 +7,7 @@ l2ContractsLocator = "tag://op-contracts/v3.0.0-rc.2"
 
 [globalDeployOverrides]
   l2GenesisIsthmusTimeOffset = "0x6A3C4B96"
+  mipsVersion = 2
 
 [superchainRoles]
   proxyAdminOwner = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
