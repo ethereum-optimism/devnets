@@ -44,7 +44,8 @@
       }
     ],
     "globalDeployOverrides": {
-      "l2GenesisIsthmusTimeOffset": "0x6A3C4B96"
+      "l2GenesisIsthmusTimeOffset": "0x6A3C4B96",
+      "mipsVersion": 2
     }
   },
   "superchainDeployment": {
@@ -55,14 +56,14 @@
     "protocolVersionsImplAddress": "0x37e15e4d6dffa9e5e320ee1ec036922e563cb76c"
   },
   "implementationsDeployment": {
-    "opcmAddress": "0x8c33c627b45b2b2eb8fe2d97ac67ee16c18a73f8",
-    "opcmGameTypeAdderAddress": "0xa5f46430294334fdce035ac22284e004b1e7d3fa",
-    "opcmDeployerAddress": "0x2218c4d65465fdc6fb74237f81438ec610568fa7",
-    "opcmUpgraderAddress": "0xc32c501261fcde50089cb6dcf8ee22c9c21ca3d9",
+    "opcmAddress": "0xa91b850dbb852c3e996d55f59f4fe538ccbd7f03",
+    "opcmGameTypeAdderAddress": "0xc9060f6283b78e1feebfd1993cb6350b5626f115",
+    "opcmDeployerAddress": "0x88e39ea5cfe6c4d450305eec5fd90dd1fba87f45",
+    "opcmUpgraderAddress": "0xbf098a12edcf99f8e6db258b7ac567a1fd020f4b",
     "delayedWETHImplAddress": "0x5e40b9231b86984b5150507046e354dbfbed3d9e",
     "optimismPortalImplAddress": "0xb443da3e07052204a02d630a8933dac05a0d6fb4",
     "preimageOracleSingletonAddress": "0x1fb8cdfc6831fc866ed9c51af8817da5c287add3",
-    "mipsSingletonAddress": "0xaa59a0777648bc75cd10364083e878c1ccd6112a",
+    "mipsSingletonAddress": "0xf027f4a985560fb13324e943edf55ad6f1d15dc1",
     "systemConfigImplAddress": "0x340f923e5c7cbb2171146f64169ec9d5a9ffe647",
     "l1CrossDomainMessengerImplAddress": "0x5d5a095665886119693f0b41d8dfee78da033e8b",
     "l1ERC721BridgeImplAddress": "0x7ae1d3bd877a4c5ca257404ce26be93a02c98013",
