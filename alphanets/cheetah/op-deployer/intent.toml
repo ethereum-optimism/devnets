@@ -2,33 +2,32 @@ configType = "custom"
 l1ChainID = 11155111
 fundDevAccounts = false
 useInterop = false
-l1ContractsLocator = "tag://op-contracts/v3.0.0-rc.1"
-l2ContractsLocator = "tag://op-contracts/v3.0.0-rc.1"
+l1ContractsLocator = "tag://op-contracts/v3.0.0-rc.2"
+l2ContractsLocator = "tag://op-contracts/v3.0.0-rc.2"
 
 [globalDeployOverrides]
-  l2GenesisIsthmusTimeOffset = "0x0"
+  l2GenesisIsthmusTimeOffset = "0x6A3C4B96"
 
 [superchainRoles]
-  proxyAdminOwner = "0xa6afc9612b504202e0a5f6cf3c8e89c49ea06037"
-  protocolVersionsOwner = "0xfd1d2e729ae8eee2e146c033bf4400fe75284301"
-  guardian = "0xa6afc9612b504202e0a5f6cf3c8e89c49ea06037"
+  proxyAdminOwner = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
+  protocolVersionsOwner = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
+  guardian = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
 
 [[chains]]
-  id = "0x00000000000000000000000000000000000000000000000000000000190a37a1"
-  baseFeeVaultRecipient = "0x9ddbfbeeea216c6adcb2430bf9a73d7ec90c0bbd"
-  l1FeeVaultRecipient = "0xcd56d57a4b4ef9af696569d425e1e1928545b0bd"
-  sequencerFeeVaultRecipient = "0x7635bb8bb9af2f07ff92a493d47d1482ef63f940"
+  id = "0x00000000000000000000000000000000000000000000000000000000190a37a2"
+  baseFeeVaultRecipient = "0xedd9632cdfea0a9696e322ee133a35fe4b3c0e20"
+  l1FeeVaultRecipient = "0xa4a7b0af3293d7e1a7246e19b8f741a489de8d5c"
+  sequencerFeeVaultRecipient = "0x32bb69e1951c34e677640d6a1c5e993adcd91e67"
   eip1559DenominatorCanyon = 250
   eip1559Denominator = 50
   eip1559Elasticity = 6
   operatorFeeScalar = 0
   operatorFeeConstant = 0
   [chains.roles]
-    l1ProxyAdminOwner = "0x4b9d57a0852698253e4d38f6bb4d4e4c6598693b"
-    l2ProxyAdminOwner = "0x2494ef0ba2daa647b6342fcc1c0c8f542259eca2"
-    systemConfigOwner = "0xc5bed47ff0c32eab8c25ef27094cc5c786a3cde9"
-    unsafeBlockSigner = "0x104abde9857f356b1e07a6b89fe2d4a359446157"
-    batcher = "0x810f48287a5e45c875179ccf6b8513d55506a2c3"
-    proposer = "0x3e69f956c7000705ddbff45a38d87ae7f70ac708"
-    challenger = "0x1625c24f7698fa2d375446a83964cb72b246a6e6"
-
+    l1ProxyAdminOwner = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
+    l2ProxyAdminOwner = "0x5270a71d6a754bd0d89433d177f05920295d8ea1"
+    systemConfigOwner = "0xa2dfb3d5aadcdbacf0b9277debc81ee14eaf96db"
+    unsafeBlockSigner = "0xbad61944d2d0b0ecb4e0c42e8b97bd6b67ebd648"
+    batcher = "0x0d191b5067442528d0622d997c2646d180b1c35f"
+    proposer = "0x088fbb7c7a065e0cd08ad3ad083816a51fd53068"
+    challenger = "0x57cb6c16943ede15bac29e2f8c23416331da7d36"
