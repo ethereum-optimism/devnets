@@ -1,0 +1,50 @@
+configType = "custom"
+l1ChainID = 11155111
+fundDevAccounts = false
+useInterop = false
+l1ContractsLocator = "tag://op-contracts/v2.0.0-rc.1"
+l2ContractsLocator = "tag://op-contracts/v1.7.0-beta.1+l2-contracts"
+
+[superchainRoles]
+  proxyAdminOwner = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
+  protocolVersionsOwner = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
+  guardian = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
+
+[[chains]]
+  id = "0x00000000000000000000000000000000000000000000000000000000190a5eb6"
+  baseFeeVaultRecipient = "0x81666a003fb4a7ee23fcf8fbcabbf25a98ad670a"
+  l1FeeVaultRecipient = "0xfb040d47266ff21beef1a201c812923b21f5789b"
+  sequencerFeeVaultRecipient = "0xafdf10fbdf841583c7dd9f55da1ca846185a4475"
+  eip1559DenominatorCanyon = 250
+  eip1559Denominator = 50
+  eip1559Elasticity = 6
+  operatorFeeScalar = 0
+  operatorFeeConstant = 0
+  [chains.roles]
+    l1ProxyAdminOwner = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
+    l2ProxyAdminOwner = "0x42fcea5a3a4c0f0bc680a1a92346451459a52448"
+    systemConfigOwner = "0xaf56e42eac53effdcf2d50a9c5f912edde22708c"
+    unsafeBlockSigner = "0x8b678dba71256d9fead1e1fde5f538f7d765c2ef"
+    batcher = "0x2b88fa399b512bcc3176cc22111e1e79549de70c"
+    proposer = "0x746f68ba625191724395026fd0178c66d211c6a2"
+    challenger = "0xfc49f96be28393e0bb262ddf7072639b0f953a57"
+
+[[chains]]
+  id = "0x00000000000000000000000000000000000000000000000000000000190a5eb7"
+  baseFeeVaultRecipient = "0xaeaeaa6a633ec488cf3d40afe9ab4b43145a8df3"
+  l1FeeVaultRecipient = "0xf9b6f872a84b515c39cd221ad56ae22da45e144b"
+  sequencerFeeVaultRecipient = "0x554c5d814a4d9b9220d2b4af5487b7cd9decaf2a"
+  eip1559DenominatorCanyon = 250
+  eip1559Denominator = 50
+  eip1559Elasticity = 6
+  operatorFeeScalar = 0
+  operatorFeeConstant = 0
+  [chains.roles]
+    l1ProxyAdminOwner = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
+    l2ProxyAdminOwner = "0x9c4194d9380676e09375c3575d41ac02f3eab1a0"
+    systemConfigOwner = "0x9e1ae3a2bcc5aa94247843bc35c54251de386353"
+    unsafeBlockSigner = "0x4ea829678ae1d2a70d6be807b3a638598e5f4526"
+    batcher = "0xa6f4ed6bee3774ff0376b849b1e4e5f02b469144"
+    proposer = "0xc46e9ca01e0985477f07087118929310697a3ed9"
+    challenger = "0xf5e790b221426f23af804070a2c93334caad9b81"
+
