@@ -11,13 +11,6 @@ body:
       description: What should we call this devnet?
     validations:
       required: true
-  - type: input
-    id: deployment_date
-    attributes:
-      label: Deployment date
-      description: When does this devnet need to be deployed by?
-    validations:
-      required: true
   - type: textarea
     id: scope
     attributes:
@@ -25,18 +18,11 @@ body:
       description: What features are going to be deployed in this devnet?
     validations:
       required: true
-  - type: input
-    id: op_node_version
+  - type: textarea
+    id: configurations
     attributes:
-      label: op-node version
-      description: op-node tag to release. Optional. Leave as TBD if unknown.
-  - type: input
-    id: op_geth_version
-    attributes:
-      label: op-geth version
-      description: op-geth tag to release. Optional. Leave as TBD if unknown.
-  - type: input
-    id: op_reth_version
-    attributes:
-      label: op-reth version
-      description: op-reth tag to release. Optional. Leave as TBD if unknown.
+      label: Configurations
+      description: What configurations are needed for this devnet?
+      placeholder: |
+        - specific component versions or configurations
+        - anything else we need to know to deploy this devnet?
