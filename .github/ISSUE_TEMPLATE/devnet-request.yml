@@ -19,6 +19,18 @@ body:
     validations:
       required: true
   - type: textarea
+    id: acceptance_tests
+    attributes:
+      label: Acceptance Tests
+      description: What acceptance tests need to be run to validate this devnet?
+      placeholder: |
+        - Focus on new features (general network tests are covered by Platforms)
+        - Which tests will be executed manually? Which do you plan to automate?
+        - Any special test scenarios we should be aware of and plan for?
+        - Feel free to link to another doc if this is defined there
+    validations:
+      required: true
+  - type: textarea
     id: configurations
     attributes:
       label: Configurations
