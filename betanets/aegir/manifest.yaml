@@ -1,7 +1,7 @@
 name: aegir
 type: betanet
 scope: https://github.com/ethereum-optimism/devnets/issues/5
-status: online
+status: offline
 deployed_on: 03-02-2025 # re-deploy, original was 01-29-2025
 description: |
   * OPCM Upgrades
