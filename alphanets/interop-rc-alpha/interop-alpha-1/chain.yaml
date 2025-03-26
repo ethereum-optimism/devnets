@@ -1,0 +1,7 @@
+name: interop-rc-alpha-1
+chain_id: 420120004
+rpc_url: https://interop-rc-alpha-1.optimism.io
+contracts:
+  superchainDeployment:
+  opChainDeployment:
+  implementationsDeployment:
