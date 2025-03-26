@@ -2,8 +2,8 @@ configType = "custom"
 l1ChainID = 11155111
 fundDevAccounts = false
 useInterop = true
-l1ContractsLocator = "file:///Users/ykukreja/OPLabs/Projects/optimism/packages/contracts-bedrock/packages/contracts-bedrock/forge-artifacts/"
-l2ContractsLocator = "file:///Users/ykukreja/OPLabs/Projects/optimism/packages/contracts-bedrock/packages/contracts-bedrock/forge-artifacts/"
+l1ContractsLocator = "https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-f9a55787fd592c2fa6d4c253a3ad7904ce55f255ab59cc6d2a576c938f021896.tar.gz"
+l2ContractsLocator = "https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-f9a55787fd592c2fa6d4c253a3ad7904ce55f255ab59cc6d2a576c938f021896.tar.gz"
 
 [superchainRoles]
   proxyAdminOwner = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
