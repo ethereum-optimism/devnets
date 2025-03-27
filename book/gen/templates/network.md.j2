@@ -10,11 +10,11 @@ It was deployed on {{ network.deployed_on }}.
 
 ## Chains
 
-| Type                               | Name  | Chain ID                    | Config | Rollup | Genesis |
-|------------------------------------|-------|-----------------------------|--------|--------|---------|
-| L1 | {{ network.l1.name | title }}  | `{{ network.l1.chain_id }}` | - | - | - |
+| Type | Name | Chain ID | Config | Rollup | Genesis | RPC |
+|------|------|----------|---------|---------|----------|-----|
+| L1 | {{ network.l1.name | title }} | `{{ network.l1.chain_id }}` | - | - | - | - |
 {% for chain in network.l2.chains %}
-| L2 | {{ chain.name }} | `{{ chain.chain_id }}` | [View](https://github.com/ethereum-optimism/devnets/blob/main/{{ network.type }}s/{{ network.name }}/{{ chain.name }}/chain.yaml) | [View](https://github.com/ethereum-optimism/devnets/blob/main/{{ network.type }}s/{{ network.name }}/{{ chain.name }}/rollup.json) | [Download](https://raw.githubusercontent.com/ethereum-optimism/devnets/refs/heads/main/{{ network.type }}s/{{ network.name }}/{{ chain.name }}/genesis.json)
+| L2 | {{ chain.name }} | `{{ chain.chain_id }}` | [View](https://github.com/ethereum-optimism/devnets/blob/main/{{ network.type }}s/{{ network.name }}/{{ chain.name }}/chain.yaml) | [View](https://github.com/ethereum-optimism/devnets/blob/main/{{ network.type }}s/{{ network.name }}/{{ chain.name }}/rollup.json) | [Download](https://raw.githubusercontent.com/ethereum-optimism/devnets/refs/heads/main/{{ network.type }}s/{{ network.name }}/{{ chain.name }}/genesis.json) | [RPC](https://{{ chain.name }}.optimism.io) |
 {% endfor %}
 
 ## Deployment Details
@@ -25,15 +25,20 @@ It was deployed on {{ network.deployed_on }}.
 | L1 Contracts Version | `{{ network.l2.deployment["l1-contracts"].version }}` |
 | L2 Contracts Version | `{{ network.l2.deployment["l2-contracts"].version }}` |
 
-{% if network.l2.deployment.overrides %}
 ## Deployment Overrides
 
-| Parameter | Value |
-|-----------|-------|
+| Scope | Parameter | Value |
+|-------|-----------|-------|
 {% for key, value in network.l2.deployment.overrides.items() %}
-| {{ key | replace('_', ' ') | title }} | {{ value }} |
+| global | `{{ key }}` | `{{ value }}` |
+{% endfor %}
+{% for chain in network.l2.chains %}
+{% if chain.get('deployment', {}).get('overrides') %}
+{% for key, value in chain.deployment.overrides.items() %}
+| {{ chain.name }} | `{{ key }}` | `{{ value }}` |
 {% endfor %}
 {% endif %}
+{% endfor %}
 
 ## Components
 
