@@ -100,13 +100,13 @@ chains:
 
     services:
 
-      - kind: "proposer"
-        name: "op-proposer"
-        spec:
-          kind: "op-proposer"
-        deps:
-          nodes:
-            - "rpc-0"
+      # - kind: "proposer"
+      #   name: "op-proposer"
+      #   spec:
+      #     kind: "op-proposer"
+      #   deps:
+      #     nodes:
+      #       - "rpc-0"
 
       - kind: "batcher"
         name: "op-batcher"
@@ -175,6 +175,14 @@ chains:
         name: "op-dispute-mon"
         spec:
           kind: "op-dispute-mon"
+        deps:
+          nodes:
+            - "rpc-0"
+
+      - kind: "op-challenger-runner"
+        name: "op-challenger-runner"
+        spec:
+          kind: "op-challenger-runner"
         deps:
           nodes:
             - "rpc-0"

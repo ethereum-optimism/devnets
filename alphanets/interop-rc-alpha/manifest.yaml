@@ -33,11 +33,11 @@ l2:
     op-proposer:
       version: op-proposer/v1.10.1-rc.1
     op-batcher:
-      version: op-batcher/v1.11.5
+      version: op-batcher/v1.11.6-dev.1
     op-challenger:
       version: op-challenger/v1.3.4-rc.1
     op-supervisor:
-      version: op-supervisor/v0.2.0-dev.1
+      version: op-supervisor/v0.2.0-dev.2
     op-reth:
       version: tbd
     op-dispute-mon:
@@ -51,7 +51,11 @@ l2:
     chain_id: 420120003
     overrides:
       seconds_per_slot: 2
+    features:
+      - fp-permissionless
   - name: interop-rc-alpha-1
     chain_id: 420120004
     overrides:
       seconds_per_slot: 1
+    features:
+      - fp-permissionless
