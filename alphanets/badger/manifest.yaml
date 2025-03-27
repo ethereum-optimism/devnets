@@ -19,10 +19,7 @@ l2:
       locator: https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-bde597e90c98c89cf2c7c571f65e415cda3d4af88ea613daa813ef52cfdb21ab.tar.gz
       version: c46bb168e221c2b961a63b0107cbf6a95ffc5348
     overrides:
-      seconds_per_slot: 2
-      fjord_time_offset: 0
-      granite_time_offset: 0
-      holocene_time_offset: 0
+      l2GenesisHoloceneTimeOffset: '0x0'
   components:
     op-node:
       version: op-node/v1.11.3-rc.1

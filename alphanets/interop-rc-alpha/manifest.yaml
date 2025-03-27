@@ -21,10 +21,9 @@ l2:
       locator: https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-f9a55787fd592c2fa6d4c253a3ad7904ce55f255ab59cc6d2a576c938f021896.tar.gz
       version: f79ed8b9c9cbdbf8bb492074f3f98da7f072e21a # head of develop
     overrides:
-      fjord_time_offset: 0
-      granite_time_offset: 0
-      holocene_time_offset: 0
-      interop_time_offset: 0
+      l2GenesisInteropTimeOffset: "0x0"
+      l2GenesisIsthmusTimeOffset: "0x0"
+      mipsVersion: 2
   components:
     op-node:
       version: op-node/v1.12.3-dev.1
@@ -49,13 +48,15 @@ l2:
   chains:
   - name: interop-rc-alpha-0
     chain_id: 420120003
-    overrides:
-      seconds_per_slot: 2
+    deployment:
+      overrides:
+        l2BlockTime: 2
     features:
       - fp-permissionless
   - name: interop-rc-alpha-1
     chain_id: 420120004
-    overrides:
-      seconds_per_slot: 1
+    deployment:
+      overrides:
+        l2BlockTime: 1
     features:
       - fp-permissionless

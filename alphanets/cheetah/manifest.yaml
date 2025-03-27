@@ -18,10 +18,9 @@ l2:
     l2-contracts:
       version: op-contracts/v3.0.0-rc.2
     overrides:
-      seconds_per_slot: 2
-      fjord_time_offset: 0
-      granite_time_offset: 0
-      holocene_time_offset: 0
+      l2GenesisHoloceneTimeOffset: '0x0'
+      l2GenesisIsthmusTimeOffset: '0x6A3C4B96'
+      mipsVersion: 2
   components:
     op-node:
       version: op-node/v1.12.1-rc.1

@@ -19,10 +19,8 @@ l2:
     l2-contracts:
       version: 31a9c298416b63402f1d1c95062dc438fc5d1ff3 # head of feat/interop-stable-devnet
     overrides:
-      seconds_per_slot: 2
-      fjord_time_offset: 0
-      granite_time_offset: 0
-      holocene_time_offset: 0
+      l2GenesisHoloceneTimeOffset: '0x0'
+      l2GenesisInteropTimeOffset: '0x0'
   components:
     op-node:
       version: op-node/v1.11.1
