@@ -38,7 +38,7 @@ l2:
     op-supervisor:
       version: op-supervisor/v0.2.0-dev.2
     op-reth:
-      version: op-reth/nightly-20250328
+      version: op-reth/1.3.5
     op-dispute-mon:
       version: op-dispute-mon/v1.4.1-rc.1
   bootnodes:
