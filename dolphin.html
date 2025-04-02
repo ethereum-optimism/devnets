@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Interop-Alpha - OP Stack Devnets</title>
+        <title>Dolphin - OP Stack Devnets</title>
 
 
         <!-- Custom HTML head -->
@@ -153,51 +153,51 @@
                 <div id="content" class="content">
                     <main>
                         <!-- generated file, do not edit -->
-<h1 style="display: flex; align-items: center">Interop-Alpha <a href="https://github.com/ethereum-optimism/devnets/issues/1" style="margin-left: auto; font-size: 1.5rem;">Scoping Issue ↗️</a></h1>
+<h1 style="display: flex; align-items: center">Dolphin <a href="https://github.com/ethereum-optimism/devnets/issues/12" style="margin-left: auto; font-size: 1.5rem;">Scoping Issue ↗️</a></h1>
 <p><strong>Status:</strong> 🟢 Online</p>
 <ul>
-<li>Interop (no fault proof)</li>
+<li>Operator Fee</li>
+<li>L2 Withdrawal Root in Header</li>
+<li>Pectra Support</li>
 </ul>
-<p>It was deployed on 02-06-2025.</p>
+<p>It was deployed on 04-02-2025.</p>
 <h2 id="chains"><a class="header" href="#chains">Chains</a></h2>
 <div class="table-wrapper"><table><thead><tr><th>Type</th><th>Name</th><th>Chain ID</th><th>Config</th><th>Rollup</th><th>Genesis</th><th>RPC</th></tr></thead><tbody>
 <tr><td>L1</td><td>Sepolia</td><td><code>11155111</code></td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
-<tr><td>L2</td><td>interop-alpha-0</td><td><code>420120000</code></td><td><a href="https://github.com/ethereum-optimism/devnets/blob/main/alphanets/interop-alpha/interop-alpha-0/chain.yaml">View</a></td><td><a href="https://github.com/ethereum-optimism/devnets/blob/main/alphanets/interop-alpha/interop-alpha-0/rollup.json">View</a></td><td><a href="https://raw.githubusercontent.com/ethereum-optimism/devnets/refs/heads/main/alphanets/interop-alpha/interop-alpha-0/genesis.json">Download</a></td><td><a href="https://interop-alpha-0.optimism.io">RPC</a></td></tr>
-<tr><td>L2</td><td>interop-alpha-1</td><td><code>420120001</code></td><td><a href="https://github.com/ethereum-optimism/devnets/blob/main/alphanets/interop-alpha/interop-alpha-1/chain.yaml">View</a></td><td><a href="https://github.com/ethereum-optimism/devnets/blob/main/alphanets/interop-alpha/interop-alpha-1/rollup.json">View</a></td><td><a href="https://raw.githubusercontent.com/ethereum-optimism/devnets/refs/heads/main/alphanets/interop-alpha/interop-alpha-1/genesis.json">Download</a></td><td><a href="https://interop-alpha-1.optimism.io">RPC</a></td></tr>
+<tr><td>L2</td><td>dolphin-0</td><td><code>420100003</code></td><td><a href="https://github.com/ethereum-optimism/devnets/blob/main/alphanets/dolphin/dolphin-0/chain.yaml">View</a></td><td><a href="https://github.com/ethereum-optimism/devnets/blob/main/alphanets/dolphin/dolphin-0/rollup.json">View</a></td><td><a href="https://raw.githubusercontent.com/ethereum-optimism/devnets/refs/heads/main/alphanets/dolphin/dolphin-0/genesis.json">Download</a></td><td><a href="https://dolphin-0.optimism.io">RPC</a></td></tr>
 </tbody></table>
 </div>
 <h2 id="deployment-details"><a class="header" href="#deployment-details">Deployment Details</a></h2>
 <div class="table-wrapper"><table><thead><tr><th>Parameter</th><th>Value</th></tr></thead><tbody>
-<tr><td>OP Deployer Version</td><td><code>31a9c298416b63402f1d1c95062dc438fc5d1ff3</code></td></tr>
-<tr><td>L1 Contracts Version</td><td><code>31a9c298416b63402f1d1c95062dc438fc5d1ff3</code></td></tr>
-<tr><td>L2 Contracts Version</td><td><code>31a9c298416b63402f1d1c95062dc438fc5d1ff3</code></td></tr>
+<tr><td>OP Deployer Version</td><td><code>op-deployer/v0.3.0-rc.5</code></td></tr>
+<tr><td>L1 Contracts Version</td><td><code>op-contracts/v3.0.0-rc.2</code></td></tr>
+<tr><td>L2 Contracts Version</td><td><code>op-contracts/v3.0.0-rc.2</code></td></tr>
 </tbody></table>
 </div>
 <h2 id="deployment-overrides"><a class="header" href="#deployment-overrides">Deployment Overrides</a></h2>
 <div class="table-wrapper"><table><thead><tr><th>Scope</th><th>Parameter</th><th>Value</th></tr></thead><tbody>
-<tr><td>global</td><td><code>l2GenesisHoloceneTimeOffset</code></td><td><code>0x0</code></td></tr>
-<tr><td>global</td><td><code>l2GenesisInteropTimeOffset</code></td><td><code>0x0</code></td></tr>
+<tr><td>global</td><td><code>l2GenesisIsthmusTimeOffset</code></td><td><code>0xe10</code></td></tr>
+<tr><td>global</td><td><code>mipsVersion</code></td><td><code>2</code></td></tr>
 </tbody></table>
 </div>
 <h2 id="components"><a class="header" href="#components">Components</a></h2>
 <div class="table-wrapper"><table><thead><tr><th>Component</th><th>Version</th></tr></thead><tbody>
-<tr><td>op-node</td><td><code>op-node/v1.11.1</code></td></tr>
-<tr><td>op-geth</td><td><code>op-geth/v1.101500.1</code></td></tr>
-<tr><td>op-proposer</td><td><code>op-proposer/v1.10.0</code></td></tr>
-<tr><td>op-batcher</td><td><code>op-batcher/v1.11.4</code></td></tr>
-<tr><td>op-challenger</td><td><code>op-challenger/v1.3.2</code></td></tr>
-<tr><td>op-supervisor</td><td><code>b4e38ebb63babe634659dd6356e898d2b7f742f0</code></td></tr>
+<tr><td>op-node</td><td><code>op-node/v1.13.0-rc.1</code></td></tr>
+<tr><td>op-geth</td><td><code>op-geth/v1.101503.2-rc.5</code></td></tr>
+<tr><td>op-reth</td><td><code>op-reth/v1.3.5</code></td></tr>
+<tr><td>op-proposer</td><td><code>op-proposer/v1.10.0-rc.3</code></td></tr>
+<tr><td>op-batcher</td><td><code>op-batcher/v1.12.0-rc.1</code></td></tr>
 </tbody></table>
 </div>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="dolphin.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="cheetah.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="interop-rc-alpha.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="interop-alpha.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -207,11 +207,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="dolphin.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="cheetah.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="interop-rc-alpha.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="interop-alpha.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
