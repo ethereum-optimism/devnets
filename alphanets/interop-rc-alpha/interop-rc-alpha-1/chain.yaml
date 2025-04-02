@@ -18,7 +18,7 @@ contracts:
     l1CrossDomainMessengerProxyAddress: 0xd40ea45998b8abae23541249d2522ef97bbb604e
     optimismPortalProxyAddress: 0x92b3b2d4032492cd177fefa20e67c64826ccbc70
     ethLockboxProxyAddress: 0x3abd95d959c2f1af0fdf6de7005c0f9f77b6e858
-    disputeGameFactoryProxyAddress: 0xe0ff87008d8b6e77de390092f523b8fa412828bd
+    disputeGameFactoryProxyAddress: 0xC3fa613f53E95c3b1CfCf80dE0E9BF6f29a1113f
     anchorStateRegistryProxyAddress: 0x352264750cad1dee3b91045150d4efecd2f36ede
     faultDisputeGameAddress: 0x0000000000000000000000000000000000000000
     permissionedDisputeGameAddress: 0x9a77e6f08585e5aec9fc64f1aae2469eea7ff420
