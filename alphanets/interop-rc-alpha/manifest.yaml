@@ -36,7 +36,7 @@ l2:
     op-challenger:
       version: op-challenger/v1.3.4-rc.2
     op-supervisor:
-      version: op-supervisor/v0.2.0-dev.2
+      version: op-supervisor/v0.2.0-dev.3
     op-reth:
       version: op-reth/v1.3.5
     op-dispute-mon:
