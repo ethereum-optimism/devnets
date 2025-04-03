@@ -39,5 +39,5 @@ l2:
   chains:
   - name: dolphin-0
     chain_id: 420100003
-    # features:
-    #   - fp-permissionless
+    features:
+      - fp-permissionless

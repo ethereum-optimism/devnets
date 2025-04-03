@@ -155,3 +155,11 @@ chains:
         deps:
           nodes:
             - "rpc-0"
+
+      - kind: "op-challenger-runner"
+        name: "op-challenger-runner"
+        spec:
+          kind: "op-challenger-runner"
+        deps:
+          nodes:
+            - "rpc-0"
