@@ -31,6 +31,17 @@ body:
     validations:
       required: true
   - type: textarea
+    id: security_documents
+    attributes:
+      label: Design Docs, Specs, and FMAs
+      description: Please provide links to applicable design documents, specifications, and FMAs, which are required for devnet deployment
+      placeholder: |
+        - Links to design documents
+        - Links to specs
+        - Links to FMAs
+    validations:
+      required: true
+  - type: textarea
     id: configurations
     attributes:
       label: Configurations
