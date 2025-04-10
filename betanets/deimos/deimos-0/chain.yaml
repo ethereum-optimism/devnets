@@ -3,24 +3,24 @@ chain_id: 420110008
 rpc_url: https://deimos-0.optimism.io
 contracts:
   superchainDeployment:
-    proxyAdminAddress: "0x359c8a695d69dcfe58348aa94e4a134c0988eaf3" ## done
-    superchainConfigProxyAddress: "0x073cc9dd2fd19f11f9016e5f51b4928cfd79c3e5" ## done
-    superchainConfigImplAddress: "0x4da82a327773965b8d4d85fa3db8249b387458e7" ## done
-    protocolVersionsProxyAddress: "0x2929afb8da0bef0cc66ceb8343a0566848e91831" ## done
-    protocolVersionsImplAddress: "0x37e15e4d6dffa9e5e320ee1ec036922e563cb76c" ## done
+    proxyAdminAddress: "0x359c8a695d69dcfe58348aa94e4a134c0988eaf3"
+    superchainConfigProxyAddress: "0x073cc9dd2fd19f11f9016e5f51b4928cfd79c3e5"
+    superchainConfigImplAddress: "0x4da82a327773965b8d4d85fa3db8249b387458e7"
+    protocolVersionsProxyAddress: "0x2929afb8da0bef0cc66ceb8343a0566848e91831"
+    protocolVersionsImplAddress: "0x37e15e4d6dffa9e5e320ee1ec036922e563cb76c"
   opChainDeployment:
-    proxyAdminAddress: "0xe81de2d233c1934cb1f1563c8d52c26ece0ab543" ## done
-    addressManagerAddress: "0x5f71247a311a63964a56483751d849054b28ee9d" ## done
-    l1ERC721BridgeProxyAddress: "0x5475977d0e3362aed57d4aad33964c139498f84d" ## done
-    systemConfigProxyAddress: "0x4c40b086a197da3796b3468b393408feaa3add73" ## done
-    optimismMintableERC20FactoryProxyAddress: "0x73a661ee51855e367ba6c8fd19709cbb0bca0c18" ## done
-    l1StandardBridgeProxyAddress: "0x9d6a8e726ee7b6193315b1253364276696920474" ## done
-    l1CrossDomainMessengerProxyAddress: "0xaa1592614aed492bb544f2286ad18eebc0a1b512" ## done
-    optimismPortalProxyAddress: "0x354aee8b36a42cd803890c68a51e6d038b3ae6d7" ## done
-    disputeGameFactoryProxyAddress: "0xddb30661c372f3d1626bb6b0157e777c645723ec"  ## done
-    anchorStateRegistryProxyAddress: "0x9b325b7ec25294cce78fbcafbb912fb4a15fad35"  ## done
-    faultDisputeGameAddress: "0x0000000000000000000000000000000000000000"  ## done
-    permissionedDisputeGameAddress: "0x8d868c8fa35d4944862f7859a5336b422267a9c1"  ## done
+    proxyAdminAddress: "0xe81de2d233c1934cb1f1563c8d52c26ece0ab543"
+    addressManagerAddress: "0x5f71247a311a63964a56483751d849054b28ee9d"
+    l1ERC721BridgeProxyAddress: "0x5475977d0e3362aed57d4aad33964c139498f84d"
+    systemConfigProxyAddress: "0x4c40b086a197da3796b3468b393408feaa3add73"
+    optimismMintableERC20FactoryProxyAddress: "0x73a661ee51855e367ba6c8fd19709cbb0bca0c18"
+    l1StandardBridgeProxyAddress: "0x9d6a8e726ee7b6193315b1253364276696920474"
+    l1CrossDomainMessengerProxyAddress: "0xaa1592614aed492bb544f2286ad18eebc0a1b512"
+    optimismPortalProxyAddress: "0x354aee8b36a42cd803890c68a51e6d038b3ae6d7"
+    disputeGameFactoryProxyAddress: "0xddb30661c372f3d1626bb6b0157e777c645723ec" 
+    anchorStateRegistryProxyAddress: "0x9b325b7ec25294cce78fbcafbb912fb4a15fad35" 
+    faultDisputeGameAddress: "0x0000000000000000000000000000000000000000" 
+    permissionedDisputeGameAddress: "0x8d868c8fa35d4944862f7859a5336b422267a9c1" 
     delayedWETHPermissionedGameProxyAddress: "0x0fb900130c9356515c0e0ec0f1b2a39b3a7a0f30"
     delayedWETHPermissionlessGameProxyAddress: "0x0000000000000000000000000000000000000000"
     dataAvailabilityChallengeProxyAddress: "0x0000000000000000000000000000000000000000"
