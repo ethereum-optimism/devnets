@@ -479,3 +479,8 @@ services:
     deps:
       nodes:
         - "snapsync-2"
+
+  - kind: "test-runner"
+    name: "op-acceptor"
+    spec:
+      kind: "op-acceptor"

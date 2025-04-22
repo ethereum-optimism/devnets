@@ -163,3 +163,9 @@ chains:
         deps:
           nodes:
             - "rpc-0"
+
+services:
+  - kind: "test-runner"
+    name: "op-acceptor"
+    spec:
+      kind: "op-acceptor"
