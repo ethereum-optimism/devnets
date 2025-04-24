@@ -1,0 +1,43 @@
+name: flashblocks-alpha-0
+chain_id: 420100004
+rpc_url: https://flashblocks-alpha-0.optimism.io
+contracts:
+  superchainDeployment:
+    proxyAdminAddress: ""
+    superchainConfigProxyAddress: ""
+    superchainConfigImplAddress: ""
+    protocolVersionsProxyAddress: ""
+    protocolVersionsImplAddress: ""
+  opChainDeployment:
+    proxyAdminAddress: ""
+    addressManagerAddress: ""
+    l1ERC721BridgeProxyAddress: ""
+    systemConfigProxyAddress: ""
+    optimismMintableERC20FactoryProxyAddress: ""
+    l1StandardBridgeProxyAddress: ""
+    l1CrossDomainMessengerProxyAddress: ""
+    optimismPortalProxyAddress: ""
+    disputeGameFactoryProxyAddress: ""
+    anchorStateRegistryProxyAddress: ""
+    faultDisputeGameAddress: ""
+    permissionedDisputeGameAddress: ""
+    delayedWETHPermissionedGameProxyAddress: ""
+    delayedWETHPermissionlessGameProxyAddress: ""
+    dataAvailabilityChallengeProxyAddress: ""
+    dataAvailabilityChallengeImplAddress: ""
+  implementationsDeployment:
+    opcmAddress: ""
+    opcmGameTypeAdderAddress: ""
+    opcmDeployerAddress: ""
+    opcmUpgraderAddress: ""
+    delayedWETHImplAddress: ""
+    optimismPortalImplAddress: ""
+    preimageOracleSingletonAddress: ""
+    mipsSingletonAddress: ""
+    systemConfigImplAddress: ""
+    l1CrossDomainMessengerImplAddress: ""
+    l1ERC721BridgeImplAddress: ""
+    l1StandardBridgeImplAddress: ""
+    optimismMintableERC20FactoryImplAddress: ""
+    disputeGameFactoryImplAddress: ""
+    anchorStateRegistryImplAddress: ""
