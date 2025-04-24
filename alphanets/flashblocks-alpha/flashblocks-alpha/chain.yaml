@@ -1,6 +1,6 @@
-name: flashblocks-alpha-0
+name: flashblocks-alpha
 chain_id: 420100004
-rpc_url: https://flashblocks-alpha-0.optimism.io
+rpc_url: https://flashblocks-alpha.optimism.io
 contracts:
   superchainDeployment:
     proxyAdminAddress: "0x4315d13f94f0d9eb8628236e43ced6ca0984a56c"
