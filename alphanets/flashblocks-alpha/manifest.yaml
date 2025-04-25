@@ -1,0 +1,45 @@
+name: flashblocks-alpha
+type: alphanet
+scope: https://github.com/ethereum-optimism/devnets/issues/70
+status: online
+deployed_on: 04-24-2025
+description: |
+  Flashblocks Alphanet
+l1:
+  name: sepolia
+  chain_id: 11155111
+l2:
+  deployment:
+    op-deployer:
+      version: op-deployer/v0.3.0-rc.3
+    l1-contracts:
+      version: op-contracts/v3.0.0-rc.2
+    l2-contracts:
+      version: op-contracts/v3.0.0-rc.2
+    overrides:
+      l2GenesisIsthmusTimeOffset: '0x0'
+      mipsVersion: 2
+  components:
+    op-node:
+      version: op-node/v1.13.2-rc.3
+    op-geth:
+      version: op-geth/v1.101503.1-rc.1
+    op-reth:
+      version: op-reth/v1.3.11
+    op-proposer:
+      version: op-proposer/v1.10.0-rc.3
+    op-batcher:
+      version: op-batcher/v1.12.0-rc.1
+    rollup-boost:
+      version: rollup-boost/sha-f2ee10a
+    op-rbuilder:
+      version: op-rbuilder/sha-7f05d34
+  bootnodes:
+    - enode://e63f16f93b44938a43ba8304d9948da3304e47c7a14fb1ce9d75194f2bd6784665aab18a8b38dc7772cd9a7fa71dd51997cc6cd8af0fc8915bc2fddcb68dfc87@34.123.30.27:0?discport=30305
+    - enode://524958a8fc12140491f59a78442d38d1f3cb96765136379dca2ce569f0d770de25931fc11ad1bcfe1af3d4db025d23c25a401e23c91f5f53ff281f25bd36e733@34.27.92.24:0?discport=30305
+    - enode://7353cf20a38a59c67139ccceaf4fa94be3487f0ace88ca368c24026f0825ff6983493a6b7c6e4286e18394880f3f450987ca1f26d848b7057e7dfdf3eb6b71a5@34.28.88.99:0?discport=30305
+  chains:
+  - name: flashblocks-alpha
+    chain_id: 420100004
+    features:
+      - flashblocks
