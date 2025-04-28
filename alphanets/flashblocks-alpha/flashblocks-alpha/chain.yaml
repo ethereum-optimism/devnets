@@ -1,5 +1,5 @@
 name: flashblocks-0
-chain_id: 420120000
+chain_id: 420120004
 rpc_url: https://flashblocks-0.optimism.io
 contracts:
   superchainDeployment:
