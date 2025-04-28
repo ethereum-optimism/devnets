@@ -1,0 +1,40 @@
+name: flashblocks-0
+chain_id: 420120000
+rpc_url: https://flashblocks-0.optimism.io
+contracts:
+  superchainDeployment:
+    proxyAdminAddress: "0xc85eeb25a7b50ed3a29aab5aea26087925c27be3"
+    superchainConfigProxyAddress: "0x1ba56c1be55bce9bbf1f6d0045704e77148df7ad"
+    superchainConfigImplAddress: "0x4da82a327773965b8d4d85fa3db8249b387458e7"
+    protocolVersionsProxyAddress: "0x9000f9588f89c9e857afe838a1367c41d12480b4"
+    protocolVersionsImplAddress: "0x37e15e4d6dffa9e5e320ee1ec036922e563cb76c"
+  opChainDeployment:
+    proxyAdminAddress: "0x17c03d778164ceeee31c7b6b91b1b9f915d475eb"
+    addressManagerAddress: "0xc61198b0df989ea1c1b6094b19803e07f0e5db8f"
+    l1ERC721BridgeProxyAddress: "0x9fed6290f281c693787056f1a600011e63139ec1"
+    systemConfigProxyAddress: "0x960bfd72142722ddd2d5d3c3769875a11b383901"
+    optimismMintableERC20FactoryProxyAddress: "0xcf82758d98e1aefaf6424780ce432c4b13dfe35f"
+    l1StandardBridgeProxyAddress: "0xb93994c3ec0c6fd94fb715d94e7e488017333da4"
+    l1CrossDomainMessengerProxyAddress: "0x0fece874e736ce7d7f2b394d15acf2fd598f886c"
+    optimismPortalProxyAddress: "0xab51becb132867271a1f49480122801e6e6db126"
+    disputeGameFactoryProxyAddress: "0xca6b5a11f08fd5c6b638d9cbc8410855cc7511bb"
+    anchorStateRegistryProxyAddress: "0xc2dc2bc81c04274f573a213641b7f81e071e5151"
+    faultDisputeGameAddress: "0x0000000000000000000000000000000000000000"
+    permissionedDisputeGameAddress: "0xb1aeb718213e756b2fa059c8b30e4606385f7d07"
+    delayedWETHPermissionedGameProxyAddress: "0xe32f45e2d19ba8de44195b153b86677d6a9f4825"
+    delayedWETHPermissionlessGameProxyAddress: "0x0000000000000000000000000000000000000000"
+    dataAvailabilityChallengeProxyAddress: "0x0000000000000000000000000000000000000000"
+    dataAvailabilityChallengeImplAddress: "0x0000000000000000000000000000000000000000"
+  implementationsDeployment:
+    opcmAddress: "0x8b741b0d8b608032e11cb5fa80078a8977f9cca6"
+    delayedWETHImplAddress: "0x5e40b9231b86984b5150507046e354dbfbed3d9e"
+    optimismPortalImplAddress: "0xb443da3e07052204a02d630a8933dac05a0d6fb4"
+    preimageOracleSingletonAddress: "0x1fb8cdfc6831fc866ed9c51af8817da5c287add3"
+    mipsSingletonAddress: "0xf027f4a985560fb13324e943edf55ad6f1d15dc1"
+    systemConfigImplAddress: "0x340f923e5c7cbb2171146f64169ec9d5a9ffe647"
+    l1CrossDomainMessengerImplAddress: "0x5d5a095665886119693f0b41d8dfee78da033e8b"
+    l1ERC721BridgeImplAddress: "0x7ae1d3bd877a4c5ca257404ce26be93a02c98013"
+    l1StandardBridgeImplAddress: "0x0b09ba359a106c9ea3b181cbc5f394570c7d2a7a"
+    optimismMintableERC20FactoryImplAddress: "0x5493f4677a186f64805fe7317d6993ba4863988f"
+    disputeGameFactoryImplAddress: "0x4bba758f006ef09402ef31724203f316ab74e4a0"
+    anchorStateRegistryImplAddress: "0x7b465370bb7a333f99edd19599eb7fb1c2d3f8d2"
