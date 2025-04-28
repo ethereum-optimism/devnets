@@ -40,6 +40,6 @@ l2:
     - enode://7353cf20a38a59c67139ccceaf4fa94be3487f0ace88ca368c24026f0825ff6983493a6b7c6e4286e18394880f3f450987ca1f26d848b7057e7dfdf3eb6b71a5@34.28.88.99:0?discport=30305
   chains:
   - name: flashblocks-alpha
-    chain_id: 420100004
+    chain_id: 420120004
     features:
       - flashblocks
