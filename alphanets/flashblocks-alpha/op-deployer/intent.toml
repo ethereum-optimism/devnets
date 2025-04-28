@@ -11,10 +11,10 @@ l2ContractsLocator = "tag://op-contracts/v3.0.0-rc.2"
   guardian = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
 
 [[chains]]
-  id = "0x00000000000000000000000000000000000000000000000000000000190a37a4"
-  baseFeeVaultRecipient = "0x47c7afae09e6db8f580be80f4977a1b9116229dc"
-  l1FeeVaultRecipient = "0x7c3a3a342bc2f6f85422f9e6ef1d54c549279188"
-  sequencerFeeVaultRecipient = "0x48ce60de72b5e04c5dccd4d5c49aa69c3487da1a"
+  id = "0x00000000000000000000000000000000000000000000000000000000190a85c4"
+  baseFeeVaultRecipient = "0x5c80a0d49b30fedcc38d19eaf5990bde098353ec"
+  l1FeeVaultRecipient = "0xc2e092b6c45e7885559acea88c43171c0a223a6b"
+  sequencerFeeVaultRecipient = "0x26370298d1e15a9fbf6861844f75f32b909a7338"
   eip1559DenominatorCanyon = 250
   eip1559Denominator = 50
   eip1559Elasticity = 6
@@ -22,10 +22,14 @@ l2ContractsLocator = "tag://op-contracts/v3.0.0-rc.2"
   operatorFeeConstant = 0
   [chains.roles]
     l1ProxyAdminOwner = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
-    l2ProxyAdminOwner = "0xfb04a84d6502b03860b3afe8860b0d992c6e9b79"
-    systemConfigOwner = "0x34caa4700197ea8967a5062acacd2107cf30daae"
-    unsafeBlockSigner = "0x9bb155e0c60323003439799bfc85591226eecd2c"
-    batcher = "0xf499b8046f01c8118b4b1efd1900ee1c2a4e8c78"
-    proposer = "0xf602238d22280a6f6baf21473c8f082e0b2c1e5c"
-    challenger = "0x05cce8214f470065a547afd74cb95b425d5f1fb1"
+    l2ProxyAdminOwner = "0x6d3499c9f58c97416ab38a6072685fd4e70bd4f4"
+    systemConfigOwner = "0x2bd0c757cb2af3d1e6f097ec5c708b789dc81de9"
+    unsafeBlockSigner = "0x7e8590ddd22d87c2e6ab1af3b77766cfebbfbd35"
+    batcher = "0x01ef756ec40ba9bd71f46d00af85560816f69fc0"
+    proposer = "0xd2c348373fd867e60fe34b182c238c188d564f7b"
+    challenger = "0x28d7cb1c0ffaa900fdacd8b4776628d9c298c2cb"
+
+[globalDeployOverrides]
+  l2GenesisIsthmusTimeOffset = "0x0"
+  mipsVersion = 2
 
