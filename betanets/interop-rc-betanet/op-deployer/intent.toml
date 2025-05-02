@@ -5,56 +5,55 @@ useInterop = false
 l1ContractsLocator = "https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-f9a55787fd592c2fa6d4c253a3ad7904ce55f255ab59cc6d2a576c938f021896.tar.gz"
 l2ContractsLocator = "https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-f9a55787fd592c2fa6d4c253a3ad7904ce55f255ab59cc6d2a576c938f021896.tar.gz"
 
-[globalDeployOverrides]
-  l2GenesisIsthmusTimeOffset = "0x0"
-  mipsVersion = 2
-  ## TODO: Pick Hardfork Timestamp
-  l2GenesisInteropTimeOffset = "0x0"
-
 [superchainRoles]
-  SuperchainProxyAdminOwner = "0x0000000000000000000000000000000000000000"
-  SuperchainGuardian = "0x0000000000000000000000000000000000000000"
-  ProtocolVersionsOwner = "0x0000000000000000000000000000000000000000"
+  proxyAdminOwner = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
+  protocolVersionsOwner = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
+  guardian = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
 
 [[chains]]
   id = "0x000000000000000000000000000000000000000000000000000000026d1642b9"
-  baseFeeVaultRecipient = "0x0000000000000000000000000000000000000000"
-  l1FeeVaultRecipient = "0x0000000000000000000000000000000000000000"
-  sequencerFeeVaultRecipient = "0x0000000000000000000000000000000000000000"
+  baseFeeVaultRecipient = "0xc701018d24a62e0564a73a5ddb016bb5a32d0cc7"
+  l1FeeVaultRecipient = "0x165ade9ae5e1617a24426888e00f8754e9295ffe"
+  sequencerFeeVaultRecipient = "0xa7dbf370e76551d387a3b01a8ecfccb1d9cd54c3"
   eip1559DenominatorCanyon = 250
   eip1559Denominator = 50
   eip1559Elasticity = 6
   operatorFeeScalar = 0
   operatorFeeConstant = 0
   [chains.roles]
-    l1ProxyAdminOwner = "0x0000000000000000000000000000000000000000"
-    l2ProxyAdminOwner = "0x0000000000000000000000000000000000000000"
-    systemConfigOwner = "0x0000000000000000000000000000000000000000"
-    unsafeBlockSigner = "0x0000000000000000000000000000000000000000"
-    batcher = "0x0000000000000000000000000000000000000000"
-    proposer = "0x0000000000000000000000000000000000000000"
-    challenger = "0x0000000000000000000000000000000000000000"
+    l1ProxyAdminOwner = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
+    l2ProxyAdminOwner = "0xec36e1f2e0755ce1e61e35b88db5fdc7f8752b48"
+    systemConfigOwner = "0x0af0918fa86d79ff8083486f0cb14fe588447423"
+    unsafeBlockSigner = "0xedcf02bac7f1902d76404174159b20101008316c"
+    batcher = "0x07379cfe125840b25e40be03aca5344197aeb0e6"
+    proposer = "0x39e5cea5e5fa7321adc424376b2b94a038015fd3"
+    challenger = "0xafda06beb88cc91b54e5dfd7fe31978f23e0ca2a"
   [chains.deployOverrides]
     l2BlockTime = 1
 
 [[chains]]
   id = "0x000000000000000000000000000000000000000000000000000000026d1642ba"
-  baseFeeVaultRecipient = "0x0000000000000000000000000000000000000000"
-  l1FeeVaultRecipient = "0x0000000000000000000000000000000000000000"
-  sequencerFeeVaultRecipient = "0x0000000000000000000000000000000000000000"
+  baseFeeVaultRecipient = "0x3085b1294d59d98859385056be6b35ecf7df9209"
+  l1FeeVaultRecipient = "0x484374b2297c0676e542c94f798f9d45cf7a41e4"
+  sequencerFeeVaultRecipient = "0xe7967284219c551f69d3b6ab8cf648b8cec63192"
   eip1559DenominatorCanyon = 250
   eip1559Denominator = 50
   eip1559Elasticity = 6
   operatorFeeScalar = 0
   operatorFeeConstant = 0
   [chains.roles]
-    l1ProxyAdminOwner = "0x0000000000000000000000000000000000000000"
-    l2ProxyAdminOwner = "0x0000000000000000000000000000000000000000"
-    systemConfigOwner = "0x0000000000000000000000000000000000000000"
-    unsafeBlockSigner = "0x0000000000000000000000000000000000000000"
-    batcher = "0x0000000000000000000000000000000000000000"
-    proposer = "0x0000000000000000000000000000000000000000"
-    challenger = "0x0000000000000000000000000000000000000000"
+    l1ProxyAdminOwner = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
+    l2ProxyAdminOwner = "0xa85ce36bd8d04add78b1a2858abd8366c6d6fcf1"
+    systemConfigOwner = "0xb936f50e4eaa97ee5b9b9dbccd7999d339b34c34"
+    unsafeBlockSigner = "0xcf960b079a5c454705bd0d7498276eeea86074b3"
+    batcher = "0xf41c6951f468cd98e07cfa0010e07adc8a2f8d4e"
+    proposer = "0xabb13febbf674f6511a3484148a46de7a68ea3bd"
+    challenger = "0x82cce6a15b70dc25dd9dec3ef96bda5b8cbee11e"
   [chains.deployOverrides]
     l2BlockTime = 1
+
+[globalDeployOverrides]
+  l2GenesisInteropTimeOffset = "0x0"
+  l2GenesisIsthmusTimeOffset = "0x0"
+  mipsVersion = 2
 

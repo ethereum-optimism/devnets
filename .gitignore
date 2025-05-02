@@ -6,3 +6,5 @@ book/src
 !book/src/README.md
 
 .venv
+command_*
+.env
