@@ -6,12 +6,16 @@ l1ContractsLocator = "https://storage.googleapis.com/oplabs-contract-artifacts/a
 l2ContractsLocator = "https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-f9a55787fd592c2fa6d4c253a3ad7904ce55f255ab59cc6d2a576c938f021896.tar.gz"
 
 [superchainRoles]
-  proxyAdminOwner = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
-  protocolVersionsOwner = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
-  guardian = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
+  ## TODO: Update to safe PAO
+  proxyAdminOwner = "0x26DF14a0C889de2448d228Ee23B2530550000000"
+  protocolVersionsOwner = "0xe934dc97e347c6acef74364b50125bb8689c0000"
+  guardian = "0xe934dc97e347c6acef74364b5012SuperchainProxyAdminOwner5bb86890000"
+  ## TODO: op-deployer is asking for these
+  SuperchainProxyAdminOwner="0x26DF14a0C889de2448d228Ee23B2530500000000"
+  SuperchainGuardian="0x26DF14a0C889de2448d228Ee23B2530550000000"
 
 [[chains]]
-  id = "0x000000000000000000000000000000000000000000000000000000026d1642b9"
+  id = "0x000000000000000000000000000000000000000000000000000bbbb26d1642b9"
   baseFeeVaultRecipient = "0xc701018d24a62e0564a73a5ddb016bb5a32d0cc7"
   l1FeeVaultRecipient = "0x165ade9ae5e1617a24426888e00f8754e9295ffe"
   sequencerFeeVaultRecipient = "0xa7dbf370e76551d387a3b01a8ecfccb1d9cd54c3"
@@ -29,10 +33,10 @@ l2ContractsLocator = "https://storage.googleapis.com/oplabs-contract-artifacts/a
     proposer = "0x39e5cea5e5fa7321adc424376b2b94a038015fd3"
     challenger = "0xafda06beb88cc91b54e5dfd7fe31978f23e0ca2a"
   [chains.deployOverrides]
-    l2BlockTime = 1
+    l2BlockTime = 2
 
 [[chains]]
-  id = "0x000000000000000000000000000000000000000000000000000000026d1642ba"
+  id = "0x0000000000000000000000000000000000000000000000000000bbb26d1642ba"
   baseFeeVaultRecipient = "0x3085b1294d59d98859385056be6b35ecf7df9209"
   l1FeeVaultRecipient = "0x484374b2297c0676e542c94f798f9d45cf7a41e4"
   sequencerFeeVaultRecipient = "0xe7967284219c551f69d3b6ab8cf648b8cec63192"
@@ -53,7 +57,8 @@ l2ContractsLocator = "https://storage.googleapis.com/oplabs-contract-artifacts/a
     l2BlockTime = 1
 
 [globalDeployOverrides]
-  l2GenesisInteropTimeOffset = "0x0"
+  l2GenesisFjordTimeOffset = "0x0"
+  l2GenesisGraniteTimeOffset = "0x0"
+  l2GenesisHoloceneTimeOffset = "0x0"
   l2GenesisIsthmusTimeOffset = "0x0"
   mipsVersion = 2
-
