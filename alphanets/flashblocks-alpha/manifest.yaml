@@ -1,7 +1,7 @@
 name: flashblocks-alpha
 type: alphanet
 scope: https://github.com/ethereum-optimism/devnets/issues/70
-status: online
+status: offline
 deployed_on: 04-28-2025
 description: |
   Flashblocks Alphanet
