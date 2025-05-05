@@ -20,11 +20,11 @@ l1:
 l2:
   deployment:
     op-deployer:
-      version: op-deployer/v0.3.0-rc.5
+      version: op-contracts/v4.0.0-rc.1
     l1-contracts:
-      version: op-contracts/v3.0.0-rc.2
+      version: op-contracts/v4.0.0-rc.1
     l2-contracts:
-      version: op-contracts/v3.0.0-rc.2
+      version: op-contracts/v4.0.0-rc.1
     overrides:
       mipsVersion: 2
       l2GenesisIsthmusTimeOffset: "0x0"
@@ -42,7 +42,7 @@ l2:
     op-challenger:
       version: op-challenger/v1.4.1-rc.1 # confirmed
     op-supervisor:
-      version: op-supervisor/v0.2.0-dev.4 # confirmed
+      version: op-supervisor/v0.2.0-dev.5 # confirmed
     op-reth:
       version: op-reth/v1.3.12 # Confirmed: @mark
     op-dispute-mon:
@@ -53,15 +53,13 @@ l2:
     - enode://7353cf20a38a59c67139ccceaf4fa94be3487f0ace88ca368c24026f0825ff6983493a6b7c6e4286e18394880f3f450987ca1f26d848b7057e7dfdf3eb6b71a5@34.28.88.99:0?discport=30305
   chains:
   - name: interop-rc-beta-0
-    #TODO: remove 10 prefix
-    chain_id: 10420110009
+    chain_id: 420110009
     features:
       - fp-permissionless
       - interop-hf
       - superroot-migration
   - name: interop-rc-beta-1
-    #TODO: remove 10 prefix
-    chain_id: 10420110010
+    chain_id: 420110010
     features:
       - fp-permissionless
       - interop-hf
