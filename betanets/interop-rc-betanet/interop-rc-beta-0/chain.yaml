@@ -1,5 +1,5 @@
 name: interop-rc-beta-0
-chain_id: 420120009
+chain_id: 420110009
 rpc_url: https://interop-rc-beta-0.optimism.io
 contracts:
   superchainDeployment:

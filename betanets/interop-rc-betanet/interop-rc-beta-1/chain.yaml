@@ -1,0 +1,46 @@
+name: interop-rc-beta-1
+chain_id: 420110010
+rpc_url: https://interop-rc-beta-1.optimism.io
+contracts:
+  superchainDeployment:
+    proxyAdminAddress: 0x26DF14a0C889de2448d228Ee23B2530550b5B774
+    superchainConfigProxyAddress: 0x584ceae10f7d1b485b01b9df49557c6b8721bd11
+    superchainConfigImplAddress: 0x4eee58d4c012713b23b6cb73ba64236eff52eb6e
+    protocolVersionsProxyAddress: 0x50d1f0541b03c89a149e0e59256e8871665176cb
+    protocolVersionsImplAddress: 0x37e15e4d6dffa9e5e320ee1ec036922e563cb76c
+  opChainDeployment:
+    proxyAdminAddress: 0x19397254e9387dee2cf60142989428706348c265
+    addressManagerAddress: 0x71bf7b69110d20b0ab728aacae6818463f258278 
+    l1ERC721BridgeProxyAddress: 0x14929b7291cfcbf7b8446de291d5ca8ed78e7cd6
+    systemConfigProxyAddress: 0xc7ba6cba614bc17540e7b2cd9844d45efcaa0609
+    optimismMintableERC20FactoryProxyAddress: 0xc2838817730258305e43c904aad3a6d97cdfd397
+    l1StandardBridgeProxyAddress: 0x1cafac6b17abe0386068d1ab4c32520b74ff97de
+    l1CrossDomainMessengerProxyAddress: 0x8832bfb936857d84c51331707e9d70a11cb29955
+    optimismPortalProxyAddress: 0xa56700196e5e0564733d7b9f0c4325c868215685
+    ethLockboxProxyAddress: 0x02a38b90c4dbf2cbfd0d7899421f7423e0622d7d
+    disputeGameFactoryProxyAddress: 0xaff9e60c22c21f6849ab73b55755bf7ab550e263
+    anchorStateRegistryProxyAddress: 0xe91b4069b8cbab7dc621c3525b462853467ccf02
+    faultDisputeGameAddress: 0x0000000000000000000000000000000000000000
+    permissionedDisputeGameAddress: 0x45bbee9272d8e4a592c70f7ef4f00cdd7c3332da
+    delayedWETHPermissionedGameProxyAddress: 0x4d353678850e1ad53b965974489e7a4fa184eec1
+    delayedWETHPermissionlessGameProxyAddress: 0x0000000000000000000000000000000000000000
+    dataAvailabilityChallengeProxyAddress: 0x0000000000000000000000000000000000000000
+    dataAvailabilityChallengeImplAddress: 0x0000000000000000000000000000000000000000
+  implementationsDeployment:
+    opcmAddress: 0xf805d76451fbf4beefebd85372fac06c4c83d83b
+    opcmGameTypeAdderAddress: 0x7dd4416735d821bd6564e1265ad4ad8424366309
+    opcmDeployerAddress: 0x42e9ef8cbe5b4e033a9cd7d82f172be7875d73ee
+    opcmUpgraderAddress: 0xde13b206c018b23b65985eab917d4af48b702323
+    opcmInteropMigratorAddress: 0x24e8103c41bc5e908a1c68ea1e14cd61af5edba2
+    delayedWETHImplAddress: 0x33dadc2d1aa9bb613a7ae6b28425ea00d44c6998
+    optimismPortalImplAddress: 0x72c07874fd9eedad233d3a93881f9dc768f3e5d3
+    ethLockboxImplAddress: 0x784d2f03593a42a6e4676a012762f18775ecbbe6
+    preimageOracleSingletonAddress: 0x1fb8cdfc6831fc866ed9c51af8817da5c287add3
+    mipsSingletonAddress: 0xc4c6523ae959f21e83a3b8112f78463231dab40d
+    systemConfigImplAddress: 0x3fade0e6ad67a235632463dbacaf0d2d29db97ff
+    l1CrossDomainMessengerImplAddress: 0xbf8cccc01ea4c24ce82f0e7b8420939273f960e9
+    l1ERC721BridgeImplAddress: 0xddf61cd5106e3ee697c61b0347ff26943f738877
+    l1StandardBridgeImplAddress: 0x3c19a9deb66840d5748d00c8490c6440eb83a2c7
+    optimismMintableERC20FactoryImplAddress: 0x5493f4677a186f64805fe7317d6993ba4863988f
+    disputeGameFactoryImplAddress: 0x024b45b2610f366821872079f873b0b1cdcd3d13
+    anchorStateRegistryImplAddress: 0x2776ea95446255f53d6b7a08755ce17555ad2fd5
