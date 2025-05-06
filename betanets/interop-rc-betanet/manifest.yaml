@@ -42,7 +42,7 @@ l2:
     op-challenger:
       version: op-challenger/v1.4.1-rc.1 # confirmed
     op-supervisor:
-      version: op-supervisor/v0.2.0-dev.5 # confirmed
+      version: op-supervisor/v0.2.0-dev.8 # confirmed
     op-reth:
       version: op-reth/v1.3.12 # Confirmed: @mark
     op-dispute-mon:
