@@ -14,6 +14,8 @@ description: |
   * Audit fixes from interop assets audit
   * Reth with interop sequencing and txpool support
   * Oncall runbooks
+features:
+  - "interop"
 l1:
   name: sepolia
   chain_id: 11155111
@@ -28,11 +30,9 @@ l2:
     overrides:
       mipsVersion: 2
       l2GenesisIsthmusTimeOffset: "0x0"
-      ## TODO: Pick Hardfork Timestamp
-      l2GenesisInteropTimeOffset: "0x0"
   components:
     op-node:
-      version: op-node/v1.13.3-dev.1 # confirmed: @proto
+      version: op-node/v1.13.3-dev.2 # confirmed: @proto
     op-geth:
       version: v1.101503.5-rc.1 # confirmed: @proto
     op-proposer:
