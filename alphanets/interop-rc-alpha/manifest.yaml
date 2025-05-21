@@ -1,7 +1,7 @@
 name: interop-rc-alpha
 type: alphanet
 scope: https://github.com/ethereum-optimism/devnets/issues/11
-status: online
+status: offline
 deployed_on: 03-26-2025
 description: |
  * Interop with FP
