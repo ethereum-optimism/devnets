@@ -1,0 +1,53 @@
+configType = "custom"
+l1ChainID = 11155111
+fundDevAccounts = false
+useInterop = false
+l1ContractsLocator = "tag://op-contracts/v3.0.0-rc.2"
+l2ContractsLocator = "tag://op-contracts/v3.0.0-rc.2"
+
+[superchainRoles]
+  SuperchainProxyAdminOwner = "0x17be380a565115424a1fead3ee4e08a11c9fb540"
+  SuperchainGuardian = "0xfbbe1d8bd1efc1aa2895ae60581019a92b2df1f2"
+  ProtocolVersionsOwner = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
+
+[[chains]]
+  id = "0x00000000000000000000000000000000000000000000000000000000190a5ebb"
+  baseFeeVaultRecipient = "0x28255dc7be0e307df5fd5c585bf9ceadbb560a36"
+  l1FeeVaultRecipient = "0x2764ba83dc2e6df9e853da940d2f199379af3f86"
+  sequencerFeeVaultRecipient = "0xa78dd11f87a8991ab3f4330df41314a281db0663"
+  eip1559DenominatorCanyon = 250
+  eip1559Denominator = 50
+  eip1559Elasticity = 6
+  operatorFeeScalar = 0
+  operatorFeeConstant = 0
+  [chains.roles]
+    l1ProxyAdminOwner = "0x17be380a565115424a1fead3ee4e08a11c9fb540"
+    l2ProxyAdminOwner = "0xf15f4aa783c03b155654af5d74525e196fcca51b"
+    systemConfigOwner = "0x6e04eea82d5422906639de94fa786db3b4d33b3a"
+    unsafeBlockSigner = "0x6bd628d2b5d01d6c0118438452fb1c4b4a977aea"
+    batcher = "0x780e5df35bf706192942e4d06a2330deaae02c6c"
+    proposer = "0x71b5d6135e5577acfcc154637f40e1f8b682f943"
+    challenger = "0xe6dc00655053808ea5aa1185643cf391fe14638c"
+
+[[chains]]
+  id = "0x00000000000000000000000000000000000000000000000000000000190a5ebc"
+  baseFeeVaultRecipient = "0x433eb871de65cb762fea4a6e4d23716806551c0a"
+  l1FeeVaultRecipient = "0xaf4126dfbc1874342b2aae0ecf1ff7a04714706c"
+  sequencerFeeVaultRecipient = "0x007a60e159607b0fcfbe6c2f9b2c45cac85f0220"
+  eip1559DenominatorCanyon = 250
+  eip1559Denominator = 50
+  eip1559Elasticity = 6
+  operatorFeeScalar = 0
+  operatorFeeConstant = 0
+  [chains.roles]
+    l1ProxyAdminOwner = "0x17be380a565115424a1fead3ee4e08a11c9fb540"
+    l2ProxyAdminOwner = "0x0b6a4936e1576ab3111939ba967448de07eca4b8"
+    systemConfigOwner = "0xd97a42cb0703574ca174128300b295939bb6df1a"
+    unsafeBlockSigner = "0xbead9ad2c90162048aad643d096c413e52209730"
+    batcher = "0x56b4e58bcb2336d11677ef1baa7a978e14b1718c"
+    proposer = "0x22d563772e26c6591462233ade5fa6155a64261f"
+    challenger = "0x6cd7a9dd153f8bd687340b3e1d9d62090cc44475"
+
+[globalDeployOverrides]
+  l2GenesisIsthmusTimeOffset = "0x0"
+  mipsVersion = 2
