@@ -1,0 +1,57 @@
+configType = "custom"
+l1ChainID = 11155111
+fundDevAccounts = false
+useInterop = true
+l1ContractsLocator = "https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-1d19b7b1f814b6608f4598cb208c15080e44adb4176a037bcfb9392e8ccea1f2.tar.gz"
+l2ContractsLocator = "https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-1d19b7b1f814b6608f4598cb208c15080e44adb4176a037bcfb9392e8ccea1f2.tar.gz"
+
+[superchainRoles]
+  SuperchainProxyAdminOwner = "0xf21dc53d0f71c9c2cfce0ad6f6827fc22bb398e8"
+  SuperchainGuardian = "0xf21dc53d0f71c9c2cfce0ad6f6827fc22bb398e8"
+  ProtocolVersionsOwner = "0xf21dc53d0f71c9c2cfce0ad6f6827fc22bb398e8"
+
+[[chains]]
+  id = "0x00000000000000000000000000000000000000000000000000000000190a85c7"
+  baseFeeVaultRecipient = "0x3cb46286f44e594f0537058744c5d4b0d76d768e"
+  l1FeeVaultRecipient = "0x8f672822ceaf0584703b451ecbf32b80a97d6bf1"
+  sequencerFeeVaultRecipient = "0x6aeae80bc43aef91d748c041a01dffcbcb89195b"
+  eip1559DenominatorCanyon = 250
+  eip1559Denominator = 50
+  eip1559Elasticity = 6
+  operatorFeeScalar = 0
+  operatorFeeConstant = 0
+  [chains.roles]
+    l1ProxyAdminOwner = "0xf21dc53d0f71c9c2cfce0ad6f6827fc22bb398e8"
+    l2ProxyAdminOwner = "0xad682143db8d817ef039fe5b6c0ca796e515948d"
+    systemConfigOwner = "0x9f6e843b58305871836a399253a1323da02de330"
+    unsafeBlockSigner = "0xac63b2945182b26f381100f27a0ec548fa5d423c"
+    batcher = "0xfd18f4a5661f9a97964ab550b54ed999462a47c7"
+    proposer = "0x453f84b6bcfee668008e0f415463e2e4e801ec45"
+    challenger = "0x62ab2ab3bcc032e2cfb4b924976944fc2acbfafc"
+  [chains.deployOverrides]
+    l2BlockTime = 2
+
+[[chains]]
+  id = "0x00000000000000000000000000000000000000000000000000000000190a85c8"
+  baseFeeVaultRecipient = "0xb1c10182cde7562b7c17ee9c69f5aba7ba86df3a"
+  l1FeeVaultRecipient = "0x163c699ea6b6a1a7fb26eacdab6cfca98219c0ec"
+  sequencerFeeVaultRecipient = "0x2136bfdd79a8eeebec83e0f0ac6a506c2f3ac6a5"
+  eip1559DenominatorCanyon = 250
+  eip1559Denominator = 50
+  eip1559Elasticity = 6
+  operatorFeeScalar = 0
+  operatorFeeConstant = 0
+  [chains.roles]
+    l1ProxyAdminOwner = "0xf21dc53d0f71c9c2cfce0ad6f6827fc22bb398e8"
+    l2ProxyAdminOwner = "0xd555ce61ce89bbd8601a9f7ac855a874e82689c9"
+    systemConfigOwner = "0x2591ab9ee6ba4a3a216a48ab7dfb233eff997e26"
+    unsafeBlockSigner = "0xc7a6dab252da79d1e37d2d6c36ea80ee3a6cd16d"
+    batcher = "0x68da488c46baddc4aa5c58f0c7dd66b1ed92d04b"
+    proposer = "0x3edeb5c0778e73836057978458ec89449b87947d"
+    challenger = "0x7bf94fa11beec0105cf7fedd4bbd0424764d4639"
+  [chains.deployOverrides]
+    l2BlockTime = 1
+
+[globalDeployOverrides]
+  l2GenesisInteropTimeOffset = "0x0"
+  l2GenesisIsthmusTimeOffset = "0x0"
