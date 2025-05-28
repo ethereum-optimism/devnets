@@ -24,6 +24,11 @@ chains:
               kind: "full"
           cl:
             kind: "op-node"
+          flashblocks:
+            builder:
+              kind: "op-rbuilder"
+            rollup-boost:
+              kind: "rollup-boost"
         deps:
           services:
             - "op-supervisor-sequencer-1"
@@ -38,6 +43,11 @@ chains:
               kind: "full"
           cl:
             kind: "op-node"
+          flashblocks:
+            builder:
+              kind: "op-rbuilder"
+            rollup-boost:
+              kind: "rollup-boost"
         deps:
           services:
             - "op-supervisor-sequencer-2"
@@ -138,6 +148,9 @@ chains:
           nodes:
             - "rpc-0"
             - "rpc-1"
+          services:
+            - "op-supervisor-rpc-0"
+            - "op-supervisor-rpc-1"
 
       - kind: "peer-mgmt-service"
         name: "peer-mgmt-service"
@@ -208,6 +221,11 @@ chains:
               kind: "full"
           cl:
             kind: "op-node"
+          flashblocks:
+            builder:
+              kind: "op-rbuilder"
+            rollup-boost:
+              kind: "rollup-boost"
         deps:
           services:
             - "op-supervisor-sequencer-1"
@@ -222,6 +240,11 @@ chains:
               kind: "full"
           cl:
             kind: "op-node"
+          flashblocks:
+            builder:
+              kind: "op-rbuilder"
+            rollup-boost:
+              kind: "rollup-boost"
         deps:
           services:
             - "op-supervisor-sequencer-2"
@@ -322,6 +345,9 @@ chains:
           nodes:
             - "rpc-0"
             - "rpc-1"
+          services:
+            - "op-supervisor-rpc-0"
+            - "op-supervisor-rpc-1"
 
       - kind: "peer-mgmt-service"
         name: "peer-mgmt-service"
