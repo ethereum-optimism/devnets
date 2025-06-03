@@ -1,4 +1,4 @@
-name: rehearsal-1-betanet
+name: rehearsal-0-bn
 type: betanet
 scope: https://github.com/ethereum-optimism/devnets/issues/91
 status: offline
@@ -26,7 +26,7 @@ l2:
     l2-contracts:
       version: op-contracts/v4.0.0-rc.7
     overrides:
-      mipsVersion: 2
+      mipsVersion: 7
       l2GenesisIsthmusTimeOffset: "0x0"
   components:
     op-node:
@@ -54,15 +54,13 @@ l2:
     - enode://524958a8fc12140491f59a78442d38d1f3cb96765136379dca2ce569f0d770de25931fc11ad1bcfe1af3d4db025d23c25a401e23c91f5f53ff281f25bd36e733@34.27.92.24:0?discport=30305
     - enode://7353cf20a38a59c67139ccceaf4fa94be3487f0ace88ca368c24026f0825ff6983493a6b7c6e4286e18394880f3f450987ca1f26d848b7057e7dfdf3eb6b71a5@34.28.88.99:0?discport=30305
   chains:
-  - name: rehearsal-1-betanet-0
+  - name: rehearsal-0-bn-0
     chain_id: 420120009
     deployment:
       overrides:
         l2BlockTime: 1
-    features:
-  - name: rehearsal-1-betanet-1
+  - name: rehearsal-0-bn-1
     chain_id: 420120010
     deployment:
       overrides:
         l2BlockTime: 2
-    features:
