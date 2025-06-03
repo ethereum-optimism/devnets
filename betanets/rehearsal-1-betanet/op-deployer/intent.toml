@@ -50,4 +50,3 @@ opcmAddress = "0x0fcd165e2531c934a186e3a412d58daa241e0ad0"
 [globalDeployOverrides]
   l2GenesisIsthmusTimeOffset = "0x0"
   mipsVersion = 7
-
