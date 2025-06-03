@@ -382,6 +382,26 @@ chains:
           # services:
           #   - "op-supervisor-rpc-0"
 
+      - kind: "op-dispute-mon"
+        name: "op-dispute-mon"
+        spec:
+          kind: "op-dispute-mon"
+        deps:
+          nodes:
+            - "rpc-0"
+          # services:
+          #   - "op-supervisor-rpc-0"
+
+      - kind: "op-challenger-runner"
+        name: "op-challenger-runner"
+        spec:
+          kind: "op-challenger-runner"
+        deps:
+          nodes:
+            - "rpc-0"
+          # services:
+          #   - "op-supervisor-rpc-0"
+
       - kind: "public-rpc"
         name: "proxyd-public"
         spec:

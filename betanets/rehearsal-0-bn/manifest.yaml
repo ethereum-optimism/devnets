@@ -59,8 +59,12 @@ l2:
     deployment:
       overrides:
         l2BlockTime: 2
+    features:
+      - fp-permissionless
   - name: rehearsal-0-bn-1
     chain_id: 420120010
     deployment:
       overrides:
         l2BlockTime: 1
+    features:
+      - fp-permissionless
