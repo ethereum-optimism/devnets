@@ -1,9 +1,9 @@
 configType = "custom"
 l1ChainID = 11155111
+opcmAddress = "0x0fcd165e2531c934a186e3a412d58daa241e0ad0"
 fundDevAccounts = false
 l1ContractsLocator = "tag://op-contracts/v4.0.0-rc.7"
 l2ContractsLocator = "tag://op-contracts/v4.0.0-rc.7"
-opcmAddress = "0x0fcd165e2531c934a186e3a412d58daa241e0ad0"
 
 [[chains]]
   id = "0x00000000000000000000000000000000000000000000000000000000190a85c9"
@@ -16,7 +16,7 @@ opcmAddress = "0x0fcd165e2531c934a186e3a412d58daa241e0ad0"
   operatorFeeScalar = 0
   operatorFeeConstant = 0
   [chains.roles]
-    l1ProxyAdminOwner = "0x26DF14a0C889de2448d228Ee23B2530550b5B774"
+    l1ProxyAdminOwner = "0x26df14a0c889de2448d228ee23b2530550b5b774"
     l2ProxyAdminOwner = "0x7614591245816314c2312cd5e083546114f2e7cf"
     systemConfigOwner = "0xfbe0d73aaa16fbe849f6def6711c08f69b289df8"
     unsafeBlockSigner = "0xf17e730fcebbfb2166654f7e6ed22fd18f3b8032"
@@ -37,7 +37,7 @@ opcmAddress = "0x0fcd165e2531c934a186e3a412d58daa241e0ad0"
   operatorFeeScalar = 0
   operatorFeeConstant = 0
   [chains.roles]
-    l1ProxyAdminOwner = "0x26DF14a0C889de2448d228Ee23B2530550b5B774"
+    l1ProxyAdminOwner = "0x26df14a0c889de2448d228ee23b2530550b5b774"
     l2ProxyAdminOwner = "0x0207e017dbfbe71ba3b13cccfadf73b3f81337fa"
     systemConfigOwner = "0xa9d34b19250a295fd59db9a131c18167114fac12"
     unsafeBlockSigner = "0x2229cfe26a83225fa80dbf6564e6dace44e1057c"
@@ -50,3 +50,4 @@ opcmAddress = "0x0fcd165e2531c934a186e3a412d58daa241e0ad0"
 [globalDeployOverrides]
   l2GenesisIsthmusTimeOffset = "0x0"
   mipsVersion = 7
+
