@@ -14,6 +14,8 @@ description: |
   * Audit fixes from interop assets audit
   * Reth with interop sequencing and txpool support
   * Oncall runbooks
+features:
+  - "interop"
 l1:
   name: sepolia
   chain_id: 11155111
@@ -30,7 +32,7 @@ l2:
       l2GenesisIsthmusTimeOffset: "0x0"
   components:
     op-node:
-      version: op-node/v1.13.4-dev.1
+      version: op-node/v1.13.4-dev.2
     op-geth:
       version: op-geth/v1.101511.1-dev.1 
     op-proposer:
@@ -46,7 +48,7 @@ l2:
     op-dispute-mon:
       version: op-dispute-mon/v1.4.1-rc.3
     proxyd:
-      version: proxyd/v4.16.1
+      version: proxyd/v4.16.0
     op-conductor:
       version: op-conductor/v0.6.0-rc.1
   bootnodes:
