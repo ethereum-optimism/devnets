@@ -156,6 +156,14 @@ chains:
           nodes:
             - "rpc-0"
 
+      - kind: "faucet"
+        name: "op-faucet"
+        spec:
+          kind: "op-faucet"
+        deps:
+          nodes:
+            - "rpc-0"
+
   - nodes:
       - kind: "node"
         name: "sequencer-0"
@@ -317,6 +325,14 @@ chains:
         name: "op-challenger-runner"
         spec:
           kind: "op-challenger-runner"
+        deps:
+          nodes:
+            - "rpc-0"
+
+      - kind: "faucet"
+        name: "op-faucet"
+        spec:
+          kind: "op-faucet"
         deps:
           nodes:
             - "rpc-0"

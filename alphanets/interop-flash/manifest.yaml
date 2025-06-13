@@ -26,7 +26,7 @@ l2:
       l2GenesisIsthmusTimeOffset: "0x0"
   components:
     op-node:
-      version: ff50fe42b2ad7b8ffb8653784d27280159cf4f2a
+      version: caace73d1f0b5a2033315f487d26cc8d7faeae95
     op-geth:
       version: op-geth/v1.101511.0-rc.1
     op-reth:
@@ -36,11 +36,11 @@ l2:
     op-batcher:
       version: op-batcher/v1.13.1-rc.1
     op-supervisor:
-      version: 84d9c84034e5aca116cafddd0ee57cc59fbcd873
+      version: caace73d1f0b5a2033315f487d26cc8d7faeae95
     rollup-boost:
-      version: rollup-boost/0.6.2
+      version: rollup-boost/0.7.0
     op-rbuilder:
-      version: op-rbuilder/sha-4aee498
+      version: op-rbuilder/sha-30bf302
     op-conductor:
       version: op-conductor/v0.6.0-rc.1
   bootnodes:
