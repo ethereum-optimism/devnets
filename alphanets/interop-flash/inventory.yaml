@@ -10,6 +10,11 @@ chains:
               kind: "full"
           cl:
             kind: "op-node"
+          flashblocks:
+            builder:
+              kind: "op-rbuilder"
+            rollup-boost:
+              kind: "rollup-boost"
         deps:
           services:
             - "op-supervisor-sequencer-0"
@@ -195,6 +200,14 @@ chains:
             - "rpc-0"
           services:
             - "op-supervisor-rpc-0"
+
+      - kind: "faucet"
+        name: "op-faucet"
+        spec:
+          kind: "op-faucet"
+        deps:
+          nodes:
+            - "rpc-0"
 
   - nodes:
       - kind: "node"
@@ -207,6 +220,11 @@ chains:
               kind: "full"
           cl:
             kind: "op-node"
+          flashblocks:
+            builder:
+              kind: "op-rbuilder"
+            rollup-boost:
+              kind: "rollup-boost"
         deps:
           services:
             - "op-supervisor-sequencer-0"
@@ -392,6 +410,14 @@ chains:
             - "rpc-0"
           services:
             - "op-supervisor-rpc-0"
+
+      - kind: "faucet"
+        name: "op-faucet"
+        spec:
+          kind: "op-faucet"
+        deps:
+          nodes:
+            - "rpc-0"
 
 services:
 
