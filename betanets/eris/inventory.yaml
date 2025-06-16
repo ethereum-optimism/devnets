@@ -10,6 +10,11 @@ chains:
               kind: "full"
           cl:
             kind: "op-node"
+          flashblocks:
+            builder:
+              kind: "op-rbuilder"
+            rollup-boost:
+              kind: "rollup-boost"
 
       - kind: "node"
         name: "sequencer-1"
@@ -21,6 +26,11 @@ chains:
               kind: "full"
           cl:
             kind: "op-node"
+          flashblocks:
+            builder:
+              kind: "op-rbuilder"
+            rollup-boost:
+              kind: "rollup-boost"
 
       - kind: "node"
         name: "sequencer-2"
@@ -32,6 +42,11 @@ chains:
               kind: "full"
           cl:
             kind: "op-node"
+          flashblocks:
+            builder:
+              kind: "op-rbuilder"
+            rollup-boost:
+              kind: "rollup-boost"
 
       - kind: "node"
         name: "rpc-0"
