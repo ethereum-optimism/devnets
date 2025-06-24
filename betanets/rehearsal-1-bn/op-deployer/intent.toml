@@ -2,8 +2,8 @@ configType = "custom"
 l1ChainID = 11155111
 opcmAddress = "0x0fcd165e2531c934a186e3a412d58daa241e0ad0"
 fundDevAccounts = false
-l1ContractsLocator = "tag://op-contracts/v4.0.0-rc.8"
-l2ContractsLocator = "tag://op-contracts/v4.0.0-rc.8"
+l1ContractsLocator = "tag://op-contracts/v4.0.0-rc.7"
+l2ContractsLocator = "tag://op-contracts/v4.0.0-rc.7"
 
 [[chains]]
   id = "0x00000000000000000000000000000000000000000000000000000000190a85cb"
@@ -47,3 +47,6 @@ l2ContractsLocator = "tag://op-contracts/v4.0.0-rc.8"
   [chains.deployOverrides]
     l2BlockTime = 2
 
+[globalDeployOverrides]
+  l2GenesisIsthmusTimeOffset = "0x0"
+  mipsVersion = 7
