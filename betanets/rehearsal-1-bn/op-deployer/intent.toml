@@ -1,0 +1,52 @@
+configType = "custom"
+l1ChainID = 11155111
+opcmAddress = "0x0fcd165e2531c934a186e3a412d58daa241e0ad0"
+fundDevAccounts = false
+l1ContractsLocator = "tag://op-contracts/v4.0.0-rc.7"
+l2ContractsLocator = "tag://op-contracts/v4.0.0-rc.7"
+
+[[chains]]
+  id = "0x00000000000000000000000000000000000000000000000000000000190a85cb"
+  baseFeeVaultRecipient = "0x4970333b56f20447e8de093285b604c181a143ef"
+  l1FeeVaultRecipient = "0xe0b6bfe28b5997d41901469869c36b4279cca4f3"
+  sequencerFeeVaultRecipient = "0xd2d39abf1cf7690691a0ad55b79aebe890be572a"
+  eip1559DenominatorCanyon = 250
+  eip1559Denominator = 50
+  eip1559Elasticity = 6
+  operatorFeeScalar = 0
+  operatorFeeConstant = 0
+  [chains.roles]
+    l1ProxyAdminOwner = "0x26df14a0c889de2448d228ee23b2530550b5b774"
+    l2ProxyAdminOwner = "0xa475690435f454807b9ecdb4759e4673e3a9652c"
+    systemConfigOwner = "0x015bff7da797ad476841c0bb20fe065168de3792"
+    unsafeBlockSigner = "0x30f3a533c41e9493c22d939d4b15d237ba0d15c6"
+    batcher = "0x5ad1f644b5c9473a97de8937810e2f50fe28f934"
+    proposer = "0x31cfe1d42f4583f45a11300c78b19e80900496d3"
+    challenger = "0xb99908c399869f963b7d4342082e0f2f09595004"
+  [chains.deployOverrides]
+    l2BlockTime = 2
+
+[[chains]]
+  id = "0x00000000000000000000000000000000000000000000000000000000190a85cc"
+  baseFeeVaultRecipient = "0x7ae87ccba3a165717ebbcfc2835af4b047842164"
+  l1FeeVaultRecipient = "0x2e64415a01757f45b125fac9844a80aa68dc5d16"
+  sequencerFeeVaultRecipient = "0x98dd3a6097ac6f05a07d223269160f4b50d458cd"
+  eip1559DenominatorCanyon = 250
+  eip1559Denominator = 50
+  eip1559Elasticity = 6
+  operatorFeeScalar = 0
+  operatorFeeConstant = 0
+  [chains.roles]
+    l1ProxyAdminOwner = "0x26df14a0c889de2448d228ee23b2530550b5b774"
+    l2ProxyAdminOwner = "0x0784281a078b3e1a8e37fe012a0795ecc373fd2d"
+    systemConfigOwner = "0xa7be2b1ae8394e09d49f2a1326e0cb0d392bf41e"
+    unsafeBlockSigner = "0x3068a56c07fe44dbe1a9fc648b7961dd0eb2b8eb"
+    batcher = "0xa1c423c18f5ef44d6eb9c31066f64226e04cb6ab"
+    proposer = "0x39ca7602b9ed8f8a303ee799c9a210ec704fd6cc"
+    challenger = "0x63186523cdc43c6dcb4fd95a9073c9d140a69ced"
+  [chains.deployOverrides]
+    l2BlockTime = 2
+
+[globalDeployOverrides]
+  l2GenesisIsthmusTimeOffset = "0x0"
+  mipsVersion = 7
