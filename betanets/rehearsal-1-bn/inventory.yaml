@@ -226,6 +226,14 @@ chains:
           # services:
           #   - "op-supervisor-rpc-0"
 
+      - kind: "faucet"
+        name: "op-faucet"
+        spec:
+          kind: "op-faucet"
+        deps:
+          nodes:
+            - "rpc-0"
+
   - nodes:
       - kind: "node"
         name: "sequencer-0"
@@ -453,7 +461,20 @@ chains:
             - "sequencer-1"
             - "sequencer-2"
 
+      - kind: "faucet"
+        name: "op-faucet"
+        spec:
+          kind: "op-faucet"
+        deps:
+          nodes:
+            - "rpc-0"
+
 services:
+
+  - kind: "test-runner"
+    name: "op-acceptor"
+    spec:
+      kind: "op-acceptor"
   # - kind: "supervisor"
   #   name: "op-supervisor-sequencer-0"
   #   spec:
