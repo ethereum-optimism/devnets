@@ -15,6 +15,7 @@ description: |
   * Reth with interop sequencing and txpool support
   * Oncall runbooks
 features:
+  - "interop"
 l1:
   name: sepolia
   chain_id: 11155111
