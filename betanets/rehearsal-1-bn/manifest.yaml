@@ -63,6 +63,7 @@ l2:
         l2BlockTime: 2
     features:
       - fp-permissionless
+      - fp-interop
   - name: rehearsal-1-bn-1
     chain_id: 420120012
     deployment:
