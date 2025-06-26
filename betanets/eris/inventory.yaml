@@ -142,6 +142,16 @@ chains:
             - "rpc-1"
             - "snapsync-0"
             - "snapsync-1"
+      
+      - kind: "flashblocks-websocket-proxy"
+        name: "flashblocks-websocket-proxy-0"
+        spec:
+          kind: "flashblocks-websocket-proxy"
+        deps:
+          nodes:
+            - "sequencer-0"
+            - "sequencer-1"
+            - "sequencer-2"
 
       - kind: "op-conductor-mon"
         name: "op-conductor-mon"
