@@ -29,7 +29,7 @@ l2:
     op-geth:
       version: op-geth/v1.101511.0-rc.1
     op-reth:
-      version: op-reth/v1.4.3
+      version: op-reth/v1.4.8
     op-proposer:
       version: op-proposer/v1.10.0-rc.3
     op-batcher:
