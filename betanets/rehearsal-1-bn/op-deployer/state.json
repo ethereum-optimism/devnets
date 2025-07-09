@@ -22,7 +22,7 @@
         "roles": {
           "l1ProxyAdminOwner": "0x26df14a0c889de2448d228ee23b2530550b5b774",
           "l2ProxyAdminOwner": "0xa475690435f454807b9ecdb4759e4673e3a9652c",
-          "systemConfigOwner": "0x015bff7da797ad476841c0bb20fe065168de3792",
+          "systemConfigOwner": "0x1A18bd2A868898EDDe75C54013baCc1938d399aC",
           "unsafeBlockSigner": "0x30f3a533c41e9493c22d939d4b15d237ba0d15c6",
           "batcher": "0x5ad1f644b5c9473a97de8937810e2f50fe28f934",
           "proposer": "0x31cfe1d42f4583f45a11300c78b19e80900496d3",
