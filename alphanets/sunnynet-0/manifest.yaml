@@ -15,9 +15,9 @@ l2:
     op-deployer:
       version: op-deployer/v0.4.0-rc.4
     l1-contracts:
-      version: op-contracts/v4.0.0-rc.7
+      version: op-contracts/v4.0.0
     l2-contracts:
-      version: op-contracts/v4.0.0-rc.7
+      version: op-contracts/v4.0.0
     overrides:
       mipsVersion: 7
       l2GenesisIsthmusTimeOffset: "0x0"
