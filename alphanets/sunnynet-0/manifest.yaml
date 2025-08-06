@@ -1,0 +1,51 @@
+name: sunnynet-0-an
+type: alphanet
+scope:
+status: offline
+deployed_on: 08-06-2025
+description: |
+  * Sunny Days hackathon interop network
+features:
+  - "interop"
+l1:
+  name: sepolia
+  chain_id: 11155111
+l2:
+  deployment:
+    op-deployer:
+      version: op-deployer/v0.4.0-rc.4
+    l1-contracts:
+      version: op-contracts/v4.0.0-rc.7
+    l2-contracts:
+      version: op-contracts/v4.0.0-rc.7
+    overrides:
+      mipsVersion: 7
+      l2GenesisIsthmusTimeOffset: "0x0"
+  components:
+    op-node:
+      version: op-node/d5a1ad96c808a545e8fb116f58d92fbe3d58a0c2
+    op-geth:
+      version: op-geth/da473e02b40c98444df4453f3e11fdc84646bc1e
+    op-batcher:
+      version: op-batcher/d5a1ad96c808a545e8fb116f58d92fbe3d58a0c2
+    op-supervisor:
+      version: op-supervisor/d5a1ad96c808a545e8fb116f58d92fbe3d58a0c2
+    proxyd:
+      version: proxyd/v4.16.2
+    op-conductor:
+      version: op-conductor/v0.7.0
+  bootnodes:
+    - enode://e63f16f93b44938a43ba8304d9948da3304e47c7a14fb1ce9d75194f2bd6784665aab18a8b38dc7772cd9a7fa71dd51997cc6cd8af0fc8915bc2fddcb68dfc87@34.123.30.27:0?discport=30305
+    - enode://524958a8fc12140491f59a78442d38d1f3cb96765136379dca2ce569f0d770de25931fc11ad1bcfe1af3d4db025d23c25a401e23c91f5f53ff281f25bd36e733@34.27.92.24:0?discport=30305
+    - enode://7353cf20a38a59c67139ccceaf4fa94be3487f0ace88ca368c24026f0825ff6983493a6b7c6e4286e18394880f3f450987ca1f26d848b7057e7dfdf3eb6b71a5@34.28.88.99:0?discport=30305
+  chains:
+  - name: sunnynet-0-an-0
+    chain_id: 420120013
+    deployment:
+      overrides:
+        l2BlockTime: 2
+  - name: sunnynet-0-an-1
+    chain_id: 420120014
+    deployment:
+      overrides:
+        l2BlockTime: 1
