@@ -23,13 +23,13 @@ l2:
       l2GenesisIsthmusTimeOffset: "0x0"
   components:
     op-node:
-      version: op-node/develop
+      version: op-node/d5a1ad96c808a545e8fb116f58d92fbe3d58a0c2
     op-geth:
       version: op-geth/da473e02b40c98444df4453f3e11fdc84646bc1e
     op-batcher:
-      version: op-batcher/develop
+      version: op-batcher/d5a1ad96c808a545e8fb116f58d92fbe3d58a0c2
     op-supervisor:
-      version: op-supervisor/develop
+      version: op-supervisor/d5a1ad96c808a545e8fb116f58d92fbe3d58a0c2
     proxyd:
       version: proxyd/v4.16.2
     op-conductor:
@@ -40,12 +40,12 @@ l2:
     - enode://7353cf20a38a59c67139ccceaf4fa94be3487f0ace88ca368c24026f0825ff6983493a6b7c6e4286e18394880f3f450987ca1f26d848b7057e7dfdf3eb6b71a5@34.28.88.99:0?discport=30305
   chains:
   - name: sunnynet-0-an-0
-    chain_id: 420120011
+    chain_id: 420120013
     deployment:
       overrides:
         l2BlockTime: 2
   - name: sunnynet-0-an-1
-    chain_id: 420120012
+    chain_id: 420120014
     deployment:
       overrides:
         l2BlockTime: 1

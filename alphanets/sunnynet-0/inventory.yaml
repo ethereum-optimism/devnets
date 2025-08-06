@@ -71,20 +71,6 @@ chains:
             - "op-supervisor-rpc-1"
 
       - kind: "node"
-        name: "rpc-2"
-        spec:
-          kind: "rpc"
-          el:
-            kind: "op-geth"
-            spec:
-              kind: "archive"
-          cl:
-            kind: "op-node"
-        deps:
-          services:
-            - "op-supervisor-rpc-2"
-
-      - kind: "node"
         name: "snapsync-0"
         spec:
           kind: "snapsync"
@@ -112,31 +98,7 @@ chains:
           services:
             - "op-supervisor-snapsync-1"
 
-      - kind: "node"
-        name: "snapsync-2"
-        spec:
-          kind: "snapsync"
-          el:
-            kind: "op-geth"
-            spec:
-              kind: "full"
-          cl:
-            kind: "op-node"
-        deps:
-          services:
-            - "op-supervisor-snapsync-2"
-
     services:
-
-      - kind: "proposer"
-        name: "op-proposer"
-        spec:
-          kind: "op-proposer"
-        deps:
-          nodes:
-            - "rpc-0"
-          services:
-            - "op-supervisor-rpc-0"
 
       - kind: "batcher"
         name: "op-batcher"
@@ -171,10 +133,8 @@ chains:
             - "sequencer-2"
             - "rpc-0"
             - "rpc-1"
-            - "rpc-2"
             - "snapsync-0"
             - "snapsync-1"
-            - "snapsync-2"
 
       - kind: "op-conductor-mon"
         name: "op-conductor-mon"
@@ -276,20 +236,6 @@ chains:
             - "op-supervisor-rpc-1"
 
       - kind: "node"
-        name: "rpc-2"
-        spec:
-          kind: "rpc"
-          el:
-            kind: "op-geth"
-            spec:
-              kind: "archive"
-          cl:
-            kind: "op-node"
-        deps:
-          services:
-            - "op-supervisor-rpc-2"
-
-      - kind: "node"
         name: "snapsync-0"
         spec:
           kind: "snapsync"
@@ -316,20 +262,6 @@ chains:
         deps:
           services:
             - "op-supervisor-snapsync-1"
-
-      - kind: "node"
-        name: "snapsync-2"
-        spec:
-          kind: "snapsync"
-          el:
-            kind: "op-reth"
-            spec:
-              kind: "full"
-          cl:
-            kind: "op-node"
-        deps:
-          services:
-            - "op-supervisor-snapsync-2"
 
     services:
 
@@ -366,10 +298,8 @@ chains:
             - "sequencer-2"
             - "rpc-0"
             - "rpc-1"
-            - "rpc-2"
             - "snapsync-0"
             - "snapsync-1"
-            - "snapsync-2"
 
       - kind: "op-conductor-mon"
         name: "op-conductor-mon"
@@ -447,14 +377,6 @@ services:
         - "rpc-1"
 
   - kind: "supervisor"
-    name: "op-supervisor-rpc-2"
-    spec:
-      kind: "op-supervisor"
-    deps:
-      nodes:
-        - "rpc-2"
-
-  - kind: "supervisor"
     name: "op-supervisor-snapsync-0"
     spec:
       kind: "op-supervisor"
@@ -469,11 +391,3 @@ services:
     deps:
       nodes:
         - "snapsync-1"
-
-  - kind: "supervisor"
-    name: "op-supervisor-snapsync-2"
-    spec:
-      kind: "op-supervisor"
-    deps:
-      nodes:
-        - "snapsync-2"
