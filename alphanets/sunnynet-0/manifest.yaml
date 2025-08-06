@@ -1,6 +1,6 @@
 name: sunnynet-0-an
 type: alphanet
-scope: https://github.com/ethereum-optimism/devnets/issues/999
+scope:
 status: offline
 deployed_on: 08-06-2025
 description: |
