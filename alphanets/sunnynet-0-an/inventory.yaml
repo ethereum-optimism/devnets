@@ -100,6 +100,16 @@ chains:
 
     services:
 
+      - kind: "proposer"
+        name: "op-proposer"
+        spec:
+          kind: "op-proposer"
+        deps:
+          nodes:
+            - "rpc-0"
+          services:
+            - "op-supervisor-rpc-0"
+
       - kind: "batcher"
         name: "op-batcher"
         spec:
@@ -264,6 +274,16 @@ chains:
             - "op-supervisor-snapsync-1"
 
     services:
+
+      - kind: "proposer"
+        name: "op-proposer"
+        spec:
+          kind: "op-proposer"
+        deps:
+          nodes:
+            - "rpc-0"
+          services:
+            - "op-supervisor-rpc-0"
 
       - kind: "batcher"
         name: "op-batcher"
