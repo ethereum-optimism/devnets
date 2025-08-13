@@ -100,16 +100,6 @@ chains:
 
     services:
 
-      - kind: "proposer"
-        name: "op-proposer"
-        spec:
-          kind: "op-proposer"
-        deps:
-          nodes:
-            - "rpc-0"
-          services:
-            - "op-supervisor-rpc-0"
-
       - kind: "batcher"
         name: "op-batcher"
         spec:
@@ -119,16 +109,6 @@ chains:
             - "sequencer-0"
             - "sequencer-1"
             - "sequencer-2"
-
-      - kind: "challenger"
-        name: "op-challenger"
-        spec:
-          kind: "op-challenger"
-        deps:
-          nodes:
-            - "rpc-0"
-          services:
-            - "op-supervisor-rpc-0"
 
       - kind: "public-rpc"
         name: "proxyd-public"
@@ -175,16 +155,6 @@ chains:
             - "sequencer-0"
             - "sequencer-1"
             - "sequencer-2"
-
-      - kind: "op-dispute-mon"
-        name: "op-dispute-mon"
-        spec:
-          kind: "op-dispute-mon"
-        deps:
-          nodes:
-            - "rpc-0"
-          services:
-            - "op-supervisor-rpc-0"
 
       - kind: "faucet"
         name: "op-faucet"
@@ -295,16 +265,6 @@ chains:
 
     services:
 
-      - kind: "proposer"
-        name: "op-proposer"
-        spec:
-          kind: "op-proposer"
-        deps:
-          nodes:
-            - "rpc-0"
-          services:
-            - "op-supervisor-rpc-0"
-
       - kind: "batcher"
         name: "op-batcher"
         spec:
@@ -314,16 +274,6 @@ chains:
             - "sequencer-0"
             - "sequencer-1"
             - "sequencer-2"
-
-      - kind: "challenger"
-        name: "op-challenger"
-        spec:
-          kind: "op-challenger"
-        deps:
-          nodes:
-            - "rpc-0"
-          services:
-            - "op-supervisor-rpc-0"
 
       - kind: "public-rpc"
         name: "proxyd-public"
@@ -370,16 +320,6 @@ chains:
             - "sequencer-0"
             - "sequencer-1"
             - "sequencer-2"
-
-      - kind: "op-dispute-mon"
-        name: "op-dispute-mon"
-        spec:
-          kind: "op-dispute-mon"
-        deps:
-          nodes:
-            - "rpc-0"
-          services:
-            - "op-supervisor-rpc-0"
 
       - kind: "faucet"
         name: "op-faucet"
