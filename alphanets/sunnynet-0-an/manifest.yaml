@@ -25,7 +25,7 @@ l2:
     op-node:
       version: op-node/d5a1ad96c808a545e8fb116f58d92fbe3d58a0c2
     op-geth:
-      version: op-geth/da473e02b40c98444df4453f3e11fdc84646bc1e
+      version: op-geth/v1.101511.1
     op-batcher:
       version: op-batcher/d5a1ad96c808a545e8fb116f58d92fbe3d58a0c2
     op-supervisor:
