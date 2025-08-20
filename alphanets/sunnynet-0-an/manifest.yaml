@@ -5,8 +5,6 @@ status: offline
 deployed_on: 08-06-2025
 description: |
   * Sunny Days hackathon interop network
-features:
-  - "interop"
 l1:
   name: sepolia
   chain_id: 11155111

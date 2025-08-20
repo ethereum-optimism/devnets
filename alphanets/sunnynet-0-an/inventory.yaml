@@ -336,58 +336,58 @@ services:
     spec:
       kind: "op-acceptor"
 
-  - kind: "supervisor"
-    name: "op-supervisor-sequencer-0"
-    spec:
-      kind: "op-supervisor"
-    deps:
-      nodes:
-        - "sequencer-0"
+  # - kind: "supervisor"
+  #   name: "op-supervisor-sequencer-0"
+  #   spec:
+  #     kind: "op-supervisor"
+  #   deps:
+  #     nodes:
+  #       - "sequencer-0"
 
-  - kind: "supervisor"
-    name: "op-supervisor-sequencer-1"
-    spec:
-      kind: "op-supervisor"
-    deps:
-      nodes:
-        - "sequencer-1"
+  # - kind: "supervisor"
+  #   name: "op-supervisor-sequencer-1"
+  #   spec:
+  #     kind: "op-supervisor"
+  #   deps:
+  #     nodes:
+  #       - "sequencer-1"
 
-  - kind: "supervisor"
-    name: "op-supervisor-sequencer-2"
-    spec:
-      kind: "op-supervisor"
-    deps:
-      nodes:
-        - "sequencer-2"
+  # - kind: "supervisor"
+  #   name: "op-supervisor-sequencer-2"
+  #   spec:
+  #     kind: "op-supervisor"
+  #   deps:
+  #     nodes:
+  #       - "sequencer-2"
 
-  - kind: "supervisor"
-    name: "op-supervisor-rpc-0"
-    spec:
-      kind: "op-supervisor"
-    deps:
-      nodes:
-        - "rpc-0"
+  # - kind: "supervisor"
+  #   name: "op-supervisor-rpc-0"
+  #   spec:
+  #     kind: "op-supervisor"
+  #   deps:
+  #     nodes:
+  #       - "rpc-0"
 
-  - kind: "supervisor"
-    name: "op-supervisor-rpc-1"
-    spec:
-      kind: "op-supervisor"
-    deps:
-      nodes:
-        - "rpc-1"
+  # - kind: "supervisor"
+  #   name: "op-supervisor-rpc-1"
+  #   spec:
+  #     kind: "op-supervisor"
+  #   deps:
+  #     nodes:
+  #       - "rpc-1"
 
-  - kind: "supervisor"
-    name: "op-supervisor-snapsync-0"
-    spec:
-      kind: "op-supervisor"
-    deps:
-      nodes:
-        - "snapsync-0"
+  # - kind: "supervisor"
+  #   name: "op-supervisor-snapsync-0"
+  #   spec:
+  #     kind: "op-supervisor"
+  #   deps:
+  #     nodes:
+  #       - "snapsync-0"
 
-  - kind: "supervisor"
-    name: "op-supervisor-snapsync-1"
-    spec:
-      kind: "op-supervisor"
-    deps:
-      nodes:
-        - "snapsync-1"
+  # - kind: "supervisor"
+  #   name: "op-supervisor-snapsync-1"
+  #   spec:
+  #     kind: "op-supervisor"
+  #   deps:
+  #     nodes:
+  #       - "snapsync-1"
