@@ -1,8 +1,8 @@
 configType = "custom"
 l1ChainID = 11155111
 fundDevAccounts = false
-l1ContractsLocator = "tag://op-contracts/v4.0.0"
-l2ContractsLocator = "tag://op-contracts/v4.0.0"
+l1ContractsLocator = "https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-62483b5a18c2edc3ca09bf09130b79a7c4598191af8b98a18ad6477b63917def.tar.gz"
+l2ContractsLocator = "https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-62483b5a18c2edc3ca09bf09130b79a7c4598191af8b98a18ad6477b63917def.tar.gz"
 
 [superchainRoles]
   SuperchainProxyAdminOwner = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
