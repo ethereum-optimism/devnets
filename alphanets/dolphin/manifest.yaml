@@ -1,7 +1,7 @@
 name: dolphin
 type: alphanet
 scope: https://github.com/ethereum-optimism/devnets/issues/12
-status: online
+status: offline
 deployed_on: 04-02-2025
 description: |
   * Operator Fee

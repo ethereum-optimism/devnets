@@ -72,6 +72,26 @@ chains:
             - "rpc-0"
             - "rpc-1"
 
+      - kind: "op-conductor-mon"
+        name: "op-conductor-mon"
+        spec:
+          kind: "op-conductor-mon"
+        deps:
+          nodes:
+            - "sequencer-0"
+            - "sequencer-1"
+            - "sequencer-2"
+
+      - kind: "op-conductor-ops"
+        name: "op-conductor-ops"
+        spec:
+          kind: "op-conductor-ops"
+        deps:
+          nodes:
+            - "sequencer-0"
+            - "sequencer-1"
+            - "sequencer-2"
+
   - nodes:
       - kind: "node"
         name: "sequencer-0"
@@ -143,6 +163,26 @@ chains:
             - "sequencer-0"
             - "rpc-0"
             - "rpc-1"
+
+      - kind: "op-conductor-mon"
+        name: "op-conductor-mon"
+        spec:
+          kind: "op-conductor-mon"
+        deps:
+          nodes:
+            - "sequencer-0"
+            - "sequencer-1"
+            - "sequencer-2"
+
+      - kind: "op-conductor-ops"
+        name: "op-conductor-ops"
+        spec:
+          kind: "op-conductor-ops"
+        deps:
+          nodes:
+            - "sequencer-0"
+            - "sequencer-1"
+            - "sequencer-2"
 
 services:
   - kind: "supervisor"

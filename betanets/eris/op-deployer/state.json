@@ -13,8 +13,8 @@
     },
     "fundDevAccounts": false,
     "useInterop": false,
-    "l1ContractsLocator": "tag://op-contracts/v3.0.0-rc.2",
-    "l2ContractsLocator": "tag://op-contracts/v3.0.0-rc.2",
+    "l1ContractsLocator": "https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-e2e653e30fd170bae3909569fd3e30f7fedda986c1805cb5e3c7655f84502760.tar.gz",
+    "l2ContractsLocator": "https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-e2e653e30fd170bae3909569fd3e30f7fedda986c1805cb5e3c7655f84502760.tar.gz",
     "chains": [
       {
         "id": "0x00000000000000000000000000000000000000000000000000000000190a5ebb",
