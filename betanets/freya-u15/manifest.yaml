@@ -12,13 +12,13 @@ l1:
 l2:
   deployment:
     op-deployer:
-      version: op-deployer/v0.4.2
+      version: op-deployer/v0.3.3
     l1-contracts:
       version: op-contracts/v3.0.0
-      locator: https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-e2e653e30fd170bae3909569fd3e30f7fedda986c1805cb5e3c7655f84502760.tar.gz
+      locator: https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-147b9fae70608da2975a01be3d98948306f89ba1930af7c917eea41a54d87cdb.tar.gz
     l2-contracts:
       version: op-contracts/v3.0.0
-      locator: https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-e2e653e30fd170bae3909569fd3e30f7fedda986c1805cb5e3c7655f84502760.tar.gz
+      locator: https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-147b9fae70608da2975a01be3d98948306f89ba1930af7c917eea41a54d87cdb.tar.gz
     overrides:
       l2GenesisIsthmusTimeOffset: '0x0'
   components:

@@ -15,7 +15,7 @@ l1:
 l2:
   deployment:
     op-deployer:
-      version: op-deployer/v0.4.0-rc.2
+      version: op-deployer/v0.3.0
     l1-contracts:
       version: op-contracts/v3.0.0-rc.2
     l2-contracts:

@@ -1,14 +1,13 @@
 configType = "custom"
 l1ChainID = 11155111
 fundDevAccounts = false
-l1ContractsLocator = "https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-e2e653e30fd170bae3909569fd3e30f7fedda986c1805cb5e3c7655f84502760.tar.gz"
-l2ContractsLocator = "https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-e2e653e30fd170bae3909569fd3e30f7fedda986c1805cb5e3c7655f84502760.tar.gz"
+l1ContractsLocator = "https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-147b9fae70608da2975a01be3d98948306f89ba1930af7c917eea41a54d87cdb.tar.gz"
+l2ContractsLocator = "https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-147b9fae70608da2975a01be3d98948306f89ba1930af7c917eea41a54d87cdb.tar.gz"
 
 [superchainRoles]
-  SuperchainProxyAdminOwner = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
-  SuperchainGuardian = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
-  ProtocolVersionsOwner = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
-  Challenger = "0x542844fe042fab9bd0504c3d179506cbca72b3b8"
+  proxyAdminOwner = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
+  guardian = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
+  protocolVersionsOwner = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
 
 [[chains]]
   id = "0x00000000000000000000000000000000000000000000000000000000190a5ebd"
