@@ -2,7 +2,7 @@ name: deimos
 type: betanet
 scope: https://github.com/ethereum-optimism/devnets/issues/53
 status: offline
-deployed_on: 09-04-2025
+deployed_on: 04-09-2025
 description: |
   Upgrade 15
   * Operator Fee
