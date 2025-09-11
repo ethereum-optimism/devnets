@@ -1,16 +1,12 @@
 {
-  "420110013": {
-    "cannon64": {
-      "hash": "0x030eb87d7b5c5334c5f9dca7e159d37be04ce9d8490856834eeae25c99f33ca1",
-      "createdAt": "2025-09-04T22:06:28Z",
-      "opProgramVersion": "op-program/v1.6.1"
-    }
+  "cannon64": {
+    "hash": "0x03f0fcd170d6538082f38fd2911a7169162f1f0922253325851a5b0b97b920d8",
+    "createdAt": "2025-09-11T15:31:17Z",
+    "opProgramVersion": "op-program/v1.6.1"
   },
-  "420110014": {
-    "cannon64": {
-      "hash": "0x0370bcda8cf40036f0c01ac6e03415f0035105648d422fa54cd4f1708d3dd2c1",
-      "createdAt": "2025-09-04T22:06:33Z",
-      "opProgramVersion": "op-program/v1.6.1"
-    }
+  "cannonInterop": {
+    "hash": "0x03074e5479516c48df7a0f0d514c3cf2ed7df0d7ee41dacc2deeae1cafaffbdd",
+    "createdAt": "2025-09-11T15:31:17Z",
+    "opProgramVersion": "op-program/v1.6.1"
   }
 }
