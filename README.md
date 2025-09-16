@@ -9,15 +9,15 @@ Alphanets and Betanets are deployed on an ad-hoc basis as features become ready 
 
 # Operations
 
-Devnet coordination will be centered around this repostory.
+Devnet coordination will be centered around this repostory. Devnet requests are raised to Platforms as features are developed by creating an issue in this repo using [this link](https://github.com/ethereum-optimism/devnets/issues/new?template=devnet-request.yml).
+
+The recurring upgrades standups also act as a regular forum for cross-team alignment around devnet needs.
 
 ## Issues
 
 ### Scoping Issue
 
-Devnet requests are raised to Platforms as features are developed. The recurring upgrades standups act as a regular forum for cross-team alignment around devnet needs.
-
-Devnet scope is captured in GitHub issues in this repo. Aspirationally, it should include a list of features, each containing:
+Devnet scope is captured in GitHub issues in this repo and should include a list of features, each containing:
 
 - A short description of the feature
 - Monitoring / alerting requirements, new metrics to be aware of
