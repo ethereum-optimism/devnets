@@ -1,7 +1,7 @@
 name: interop-sv2-poc
 type: alphanet
 scope: https://github.com/ethereum-optimism/devnets/issues/124
-status: pending
+status: online
 deployed_on: 09-16-2025
 description: |
   * Interop Supervisor-V2 Proof of concept devnet
@@ -18,10 +18,10 @@ l2:
       mipsVersion: 7
       l2GenesisIsthmusTimeOffset: "0x0"
   components:
-    op-node: # https://github.com/ethereum-optimism/optimism/pull/17473
-      version: 184ef89c59b267468a019dbbc1d2593db8fd5ad2
-    op-geth: # https://github.com/ethereum-optimism/op-geth/pull/681
-      version: 3054d646cb8cf0eb72de2757e790919cd3e33865
+    op-node:
+      version: op-node/v1.13.6-rc.2
+    op-geth:
+      version: op-geth/v1.101602.0-rc.1
     op-reth:
       version: op-reth/v1.6.0
     op-supervisor: # https://github.com/ethereum-optimism/optimism/pull/17473
