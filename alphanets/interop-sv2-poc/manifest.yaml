@@ -1,0 +1,49 @@
+name: interop-sv2-poc
+type: alphanet
+scope: https://github.com/ethereum-optimism/devnets/issues/124
+status: pending
+deployed_on: 09-16-2025
+description: |
+  * Interop Supervisor-V2 Proof of concept devnet
+l1:
+  name: sepolia
+  chain_id: 11155111
+l2:
+  deployment:
+    l1-contracts:
+      version: op-contracts/v4.0.0
+    l2-contracts:
+      version: op-contracts/v4.0.0
+    overrides:
+      mipsVersion: 7
+      l2GenesisIsthmusTimeOffset: "0x0"
+  components:
+    op-node: # https://github.com/ethereum-optimism/optimism/pull/17473
+      version: 184ef89c59b267468a019dbbc1d2593db8fd5ad2
+    op-geth: # https://github.com/ethereum-optimism/op-geth/pull/681
+      version: 3054d646cb8cf0eb72de2757e790919cd3e33865
+    op-reth:
+      version: op-reth/v1.6.0
+    op-supervisor: # https://github.com/ethereum-optimism/optimism/pull/17473
+      version: 184ef89c59b267468a019dbbc1d2593db8fd5ad2
+    op-proposer:
+      version: op-proposer/v1.10.1-rc.3
+    op-batcher:
+      version: op-batcher/v1.15.0-rc.3
+    op-program:
+      version: op-program/v1.6.1
+  bootnodes:
+    - enode://e63f16f93b44938a43ba8304d9948da3304e47c7a14fb1ce9d75194f2bd6784665aab18a8b38dc7772cd9a7fa71dd51997cc6cd8af0fc8915bc2fddcb68dfc87@34.123.30.27:0?discport=30305
+    - enode://524958a8fc12140491f59a78442d38d1f3cb96765136379dca2ce569f0d770de25931fc11ad1bcfe1af3d4db025d23c25a401e23c91f5f53ff281f25bd36e733@34.27.92.24:0?discport=30305
+    - enode://7353cf20a38a59c67139ccceaf4fa94be3487f0ace88ca368c24026f0825ff6983493a6b7c6e4286e18394880f3f450987ca1f26d848b7057e7dfdf3eb6b71a5@34.28.88.99:0?discport=30305
+  chains:
+    - name: interop-sv2-poc-0
+      chain_id: 420120015
+      deployment:
+        overrides:
+          l2BlockTime: 2
+    - name: interop-sv2-poc-1
+      chain_id: 420120016
+      deployment:
+        overrides:
+          l2BlockTime: 1
