@@ -1,7 +1,7 @@
 name: sunnynet-0-an
 type: alphanet
 scope:
-status: online
+status: offline
 deployed_on: 08-06-2025
 description: |
   * Sunny Days hackathon interop network
