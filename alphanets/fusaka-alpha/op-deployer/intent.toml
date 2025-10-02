@@ -1,0 +1,35 @@
+configType = "custom"
+l1ChainID = 17000
+fundDevAccounts = false
+l1ContractsLocator = "https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-62483b5a18c2edc3ca09bf09130b79a7c4598191af8b98a18ad6477b63917def.tar.gz"
+l2ContractsLocator = "https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-62483b5a18c2edc3ca09bf09130b79a7c4598191af8b98a18ad6477b63917def.tar.gz"
+
+[superchainRoles]
+  SuperchainProxyAdminOwner = "0xbbac3935edc030ffd9f7f50a682e523d6ceff8ba"
+  SuperchainGuardian = "0xbbac3935edc030ffd9f7f50a682e523d6ceff8ba"
+  ProtocolVersionsOwner = "0xbbac3935edc030ffd9f7f50a682e523d6ceff8ba"
+  Challenger = "0xbf29f859f627f7ab5a03811f0a67c698992c705f"
+
+[[chains]]
+  id = "0x00000000000000000000000000000000000000000000000000000000190a37a5"
+  baseFeeVaultRecipient = "0x1d42cd53c53630c28b4a5360600daa2bb49ef8c8"
+  l1FeeVaultRecipient = "0xd87d17f3062e7850d2f101c13bba3cf1434ecbf1"
+  sequencerFeeVaultRecipient = "0x15e1081ba2b9d72e24957bd6f53ca82e0ee75b80"
+  eip1559DenominatorCanyon = 250
+  eip1559Denominator = 50
+  eip1559Elasticity = 6
+  gasLimit = 60000000
+  operatorFeeScalar = 0
+  operatorFeeConstant = 0
+  [chains.roles]
+    l1ProxyAdminOwner = "0xbbac3935edc030ffd9f7f50a682e523d6ceff8ba"
+    l2ProxyAdminOwner = "0x8ad89042c1c250bae8de7a05a798c46ff32b30eb"
+    systemConfigOwner = "0x92b44b93723cf1080c63c23e2af7ccfe5aa21d9e"
+    unsafeBlockSigner = "0x6814e194c642a2bd254157a60703abd1bb314a7f"
+    batcher = "0x76a64c588753a9d055697b39c551d2e4dc8fedc4"
+    proposer = "0x85f19b2ba249369f1e7aab797214694d43615c89"
+    challenger = "0xbf29f859f627f7ab5a03811f0a67c698992c705f"
+
+[globalDeployOverrides]
+  l2GenesisIsthmusTimeOffset = "0x0"
+
