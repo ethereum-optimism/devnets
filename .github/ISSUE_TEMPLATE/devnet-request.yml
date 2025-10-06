@@ -39,6 +39,7 @@ body:
         - Links to design documents
         - Links to specs
         - Links to FMAs
+        - Especially call out any changes to network topology, as these involve changes to Platforms tooling
     validations:
       required: true
   - type: textarea
@@ -48,4 +49,5 @@ body:
       description: What configurations are needed for this devnet?
       placeholder: |
         - specific component versions or configurations
+        - any differences from a typical network topology (e.g., introduces new components, change in # or types of components)
         - anything else we need to know to deploy this devnet?
