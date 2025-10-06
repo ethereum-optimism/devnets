@@ -14,17 +14,19 @@ l2:
       l2GenesisIsthmusTimeOffset: "0x0"
   components:
     op-node:
-      version: op-node/77aef07f0200df751820ebe7b055d8d4e43e69b6
+      version: op-node/v1.14.0-rc.2
     op-geth:
       version: op-geth/v1.101603.1-rc.1
     op-batcher:
       version: op-batcher/77aef07f0200df751820ebe7b055d8d4e43e69b6
     op-proposer:
-      version: op-proposer/77aef07f0200df751820ebe7b055d8d4e43e69b6
+      version: op-proposer/v1.10.2-rc.1
     op-challenger:
-      version: op-challenger/77aef07f0200df751820ebe7b055d8d4e43e69b6
+      version: op-challenger/v1.6.0-rc.1
+    op-program:
+      version: op-program/v1.7.0-rc.1
     op-reth:
-      version: op-reth/v1.8.1
+      version: op-reth/v1.8.2
     proxyd:
       version: proxyd/v4.20.0
     op-conductor:
@@ -36,5 +38,3 @@ l2:
   chains:
   - name: fusaka-alpha-0
     chain_id: 420100005
-    features:
-      - fp-permissionless

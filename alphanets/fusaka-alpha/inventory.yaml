@@ -149,21 +149,21 @@ chains:
             - "sequencer-1"
             - "sequencer-2"
 
-      - kind: "op-dispute-mon"
-        name: "op-dispute-mon"
-        spec:
-          kind: "op-dispute-mon"
-        deps:
-          nodes:
-            - "rpc-0"
+      # - kind: "op-dispute-mon"
+      #   name: "op-dispute-mon"
+      #   spec:
+      #     kind: "op-dispute-mon"
+      #   deps:
+      #     nodes:
+      #       - "rpc-0"
 
-      - kind: "op-challenger-runner"
-        name: "op-challenger-runner"
-        spec:
-          kind: "op-challenger-runner"
-        deps:
-          nodes:
-            - "rpc-0"
+      # - kind: "op-challenger-runner"
+      #   name: "op-challenger-runner"
+      #   spec:
+      #     kind: "op-challenger-runner"
+      #   deps:
+      #     nodes:
+      #       - "rpc-0"
 
       - kind: "faucet"
         name: "op-faucet"
