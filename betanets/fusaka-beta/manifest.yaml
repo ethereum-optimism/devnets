@@ -9,7 +9,7 @@ l1:
   name: fusaka-devnet
   chain_id: 7088850215
   eth_rpc: https://sunnyside:sleepyyolkie@rpc.lighthouse-geth-1.fusaka-devnet-ssl-oplabs-1.yolkie.xyz
-  beacon_rpc: https://sunnyside:sleepyyolkie@bn.lighthouse-geth-1.fusaka-devnet-ssl-oplabs-1.yolkie.xyz
+  beacon_rpc: https://sunnyside:sleepyyolkie@bn.teku-geth-1.fusaka-devnet-ssl-oplabs-1.yolkie.xyz
   blob_archiver_rpc: ""
   owner_safe_address: "0x0ce307789f0c3c13b67a0a858a58e0ca83575d52"
   genesis_locator: "l1/genesis.json"
