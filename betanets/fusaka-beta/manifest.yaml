@@ -1,7 +1,7 @@
 name: fusaka-beta
 type: betanet
 scope: https://github.com/ethereum-optimism/devnets/issues/132
-status: pending
+status: online
 deployed_on: 10-06-2025
 description: |
   * Fusaka Betanet
@@ -19,7 +19,7 @@ l2:
       l2GenesisIsthmusTimeOffset: "0x0"
   components:
     op-node:
-      version: op-node/v1.14.0-rc.2
+      version: op-node/v1.14.0-rc.3
     op-geth:
       version: op-geth/v1.101603.1-rc.1
     op-batcher:
