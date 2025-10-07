@@ -27,9 +27,9 @@ l2:
     op-proposer:
       version: op-proposer/v1.10.2-rc.1
     op-challenger:
-      version: op-challenger/v1.6.0-rc.1
+      version: op-challenger/v1.6.0-rc.3
     op-program:
-      version: op-program/v1.7.0-rc.1
+      version: op-program/v1.7.0-rc.2
     op-reth:
       version: op-reth/v1.8.2
     proxyd:
