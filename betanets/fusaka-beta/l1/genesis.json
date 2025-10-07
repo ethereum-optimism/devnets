@@ -33,27 +33,27 @@
           "baseFeeUpdateFraction": 5007716
         },
         "bpo1": {
-          "target": 12,
+          "target": 9,
           "max": 12,
           "baseFeeUpdateFraction": 6676955
         },
         "bpo2": {
-          "target": 18,
+          "target": 12,
           "max": 18,
           "baseFeeUpdateFraction": 10015432
         },
         "bpo3": {
-          "target": 25,
+          "target": 18,
           "max": 25,
           "baseFeeUpdateFraction": 13910322
         },
         "bpo4": {
-          "target": 30,
+          "target": 25,
           "max": 30,
           "baseFeeUpdateFraction": 16692387
         },
         "bpo5": {
-          "target": 40,
+          "target": 30,
           "max": 40,
           "baseFeeUpdateFraction": 22256516
         }
@@ -971,4 +971,4 @@
     "mixhash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "timestamp": "1759777200"
-  }
+}
