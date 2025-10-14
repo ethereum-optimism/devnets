@@ -1,0 +1,7 @@
+steps:
+  - name: us-docker.pkg.dev/oplabs-tools-artifacts/internal-images/netchef:main
+    args: ["netchef", "validate", "--devnets-dir", "."]
+options:
+  logging: CLOUD_LOGGING_ONLY
+  pool:
+    name: projects/oplabs-tools-infra/locations/us-central1/workerPools/private-pool-small
