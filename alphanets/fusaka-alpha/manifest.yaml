@@ -1,7 +1,7 @@
 name: fusaka-alpha
 type: alphanet
 scope: https://github.com/ethereum-optimism/devnets/issues/131
-status: online
+status: offline
 deployed_on: 10-02-2025
 description: |
   * Fusaka Alphanet
