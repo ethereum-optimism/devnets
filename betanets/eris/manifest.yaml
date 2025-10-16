@@ -41,7 +41,7 @@ l2:
   chains:
   - name: eris-0
     chain_id: 420110011
-  - name: eris-1
-    chain_id: 420110012
-    features:
-      - fp-permissionless
+  # - name: eris-1
+  #   chain_id: 420110012
+  #   features:
+  #     - fp-permissionless

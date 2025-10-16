@@ -1,7 +1,7 @@
 name: fusaka-beta
 type: betanet
 scope: https://github.com/ethereum-optimism/devnets/issues/132
-status: online
+status: offline
 deployed_on: 10-06-2025
 description: |
   * Fusaka Betanet

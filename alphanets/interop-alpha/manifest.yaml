@@ -1,7 +1,7 @@
 name: interop-alpha
 type: alphanet
 scope: https://github.com/ethereum-optimism/devnets/issues/1
-status: online
+status: offline
 deployed_on: 02-06-2025
 description: |
  * Interop (no fault proof)
