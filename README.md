@@ -13,6 +13,8 @@ Devnet coordination will be centered around this repostory. Devnet requests are 
 
 Protocol teams should reach out about devnet needs proactively, ideally at the start of new feature development. Waiting until late in the process impacts the Platform team’s ability to support in a timely and effective manner, which can delay feature validation and impact timelines.
 
+For contracts changes in particular, please allow for at least a few days between a new contracts release and devnet spin up to leave enough time to validate and make a new corresponding op-deployer release.
+
 Below is a set of questions to ask early during feature development:
 - **Do I need a devnet for this feature?** Note that at minimum a betanet is required for features that go through the governance process (more info [here](https://docs.google.com/document/d/11dHFxW5YpVaCtIbDQLM1wBAUNKecMIevnUPsR2pMstg/edit?usp=sharing))
 - **When will I need this devnet and at what stage of feature development?** In particular, please validate what you can locally with sysgo and strong test coverage before proceeding to a devnet
