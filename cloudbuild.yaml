@@ -1,6 +1,9 @@
 steps:
-  - name: us-docker.pkg.dev/oplabs-tools-artifacts/internal-images/netchef:main
-    args: ["netchef", "validate", "--devnets-dir", "."]
+  - name: us-docker.pkg.dev/oplabs-tools-artifacts/internal-images/netchef:b2403cbb61cfcf8665d003735cd1919f20f63756
+    args: ["ci", "validate", "--devnets-dir", "."]
+    env:
+      - NETCHEF_GCP_PROJECT=oplabs-dev-infra
+      - NETCHEF_REPO_URL=https://github.com/ethereum-optimism/devnets.git
 options:
   logging: CLOUD_LOGGING_ONLY
   pool:
