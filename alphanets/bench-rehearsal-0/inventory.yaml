@@ -1,0 +1,89 @@
+chains:
+  - nodes:
+      - kind: "node"
+        name: "sequencer-0"
+        spec:
+          kind: "sequencer"
+          el:
+            kind: "op-geth"
+            spec:
+              kind: "full"
+          cl:
+            kind: "op-node"
+          machine:
+            type: "n2-standard-16"
+            storage:
+              ssd_count: 16
+
+    services:
+      - kind: "proposer"
+        name: "op-proposer"
+        spec:
+          kind: "op-proposer"
+        deps:
+          nodes:
+            - "sequencer-0"
+
+      - kind: "batcher"
+        name: "op-batcher"
+        spec:
+          kind: "op-batcher"
+        deps:
+          nodes:
+            - "sequencer-0"
+
+      - kind: "challenger"
+        name: "op-challenger"
+        spec:
+          kind: "op-challenger"
+        deps:
+          nodes:
+            - "sequencer-0"
+
+      - kind: "public-rpc"
+        name: "proxyd-public"
+        spec:
+          kind: "proxyd"
+        deps:
+          nodes:
+            - "sequencer-0"
+
+      - kind: "peer-mgmt-service"
+        name: "peer-mgmt-service"
+        spec:
+          kind: "peer-mgmt-service"
+        deps:
+          nodes:
+            - "sequencer-0"
+
+      - kind: "op-conductor-mon"
+        name: "op-conductor-mon"
+        spec:
+          kind: "op-conductor-mon"
+        deps:
+          nodes:
+            - "sequencer-0"
+
+      - kind: "op-conductor-ops"
+        name: "op-conductor-ops"
+        spec:
+          kind: "op-conductor-ops"
+        deps:
+          nodes:
+            - "sequencer-0"
+
+      - kind: "op-dispute-mon"
+        name: "op-dispute-mon"
+        spec:
+          kind: "op-dispute-mon"
+        deps:
+          nodes:
+            - "sequencer-0"
+
+      - kind: "faucet"
+        name: "op-faucet"
+        spec:
+          kind: "op-faucet"
+        deps:
+          nodes:
+            - "sequencer-0"
