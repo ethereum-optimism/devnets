@@ -36,7 +36,7 @@ l2:
         op-geth:
             version: op-geth/6706f9375284b3606c598a4378418bc90d96924a
         op-node:
-            version: op-node/7a1c5959f38359b67506d5715f0ce2928e5111ae
+            version: op-node/v1.16.0-rc.1
         op-program:
             version: op-program/v1.7.0-rc.4
         op-proposer:
