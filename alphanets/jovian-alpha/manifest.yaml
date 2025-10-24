@@ -1,0 +1,39 @@
+name: jovian-alpha
+type: alphanet
+scope: https://github.com/ethereum-optimism/devnets/issues/123
+status: pending
+description: Alphanet for Jovian
+l1:
+  name: sepolia
+  chain_id: 11155111
+l2:
+  deployment:
+    overrides:
+      l2GenesisIsthmusTimeOffset: "0x0"
+      l2GenesisJovianTimeOffset: "0x0"
+  components:
+    op-node:
+      version: op-node/7a1c5959f38359b67506d5715f0ce2928e5111ae
+    op-geth:
+      version: op-geth/6706f9375284b3606c598a4378418bc90d96924a
+    op-batcher:
+      version: op-batcher/59e86721a4665f0d84f618ca037f4af6c74ccba0
+    op-proposer:
+      version: op-proposer/59e86721a4665f0d84f618ca037f4af6c74ccba0
+    op-challenger:
+      version: op-challenger/59e86721a4665f0d84f618ca037f4af6c74ccba0
+    op-program:
+      version: op-program/v1.7.0-rc.4
+    op-reth:
+      version: op-reth/25f0d896d92acab6e4a6c0de7a1c0c3adb954ed2
+    proxyd:
+      version: proxyd/v4.21.0
+  bootnodes:
+    - enode://e63f16f93b44938a43ba8304d9948da3304e47c7a14fb1ce9d75194f2bd6784665aab18a8b38dc7772cd9a7fa71dd51997cc6cd8af0fc8915bc2fddcb68dfc87@34.123.30.27:0?discport=30305
+    - enode://524958a8fc12140491f59a78442d38d1f3cb96765136379dca2ce569f0d770de25931fc11ad1bcfe1af3d4db025d23c25a401e23c91f5f53ff281f25bd36e733@34.27.92.24:0?discport=30305
+    - enode://7353cf20a38a59c67139ccceaf4fa94be3487f0ace88ca368c24026f0825ff6983493a6b7c6e4286e18394880f3f450987ca1f26d848b7057e7dfdf3eb6b71a5@34.28.88.99:0?discport=30305
+  chains:
+    - name: jovian-alpha
+      chain_id: 420100006
+  features:
+    - fp-permissionless
