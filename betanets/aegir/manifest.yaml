@@ -7,6 +7,8 @@ description: |
   * OPCM Upgrades
 
   Note: aegir was re-deployed on 03-02-2025
+features:
+  - "skip-ci"
 l1:
   name: sepolia
   chain_id: 11155111

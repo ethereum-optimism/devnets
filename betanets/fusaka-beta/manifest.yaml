@@ -5,6 +5,8 @@ status: offline
 deployed_on: 10-06-2025
 description: |
   * Fusaka Betanet
+features:
+  - "skip-ci"
 l1:
   name: fusaka-devnet
   chain_id: 7088850215

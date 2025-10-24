@@ -5,6 +5,8 @@ status: offline
 deployed_on: 03-03-2025
 description: |
   Badger contains latest contracts and software versions.
+features:
+  - "skip-ci"
 l1:
   name: sepolia
   chain_id: 11155111

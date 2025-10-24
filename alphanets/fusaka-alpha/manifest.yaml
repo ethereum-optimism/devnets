@@ -5,6 +5,8 @@ status: offline
 deployed_on: 10-02-2025
 description: |
   * Fusaka Alphanet
+features:
+  - "skip-ci"
 l1:
   name: holesky
   chain_id: 17000

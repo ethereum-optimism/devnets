@@ -5,6 +5,8 @@ status: offline
 deployed_on: 01-14-2025
 description: |
   Alpaca contains changes to OP Contracts Manager and incident response improvements.
+features:
+  - "skip-ci"
 l1:
   name: sepolia
   chain_id: 11155111

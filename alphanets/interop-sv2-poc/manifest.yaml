@@ -5,6 +5,8 @@ status: offline
 deployed_on: 09-16-2025
 description: |
   * Interop Supervisor-V2 Proof of concept devnet
+features:
+  - "skip-ci"
 l1:
   name: sepolia
   chain_id: 11155111
