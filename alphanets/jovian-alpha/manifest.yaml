@@ -1,7 +1,7 @@
 name: jovian-alpha
 type: alphanet
 scope: https://github.com/ethereum-optimism/devnets/issues/123
-status: pending
+status: online
 description: Alphanet for Jovian
 cluster:
     name: oplabs-dev-infra-primary
@@ -29,6 +29,8 @@ l2:
             l2GenesisIsthmusTimeOffset: "0x0"
             l2GenesisJovianTimeOffset: "0x0"
     components:
+        op-conductor:
+            version: op-conductor/a73f968a76805850fc5ec4ea3c8d7c04526e1730
         op-batcher:
             version: op-batcher/59e86721a4665f0d84f618ca037f4af6c74ccba0
         op-challenger:
