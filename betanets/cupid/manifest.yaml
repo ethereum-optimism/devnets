@@ -7,6 +7,8 @@ description: |
   Upgrade 14
   * MT Cannon
   * Isthmus L1 Contracts
+features:
+  - "skip-ci"
 l1:
   name: sepolia
   chain_id: 11155111

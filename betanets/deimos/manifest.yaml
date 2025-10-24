@@ -8,6 +8,8 @@ description: |
   * Operator Fee
   * L2 Withdrawal Root in Header
   * Pectra Support
+features:
+  - "skip-ci"
 l1:
   name: sepolia
   chain_id: 11155111

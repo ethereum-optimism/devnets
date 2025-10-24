@@ -5,6 +5,8 @@ status: offline
 deployed_on: 02-20-2025
 description: |
   * L1 Pectra Defence
+features:
+  - "skip-ci"
 l1:
   name: holesky
   chain_id: 17000

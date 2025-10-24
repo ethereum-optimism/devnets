@@ -7,6 +7,8 @@ description: |
   Upgrade 16a
   * System-level feature toggles
   * Disabled interop withdrawal-proving
+features:
+  - "skip-ci"
 l1:
   name: sepolia
   chain_id: 11155111

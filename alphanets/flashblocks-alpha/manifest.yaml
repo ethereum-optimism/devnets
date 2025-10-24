@@ -5,6 +5,8 @@ status: offline
 deployed_on: 04-28-2025
 description: |
   Flashblocks Alphanet
+features:
+  - "skip-ci"
 l1:
   name: sepolia
   chain_id: 11155111

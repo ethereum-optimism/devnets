@@ -6,6 +6,8 @@ deployed_on: 03-14-2025
 description: |
   MT Cannon
   Isthmus L1 Contracts
+features:
+  - "skip-ci"
 l1:
   name: sepolia
   chain_id: 11155111

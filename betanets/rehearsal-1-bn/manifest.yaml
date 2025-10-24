@@ -16,6 +16,7 @@ description: |
   * Oncall runbooks
 features:
   - "interop"
+  - "skip-ci"
 l1:
   name: sepolia
   chain_id: 11155111
@@ -34,17 +35,17 @@ l2:
     op-node:
       version: op-node/v1.13.5-dev.fpfix.5
     op-geth:
-      version: op-geth/v1.101511.1-dev.1 
+      version: op-geth/v1.101511.1-dev.1
     op-proposer:
       version: op-proposer/v1.10.1-rc.3
     op-batcher:
-      version: op-batcher/v1.14.0-rc.1 
+      version: op-batcher/v1.14.0-rc.1
     op-challenger:
-      version: op-challenger/v1.4.1-rc.2 
+      version: op-challenger/v1.4.1-rc.2
     op-supervisor:
       version: op-supervisor/v0.3.0-dev.fpfix.5
     op-reth:
-      version: op-reth/v1.4.8 
+      version: op-reth/v1.4.8
     op-dispute-mon:
       version: op-dispute-mon/v1.4.1-rc.3
     proxyd:

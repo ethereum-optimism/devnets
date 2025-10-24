@@ -7,6 +7,7 @@ description: |
  * Interop (no fault proof)
 features:
   - "interop"
+  - "skip-ci"
 l1:
   name: sepolia
   chain_id: 11155111
