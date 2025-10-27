@@ -58,7 +58,9 @@ jobs:
 workflows:
   pr:
     jobs:
-      - docs-build
+      - docs-build:
+          context:
+            - circleci-repo-readonly-authenticated-github-token
       - docs-deploy:
           filters:
             branches:
