@@ -1,19 +1,15 @@
 version: 2.1
 
+orbs:
+  utils: ethereum-optimism/circleci-utils@1.0.22
+
 jobs:
   docs-build:
     docker:
       - image: cimg/rust:1.84.0
     resource_class: medium
     steps:
-      - checkout
-      - run:
-          name: Install deps
-          command: |
-            curl -o /tmp/mdbook.tgz -L https://github.com/rust-lang/mdBook/releases/download/v0.4.43/mdbook-v0.4.43-x86_64-unknown-linux-gnu.tar.gz
-            tar -xzvf /tmp/mdbook.tgz -C /tmp
-            sudo mv /tmp/mdbook /usr/local/bin/mdbook
-            curl -LsSf https://astral.sh/uv/install.sh | sh
+      - utils/checkout-with-mise
       - run:
           name: Generate book source
           command: uv run gen.py
