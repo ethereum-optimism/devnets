@@ -9,7 +9,8 @@ jobs:
       - image: cimg/rust:1.84.0
     resource_class: medium
     steps:
-      - utils/checkout-with-mise
+      - utils/checkout-with-mise:
+          checkout-method: blobless
       - run:
           name: Generate book source
           command: uv run gen.py
