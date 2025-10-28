@@ -4,53 +4,53 @@ scope: https://github.com/ethereum-optimism/devnets/issues/123
 status: online
 description: Alphanet for Jovian
 cluster:
-    name: oplabs-dev-infra-primary
+  name: oplabs-dev-infra-primary
 l1:
-    name: sepolia
-    chain_id: 11155111
-    genesis_locator: ""
-    eth_rpc: https://proxyd-l1-sepolia.primary.client.dev.oplabs.cloud
-    beacon_rpc: https://beacon-api-proxy-sepolia.primary.client.dev.oplabs.cloud
-    blob_archiver_rpc: https://blob-api-sepolia.primary.client.dev.oplabs.cloud
-    owner_safe_address: 0xe934Dc97E347C6aCef74364B50125bb8689c40ff
-    celestia_auth_token: ""
-    celestia_rpc_url: ""
+  name: sepolia
+  chain_id: 11155111
+  genesis_locator: ""
+  eth_rpc: https://proxyd-l1-sepolia.primary.client.dev.oplabs.cloud
+  beacon_rpc: https://beacon-api-proxy-sepolia.primary.client.dev.oplabs.cloud
+  blob_archiver_rpc: https://blob-api-sepolia.primary.client.dev.oplabs.cloud
+  owner_safe_address: 0xe934Dc97E347C6aCef74364B50125bb8689c40ff
+  celestia_auth_token: ""
+  celestia_rpc_url: ""
 l2:
-    deployment:
-        op-deployer:
-            version: ""
-        l1-contracts:
-            locator: ""
-            version: ""
-        l2-contracts:
-            locator: ""
-            version: ""
-        overrides:
-            l2GenesisIsthmusTimeOffset: "0x0"
-            l2GenesisJovianTimeOffset: "0x0"
-    components:
-        op-conductor:
-            version: op-conductor/v0.9.0
-        op-batcher:
-            version: op-batcher/59e86721a4665f0d84f618ca037f4af6c74ccba0
-        op-challenger:
-            version: op-challenger/59e86721a4665f0d84f618ca037f4af6c74ccba0
-        op-geth:
-            version: op-geth/6706f9375284b3606c598a4378418bc90d96924a
-        op-node:
-            version: op-node/v1.16.0-rc.1
-        op-program:
-            version: op-program/v1.7.0-rc.4
-        op-proposer:
-            version: op-proposer/59e86721a4665f0d84f618ca037f4af6c74ccba0
-        op-reth:
-            version: op-reth/theo-fix-header-validation-jovian-5bf567-2
-        proxyd:
-            version: proxyd/v4.21.0
-    charts: {}
-    chains:
-        - name: jovian-alpha
-          chain_id: "420100006"
-          features: []
-          deployment:
-            overrides: {}
+  deployment:
+    op-deployer:
+      version: ""
+    l1-contracts:
+      locator: ""
+      version: ""
+    l2-contracts:
+      locator: ""
+      version: ""
+    overrides:
+      l2GenesisIsthmusTimeOffset: "0x0"
+      l2GenesisJovianTimeOffset: "0x0"
+  components:
+    op-conductor:
+      version: op-conductor/v0.9.0
+    op-batcher:
+      version: op-batcher/59e86721a4665f0d84f618ca037f4af6c74ccba0
+    op-challenger:
+      version: op-challenger/59e86721a4665f0d84f618ca037f4af6c74ccba0
+    op-geth:
+      version: op-geth/v1.101603.3-rc.3
+    op-node:
+      version: op-node/v1.16.0-rc.2
+    op-program:
+      version: op-program/v1.7.0-rc.4
+    op-proposer:
+      version: op-proposer/59e86721a4665f0d84f618ca037f4af6c74ccba0
+    op-reth:
+      version: op-reth/theo-fix-header-validation-jovian-5bf567-2
+    proxyd:
+      version: proxyd/v4.21.0
+  charts: {}
+  chains:
+    - name: jovian-alpha
+      chain_id: "420100006"
+      features: []
+      deployment:
+        overrides: {}
