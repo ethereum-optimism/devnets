@@ -30,7 +30,7 @@ l2:
             l2GenesisJovianTimeOffset: "0x0"
     components:
         op-conductor:
-            version: op-conductor/a73f968a76805850fc5ec4ea3c8d7c04526e1730
+            version: op-conductor/v0.9.0
         op-batcher:
             version: op-batcher/59e86721a4665f0d84f618ca037f4af6c74ccba0
         op-challenger:
@@ -44,7 +44,7 @@ l2:
         op-proposer:
             version: op-proposer/59e86721a4665f0d84f618ca037f4af6c74ccba0
         op-reth:
-            version: op-reth/897f500d8e123fe5f70d5275882a38bdc1056b0c491b7390005dddbc60053e40
+            version: op-reth/theo-fix-block-validation-a6f5f25
         proxyd:
             version: proxyd/v4.21.0
     charts: {}
