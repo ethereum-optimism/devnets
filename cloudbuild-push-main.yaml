@@ -34,6 +34,8 @@ steps:
       - NETCHEF_TEMPORAL_NAMESPACE=dev-netchef.nqbqu
       - NETCHEF_TEMPORAL_HOST=us-central1.gcp.api.temporal.io:7233
       - NETCHEF_TEMPORAL_TASK_QUEUE=netchef-main-workflows
+      - NETCHEF_PR_NUMBER=${_PR_NUMBER}
+      - NETCHEF_PR_HEAD_REPO_URL=${_HEAD_REPO_URL}
     secretEnv:
       - NETCHEF_TEMPORAL_API_KEY
 availableSecrets:
