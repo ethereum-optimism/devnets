@@ -44,7 +44,7 @@ l2:
         op-proposer:
             version: op-proposer/59e86721a4665f0d84f618ca037f4af6c74ccba0
         op-reth:
-            version: op-reth/theo-fix-block-validation-a6f5f25
+            version: op-reth/theo-fix-header-validation-jovian-5bf567-2
         proxyd:
             version: proxyd/v4.21.0
     charts: {}
