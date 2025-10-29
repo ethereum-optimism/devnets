@@ -30,10 +30,8 @@ steps:
 
   - name: us-docker.pkg.dev/oplabs-tools-artifacts/internal-images/netchef:main
     entrypoint: "ci-command-on-devnet-changes.sh"
-    args: ["trigger-workflow"]
+    args: ["check-for-open-workflows"]
     env:
-      - NETCHEF_GCP_PROJECT=oplabs-dev-infra
-      - NETCHEF_REPO_URL=https://github.com/ethereum-optimism/devnets.git
       - NETCHEF_TEMPORAL_NAMESPACE=dev-netchef.nqbqu
       - NETCHEF_TEMPORAL_HOST=us-central1.gcp.api.temporal.io:7233
       - NETCHEF_TEMPORAL_TASK_QUEUE=netchef-main-workflows
