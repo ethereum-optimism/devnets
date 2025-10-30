@@ -21,6 +21,10 @@ l2:
   deployment:
     overrides:
       l2GenesisIsthmusTimeOffset: "0x0"
+    l1-contracts:
+      locator: https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-579f43b5bbb43e74216b7ed33125280567df86eaf00f7621f354e4a68c07323e.tar.gz
+    l2-contracts:
+      locator: https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-579f43b5bbb43e74216b7ed33125280567df86eaf00f7621f354e4a68c07323e.tar.gz
   components:
     op-conductor:
       version: op-conductor/v0.9.0
