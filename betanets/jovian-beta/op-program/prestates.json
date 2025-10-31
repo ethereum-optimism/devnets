@@ -1,0 +1,12 @@
+{
+  "cannon64": {
+    "hash": "0x0393f84ac3e6197c3e6ea59801f12de25890e86a87a34938c6eb64c2dd37e0a7",
+    "createdAt": "2025-10-30T21:09:50Z",
+    "opProgramVersion": "op-program/v1.7.0-rc.4"
+  },
+  "cannonInterop": {
+    "hash": "0x0305267e9b6401ade7ccf48ff016b25da6e2c569cc632d098f795d30efe424dd",
+    "createdAt": "2025-10-30T21:09:50Z",
+    "opProgramVersion": "op-program/v1.7.0-rc.4"
+  }
+}
