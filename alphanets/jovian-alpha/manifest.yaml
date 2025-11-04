@@ -44,7 +44,7 @@ l2:
     op-proposer:
       version: op-proposer/59e86721a4665f0d84f618ca037f4af6c74ccba0
     op-reth:
-      version: op-reth/2976163
+      version: op-reth/c3a60fa
     proxyd:
       version: proxyd/v4.21.0
   charts: {}
