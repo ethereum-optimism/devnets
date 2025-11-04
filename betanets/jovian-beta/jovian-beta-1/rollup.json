@@ -32,6 +32,7 @@
   "granite_time": 0,
   "holocene_time": 0,
   "isthmus_time": 0,
+  "jovian_time": 1762354800,
   "batch_inbox_address": "0x0098e60b45a0bfa256cc8a5f314d3aa0cb9f3462",
   "deposit_contract_address": "0x4f90cc80cfc548bc68cd51c5b356eb6fcf534900",
   "l1_system_config_address": "0xc3d20bb0f9214f4826b2a056e91897d60864761d",
@@ -42,4 +43,3 @@
     "eip1559DenominatorCanyon": 250
   }
 }
-
