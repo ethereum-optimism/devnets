@@ -37,7 +37,7 @@ l2:
     op-conductor:
       version: op-conductor/v0.9.0
     op-geth:
-      version: op-geth/v1.101603.4-rc.1
+      version: op-geth/v1.101603.4-rc.2
     op-node:
       version: op-node/v1.16.1-rc.1
     op-program:
