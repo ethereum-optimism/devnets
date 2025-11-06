@@ -26,6 +26,14 @@ steps:
     env:
       - NETCHEF_GCP_PROJECT=oplabs-dev-infra
       - NETCHEF_REPO_URL=https://github.com/ethereum-optimism/devnets.git
+  - name: us-docker.pkg.dev/oplabs-tools-artifacts/internal-images/netchef:main
+    entrypoint: "ci-command-on-devnet-changes.sh"
+    args: ["store-pr-context"]
+    env:
+      - NETCHEF_GCP_PROJECT=oplabs-dev-infra
+      - NETCHEF_PR_NUMBER=${_PR_NUMBER}
+      - NETCHEF_REPO_URL=https://github.com/ethereum-optimism/devnets.git
+
 availableSecrets:
   secretManager:
     - versionName: projects/oplabs-tools-secrets/secrets/netchef-cloudbuild-devnets-private-ssh-key/versions/latest
