@@ -21,13 +21,26 @@ steps:
     volumes:
     - name: 'ssh'
       path: /root/.ssh
+
   - name: us-docker.pkg.dev/oplabs-tools-artifacts/internal-images/netchef:main
     args: ["ci", "validate", "--devnets-dir", "."]
     env:
       - NETCHEF_GCP_PROJECT=oplabs-dev-infra
       - NETCHEF_REPO_URL=https://github.com/ethereum-optimism/devnets.git
+
   - name: us-docker.pkg.dev/oplabs-tools-artifacts/internal-images/netchef:main
-    entrypoint: "ci-main-trigger-workflows.sh"
+    entrypoint: "ci-command-on-devnet-changes.sh"
+    args: ["check-for-open-workflows"]
+    env:
+      - NETCHEF_TEMPORAL_NAMESPACE=dev-netchef.nqbqu
+      - NETCHEF_TEMPORAL_HOST=us-central1.gcp.api.temporal.io:7233
+      - NETCHEF_TEMPORAL_TASK_QUEUE=netchef-main-workflows
+    secretEnv:
+      - NETCHEF_TEMPORAL_API_KEY
+
+  - name: us-docker.pkg.dev/oplabs-tools-artifacts/internal-images/netchef:main
+    entrypoint: "ci-command-on-devnet-changes.sh"
+    args: ["trigger-workflow"]
     env:
       - NETCHEF_GCP_PROJECT=oplabs-dev-infra
       - NETCHEF_REPO_URL=https://github.com/ethereum-optimism/devnets.git
@@ -37,6 +50,7 @@ steps:
       - NETCHEF_TRIGGERING_COMMIT_SHA=$COMMIT_SHA
     secretEnv:
       - NETCHEF_TEMPORAL_API_KEY
+
 availableSecrets:
   secretManager:
     - versionName: projects/oplabs-tools-secrets/secrets/netchef-cloudbuild-env/versions/latest

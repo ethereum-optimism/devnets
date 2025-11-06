@@ -1,26 +1,4 @@
 steps:
-  - name: 'gcr.io/cloud-builders/git'
-    secretEnv: ['SSH_KEY']
-    entrypoint: 'bash'
-    args:
-    - -c
-    - |
-      echo "$$SSH_KEY" >> /root/.ssh/id_rsa
-      chmod 400 /root/.ssh/id_rsa
-      cp known_hosts.github /root/.ssh/known_hosts
-    volumes:
-    - name: 'ssh'
-      path: /root/.ssh
-  - name: gcr.io/cloud-builders/git
-    entrypoint: 'bash'
-    args:
-      - '-c'
-      - |
-        git remote set-url origin git@github.com:ethereum-optimism/devnets.git
-        git fetch --unshallow
-    volumes:
-    - name: 'ssh'
-      path: /root/.ssh
   - name: us-docker.pkg.dev/oplabs-tools-artifacts/internal-images/netchef:main
     args: ["ci", "validate", "--devnets-dir", "."]
     env:
