@@ -66,16 +66,20 @@ create-devnet net_type name template:
     mkdir -p "$TARGET_DIR"
     
     # Copy default inventory.yaml
-    if [ -f "$TEMPLATE_DIR/default-inventory.yaml" ]; then
+    if [ -f "$TEMPLATE_DIR/inventory.yaml" ]; then
         echo "  Copying inventory.yaml..."
-        cp "$TEMPLATE_DIR/default-inventory.yaml" "$TARGET_DIR/inventory.yaml"
+        cp "$TEMPLATE_DIR/inventory.yaml" "$TARGET_DIR/inventory.yaml"
     fi
     
     # Copy default manifest.yaml and replace DEVNET_NAME placeholder
-    if [ -f "$TEMPLATE_DIR/default-manifest.yaml" ]; then
+    if [ -f "$TEMPLATE_DIR/manifest.yaml" ]; then
         echo "  Copying manifest.yaml..."
-        cp "$TEMPLATE_DIR/default-manifest.yaml" "$TARGET_DIR/manifest.yaml"
+        cp "$TEMPLATE_DIR/manifest.yaml" "$TARGET_DIR/manifest.yaml"
         sed -i '' "s/DEVNET_NAME/{{name}}/g" "$TARGET_DIR/manifest.yaml"
+        
+        # Set the type field in manifest based on net_type (alphanets -> alphanet, betanets -> betanet)
+        NET_TYPE_VALUE=$(echo "{{net_type}}" | sed 's/s$//')
+        sed -i '' "s/^type: .*/type: $NET_TYPE_VALUE/" "$TARGET_DIR/manifest.yaml"
     fi
     
     echo "✓ Successfully created devnet: {{name}}"
@@ -90,5 +94,3 @@ create-devnet net_type name template:
     echo "  1. Edit $TARGET_DIR/manifest.yaml to configure your devnet"
     echo "  2. Edit $TARGET_DIR/inventory.yaml to configure nodes and services"
 
-# Backward compatibility alias (defaults to alphanets with default-alphanet template)
-create-default-devnet name: (create-devnet "alphanets" name "default-alphanet")
