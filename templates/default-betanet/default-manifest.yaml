@@ -42,6 +42,8 @@ l2:
       version: ""
     proxyd:
       version: ""
+    kona-node:
+      version: ""
   charts: {}
   bootnodes:
     - enode://e63f16f93b44938a43ba8304d9948da3304e47c7a14fb1ce9d75194f2bd6784665aab18a8b38dc7772cd9a7fa71dd51997cc6cd8af0fc8915bc2fddcb68dfc87@34.123.30.27:0?discport=30305
