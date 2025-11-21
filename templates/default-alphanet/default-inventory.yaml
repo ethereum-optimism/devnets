@@ -66,6 +66,17 @@ chains:
             kind: "op-node"
 
       - kind: "node"
+        name: "rpc-2"
+        spec:
+          kind: "rpc"
+          el:
+            kind: "op-reth"
+            spec:
+              kind: "archive"
+          cl:
+            kind: "kona-node"
+
+      - kind: "node"
         name: "snapsync-0"
         spec:
           kind: "snapsync"
@@ -86,6 +97,17 @@ chains:
               kind: "full"
           cl:
             kind: "op-node"
+
+      - kind: "node"
+        name: "snapsync-2"
+        spec:
+          kind: "snapsync"
+          el:
+            kind: "op-geth"
+            spec:
+              kind: "full"
+          cl:
+            kind: "kona-node"
 
     services:
       - kind: "proposer"
@@ -122,6 +144,7 @@ chains:
           nodes:
             - "rpc-0"
             - "rpc-1"
+            - "rpc-2"
 
       - kind: "peer-mgmt-service"
         name: "peer-mgmt-service"
@@ -134,8 +157,10 @@ chains:
             - "sequencer-2"
             - "rpc-0"
             - "rpc-1"
+            - "rpc-2"
             - "snapsync-0"
             - "snapsync-1"
+            - "snapsync-2"
 
       - kind: "op-conductor-mon"
         name: "op-conductor-mon"
