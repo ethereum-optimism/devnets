@@ -9,12 +9,20 @@ l1:
   chain_id: 11155111
 l2:
   deployment:
+    op-deployer:
+      version: ""
     l1-contracts:
-      version: op-contracts/v4.0.0
+      locator: ""
+      version: ""
     l2-contracts:
-      version: op-contracts/v4.0.0
+      locator: ""
+      version: ""
     overrides:
       l2GenesisJovianTimeOffset: "0x0"
+    gas_limit: 60000000
+    eip1559_elasticity: 6
+    eip1559_denominator: 50
+    eip1559_denominator_canyon: 250
   components:
     op-batcher:
       version: ""

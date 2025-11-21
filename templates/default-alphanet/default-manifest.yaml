@@ -9,21 +9,32 @@ l1:
   chain_id: 11155111
 l2:
   deployment:
+    op-deployer:
+      version: ""
     l1-contracts:
-      version: op-contracts/v4.0.0
+      locator: ""
+      version: ""
     l2-contracts:
-      version: op-contracts/v4.0.0
+      locator: ""
+      version: ""
     overrides:
       l2GenesisJovianTimeOffset: "0x0"
+    gas_limit: 60000000
+    eip1559_elasticity: 6
+    eip1559_denominator: 50
+    eip1559_denominator_canyon: 250
   components:
     op-batcher:
-      version: ""
+      version: op-batcher/v1.16.2
     op-geth:
-      version: ""
+      version: op-geth/v1.101603.5
     op-node:
-      version: ""
+      version: op-node/v1.16.2
     op-proposer:
-      version: ""
+      version: op-proposer/v1.10.2-rc.1
+    op-reth:
+      version: op-reth/v1.9.3
+  charts: {}
   bootnodes:
     - enode://e63f16f93b44938a43ba8304d9948da3304e47c7a14fb1ce9d75194f2bd6784665aab18a8b38dc7772cd9a7fa71dd51997cc6cd8af0fc8915bc2fddcb68dfc87@34.123.30.27:0?discport=30305
     - enode://524958a8fc12140491f59a78442d38d1f3cb96765136379dca2ce569f0d770de25931fc11ad1bcfe1af3d4db025d23c25a401e23c91f5f53ff281f25bd36e733@34.27.92.24:0?discport=30305
