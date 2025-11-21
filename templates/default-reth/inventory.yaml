@@ -1,0 +1,122 @@
+chains:
+  - nodes:
+      - kind: "node"
+        name: "sequencer-0"
+        spec:
+          kind: "sequencer"
+          el:
+            kind: "op-reth"
+            spec:
+              kind: "full"
+          cl:
+            kind: "op-node"
+
+      - kind: "node"
+        name: "sequencer-1"
+        spec:
+          kind: "sequencer"
+          el:
+            kind: "op-reth"
+            spec:
+              kind: "full"
+          cl:
+            kind: "op-node"
+
+      - kind: "node"
+        name: "sequencer-2"
+        spec:
+          kind: "sequencer"
+          el:
+            kind: "op-reth"
+            spec:
+              kind: "full"
+          cl:
+            kind: "op-node"
+
+      - kind: "node"
+        name: "rpc-0"
+        spec:
+          kind: "rpc"
+          el:
+            kind: "op-reth"
+            spec:
+              kind: "archive"
+          cl:
+            kind: "op-node"
+
+      - kind: "node"
+        name: "rpc-1"
+        spec:
+          kind: "rpc"
+          el:
+            kind: "op-reth"
+            spec:
+              kind: "archive"
+          cl:
+            kind: "kona-node"
+
+    services:
+      - kind: "batcher"
+        name: "op-batcher"
+        spec:
+          kind: "op-batcher"
+        deps:
+          nodes:
+            - "sequencer-0"
+            - "sequencer-1"
+            - "sequencer-2"
+
+      - kind: "public-rpc"
+        name: "proxyd-public"
+        spec:
+          kind: "proxyd"
+        deps:
+          nodes:
+            - "rpc-0"
+            - "rpc-1"
+
+      - kind: "peer-mgmt-service"
+        name: "peer-mgmt-service"
+        spec:
+          kind: "peer-mgmt-service"
+        deps:
+          nodes:
+            - "sequencer-0"
+            - "sequencer-1"
+            - "sequencer-2"
+            - "rpc-0"
+            - "rpc-1"
+
+      - kind: "op-conductor-mon"
+        name: "op-conductor-mon"
+        spec:
+          kind: "op-conductor-mon"
+        deps:
+          nodes:
+            - "sequencer-0"
+            - "sequencer-1"
+            - "sequencer-2"
+
+      - kind: "op-conductor-ops"
+        name: "op-conductor-ops"
+        spec:
+          kind: "op-conductor-ops"
+        deps:
+          nodes:
+            - "sequencer-0"
+            - "sequencer-1"
+            - "sequencer-2"
+
+      - kind: "faucet"
+        name: "op-faucet"
+        spec:
+          kind: "op-faucet"
+        deps:
+          nodes:
+            - "rpc-0"
+
+services:
+  - kind: "test-runner"
+    name: "op-acceptor"
+    spec:
+      kind: "op-acceptor"
