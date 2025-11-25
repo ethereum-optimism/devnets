@@ -1,4 +1,4 @@
 [tools]
-
 mdbook = "v0.4.43"
 uv = "0.9.5"
+"pipx:cookiecutter" = "2.6.0"
