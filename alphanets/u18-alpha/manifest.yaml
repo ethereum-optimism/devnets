@@ -1,0 +1,64 @@
+name: u18-alpha
+type: alphanet
+scope: https://github.com/ethereum-optimism/devnets/issues/128
+status: pending
+description: |
+    * Flashblocks
+    * Jovian
+    * CGT
+    * Kona Proofs
+features:
+    - skip-ci
+cluster:
+    name: oplabs-dev-infra-primary
+l1:
+    name: sepolia
+    chain_id: 11155111
+    genesis_locator: ""
+    eth_rpc: https://proxyd-l1-sepolia.primary.client.dev.oplabs.cloud
+    beacon_rpc: https://beacon-api-proxy-sepolia.primary.client.dev.oplabs.cloud
+    blob_archiver_rpc: https://blob-api-sepolia.primary.client.dev.oplabs.cloud
+    owner_safe_address: 0xe934Dc97E347C6aCef74364B50125bb8689c40ff
+    celestia_auth_token: ""
+    celestia_rpc_url: ""
+l2:
+    deployment:
+        op-deployer:
+            version: ""
+        l1-contracts:
+            locator: ""
+            version: ""
+        l2-contracts:
+            locator: ""
+            version: ""
+        overrides:
+            l2GenesisJovianTimeOffset: "0x0"
+    components:
+        op-batcher:
+            version: op-batcher/v1.16.2-rc.1
+        op-challenger:
+            version: op-challenger/ef970556e668b271a152124023a8d6bb5159bacf
+        op-conductor:
+            version: op-conductor/v0.9.0
+        op-geth:
+            version: op-geth/v1.101603.5-rc.1
+        op-node:
+            version: op-node/v1.16.2-rc.3
+        op-program:
+            version: op-program/ec8ce8753d4e5e4376c8ff27a91b36dcbb414387
+        op-proposer:
+            version: op-proposer/ef970556e668b271a152124023a8d6bb5159bacf
+        op-reth:
+            version: op-reth/v1.9.3
+    charts: {}
+    chains:
+        - name: u18-alpha-0
+          chain_id: "420100006"
+          features:
+            - flashblocks
+            - kona
+          deployment:
+            overrides: {}
+          custom_gas_token:
+            name: CGT USD
+            symbol: CGTUSD
