@@ -1,0 +1,49 @@
+configType = "custom"
+opDeployerVersion = "v0.0.0-dev"
+l1ChainID = 11155111
+fundDevAccounts = true
+l1ContractsLocator = "embedded"
+l2ContractsLocator = "embedded"
+
+[superchainRoles]
+  SuperchainProxyAdminOwner = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
+  SuperchainGuardian = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
+  ProtocolVersionsOwner = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
+  Challenger = "0x293204bfa7f28c4a4275b377ccafd525d2225d37"
+
+[[chains]]
+  id = "0x00000000000000000000000000000000000000000000000000000000190a37a7"
+  baseFeeVaultRecipient = "0xa03e9ec6e474e71c8aa0ab18428a9a5b35ed8839"
+  l1FeeVaultRecipient = "0x08ea31cc6f873588522f0bd94ca4c779233034b7"
+  sequencerFeeVaultRecipient = "0xeeee6fe98d72647a81e01f16e29e9586b773334f"
+  operatorFeeVaultRecipient = "0x43094b4027986c0984bc7cfaa3dbe65ed3d38201"
+  eip1559DenominatorCanyon = 250
+  eip1559Denominator = 50
+  eip1559Elasticity = 6
+  gasLimit = 60000000
+  operatorFeeScalar = 0
+  operatorFeeConstant = 0
+  chainFeesRecipient = "0x0000000000000000000000000000000000000000"
+  minBaseFee = 0
+  daFootprintGasScalar = 0
+  [chains.roles]
+    l1ProxyAdminOwner = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
+    l2ProxyAdminOwner = "0x2d76e48eb3c747322af0d3016be0b3754bbb5121"
+    systemConfigOwner = "0x9b3ce09e220fcb9469dded7210a3bbbfc5548bfb"
+    unsafeBlockSigner = "0x5e2b4cf0fd815a70c26b0608133b27e3ca0c252d"
+    batcher = "0x2af6b4a453456f1ecef457963813843cca28d16b"
+    proposer = "0x000c245b7a2e946c9eee6b488f1da07af15ad4f4"
+    challenger = "0x293204bfa7f28c4a4275b377ccafd525d2225d37"
+  [chains.deployOverrides]
+    faultGameAbsolutePrestate = "0x03f75c06fd059a9fab4fdfd76acabd80d6305effa8921e7e8b0e1400f5c2a3be"
+    respectedGameType = 8
+  [chains.customGasToken]
+    name = "CGT USD"
+    symbol = "CGTUSD"
+    initialLiquidity = "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    liquidityControllerOwner = "0x0000000000000000000000000000000000000000"
+
+[globalDeployOverrides]
+  devFeatureBitmap = "0x0000000000000000000000000000000000000000000000000000000000003000"
+  l2GenesisJovianTimeOffset = "0x0"
+
