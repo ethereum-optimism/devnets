@@ -1,7 +1,7 @@
 name: u18-alpha
 type: alphanet
 scope: https://github.com/ethereum-optimism/devnets/issues/128
-status: pending
+status: online
 description: |
     * Flashblocks
     * Jovian
@@ -49,7 +49,7 @@ l2:
         op-node:
             version: op-node/v1.16.2-rc.3
         op-program:
-            version: op-program/ec8ce8753d4e5e4376c8ff27a91b36dcbb414387
+            version: op-program/develop
         op-proposer:
             version: op-proposer/ef970556e668b271a152124023a8d6bb5159bacf
         op-reth:
