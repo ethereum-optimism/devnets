@@ -1,7 +1,7 @@
 name: u18-alpha
 type: alphanet
 scope: https://github.com/ethereum-optimism/devnets/issues/128
-status: pending
+status: online
 description: |
     * Flashblocks
     * Jovian
