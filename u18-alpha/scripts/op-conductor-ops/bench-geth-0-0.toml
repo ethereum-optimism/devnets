@@ -1,0 +1,33 @@
+# Cooked with love by netchef
+
+cert_path = "./combined-cacert.pem"
+
+[networks]
+
+[networks.bench-geth-0-0]
+sequencers = [
+"dev-client-bench-geth-0-0-opn-geth-f-sequencer-0",
+"dev-client-bench-geth-0-0-opn-geth-f-sequencer-1",
+"dev-client-bench-geth-0-0-opn-geth-f-sequencer-2",
+]
+
+[sequencers]
+
+[sequencers.dev-client-bench-geth-0-0-opn-geth-f-sequencer-0]
+raft_addr = "bench-geth-0-0-opn-geth-f-sequencer-0-raft.secondary.client.dev.oplabs.cloud:50050"
+conductor_rpc_url = "https://bench-geth-0-0-opn-geth-f-sequencer-0-con.secondary.client.dev.oplabs.cloud"
+node_rpc_url = "https://bench-geth-0-0-opn-geth-f-sequencer-0-op-node.secondary.client.dev.oplabs.cloud"
+voting = true
+
+[sequencers.dev-client-bench-geth-0-0-opn-geth-f-sequencer-1]
+raft_addr = "bench-geth-0-0-opn-geth-f-sequencer-1-raft.secondary.client.dev.oplabs.cloud:50050"
+conductor_rpc_url = "https://bench-geth-0-0-opn-geth-f-sequencer-1-con.secondary.client.dev.oplabs.cloud"
+node_rpc_url = "https://bench-geth-0-0-opn-geth-f-sequencer-1-op-node.secondary.client.dev.oplabs.cloud"
+voting = true
+
+[sequencers.dev-client-bench-geth-0-0-opn-geth-f-sequencer-2]
+raft_addr = "bench-geth-0-0-opn-geth-f-sequencer-2-raft.secondary.client.dev.oplabs.cloud:50050"
+conductor_rpc_url = "https://bench-geth-0-0-opn-geth-f-sequencer-2-con.secondary.client.dev.oplabs.cloud"
+node_rpc_url = "https://bench-geth-0-0-opn-geth-f-sequencer-2-op-node.secondary.client.dev.oplabs.cloud"
+voting = true
+

@@ -1,0 +1,39 @@
+# Cooked with love by netchef
+
+cert_path = "./combined-cacert.pem"
+
+[networks]
+
+[networks.cgtfb-0]
+sequencers = [
+"dev-infra-cgtfb-0-opn-geth-f-sequencer-0",
+"dev-infra-cgtfb-0-opn-geth-f-sequencer-1",
+"dev-infra-cgtfb-0-opn-reth-f-sequencer-2",
+]
+
+[sequencers]
+
+[sequencers.dev-infra-cgtfb-0-opn-geth-f-sequencer-0]
+raft_addr = "cgtfb-0-opn-geth-f-sequencer-0-op-conductor-raft.primary.infra.dev.oplabs.cloud:50050"
+conductor_rpc_url = "https://cgtfb-0-opn-geth-f-sequencer-0-op-conductor.primary.infra.dev.oplabs.cloud"
+node_rpc_url = "https://cgtfb-0-opn-geth-f-sequencer-0-op-node.primary.infra.dev.oplabs.cloud"
+builder_rpc_url = "https://cgtfb-0-opn-geth-f-sequencer-0-rbld.primary.infra.dev.oplabs.cloud"
+rollup_boost_debug_rpc_url = "https://cgtfb-0-opn-geth-f-sequencer-0-rb-dbg.primary.infra.dev.oplabs.cloud"
+voting = true
+
+[sequencers.dev-infra-cgtfb-0-opn-geth-f-sequencer-1]
+raft_addr = "cgtfb-0-opn-geth-f-sequencer-1-op-conductor-raft.primary.infra.dev.oplabs.cloud:50050"
+conductor_rpc_url = "https://cgtfb-0-opn-geth-f-sequencer-1-op-conductor.primary.infra.dev.oplabs.cloud"
+node_rpc_url = "https://cgtfb-0-opn-geth-f-sequencer-1-op-node.primary.infra.dev.oplabs.cloud"
+builder_rpc_url = "https://cgtfb-0-opn-geth-f-sequencer-1-rbld.primary.infra.dev.oplabs.cloud"
+rollup_boost_debug_rpc_url = "https://cgtfb-0-opn-geth-f-sequencer-1-rb-dbg.primary.infra.dev.oplabs.cloud"
+voting = true
+
+[sequencers.dev-infra-cgtfb-0-opn-reth-f-sequencer-2]
+raft_addr = "cgtfb-0-opn-reth-f-sequencer-2-op-conductor-raft.primary.infra.dev.oplabs.cloud:50050"
+conductor_rpc_url = "https://cgtfb-0-opn-reth-f-sequencer-2-op-conductor.primary.infra.dev.oplabs.cloud"
+node_rpc_url = "https://cgtfb-0-opn-reth-f-sequencer-2-op-node.primary.infra.dev.oplabs.cloud"
+builder_rpc_url = "https://cgtfb-0-opn-reth-f-sequencer-2-rbld.primary.infra.dev.oplabs.cloud"
+rollup_boost_debug_rpc_url = "https://cgtfb-0-opn-reth-f-sequencer-2-rb-dbg.primary.infra.dev.oplabs.cloud"
+voting = true
+
