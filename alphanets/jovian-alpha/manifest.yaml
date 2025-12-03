@@ -1,7 +1,7 @@
 name: jovian-alpha
 type: alphanet
 scope: https://github.com/ethereum-optimism/devnets/issues/123
-status: online
+status: offline
 description: Alphanet for Jovian
 cluster:
   name: oplabs-dev-infra-primary
