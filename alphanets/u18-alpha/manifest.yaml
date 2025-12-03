@@ -1,7 +1,7 @@
 name: u18-alpha
 type: alphanet
 scope: https://github.com/ethereum-optimism/devnets/issues/128
-status: online
+status: pending
 description: |
     * Flashblocks
     * Jovian
@@ -33,15 +33,11 @@ l2:
             version: ""
         overrides:
             l2GenesisJovianTimeOffset: "0x0"
-        gas_limit: 60000000
-        eip1559_elasticity: 6
-        eip1559_denominator: 50
-        eip1559_denominator_canyon: 250
     components:
         op-batcher:
             version: op-batcher/v1.16.2-rc.1
         op-challenger:
-            version: op-challenger/ef970556e668b271a152124023a8d6bb5159bacf
+            version: op-challenger/ff51a4a203bd920c4e3bfd18a26af811369c69de
         op-conductor:
             version: op-conductor/v0.9.0
         op-geth:
@@ -51,7 +47,7 @@ l2:
         op-program:
             version: op-program/develop
         op-proposer:
-            version: op-proposer/ef970556e668b271a152124023a8d6bb5159bacf
+            version: op-proposer/ff51a4a203bd920c4e3bfd18a26af811369c69de
         op-reth:
             version: op-reth/v1.9.3
     charts: {}
@@ -63,10 +59,6 @@ l2:
             - kona
           deployment:
             overrides: {}
-            gas_limit: 60000000
-            eip1559_elasticity: 6
-            eip1559_denominator: 50
-            eip1559_denominator_canyon: 250
           custom_gas_token:
             name: CGT USD
             symbol: CGTUSD
