@@ -90,7 +90,8 @@ create-devnet net_type name preset:
         --output-dir "{{net_type}}" \
         devnet_name="{{name}}" \
         preset="$PRESET" \
-        description="$PRESET configuration for {{name}}" 2>&1; then
+        description="$PRESET configuration for {{name}}" \
+        flashblock_enabled=true 2>&1; then
         echo ""
         echo "Error: Failed to create devnet. Preset '$PRESET' may not exist."
         echo "Run 'just list-presets' to see available presets."
