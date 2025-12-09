@@ -4,74 +4,86 @@ scope: https://github.com/ethereum-optimism/devnets/issues/159
 status: pending
 deployed_on: 12-09-2025
 description: |
-  * U18 Betanet
-    * Flashblocks
-    * Jovian
+    * U18 Betanet
+      * Flashblocks
+      * Jovian
 features:
     - skip-ci
 cluster:
-  name: oplabs-dev-infra-primary
+    name: oplabs-dev-infra-primary
 l1:
-  name: sepolia
-  chain_id: 11155111
-  genesis_locator: ""
-  eth_rpc: https://proxyd-l1-sepolia.primary.client.dev.oplabs.cloud
-  beacon_rpc: https://beacon-api-proxy-sepolia.primary.client.dev.oplabs.cloud
-  blob_archiver_rpc: https://blob-api-sepolia.primary.client.dev.oplabs.cloud
-  owner_safe_address: 0xe934Dc97E347C6aCef74364B50125bb8689c40ff
-  celestia_auth_token: ""
-  celestia_rpc_url: ""
+    name: sepolia
+    chain_id: 11155111
+    genesis_locator: ""
+    eth_rpc: https://proxyd-l1-sepolia.primary.client.dev.oplabs.cloud
+    beacon_rpc: https://beacon-api-proxy-sepolia.primary.client.dev.oplabs.cloud
+    blob_archiver_rpc: https://blob-api-sepolia.primary.client.dev.oplabs.cloud
+    owner_safe_address: 0xe934Dc97E347C6aCef74364B50125bb8689c40ff
+    celestia_auth_token: ""
+    celestia_rpc_url: ""
 l2:
-  deployment:
-    op-deployer:
-      version: ""
-    l1-contracts:
-      locator: https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-b112b16f8939fbb732c0693de3d3bd1e8e3e2f0771f91d5ab300a6c9b7b1af73.tar.gz
-      version: ""
-    l2-contracts:
-      locator: https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-b112b16f8939fbb732c0693de3d3bd1e8e3e2f0771f91d5ab300a6c9b7b1af73.tar.gz
-      version: ""
-    overrides:
-      l2GenesisJovianTimeOffset: "0x0"
-  components:
-    op-batcher:
-      version: op-batcher/v1.16.2-rc.1
-    op-challenger:
-      version: op-challenger/v1.8.0-rc.1
-    op-dispute-mon:
-      version: op-dispute-mon/v1.4.2-rc.6
-    op-conductor:
-      version: op-conductor/v0.9.0
-    op-geth:
-      version: op-geth/v1.101603.5-rc.1
-    op-node:
-      version: op-node/v1.16.3-rc.1
-    op-program:
-      version: op-program/v1.9.0-rc.1
-    op-proposer:
-      version: op-proposer/v1.10.0-rc.3
-    op-reth:
-      version: op-reth/v1.9.3
-    rollup-boost:
-      version: v0.7.11
-    op-rbuilder:
-      version: op-rbuilder/v0.2.13
-    kona-node:
-      version: kona-client/v1.2.5
-    proxyd:
-      version: proxyd/v4.21.0
-  charts: {}
-  chains:
-    - name: u18-beta-0
-      chain_id: "420110021"
-      features:
-        - flashblocks
-      deployment:
-        overrides: {}
-    - name: u18-beta-1
-      chain_id: "420110022"
-      features:
-        - fp-permissionless
-        - flashblocks
-      deployment:
-        overrides: {}
+    deployment:
+        op-deployer:
+            version: ""
+        l1-contracts:
+            locator: https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-b112b16f8939fbb732c0693de3d3bd1e8e3e2f0771f91d5ab300a6c9b7b1af73.tar.gz
+            version: ""
+        l2-contracts:
+            locator: https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-b112b16f8939fbb732c0693de3d3bd1e8e3e2f0771f91d5ab300a6c9b7b1af73.tar.gz
+            version: ""
+        overrides:
+            l2GenesisJovianTimeOffset: "0x0"
+        gas_limit: 60000000
+        eip1559_elasticity: 6
+        eip1559_denominator: 50
+        eip1559_denominator_canyon: 250
+    components:
+        kona-node:
+            version: kona-client/v1.2.5
+        op-batcher:
+            version: op-batcher/v1.16.2-rc.1
+        op-challenger:
+            version: op-challenger/v1.8.0-rc.1
+        op-conductor:
+            version: op-conductor/v0.9.0
+        op-dispute-mon:
+            version: op-dispute-mon/v1.4.2-rc.6
+        op-geth:
+            version: op-geth/v1.101603.5-rc.1
+        op-node:
+            version: op-node/v1.16.3-rc.1
+        op-program:
+            version: op-program/v1.9.0-rc.1
+        op-proposer:
+            version: op-proposer/v1.10.0-rc.3
+        op-rbuilder:
+            version: op-rbuilder/v0.2.13
+        op-reth:
+            version: op-reth/v1.9.3
+        proxyd:
+            version: proxyd/v4.21.0
+        rollup-boost:
+            version: v0.7.11
+    charts: {}
+    chains:
+        - name: u18-beta-0
+          chain_id: "420110021"
+          features:
+            - flashblocks
+          deployment:
+            overrides: {}
+            gas_limit: 60000000
+            eip1559_elasticity: 6
+            eip1559_denominator: 50
+            eip1559_denominator_canyon: 250
+        - name: u18-beta-1
+          chain_id: "420110022"
+          features:
+            - fp-permissionless
+            - flashblocks
+          deployment:
+            overrides: {}
+            gas_limit: 60000000
+            eip1559_elasticity: 6
+            eip1559_denominator: 50
+            eip1559_denominator_canyon: 250
