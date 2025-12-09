@@ -56,14 +56,10 @@ l2:
       version: v0.7.11
     op-rbuilder:
       version: op-rbuilder/v0.2.13
-    kona-program:
-      version: kona-client/v1.2.5
     kona-node:
       version: kona-client/v1.2.5
     proxyd:
       version: proxyd/v4.21.0
-    op-acceptor:
-      version: op-acceptor/v3.8.0
   charts: {}
   chains:
     - name: u18-beta-0
