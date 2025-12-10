@@ -60,7 +60,7 @@ l2:
           chain_id: "420100007"
           features:
             - flashblocks
-            - kona
+            - kona-proofs
           deployment:
             overrides: {}
             gas_limit: 60000000
