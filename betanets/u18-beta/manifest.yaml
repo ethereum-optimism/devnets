@@ -39,7 +39,7 @@ l2:
         eip1559_denominator_canyon: 250
     components:
         kona-node:
-            version: kona-node/v1.2.5
+            version: kona-node/1.2.5
         op-batcher:
             version: op-batcher/v1.16.2-rc.1
         op-challenger:
