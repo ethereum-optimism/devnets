@@ -1,0 +1,205 @@
+{
+    "superchains": [
+        {
+            "name": "sepolia",
+            "config": {
+                "name": "Sepolia",
+                "l1": {
+                    "chain_id": 11155111,
+                    "public_rpc": "https://proxyd-l1-sepolia.primary.client.dev.oplabs.cloud",
+                    "explorer": ""
+                },
+                "hardforks": {
+                    "canyon_time": 0,
+                    "delta_time": 0,
+                    "ecotone_time": 0,
+                    "fjord_time": 0,
+                    "granite_time": 0,
+                    "holocene_time": 0,
+                    "pectra_blob_schedule_time": 0,
+                    "isthmus_time": 0,
+                    "jovian_time": 0
+                },
+                "protocol_versions_addr": null,
+                "superchain_config_addr": null,
+                "op_contracts_manager_proxy_addr": null
+            },
+            "chains": [
+                {
+                    "Name": "u18-beta-0",
+                    "PublicRPC": "",
+                    "SequencerRPC": "",
+                    "Explorer": "",
+                    "SuperchainLevel": 0,
+                    "GovernedByOptimism": false,
+                    "SuperchainTime": 0,
+                    "DataAvailabilityType": "eth-da",
+                    "l2_chain_id": 420110021,
+                    "batch_inbox_address": "0x00E8DB7ac83EcBF426B49cA2cf43ace2DA02Be17",
+                    "block_time": 2,
+                    "seq_window_size": 3600,
+                    "max_sequencer_drift": 600,
+                    "GasPayingToken": null,
+                    "hardfork_configuration": {
+                        "canyon_time": 0,
+                        "delta_time": 0,
+                        "ecotone_time": 0,
+                        "fjord_time": 0,
+                        "granite_time": 0,
+                        "holocene_time": 0,
+                        "pectra_blob_schedule_time": 0,
+                        "isthmus_time": 0,
+                        "jovian_time": 0
+                    },
+                    "optimism": {
+                        "eip1559Elasticity": 6,
+                        "eip1559Denominator": 50,
+                        "eip1559DenominatorCanyon": 250
+                    },
+                    "alt_da": null,
+                    "genesis": {
+                        "l1": {
+                            "number": 9806090,
+                            "hash": "0x92adac99cf8bd548d762a40fe110ac4cb027beabcfc82a5230fcd26fb5dbe89a"
+                        },
+                        "l2": {
+                            "number": 0,
+                            "hash": "0x579d5839eeea9767f90d2b5899a938207274123f6eb6a491dd3fd05d1497d743"
+                        },
+                        "l2_time": 1765323036,
+                        "system_config": {
+                            "batcherAddr": "0xCee50De4d9060c4Af350DE0aD0AAF01db6962920",
+                            "overhead": "0x0000000000000000000000000000000000000000000000000000000000000000",
+                            "scalar": "0x010000000000000000000000000000000000000000000000000c3c9d00000558",
+                            "gasLimit": 60000000,
+                            "baseFeeScalar": null,
+                            "blobBaseFeeScalar": null,
+                            "eip1559Denominator": null,
+                            "eip1559Elasticity": null,
+                            "operatorFeeScalar": null,
+                            "operatorFeeConstant": null,
+                            "minBaseFee": null,
+                            "daFootprintGasScalar": null
+                        }
+                    },
+                    "Roles": {
+                        "SystemConfigOwner": null,
+                        "ProxyAdminOwner": null,
+                        "Guardian": null,
+                        "Challenger": null,
+                        "Proposer": null,
+                        "UnsafeBlockSigner": null,
+                        "BatchSubmitter": null
+                    },
+                    "Addresses": {
+                        "AddressManager": "0xF52FA3816db753E3BF7Db8cd6134258592F0bF51",
+                        "L1CrossDomainMessengerProxy": "0xe3FCcA78f39948eD8170fE04698F1e26a2551466",
+                        "L1Erc721BridgeProxy": "0x7Be332D7b7F7c28dE79cE28b36F17F3C0ad31ce2",
+                        "L1StandardBridgeProxy": "0x0Bfe4ccb44bd4591BD106345eec8473B4036A976",
+                        "L2OutputOracleProxy": "0x0000000000000000000000000000000000000000",
+                        "OptimismMintableErc20FactoryProxy": "0xC09189bC7A60248b625Eca79d4f3446Ca1Bbc64f",
+                        "OptimismPortalProxy": "0x03E9Cbd5742D2462C3b6FAD5de0b0F599444d16a",
+                        "SystemConfigProxy": "0x571d97509f51d7911cA51092F51c0A57d591a8F3",
+                        "ProxyAdmin": "0x5402a671527d2Bbde2C271862FC02B3f39531059",
+                        "SuperchainConfig": "0xBC64837fbFC57946F11a4148EBa89C48812c8dF4",
+                        "AnchorStateRegistryProxy": "0x3805CB4B2b3f7edBaA2A788b50Dd5264AB0756e3",
+                        "DelayedWethProxy": null,
+                        "DisputeGameFactoryProxy": "0xF97985C58B7E520Bd0215C11BB51Ac46475F0F87",
+                        "FaultDisputeGame": null,
+                        "Mips": null,
+                        "PermissionedDisputeGame": null,
+                        "PreimageOracle": null,
+                        "DataAvailabilityChallenge": null
+                    }
+                },
+                {
+                    "Name": "u18-beta-1",
+                    "PublicRPC": "",
+                    "SequencerRPC": "",
+                    "Explorer": "",
+                    "SuperchainLevel": 0,
+                    "GovernedByOptimism": false,
+                    "SuperchainTime": 0,
+                    "DataAvailabilityType": "eth-da",
+                    "l2_chain_id": 420110022,
+                    "batch_inbox_address": "0x00afBdB5C826F0ba6393E22f94e38c78D5B7F873",
+                    "block_time": 2,
+                    "seq_window_size": 3600,
+                    "max_sequencer_drift": 600,
+                    "GasPayingToken": null,
+                    "hardfork_configuration": {
+                        "canyon_time": 0,
+                        "delta_time": 0,
+                        "ecotone_time": 0,
+                        "fjord_time": 0,
+                        "granite_time": 0,
+                        "holocene_time": 0,
+                        "pectra_blob_schedule_time": 0,
+                        "isthmus_time": 0,
+                        "jovian_time": 0
+                    },
+                    "optimism": {
+                        "eip1559Elasticity": 6,
+                        "eip1559Denominator": 50,
+                        "eip1559DenominatorCanyon": 250
+                    },
+                    "alt_da": null,
+                    "genesis": {
+                        "l1": {
+                            "number": 9806090,
+                            "hash": "0x92adac99cf8bd548d762a40fe110ac4cb027beabcfc82a5230fcd26fb5dbe89a"
+                        },
+                        "l2": {
+                            "number": 0,
+                            "hash": "0xfea951fe1c22247ac2a4a8cc2160e01827ddf4e479b0a3fa228f3182f1ddaa99"
+                        },
+                        "l2_time": 1765323036,
+                        "system_config": {
+                            "batcherAddr": "0x5e34f39602B6A23650f98EF84705694b2d8691eE",
+                            "overhead": "0x0000000000000000000000000000000000000000000000000000000000000000",
+                            "scalar": "0x010000000000000000000000000000000000000000000000000c3c9d00000558",
+                            "gasLimit": 60000000,
+                            "baseFeeScalar": null,
+                            "blobBaseFeeScalar": null,
+                            "eip1559Denominator": null,
+                            "eip1559Elasticity": null,
+                            "operatorFeeScalar": null,
+                            "operatorFeeConstant": null,
+                            "minBaseFee": null,
+                            "daFootprintGasScalar": null
+                        }
+                    },
+                    "Roles": {
+                        "SystemConfigOwner": null,
+                        "ProxyAdminOwner": null,
+                        "Guardian": null,
+                        "Challenger": null,
+                        "Proposer": null,
+                        "UnsafeBlockSigner": null,
+                        "BatchSubmitter": null
+                    },
+                    "Addresses": {
+                        "AddressManager": "0x82D735Cc1e04fcFef24d0190F11b5253e05562AF",
+                        "L1CrossDomainMessengerProxy": "0xF0e4aAcC6D039C05B827994C3FfBBBcf00085D11",
+                        "L1Erc721BridgeProxy": "0xe081aD91D049e9999d1e7006dbF025b38198B518",
+                        "L1StandardBridgeProxy": "0x3756BF0380E7fdABcB81f2cFb1d8022e8B798a8F",
+                        "L2OutputOracleProxy": "0x0000000000000000000000000000000000000000",
+                        "OptimismMintableErc20FactoryProxy": "0xB1453F648E22c4DEB2FdEDA840E5Af42Ef9ea49a",
+                        "OptimismPortalProxy": "0xbd36ac8fB65F192dAEbCB2Dca819CB7ea7D60417",
+                        "SystemConfigProxy": "0x5babF93aC7AFfeaE25dc1a7ad4587fDeEbba44C2",
+                        "ProxyAdmin": "0xcd18a0C04286Eba52Bb168Fa1D79133Da4856bEf",
+                        "SuperchainConfig": "0xBC64837fbFC57946F11a4148EBa89C48812c8dF4",
+                        "AnchorStateRegistryProxy": "0x333f8D607B81E880315716A815A9369B33ea6A77",
+                        "DelayedWethProxy": null,
+                        "DisputeGameFactoryProxy": "0x298038f9E37b370d20E58706E8Ac78475b089FB2",
+                        "FaultDisputeGame": null,
+                        "Mips": null,
+                        "PermissionedDisputeGame": null,
+                        "PreimageOracle": null,
+                        "DataAvailabilityChallenge": null
+                    }
+                }
+            ]
+        }
+    ]
+}
