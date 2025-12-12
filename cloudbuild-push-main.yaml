@@ -22,13 +22,13 @@ steps:
     - name: 'ssh'
       path: /root/.ssh
 
-  - name: us-docker.pkg.dev/oplabs-tools-artifacts/internal-images/netchef:main
+  - name: us-docker.pkg.dev/oplabs-tools-artifacts/internal-images/netchef:1ad380431d546d6c93a89001794bda7353a610ac
     args: ["ci", "validate", "--devnets-dir", "."]
     env:
       - NETCHEF_GCP_PROJECT=oplabs-dev-infra
       - NETCHEF_REPO_URL=https://github.com/ethereum-optimism/devnets.git
 
-  - name: us-docker.pkg.dev/oplabs-tools-artifacts/internal-images/netchef:main
+  - name: us-docker.pkg.dev/oplabs-tools-artifacts/internal-images/netchef:1ad380431d546d6c93a89001794bda7353a610ac
     entrypoint: "ci-command-on-devnet-changes.sh"
     args: ["check-for-open-workflows"]
     env:
@@ -38,7 +38,7 @@ steps:
     secretEnv:
       - NETCHEF_TEMPORAL_API_KEY
 
-  - name: us-docker.pkg.dev/oplabs-tools-artifacts/internal-images/netchef:main
+  - name: us-docker.pkg.dev/oplabs-tools-artifacts/internal-images/netchef:1ad380431d546d6c93a89001794bda7353a610ac
     entrypoint: "ci-command-on-devnet-changes.sh"
     args: ["trigger-workflow"]
     env:
