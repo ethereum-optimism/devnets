@@ -166,16 +166,6 @@ chains:
             - "rpc-0"
             - "rpc-1"
 
-      - kind: "flashblocks-rpc"
-        name: "flashblocks-rpc"
-        spec:
-          kind: "proxyd"
-        deps:
-          nodes:
-            - "sequencer-0"
-            - "sequencer-1"
-            - "sequencer-2"
-
       - kind: "peer-mgmt-service"
         name: "peer-mgmt-service"
         spec:
@@ -476,4 +466,4 @@ services:
       kind: "op-acceptor"
       values:
         env:
-          OP_ACCEPTOR_GATE: "cgt,jovian,flashblocks"
+          OP_ACCEPTOR_GATE: "jovian,flashblocks"
