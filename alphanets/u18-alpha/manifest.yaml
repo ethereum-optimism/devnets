@@ -38,22 +38,34 @@ l2:
         eip1559_denominator: 50
         eip1559_denominator_canyon: 250
     components:
+        kona-node:
+            version: kona-node/1.2.5
         op-batcher:
             version: op-batcher/v1.16.2-rc.1
         op-challenger:
-            version: op-challenger/ff51a4a203bd920c4e3bfd18a26af811369c69de
+            version: op-challenger/v1.8.0-rc.2
         op-conductor:
             version: op-conductor/v0.9.0
+        op-dispute-mon:
+            version: op-dispute-mon/v1.4.2-rc.6
         op-geth:
             version: op-geth/v1.101603.5-rc.1
         op-node:
-            version: op-node/v1.16.2-rc.3
+            version: op-node/v1.16.3-rc.1
         op-program:
-            version: op-program/develop
+            version: op-program/v1.9.0-rc.1
         op-proposer:
-            version: op-proposer/ff51a4a203bd920c4e3bfd18a26af811369c69de
+            version: op-proposer/v1.10.0-rc.3
+        op-rbuilder:
+            version: op-rbuilder/v0.2.13
         op-reth:
             version: op-reth/v1.9.3
+        proxyd:
+            version: proxyd/v4.21.0
+        rollup-boost:
+            version: v0.7.11
+        kona-program:
+            version: kona-node/v1.2.5
     charts: {}
     chains:
         - name: u18-alpha-0
