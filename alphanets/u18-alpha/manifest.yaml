@@ -39,7 +39,7 @@ l2:
         eip1559_denominator_canyon: 250
     components:
         kona-node:
-            version: kona-node/1.2.5
+            version: kona-node/1.2.7
         op-batcher:
             version: op-batcher/v1.16.2-rc.1
         op-challenger:
@@ -51,7 +51,7 @@ l2:
         op-geth:
             version: op-geth/v1.101603.5-rc.1
         op-node:
-            version: op-node/v1.16.3-rc.1
+            version: op-node/v1.16.2-rc.3
         op-program:
             version: op-program/v1.9.0-rc.1
         op-proposer:
@@ -65,7 +65,7 @@ l2:
         rollup-boost:
             version: v0.7.11
         kona-program:
-            version: kona-node/v1.2.5
+            version: kona-node/v1.2.7
     charts: {}
     chains:
         - name: u18-alpha-0
