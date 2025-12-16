@@ -8,7 +8,6 @@ description: |
       * Flashblocks
       * Jovian
 features:
-    - skip-ci
     - per-el-bootnode-gen
 cluster:
     name: oplabs-dev-infra-primary
