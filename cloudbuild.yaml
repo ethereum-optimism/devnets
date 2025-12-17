@@ -21,12 +21,12 @@ steps:
     volumes:
     - name: 'ssh'
       path: /root/.ssh
-  - name: us-docker.pkg.dev/oplabs-tools-artifacts/internal-images/netchef:14123a83bafa59fa459c84d5d8c7794149b945c1
+  - name: us-docker.pkg.dev/oplabs-tools-artifacts/internal-images/netchef:f9359f96cdcb02fc8df5d055ee50d4867dd6aa73
     args: ["ci", "validate", "--devnets-dir", "."]
     env:
       - NETCHEF_GCP_PROJECT=oplabs-dev-infra
       - NETCHEF_REPO_URL=https://github.com/ethereum-optimism/devnets.git
-  - name: us-docker.pkg.dev/oplabs-tools-artifacts/internal-images/netchef:14123a83bafa59fa459c84d5d8c7794149b945c1
+  - name: us-docker.pkg.dev/oplabs-tools-artifacts/internal-images/netchef:f9359f96cdcb02fc8df5d055ee50d4867dd6aa73
     entrypoint: "ci-command-on-devnet-changes.sh"
     args: ["store-pr-context", ".", "--base"]
     env:
