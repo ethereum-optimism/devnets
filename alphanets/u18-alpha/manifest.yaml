@@ -1,14 +1,12 @@
 name: u18-alpha
 type: alphanet
 scope: https://github.com/ethereum-optimism/devnets/issues/128
-status: online
+status: offline
 description: |
     * Flashblocks
     * Jovian
     * CGT
     * Kona Proofs
-features:
-    - skip-ci
 cluster:
     name: oplabs-dev-infra-primary
 l1:
@@ -24,13 +22,12 @@ l1:
 l2:
     deployment:
         op-deployer:
-            version: ""
+            version: "v0.5.2"
         l1-contracts:
-            locator: ""
-            version: ""
+            locator: https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-ac9d0456187525c16415df5ad5b05faaa2463e2155c97a6bc1727f0352da39e0.tar.gz
+            version: op-contracts/v5.0.0
         l2-contracts:
-            locator: ""
-            version: ""
+            locator: https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-ac9d0456187525c16415df5ad5b05faaa2463e2155c97a6bc1727f0352da39e0.tar.gz
         overrides:
             l2GenesisJovianTimeOffset: "0x0"
         gas_limit: 60000000
