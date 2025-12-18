@@ -1,7 +1,7 @@
 name: revshare-beta
 type: betanet
 scope: https://github.com/ethereum-optimism/devnets/issues/192
-status: offline
+status: pending
 description: |
     * Flashblocks
     * Low Finality Delay
