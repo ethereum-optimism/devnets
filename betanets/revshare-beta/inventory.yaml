@@ -108,7 +108,7 @@ chains:
             - "rpc-0"
       
       - kind: "flashblocks-websocket-proxy"
-        name: "flashblocks-websocket-proxy-0"
+        name: "fb-ws-proxy-0"
         spec:
           kind: "flashblocks-websocket-proxy"
         deps:
