@@ -23,12 +23,12 @@ l1:
 l2:
     deployment:
         op-deployer:
-            version: "v0.6.0"
+            version: "v0.5.2"
         l1-contracts:
-            locator: https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-ba6ee9bdfcb5b15d00a1727800632dc05cfcb7d90d7a01b2a20ac7308ea4c8d4.tar.gz
+            locator: https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-ba6ee9bdfcb5b15d00a1727800632dc05cfcb7d90d7a01b2a20ac7308ea4c8d4.tar.zst
             version: op-contracts/v6.0.0
         l2-contracts:
-            locator: https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-ba6ee9bdfcb5b15d00a1727800632dc05cfcb7d90d7a01b2a20ac7308ea4c8d4.tar.gz
+            locator: https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-ba6ee9bdfcb5b15d00a1727800632dc05cfcb7d90d7a01b2a20ac7308ea4c8d4.tar.zst
         overrides:
             l2GenesisJovianTimeOffset: "0x0"
             disputeGameFinalityDelaySeconds: 300
