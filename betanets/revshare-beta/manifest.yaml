@@ -7,7 +7,7 @@ description: |
     * Low Finality Delay
     * RevShare-ready Upgrade
 features:
-    - skip-ci
+    - skip-workflows
 cluster:
     name: oplabs-dev-infra-primary
 l1:
