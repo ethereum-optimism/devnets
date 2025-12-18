@@ -23,15 +23,16 @@ l1:
 l2:
     deployment:
         op-deployer:
-            version: "v0.5.2"
+            version: v0.5.2
         l1-contracts:
             locator: https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-ba6ee9bdfcb5b15d00a1727800632dc05cfcb7d90d7a01b2a20ac7308ea4c8d4.tar.zst
             version: op-contracts/v6.0.0
         l2-contracts:
             locator: https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-ba6ee9bdfcb5b15d00a1727800632dc05cfcb7d90d7a01b2a20ac7308ea4c8d4.tar.zst
+            version: ""
         overrides:
-            l2GenesisJovianTimeOffset: "0x0"
             disputeGameFinalityDelaySeconds: 300
+            l2GenesisJovianTimeOffset: "0x0"
         gas_limit: 60000000
         eip1559_elasticity: 6
         eip1559_denominator: 50
@@ -39,6 +40,8 @@ l2:
     components:
         kona-node:
             version: kona-node/1.2.7
+        kona-program:
+            version: kona-node/v1.2.7
         op-batcher:
             version: op-batcher/v1.16.2-rc.1
         op-challenger:
@@ -63,8 +66,6 @@ l2:
             version: proxyd/v4.21.0
         rollup-boost:
             version: v0.7.11
-        kona-program:
-            version: kona-node/v1.2.7
     charts: {}
     chains:
         - name: revshare-beta-0
@@ -73,8 +74,8 @@ l2:
             - flashblocks
           deployment:
             overrides:
-                useRevenueShare: false
                 finalSystemOwner: 0x1Eb2fFc903729a0F03966B917003800b145F56E2
+                useRevenueShare: false
             gas_limit: 60000000
             eip1559_elasticity: 6
             eip1559_denominator: 50
