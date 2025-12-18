@@ -1,7 +1,7 @@
 name: revshare-beta
 type: betanet
 scope: https://github.com/ethereum-optimism/devnets/issues/192
-status: online
+status: offline
 description: |
     * Flashblocks
     * Low Finality Delay
@@ -18,7 +18,7 @@ l1:
     eth_rpc: https://proxyd-l1-sepolia.primary.client.dev.oplabs.cloud
     beacon_rpc: https://beacon-api-proxy-sepolia.primary.client.dev.oplabs.cloud
     blob_archiver_rpc: https://blob-api-sepolia.primary.client.dev.oplabs.cloud
-    owner_safe_address: 0xe934Dc97E347C6aCef74364B50125bb8689c40ff
+    owner_safe_address: 0x1Eb2fFc903729a0F03966B917003800b145F56E2
     celestia_auth_token: ""
     celestia_rpc_url: ""
 l2:
@@ -75,7 +75,6 @@ l2:
             - flashblocks
           deployment:
             overrides:
-                finalSystemOwner: 0x1Eb2fFc903729a0F03966B917003800b145F56E2
                 useRevenueShare: false
             gas_limit: 60000000
             eip1559_elasticity: 6
