@@ -1,0 +1,81 @@
+name: revshare-beta
+type: betanet
+scope: https://github.com/ethereum-optimism/devnets/issues/192
+status: pending
+description: |
+    * Flashblocks
+    * Low Finality Delay
+    * RevShare-ready Upgrade
+features:
+    - skip-ci
+cluster:
+    name: oplabs-dev-infra-primary
+l1:
+    name: sepolia
+    chain_id: 11155111
+    genesis_locator: ""
+    eth_rpc: https://proxyd-l1-sepolia.primary.client.dev.oplabs.cloud
+    beacon_rpc: https://beacon-api-proxy-sepolia.primary.client.dev.oplabs.cloud
+    blob_archiver_rpc: https://blob-api-sepolia.primary.client.dev.oplabs.cloud
+    owner_safe_address: 0xe934Dc97E347C6aCef74364B50125bb8689c40ff
+    celestia_auth_token: ""
+    celestia_rpc_url: ""
+l2:
+    deployment:
+        op-deployer:
+            version: "v0.6.0"
+        l1-contracts:
+            locator: https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-ba6ee9bdfcb5b15d00a1727800632dc05cfcb7d90d7a01b2a20ac7308ea4c8d4.tar.gz
+            version: op-contracts/v6.0.0
+        l2-contracts:
+            locator: https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-ba6ee9bdfcb5b15d00a1727800632dc05cfcb7d90d7a01b2a20ac7308ea4c8d4.tar.gz
+        overrides:
+            l2GenesisJovianTimeOffset: "0x0"
+            disputeGameFinalityDelaySeconds: 300
+        gas_limit: 60000000
+        eip1559_elasticity: 6
+        eip1559_denominator: 50
+        eip1559_denominator_canyon: 250
+    components:
+        kona-node:
+            version: kona-node/1.2.7
+        op-batcher:
+            version: op-batcher/v1.16.2-rc.1
+        op-challenger:
+            version: op-challenger/v1.8.0-rc.2
+        op-conductor:
+            version: op-conductor/v0.9.0
+        op-dispute-mon:
+            version: op-dispute-mon/v1.4.2-rc.6
+        op-geth:
+            version: op-geth/v1.101603.5-rc.1
+        op-node:
+            version: op-node/v1.16.2-rc.3
+        op-program:
+            version: op-program/v1.9.0-rc.1
+        op-proposer:
+            version: op-proposer/v1.10.0-rc.3
+        op-rbuilder:
+            version: op-rbuilder/v0.2.13
+        op-reth:
+            version: op-reth/v1.9.3
+        proxyd:
+            version: proxyd/v4.21.0
+        rollup-boost:
+            version: v0.7.11
+        kona-program:
+            version: kona-node/v1.2.7
+    charts: {}
+    chains:
+        - name: revshare-beta-0
+          chain_id: "420120033"
+          features:
+            - flashblocks
+          deployment:
+            overrides:
+                useRevenueShare: false
+                finalSystemOwner: 0x1Eb2fFc903729a0F03966B917003800b145F56E2
+            gas_limit: 60000000
+            eip1559_elasticity: 6
+            eip1559_denominator: 50
+            eip1559_denominator_canyon: 250
