@@ -1,4 +1,5 @@
 configType = "custom"
+opDeployerVersion = ""
 l1ChainID = 11155111
 fundDevAccounts = false
 l1ContractsLocator = "https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-b112b16f8939fbb732c0693de3d3bd1e8e3e2f0771f91d5ab300a6c9b7b1af73.tar.gz"
@@ -15,12 +16,14 @@ l2ContractsLocator = "https://storage.googleapis.com/oplabs-contract-artifacts/a
   baseFeeVaultRecipient = "0x0f80de906d4008166e11411a0a55b568a00dc961"
   l1FeeVaultRecipient = "0x2da02851db13b913a7baad6afaca64922a349334"
   sequencerFeeVaultRecipient = "0x577c73c0b5998b2b7d957d5f7df38b387a270696"
+  operatorFeeVaultRecipient = "0x2bbd0ba8e29d94219807b24ed25e249bc9e8e07e"
   eip1559DenominatorCanyon = 250
   eip1559Denominator = 50
   eip1559Elasticity = 6
   gasLimit = 60000000
   operatorFeeScalar = 0
   operatorFeeConstant = 0
+  chainFeesRecipient = "0x0000000000000000000000000000000000000000"
   minBaseFee = 0
   daFootprintGasScalar = 0
   [chains.roles]
@@ -32,18 +35,22 @@ l2ContractsLocator = "https://storage.googleapis.com/oplabs-contract-artifacts/a
     proposer = "0x87af2830e8a39a76261f7ed515ee4a3451105561"
     challenger = "0x839057b2f150b4720d47771b9d9e51d79f3e4b38"
   [chains.deployOverrides]
+  [chains.customGasToken]
+    liquidityControllerOwner = "0x0000000000000000000000000000000000000000"
 
 [[chains]]
   id = "0x00000000000000000000000000000000000000000000000000000000190a5ec6"
   baseFeeVaultRecipient = "0x11481a7e56b7d245aeb41b0d1ad4dcfd7c51baa4"
   l1FeeVaultRecipient = "0x645df68bc6233ea0600ffe9c421e7c819a48cbe3"
   sequencerFeeVaultRecipient = "0xa33dc929569788790ccb47663e85c24e5837541a"
+  operatorFeeVaultRecipient = "0x5664f36c0f98849bd606164a8e1792ff2bce4ff1"
   eip1559DenominatorCanyon = 250
   eip1559Denominator = 50
   eip1559Elasticity = 6
   gasLimit = 60000000
   operatorFeeScalar = 0
   operatorFeeConstant = 0
+  chainFeesRecipient = "0x0000000000000000000000000000000000000000"
   minBaseFee = 0
   daFootprintGasScalar = 0
   [chains.roles]
@@ -55,6 +62,8 @@ l2ContractsLocator = "https://storage.googleapis.com/oplabs-contract-artifacts/a
     proposer = "0x39ff903ca8a3d759de9a7502d9c3b5ef8a8e6670"
     challenger = "0xd9f48b7d3e1ff4a1d4877834aacac9d1d6230d8e"
   [chains.deployOverrides]
+  [chains.customGasToken]
+    liquidityControllerOwner = "0x0000000000000000000000000000000000000000"
 
 [globalDeployOverrides]
   l2GenesisJovianTimeOffset = "0x0"
