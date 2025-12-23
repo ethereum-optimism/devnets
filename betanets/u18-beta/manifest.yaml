@@ -24,13 +24,13 @@ l1:
 l2:
     deployment:
         op-deployer:
-            version: "v0.5.2"
+            version: v0.5.2
         l1-contracts:
-            version: op-contracts/v5.0.0
             locator: https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-b112b16f8939fbb732c0693de3d3bd1e8e3e2f0771f91d5ab300a6c9b7b1af73.tar.gz
+            version: op-contracts/v5.0.0
         l2-contracts:
-            version: op-contracts/v5.0.0
             locator: https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-b112b16f8939fbb732c0693de3d3bd1e8e3e2f0771f91d5ab300a6c9b7b1af73.tar.gz
+            version: op-contracts/v5.0.0
         overrides:
             l2GenesisJovianTimeOffset: "0x0"
         gas_limit: 60000000
@@ -40,6 +40,8 @@ l2:
     components:
         kona-node:
             version: kona-node/1.2.7
+        kona-program:
+            version: kona-node/v1.2.7
         op-batcher:
             version: op-batcher/v1.16.3-rc.1
         op-challenger:
@@ -64,8 +66,6 @@ l2:
             version: proxyd/v4.21.0
         rollup-boost:
             version: v0.7.11
-        kona-program:
-            version: kona-node/v1.2.7
     charts: {}
     chains:
         - name: u18-beta-0
