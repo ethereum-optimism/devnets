@@ -1,0 +1,46 @@
+configType = "custom"
+opDeployerVersion = "untagged-449a2027-1766585511"
+l1ChainID = 11155111
+fundDevAccounts = false
+l1ContractsLocator = "https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-ba6ee9bdfcb5b15d00a1727800632dc05cfcb7d90d7a01b2a20ac7308ea4c8d4.tar.zst"
+l2ContractsLocator = "https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-ba6ee9bdfcb5b15d00a1727800632dc05cfcb7d90d7a01b2a20ac7308ea4c8d4.tar.zst"
+
+[superchainRoles]
+  SuperchainProxyAdminOwner = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
+  SuperchainGuardian = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
+  ProtocolVersionsOwner = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
+  Challenger = "0x8807e6267bafd051e87efde7bdf57736435bec32"
+
+[[chains]]
+  id = "0x00000000000000000000000000000000000000000000000000000000190a85e2"
+  baseFeeVaultRecipient = "0x5bda36b6988c18682de283f06568b379842d0805"
+  l1FeeVaultRecipient = "0x1af85aec0d3fcd5ca9682815b72d59c7ec7e9a1b"
+  sequencerFeeVaultRecipient = "0x9c3dd8e448dea9ca4425e658c378c95c524a72f5"
+  operatorFeeVaultRecipient = "0x69c2762c8423a4aadf9c49aa75453ea5190f1e7d"
+  eip1559DenominatorCanyon = 250
+  eip1559Denominator = 50
+  eip1559Elasticity = 6
+  gasLimit = 60000000
+  operatorFeeScalar = 0
+  operatorFeeConstant = 0
+  chainFeesRecipient = "0x0000000000000000000000000000000000000000"
+  minBaseFee = 0
+  daFootprintGasScalar = 0
+  [chains.roles]
+    l1ProxyAdminOwner = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
+    l2ProxyAdminOwner = "0xd76f1552cb42bb849f85bc2a13d2c7e34a24fe73"
+    systemConfigOwner = "0x35bbff923f57816b56335f254b97aa2e3054c4e8"
+    unsafeBlockSigner = "0x81d1fc80973cedf4725b8afc69dc5a99b18d5688"
+    batcher = "0x8b25602dca8bc120523d6b6ba89f58cae809b160"
+    proposer = "0x9d1a4b45df5ac09dd40c11f0b16401f57b4bafa3"
+    challenger = "0x8807e6267bafd051e87efde7bdf57736435bec32"
+  [chains.deployOverrides]
+    chainFeesRecipient = "0x455A1115C97cb0E2b24B064C00a9E13872cC37ca"
+    useRevenueShare = true
+  [chains.customGasToken]
+    liquidityControllerOwner = "0x0000000000000000000000000000000000000000"
+
+[globalDeployOverrides]
+  disputeGameFinalityDelaySeconds = 300
+  l2GenesisJovianTimeOffset = "0x0"
+
