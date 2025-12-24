@@ -5,6 +5,9 @@ status: pending
 description: |
     * Low Finality Delay
     * RevShare
+features:
+    - skip-workflows
+    - per-el-bootnode-gen
 cluster:
     name: oplabs-dev-infra-primary
 l1:
