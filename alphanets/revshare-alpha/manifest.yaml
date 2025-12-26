@@ -1,7 +1,7 @@
 name: revshare-alpha
 type: alphanet
 scope: https://github.com/ethereum-optimism/devnets/issues/192
-status: online
+status: pending
 description: |
     * Low Finality Delay
     * RevShare
@@ -25,10 +25,10 @@ l2:
         op-deployer:
             version: v0.5.2
         l1-contracts:
-            locator: https://storage.googleapis.com/oplabs-contract-artifacts-devnets/artifacts-v1-4275049d0183a5fc0a8f3c77d73432678b00ce69941589b0465caf8d80225022.tar.zst
+            locator: https://storage.googleapis.com/oplabs-contract-artifacts-devnets/artifacts-v1-2b0c907473a86e51339602296d556ec22f98ed20efd9312d914c8af92735ce61.tar.zst
             version: op-contracts/v5.0.0
         l2-contracts:
-            locator: https://storage.googleapis.com/oplabs-contract-artifacts-devnets/artifacts-v1-4275049d0183a5fc0a8f3c77d73432678b00ce69941589b0465caf8d80225022.tar.zst
+            locator: https://storage.googleapis.com/oplabs-contract-artifacts-devnets/artifacts-v1-2b0c907473a86e51339602296d556ec22f98ed20efd9312d914c8af92735ce61.tar.zst
             version: ""
         overrides:
             disputeGameFinalityDelaySeconds: 300
