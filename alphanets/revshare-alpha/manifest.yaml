@@ -1,12 +1,12 @@
 name: revshare-alpha
 type: alphanet
 scope: https://github.com/ethereum-optimism/devnets/issues/192
-status: online
+status: pending
 description: |
     * Low Finality Delay
     * RevShare
 features:
-    - skip-workflows
+    - skip-ci
     - per-el-bootnode-gen
 cluster:
     name: oplabs-dev-infra-primary
@@ -72,8 +72,7 @@ l2:
           chain_id: "420120034"
           features: []
           deployment:
-            overrides:
-                useRevenueShare: true
+            use_revenue_share: true
             gas_limit: 60000000
             eip1559_elasticity: 6
             eip1559_denominator: 50
