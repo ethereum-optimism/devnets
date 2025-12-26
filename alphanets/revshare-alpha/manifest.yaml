@@ -72,8 +72,9 @@ l2:
           chain_id: "420120034"
           features: []
           deployment:
-            use_revenue_share: true
+            overrides: {}
             gas_limit: 60000000
             eip1559_elasticity: 6
             eip1559_denominator: 50
             eip1559_denominator_canyon: 250
+            use_revenue_share: true
