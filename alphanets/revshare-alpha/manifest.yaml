@@ -1,12 +1,12 @@
 name: revshare-alpha
 type: alphanet
 scope: https://github.com/ethereum-optimism/devnets/issues/192
-status: online
+status: pending
 description: |
     * Low Finality Delay
     * RevShare
 features:
-    - skip-workflows
+    - skip-ci
     - per-el-bootnode-gen
 cluster:
     name: oplabs-dev-infra-primary
