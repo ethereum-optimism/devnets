@@ -67,9 +67,6 @@ l2:
     chains:
         - name: u18-alpha-0
           chain_id: "420100007"
-          features:
-            - flashblocks
-            - kona-proofs
           deployment:
             overrides: {}
             gas_limit: 60000000
