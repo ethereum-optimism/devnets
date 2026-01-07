@@ -10,14 +10,14 @@ description: |
   * Go 1.23 support in Cannon
   * Increase MAX_GAS_LIMIT
 features:
-  - "skip-ci"
+  - skip-ci
 l1:
   name: sepolia
   chain_id: 11155111
 l2:
   deployment:
     op-deployer:
-      version: op-deployer/v0.3.0
+      version: 0.4.7 # not actually 0.4.7, it was 0.3.0 but theres a bug in manifest reading
     l1-contracts:
       version: op-contracts/v3.0.0-rc.2
     l2-contracts:
