@@ -71,8 +71,6 @@ l2:
     chains:
         - name: revshare-beta-0
           chain_id: "420120033"
-          features:
-            - flashblocks
           deployment:
             overrides:
                 useRevenueShare: false

@@ -71,8 +71,6 @@ l2:
     chains:
         - name: u18-beta-0
           chain_id: "420110021"
-          features:
-            - flashblocks
           deployment:
             overrides: {}
             gas_limit: 60000000
@@ -83,7 +81,6 @@ l2:
           chain_id: "420110022"
           features:
             - fp-permissionless
-            - flashblocks
           deployment:
             overrides: {}
             gas_limit: 60000000
