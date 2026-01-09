@@ -25,7 +25,7 @@ steps:
   - name: us-docker.pkg.dev/oplabs-tools-artifacts/internal-images/netchef:main
     args: ["ci", "validate", "--devnets-dir", "."]
     env:
-      - NETCHEF_GCP_PROJECT=oplabs-dev-infra
+      - NETCHEF_GCP_PROJECT=oplabs-tools-infra
       - NETCHEF_REPO_URL=https://github.com/ethereum-optimism/devnets.git
 
 availableSecrets:
