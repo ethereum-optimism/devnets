@@ -72,9 +72,9 @@ l2:
         - name: revshare-beta-0
           chain_id: "420120033"
           deployment:
-            overrides:
-                useRevenueShare: false
+            overrides: {}
             gas_limit: 60000000
             eip1559_elasticity: 6
             eip1559_denominator: 50
             eip1559_denominator_canyon: 250
+            useRevenueShare: false
