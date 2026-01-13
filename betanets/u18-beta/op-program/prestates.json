@@ -1,0 +1,17 @@
+{
+  "cannon64": {
+    "hash": "0x0364251d4ea4b677ac462a25642b6de1fa53b2d6b97e56380691906bdb2e95cf",
+    "createdAt": "2026-01-13T11:18:35Z",
+    "opProgramVersion": "op-program/v1.9.0-rc.1"
+  },
+  "cannonInterop": {
+    "hash": "0x036f059ecd6ff2e432fb2cb0cfb725eb88ccf5dbdc6657f0de480f0de04ec2ad",
+    "createdAt": "2026-01-13T11:18:35Z",
+    "opProgramVersion": "op-program/v1.9.0-rc.1"
+  },
+  "kona": {
+    "hash": "0x03091ea717990785736623f894e6fb344fcf262361657bb28c9ece29207d9a9c",
+    "createdAt": "2026-01-13T11:28:05Z",
+    "opProgramVersion": "kona-node/v1.2.7"
+  }
+}
