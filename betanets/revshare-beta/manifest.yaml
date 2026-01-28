@@ -26,10 +26,10 @@ l2:
         op-deployer:
             version: v0.5.0
         l1-contracts:
-            locator: https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-ba6ee9bdfcb5b15d00a1727800632dc05cfcb7d90d7a01b2a20ac7308ea4c8d4.tar.zst
+            locator: https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-b112b16f8939fbb732c0693de3d3bd1e8e3e2f0771f91d5ab300a6c9b7b1af73.tar.gz
             version: op-contracts/v5.0.0
         l2-contracts:
-            locator: https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-ba6ee9bdfcb5b15d00a1727800632dc05cfcb7d90d7a01b2a20ac7308ea4c8d4.tar.zst
+            locator: https://storage.googleapis.com/oplabs-contract-artifacts/artifacts-v1-b112b16f8939fbb732c0693de3d3bd1e8e3e2f0771f91d5ab300a6c9b7b1af73.tar.gz
             version: ""
         overrides:
             disputeGameFinalityDelaySeconds: 300
