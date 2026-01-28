@@ -1,7 +1,7 @@
 name: u18-beta
 type: betanet
 scope: https://github.com/ethereum-optimism/devnets/issues/159
-status: pending
+status: offline
 deployed_on: 12-09-2025
 description: |
     * U18 Betanet
@@ -82,6 +82,7 @@ l2:
           chain_id: "420110022"
           features:
             - fp-permissionless
+            - kona
           deployment:
             overrides: {}
             gas_limit: 60000000
