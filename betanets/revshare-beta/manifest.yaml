@@ -7,7 +7,7 @@ description: |
     * Low Finality Delay
     * RevShare-ready Upgrade
 features:
-    - skip-workflows
+    - skip-ci
     - per-el-bootnode-gen
 cluster:
     name: oplabs-dev-infra-primary
