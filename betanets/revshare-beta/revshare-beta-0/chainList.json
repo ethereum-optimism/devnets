@@ -1,0 +1,19 @@
+[
+  {
+    "name": "revshare-beta-0",
+    "identifier": "sepolia/revshare-beta-0-0",
+    "chainId": 420120033,
+    "rpc": [],
+    "explorers": [],
+    "superchainLevel": 0,
+    "governedByOptimism": false,
+    "dataAvailabilityType": "eth-da",
+    "parent": {
+      "type": "L2",
+      "chain": "sepolia"
+    },
+    "faultProofs": {
+      "status": "permissionless"
+    }
+  }
+]
