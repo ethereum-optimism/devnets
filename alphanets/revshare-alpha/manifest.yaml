@@ -1,7 +1,7 @@
 name: revshare-alpha
 type: alphanet
 scope: https://github.com/ethereum-optimism/devnets/issues/192
-status: online
+status: offline
 description: |
     * Low Finality Delay
     * RevShare
