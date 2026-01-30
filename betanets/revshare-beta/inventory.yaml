@@ -202,7 +202,7 @@ chains:
           nodes:
             - "rpc-0"
 
-  - nodes:
+  # - nodes:
   #     - kind: "node"
   #       name: "sequencer-0"
   #       spec:
