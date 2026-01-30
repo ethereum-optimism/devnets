@@ -36,4 +36,3 @@ l2ContractsLocator = "https://storage.googleapis.com/oplabs-contract-artifacts/a
 [globalDeployOverrides]
   disputeGameFinalityDelaySeconds = 300
   l2GenesisJovianTimeOffset = "0x0"
-
