@@ -69,16 +69,16 @@ l2:
             version: v0.7.11
     charts: {}
     chains:
-        # - name: revshare-beta-0
-        #   chain_id: "420120033"
-        #   features:
-        #     - fp-permissionless
-        #   deployment:
-        #     overrides: {}
-        #     gas_limit: 60000000
-        #     eip1559_elasticity: 6
-        #     eip1559_denominator: 50
-        #     eip1559_denominator_canyon: 250
+        - name: revshare-beta-0
+          chain_id: "420120033"
+          features:
+            - fp-permissionless
+          deployment:
+            overrides: {}
+            gas_limit: 60000000
+            eip1559_elasticity: 6
+            eip1559_denominator: 50
+            eip1559_denominator_canyon: 250
         - name: revshare-beta-1
           chain_id: "420120034"
           features: []
