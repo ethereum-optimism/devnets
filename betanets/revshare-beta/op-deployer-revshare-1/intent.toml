@@ -11,10 +11,10 @@ l2ContractsLocator = "https://storage.googleapis.com/oplabs-contract-artifacts/a
   Challenger = "0xf6015e1850d6622921a647a76ffd892ba6870b75"
 
 [[chains]]
-  id = "0x00000000000000000000000000000000000000000000000000000000190a85e1"
-  baseFeeVaultRecipient = "0xc4e34d46971754a9e3191f57cc5429c35d60a340"
-  l1FeeVaultRecipient = "0x039449b19550e3582a5a6a69dede8bd4ead2381e"
-  sequencerFeeVaultRecipient = "0x7e31e1eafb4d1486c05743e5c496cb5042843d7a"
+  id = "0x00000000000000000000000000000000000000000000000000000000190a85e2"
+  baseFeeVaultRecipient = "0xf1a0033a47418b14ca73becd25669757bcf60de8"
+  l1FeeVaultRecipient = "0x320d7ad3f12aec527170ec23297b3196ee32e8f4"
+  sequencerFeeVaultRecipient = "0xee7d049e5f573a08bb5a358fcefb3d4af992fdcb"
   eip1559DenominatorCanyon = 250
   eip1559Denominator = 50
   eip1559Elasticity = 6
@@ -25,14 +25,15 @@ l2ContractsLocator = "https://storage.googleapis.com/oplabs-contract-artifacts/a
   daFootprintGasScalar = 0
   [chains.roles]
     l1ProxyAdminOwner = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
-    l2ProxyAdminOwner = "0x241f91e60ad685b4dd91450e153cc7396838132f"
-    systemConfigOwner = "0x9998fdb851d3a3e793005e8eb5f10c0cc1f85399"
-    unsafeBlockSigner = "0x919e6d1585db38f1e53316035b93fa9eb4b81746"
-    batcher = "0x29ba3d997f0bf8b9a45ee1a3aba4dc1471efa470"
-    proposer = "0x40aed6d9ef3d694aeb406d210db82613b67cf99d"
-    challenger = "0xf6015e1850d6622921a647a76ffd892ba6870b75"
+    l2ProxyAdminOwner = "0x079b83b81617b9e3bdbd8bc128d4faa7e7f44d04"
+    systemConfigOwner = "0x3dbd1346f226189439cddb6485f503d174f8bb34"
+    unsafeBlockSigner = "0x83e31a4d1f993b07222d1519d6a2c9d38328a066"
+    batcher = "0x0d74b00f88dfb85cb042e6be3fb6fe72797e3fe7"
+    proposer = "0x87be7931c05b3f0b780557af07fbbbda741a0075"
+    challenger = "0x94e6f45d675105507f3297fe64fe6cb59eaaf820"
   [chains.deployOverrides]
 
 [globalDeployOverrides]
   disputeGameFinalityDelaySeconds = 300
   l2GenesisJovianTimeOffset = "0x0"
+
