@@ -9,6 +9,8 @@ description: |
   * Stage 1
   * Go 1.23 support in Cannon
   * Increase MAX_GAS_LIMIT
+cluster:
+  name: oplabs-dev-infra-primary
 features:
   - skip-ci
 l1:
