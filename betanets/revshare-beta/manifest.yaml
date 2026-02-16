@@ -1,13 +1,12 @@
 name: revshare-beta
 type: betanet
 scope: https://github.com/ethereum-optimism/devnets/issues/192
-status: pending
+status: offline
 description: |
     * Flashblocks
     * Low Finality Delay
     * RevShare-ready Upgrade
 features:
-    - skip-ci
     - per-el-bootnode-gen
 cluster:
     name: oplabs-dev-infra-primary
