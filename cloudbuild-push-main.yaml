@@ -59,9 +59,9 @@ steps:
 
 availableSecrets:
   secretManager:
-    - versionName: projects/oplabs-tools-secrets/secrets/netchef-cloudbuild-prod-temporal-api-key/versions/latest
-      env: NETCHEF_TEMPORAL_API_KEY_DEV
     - versionName: projects/oplabs-tools-secrets/secrets/netchef-cloudbuild-dev-temporal-api-key/versions/latest
+      env: NETCHEF_TEMPORAL_API_KEY_DEV
+    - versionName: projects/oplabs-tools-secrets/secrets/netchef-cloudbuild-prod-temporal-api-key/versions/latest
       env: NETCHEF_TEMPORAL_API_KEY_PROD
     - versionName: projects/oplabs-tools-secrets/secrets/netchef-cloudbuild-env/versions/latest
       env: NETCHEF_TEMPORAL_API_KEY
