@@ -32,11 +32,14 @@ steps:
     entrypoint: "ci-command-on-devnet-changes.sh"
     args: ["check-for-open-workflows"]
     env:
-      - NETCHEF_TEMPORAL_NAMESPACE=dev-netchef.nqbqu
       - NETCHEF_TEMPORAL_HOST=us-central1.gcp.api.temporal.io:7233
       - NETCHEF_TEMPORAL_TASK_QUEUE=netchef-main-workflows
+      - NETCHEF_TEMPORAL_NAMESPACE_PROD=oplabs-prod-ent-infra-netchef.nqbqu
+      - NETCHEF_TEMPORAL_NAMESPACE_DEV=dev-netchef.nqbqu
     secretEnv:
       - NETCHEF_TEMPORAL_API_KEY
+      - NETCHEF_TEMPORAL_API_KEY_DEV
+      - NETCHEF_TEMPORAL_API_KEY_PROD
 
   - name: us-docker.pkg.dev/oplabs-tools-artifacts/internal-images/netchef:main
     entrypoint: "ci-command-on-devnet-changes.sh"
@@ -44,15 +47,22 @@ steps:
     env:
       - NETCHEF_GCP_PROJECT=oplabs-tools-infra
       - NETCHEF_REPO_URL=https://github.com/ethereum-optimism/devnets.git
-      - NETCHEF_TEMPORAL_NAMESPACE=dev-netchef.nqbqu
+      - NETCHEF_TEMPORAL_NAMESPACE_PROD=oplabs-prod-ent-infra-netchef.nqbqu
+      - NETCHEF_TEMPORAL_NAMESPACE_DEV=dev-netchef.nqbqu
       - NETCHEF_TEMPORAL_HOST=us-central1.gcp.api.temporal.io:7233
       - NETCHEF_TEMPORAL_TASK_QUEUE=netchef-main-workflows
       - NETCHEF_TRIGGERING_COMMIT_SHA=$COMMIT_SHA
     secretEnv:
       - NETCHEF_TEMPORAL_API_KEY
+      - NETCHEF_TEMPORAL_API_KEY_DEV
+      - NETCHEF_TEMPORAL_API_KEY_PROD
 
 availableSecrets:
   secretManager:
+    - versionName: projects/oplabs-tools-secrets/secrets/netchef-cloudbuild-dev-temporal-api-key/versions/latest
+      env: NETCHEF_TEMPORAL_API_KEY_DEV
+    - versionName: projects/oplabs-tools-secrets/secrets/netchef-cloudbuild-prod-temporal-api-key/versions/latest
+      env: NETCHEF_TEMPORAL_API_KEY_PROD
     - versionName: projects/oplabs-tools-secrets/secrets/netchef-cloudbuild-env/versions/latest
       env: NETCHEF_TEMPORAL_API_KEY
     - versionName: projects/oplabs-tools-secrets/secrets/netchef-cloudbuild-devnets-private-ssh-key/versions/latest
