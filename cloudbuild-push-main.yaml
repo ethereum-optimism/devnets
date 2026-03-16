@@ -46,7 +46,8 @@ steps:
     entrypoint: "ci-command-on-devnet-changes.sh"
     args: ["trigger-workflow"]
     env:
-      - NETCHEF_GCP_PROJECT=oplabs-tools-infra
+      - NETCHEF_GCP_PROJECT_DEV=oplabs-tools-infra
+      - NETCHEF_GCP_PROJECT_PROD=oplabs-prod-ent-infra-us
       - NETCHEF_REPO_URL=https://github.com/ethereum-optimism/devnets.git
       - NETCHEF_TEMPORAL_NAMESPACE_PROD=oplabs-prod-ent-infra-netchef.nqbqu
       - NETCHEF_TEMPORAL_NAMESPACE_DEV=dev-netchef.nqbqu
