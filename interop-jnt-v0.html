@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Interop-Flash - OP Stack Devnets</title>
+        <title>Interop-Jnt-V0 - OP Stack Devnets</title>
 
 
         <!-- Custom HTML head -->
@@ -153,57 +153,67 @@
                 <div id="content" class="content">
                     <main>
                         <!-- generated file, do not edit -->
-<h1 style="display: flex; align-items: center">Interop-Flash <a href="https://github.com/ethereum-optimism/devnets/issues/77" style="margin-left: auto; font-size: 1.5rem;">Scoping Issue ↗️</a></h1>
+<h1 style="display: flex; align-items: center">Interop-Jnt-V0 <a href="https://github.com/ethereum-optimism/devnets/issues/276" style="margin-left: auto; font-size: 1.5rem;">Scoping Issue ↗️</a></h1>
 <p><strong>Status:</strong> ⏸️ Offline</p>
 <ul>
-<li>Interop</li>
-<li>Flashblocks</li>
+<li>interop joint network v2 (gs/temp-hacky-devnet-interop branch)</li>
+<li>interop activated 60s after genesis</li>
+<li>includes: drop unsafe payloads fix, reth interop tx eviction, ETH bridge liquidity funding</li>
 </ul>
-<p>It was deployed on 05-23-2025.</p>
+<p>It was deployed on .</p>
 <h2 id="chains"><a class="header" href="#chains">Chains</a></h2>
 <div class="table-wrapper"><table><thead><tr><th>Type</th><th>Name</th><th>Chain ID</th><th>Config</th><th>Rollup</th><th>Genesis</th><th>RPC</th></tr></thead><tbody>
 <tr><td>L1</td><td>Sepolia</td><td><code>11155111</code></td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
-<tr><td>L2</td><td>interop-flash-0</td><td><code>420120007</code></td><td><a href="https://github.com/ethereum-optimism/devnets/blob/main/alphanets/interop-flash/interop-flash-0/chain.yaml">View</a></td><td><a href="https://github.com/ethereum-optimism/devnets/blob/main/alphanets/interop-flash/interop-flash-0/rollup.json">View</a></td><td><a href="https://raw.githubusercontent.com/ethereum-optimism/devnets/refs/heads/main/alphanets/interop-flash/interop-flash-0/genesis.json">Download</a></td><td><a href="https://interop-flash-0.optimism.io">RPC</a></td></tr>
-<tr><td>L2</td><td>interop-flash-1</td><td><code>420120008</code></td><td><a href="https://github.com/ethereum-optimism/devnets/blob/main/alphanets/interop-flash/interop-flash-1/chain.yaml">View</a></td><td><a href="https://github.com/ethereum-optimism/devnets/blob/main/alphanets/interop-flash/interop-flash-1/rollup.json">View</a></td><td><a href="https://raw.githubusercontent.com/ethereum-optimism/devnets/refs/heads/main/alphanets/interop-flash/interop-flash-1/genesis.json">Download</a></td><td><a href="https://interop-flash-1.optimism.io">RPC</a></td></tr>
+<tr><td>L2</td><td>interop-jnt-v0-0</td><td><code>420120063</code></td><td><a href="https://github.com/ethereum-optimism/devnets/blob/main/alphanets/interop-jnt-v0/interop-jnt-v0-0/chain.yaml">View</a></td><td><a href="https://github.com/ethereum-optimism/devnets/blob/main/alphanets/interop-jnt-v0/interop-jnt-v0-0/rollup.json">View</a></td><td><a href="https://raw.githubusercontent.com/ethereum-optimism/devnets/refs/heads/main/alphanets/interop-jnt-v0/interop-jnt-v0-0/genesis.json">Download</a></td><td><a href="https://interop-jnt-v0-0.optimism.io">RPC</a></td></tr>
+<tr><td>L2</td><td>interop-jnt-v0-1</td><td><code>420120064</code></td><td><a href="https://github.com/ethereum-optimism/devnets/blob/main/alphanets/interop-jnt-v0/interop-jnt-v0-1/chain.yaml">View</a></td><td><a href="https://github.com/ethereum-optimism/devnets/blob/main/alphanets/interop-jnt-v0/interop-jnt-v0-1/rollup.json">View</a></td><td><a href="https://raw.githubusercontent.com/ethereum-optimism/devnets/refs/heads/main/alphanets/interop-jnt-v0/interop-jnt-v0-1/genesis.json">Download</a></td><td><a href="https://interop-jnt-v0-1.optimism.io">RPC</a></td></tr>
 </tbody></table>
 </div>
 <h2 id="deployment-details"><a class="header" href="#deployment-details">Deployment Details</a></h2>
 <div class="table-wrapper"><table><thead><tr><th>Parameter</th><th>Value</th></tr></thead><tbody>
-<tr><td>OP Deployer Version</td><td><code>1a8fe18c4989bfd0852a8873f30422542ad4f44d</code></td></tr>
-<tr><td>L1 Contracts Version</td><td><code>1a8fe18c4989bfd0852a8873f30422542ad4f44d</code></td></tr>
-<tr><td>L2 Contracts Version</td><td><code>1a8fe18c4989bfd0852a8873f30422542ad4f44d</code></td></tr>
+<tr><td>OP Deployer Version</td><td><code>0.5.2</code></td></tr>
+<tr><td>L1 Contracts Version</td><td>``</td></tr>
+<tr><td>L2 Contracts Version</td><td>``</td></tr>
 </tbody></table>
 </div>
 <h2 id="deployment-overrides"><a class="header" href="#deployment-overrides">Deployment Overrides</a></h2>
 <div class="table-wrapper"><table><thead><tr><th>Scope</th><th>Parameter</th><th>Value</th></tr></thead><tbody>
-<tr><td>global</td><td><code>l2GenesisInteropTimeOffset</code></td><td><code>0x0</code></td></tr>
+<tr><td>global</td><td><code>l2GenesisInteropTimeOffset</code></td><td><code>0x3C</code></td></tr>
 <tr><td>global</td><td><code>l2GenesisIsthmusTimeOffset</code></td><td><code>0x0</code></td></tr>
-<tr><td>interop-flash-0</td><td><code>l2BlockTime</code></td><td><code>2</code></td></tr>
-<tr><td>interop-flash-1</td><td><code>l2BlockTime</code></td><td><code>1</code></td></tr>
+<tr><td>global</td><td><code>l2GenesisJovianTimeOffset</code></td><td><code>0x0</code></td></tr>
 </tbody></table>
 </div>
 <h2 id="components"><a class="header" href="#components">Components</a></h2>
 <div class="table-wrapper"><table><thead><tr><th>Component</th><th>Version</th></tr></thead><tbody>
-<tr><td>op-node</td><td><code>op-node/v1.13.5-dev.fpfix.5</code></td></tr>
-<tr><td>op-geth</td><td><code>op-geth/v1.101511.1-dev.1</code></td></tr>
-<tr><td>op-reth</td><td><code>op-reth/v1.5.0</code></td></tr>
-<tr><td>op-proposer</td><td><code>op-proposer/v1.10.0-rc.3</code></td></tr>
-<tr><td>op-batcher</td><td><code>op-batcher/v1.14.0-rc.1</code></td></tr>
-<tr><td>op-supervisor</td><td><code>op-supervisor/v0.3.0-dev.fpfix.5</code></td></tr>
-<tr><td>rollup-boost</td><td><code>rollup-boost/0.7.0</code></td></tr>
-<tr><td>op-rbuilder</td><td><code>op-rbuilder/sha-30bf302</code></td></tr>
-<tr><td>op-conductor</td><td><code>op-conductor/v0.7.0</code></td></tr>
+<tr><td>flashblocks-websocket-proxy</td><td><code>flashblocks-websocket-proxy/v0.7.4</code></td></tr>
+<tr><td>kona-node</td><td><code>kona-node/1.2.8</code></td></tr>
+<tr><td>op-batcher</td><td><code>op-batcher/v1.16.4</code></td></tr>
+<tr><td>op-challenger</td><td><code>op-challenger/v1.9.0</code></td></tr>
+<tr><td>op-conductor</td><td><code>op-conductor/v0.9.1</code></td></tr>
+<tr><td>op-conductor-mon</td><td><code>op-conductor-mon/v0.0.1</code></td></tr>
+<tr><td>op-conductor-ops</td><td><code>op-conductor-ops/v0.0.2</code></td></tr>
+<tr><td>op-dispute-mon</td><td><code>op-dispute-mon/v1.5.0</code></td></tr>
+<tr><td>op-geth</td><td><code>op-geth/dbb4aa0767a1657f17c1dc0e89f6181a718b2d4d</code></td></tr>
+<tr><td>op-interop-filter</td><td><code>op-interop-filter/c4d40c72d4</code></td></tr>
+<tr><td>op-node</td><td><code>op-node/65a13b97c0</code></td></tr>
+<tr><td>op-program</td><td><code>op-program/v1.7.0-rc.4</code></td></tr>
+<tr><td>op-proposer</td><td><code>op-proposer/v1.10.2</code></td></tr>
+<tr><td>op-rbuilder</td><td><code>op-rbuilder/v0.2.13</code></td></tr>
+<tr><td>op-reth</td><td><code>op-reth/5d390d0b50</code></td></tr>
+<tr><td>op-supernode</td><td><code>op-supernode/65a13b97c0</code></td></tr>
+<tr><td>peer-mgmt-service</td><td><code>peer-mgmt-service/v0.0.1</code></td></tr>
+<tr><td>proxyd</td><td><code>proxyd/v4.25.0</code></td></tr>
+<tr><td>rollup-boost</td><td><code>rollup-boost/v0.7.11</code></td></tr>
 </tbody></table>
 </div>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="interop-alpha.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="interop-flash.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="interop-jnt-v0.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="interop-rc-alpha.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -213,11 +223,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="interop-alpha.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="interop-flash.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="interop-jnt-v0.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="interop-rc-alpha.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
