@@ -1,13 +1,12 @@
 name: interop-jnt-v0
 type: alphanet
-status: pending
 scope: https://github.com/ethereum-optimism/devnets/issues/276
+status: pending
 description: |
   * interop joint network v2 (gs/temp-hacky-devnet-interop branch)
   * interop activated 60s after genesis
   * includes: drop unsafe payloads fix, reth interop tx eviction, ETH bridge liquidity funding
 features:
-  - p2p-cluster-local
   - interop
 cluster:
   name: oplabs-dev-infra-primary
