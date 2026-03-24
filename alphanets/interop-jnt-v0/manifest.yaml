@@ -3,98 +3,94 @@ type: alphanet
 scope: https://github.com/ethereum-optimism/devnets/issues/276
 status: pending
 description: |
-    * interop joint network v2 (gs/temp-hacky-devnet-interop branch)
-    * interop activated 60s after genesis
-    * includes: drop unsafe payloads fix, reth interop tx eviction, ETH bridge liquidity funding
+  * interop joint network v2 (gs/temp-hacky-devnet-interop branch)
+  * interop activated 60s after genesis
+  * includes: drop unsafe payloads fix, reth interop tx eviction, ETH bridge liquidity funding
 features:
-    - p2p-cluster-local
-    - interop
+  - interop
 cluster:
-    name: oplabs-dev-infra-primary
+  name: oplabs-dev-infra-primary
 l1:
-    name: sepolia
-    chain_id: 11155111
-    eth_rpc: https://proxyd-l1-sepolia.primary.client.dev.oplabs.cloud
-    beacon_rpc: https://beacon-api-proxy-sepolia.primary.client.dev.oplabs.cloud
-    blob_archiver_rpc: https://blob-api-sepolia.primary.client.dev.oplabs.cloud
-    owner_safe_address: 0xe934Dc97E347C6aCef74364B50125bb8689c40ff
+  name: sepolia
+  chain_id: 11155111
+  eth_rpc: https://proxyd-l1-sepolia.primary.client.dev.oplabs.cloud
+  beacon_rpc: https://beacon-api-proxy-sepolia.primary.client.dev.oplabs.cloud
+  blob_archiver_rpc: https://blob-api-sepolia.primary.client.dev.oplabs.cloud
+  owner_safe_address: 0xe934Dc97E347C6aCef74364B50125bb8689c40ff
 l2:
-    deployment:
-        op-deployer:
-            version: 0.5.2
-        l1-contracts:
-            locator: https://storage.googleapis.com/oplabs-contract-artifacts-devnets/artifacts-v1-1f68000cd77017368bc9ec55f61772a8b819a55b57e91b52e29d1074b996d385.tar.gz
-        l2-contracts:
-            locator: https://storage.googleapis.com/oplabs-contract-artifacts-devnets/artifacts-v1-1f68000cd77017368bc9ec55f61772a8b819a55b57e91b52e29d1074b996d385.tar.gz
-        overrides:
-            l2GenesisInteropTimeOffset: "0x3C"
-            l2GenesisIsthmusTimeOffset: "0x0"
-            l2GenesisJovianTimeOffset: "0x0"
+  deployment:
+    op-deployer:
+      version: 0.5.2
+    l1-contracts:
+      locator: https://storage.googleapis.com/oplabs-contract-artifacts-devnets/artifacts-v1-1f68000cd77017368bc9ec55f61772a8b819a55b57e91b52e29d1074b996d385.tar.gz
+    l2-contracts:
+      locator: https://storage.googleapis.com/oplabs-contract-artifacts-devnets/artifacts-v1-1f68000cd77017368bc9ec55f61772a8b819a55b57e91b52e29d1074b996d385.tar.gz
+    overrides:
+      l2GenesisInteropTimeOffset: "0x3C"
+      l2GenesisIsthmusTimeOffset: "0x0"
+      l2GenesisJovianTimeOffset: "0x0"
+    gas_limit: 60000000
+    eip1559_elasticity: 6
+    eip1559_denominator: 50
+    eip1559_denominator_canyon: 250
+  components:
+    flashblocks-websocket-proxy:
+      version: flashblocks-websocket-proxy/v0.7.4
+    kona-node:
+      version: kona-node/1.2.8
+    op-batcher:
+      version: op-batcher/v1.16.4
+    op-challenger:
+      version: op-challenger/v1.9.0
+    op-conductor:
+      version: op-conductor/v0.9.1
+    op-conductor-mon:
+      version: op-conductor-mon/v0.0.1
+    op-conductor-ops:
+      version: op-conductor-ops/v0.0.2
+    op-dispute-mon:
+      version: op-dispute-mon/v1.5.0
+    op-geth:
+      version: op-geth/dbb4aa0767a1657f17c1dc0e89f6181a718b2d4d
+    op-interop-filter:
+      repository: us-docker.pkg.dev/oplabs-tools-artifacts/dev-images
+      version: op-interop-filter/c4d40c72d4
+    op-node:
+      version: op-node/fec2893b68de671110303df63a0f60bf644f4369
+    op-program:
+      version: op-program/v1.7.0-rc.4
+    op-proposer:
+      version: op-proposer/v1.10.2
+    op-rbuilder:
+      version: op-rbuilder/v0.2.13
+    op-reth:
+      version: op-reth/fec2893b68de671110303df63a0f60bf644f4369
+    op-supernode:
+      version: op-supernode/fec2893b68de671110303df63a0f60bf644f4369
+    peer-mgmt-service:
+      version: peer-mgmt-service/v0.0.1
+    proxyd:
+      version: proxyd/v4.25.0
+    rollup-boost:
+      version: rollup-boost/v0.7.11
+  charts:
+    node:
+      name: ""
+      version: 0.29.4
+  chains:
+    - name: interop-jnt-v0-0
+      chain_id: "420120063"
+      deployment:
+        overrides: {}
         gas_limit: 60000000
         eip1559_elasticity: 6
         eip1559_denominator: 50
         eip1559_denominator_canyon: 250
-    components:
-        flashblocks-websocket-proxy:
-            version: flashblocks-websocket-proxy/v0.7.4
-        kona-node:
-            version: kona-node/1.2.8
-        op-batcher:
-            version: op-batcher/v1.16.4
-        op-challenger:
-            version: op-challenger/v1.9.0
-        op-conductor:
-            version: op-conductor/v0.9.1
-        op-conductor-mon:
-            version: op-conductor-mon/v0.0.1
-        op-conductor-ops:
-            version: op-conductor-ops/v0.0.2
-        op-dispute-mon:
-            version: op-dispute-mon/v1.5.0
-        op-geth:
-            version: op-geth/dbb4aa0767a1657f17c1dc0e89f6181a718b2d4d
-        op-interop-filter:
-            repository: us-docker.pkg.dev/oplabs-tools-artifacts/dev-images
-            version: op-interop-filter/c4d40c72d4
-        op-node:
-            repository: us-docker.pkg.dev/oplabs-tools-artifacts/dev-images
-            version: op-node/65a13b97c0
-        op-program:
-            version: op-program/v1.7.0-rc.4
-        op-proposer:
-            version: op-proposer/v1.10.2
-        op-rbuilder:
-            version: op-rbuilder/v0.2.13
-        op-reth:
-            repository: us-docker.pkg.dev/oplabs-tools-artifacts/dev-images
-            version: op-reth/5d390d0b50
-        op-supernode:
-            repository: us-docker.pkg.dev/oplabs-tools-artifacts/dev-images
-            version: op-supernode/65a13b97c0
-        peer-mgmt-service:
-            version: peer-mgmt-service/v0.0.1
-        proxyd:
-            version: proxyd/v4.25.0
-        rollup-boost:
-            version: rollup-boost/v0.7.11
-    charts:
-        node:
-            name: ""
-            version: 0.28.6
-    chains:
-        - name: interop-jnt-v0-0
-          chain_id: "420120063"
-          deployment:
-            overrides: {}
-            gas_limit: 60000000
-            eip1559_elasticity: 6
-            eip1559_denominator: 50
-            eip1559_denominator_canyon: 250
-        - name: interop-jnt-v0-1
-          chain_id: "420120064"
-          deployment:
-            overrides: {}
-            gas_limit: 60000000
-            eip1559_elasticity: 6
-            eip1559_denominator: 50
-            eip1559_denominator_canyon: 250
+    - name: interop-jnt-v0-1
+      chain_id: "420120064"
+      deployment:
+        overrides: {}
+        gas_limit: 60000000
+        eip1559_elasticity: 6
+        eip1559_denominator: 50
+        eip1559_denominator_canyon: 250
