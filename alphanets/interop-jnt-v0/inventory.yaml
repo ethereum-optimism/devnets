@@ -4,17 +4,22 @@ chains:
         name: "sequencer-0"
         spec:
           kind: "sequencer"
+          lightNode: true
           el:
             kind: "op-reth"
             spec:
               kind: "full"
           cl:
             kind: "op-node"
+            deps:
+              services:
+                - "op-supernode-0"
 
       - kind: "node"
         name: "sequencer-1"
         spec:
           kind: "sequencer"
+          lightNode: true
           el:
             kind: "op-reth"
             spec:
@@ -38,7 +43,7 @@ chains:
             kind: "op-node"
             deps:
               services:
-                - "op-supernode-1"
+                - "op-supernode-2"
 
       - kind: "node"
         name: "rpc-0"
@@ -186,6 +191,7 @@ chains:
   - nodes:
       - kind: "node"
         name: "sequencer-0"
+        lightNode: true
         spec:
           kind: "sequencer"
           el:
@@ -194,6 +200,9 @@ chains:
               kind: "full"
           cl:
             kind: "op-node"
+            deps:
+              services:
+                - "op-supernode-0"
 
       - kind: "node"
         name: "sequencer-1"
@@ -223,7 +232,7 @@ chains:
             kind: "op-node"
             deps:
               services:
-                - "op-supernode-1"
+                - "op-supernode-2"
 
       - kind: "node"
         name: "rpc-0"
