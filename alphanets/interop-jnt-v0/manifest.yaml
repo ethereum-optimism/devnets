@@ -1,7 +1,7 @@
 name: interop-jnt-v0
 type: alphanet
 scope: https://github.com/ethereum-optimism/devnets/issues/276
-status: pending
+status: online
 description: |
     * interop joint network v2 (gs/temp-hacky-devnet-interop branch)
     * interop activated 60s after genesis
