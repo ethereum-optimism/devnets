@@ -26,6 +26,7 @@ steps:
     env:
       - NETCHEF_GCP_PROJECT_DEV=oplabs-tools-infra
       - NETCHEF_GCP_PROJECT_PROD=oplabs-prod-ent-infra-us
+      - NETCHEF_GCP_PROJECT_STG=oplabs-stg-ent-infra-us
       - NETCHEF_REPO_URL=https://github.com/ethereum-optimism/devnets.git
   - name: us-docker.pkg.dev/oplabs-tools-artifacts/internal-images/netchef:main
     entrypoint: "ci-command-on-devnet-changes.sh"
@@ -33,6 +34,7 @@ steps:
     env:
       - NETCHEF_GCP_PROJECT_DEV=oplabs-tools-infra
       - NETCHEF_GCP_PROJECT_PROD=oplabs-prod-ent-infra-us
+      - NETCHEF_GCP_PROJECT_STG=oplabs-stg-ent-infra-us
       - NETCHEF_PR_NUMBER=${_PR_NUMBER}
       - NETCHEF_REPO_URL=https://github.com/ethereum-optimism/devnets.git
 
