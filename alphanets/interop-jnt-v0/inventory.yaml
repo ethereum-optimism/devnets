@@ -370,11 +370,6 @@ chains:
             - "rpc-0"
 
 services:
-  - kind: "test-runner"
-    name: "op-acceptor"
-    spec:
-      kind: "op-acceptor"
-
   - kind: "supernode"
     name: "op-supernode-0"
     spec:
