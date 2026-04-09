@@ -66,7 +66,7 @@ l2:
     op-reth:
       version: op-reth/fec2893b68de671110303df63a0f60bf644f4369
     op-supernode:
-      version: op-supernode/fec2893b68de671110303df63a0f60bf644f4369
+      version: op-supernode/v0.1.1
     peer-mgmt-service:
       version: peer-mgmt-service/v0.0.1
     proxyd:
