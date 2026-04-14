@@ -1,6 +1,6 @@
 name: interop-jnt-v1
 type: alphanet
-status: pending
+status: online
 description: |
     * interop-jnt-v1 network for joint sequencing
     * interop activated 60s after genesis
