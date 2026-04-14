@@ -68,7 +68,7 @@ l2:
         peer-mgmt-service:
             version: peer-mgmt-service/v0.0.3
         proxyd:
-            version: proxyd/v4.26.0
+            version: proxyd/v4.27.0
         rollup-boost:
             version: rollup-boost/v0.7.11
     charts:
