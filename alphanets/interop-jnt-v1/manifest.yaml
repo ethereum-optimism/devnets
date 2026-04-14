@@ -79,18 +79,18 @@ l2:
         - name: interop-jnt-v1-0
           chain_id: "420120070"
           deployment:
-              overrides: {}
-              gas_limit: 60000000
-              eip1559_elasticity: 6
-              eip1559_denominator: 50
-              eip1559_denominator_canyon: 250
+            overrides: {}
+            gas_limit: 60000000
+            eip1559_elasticity: 6
+            eip1559_denominator: 50
+            eip1559_denominator_canyon: 250
         - name: interop-jnt-v1-1
           chain_id: "420120071"
           deployment:
-              overrides: {}
-              gas_limit: 60000000
-              eip1559_elasticity: 6
-              eip1559_denominator: 50
-              eip1559_denominator_canyon: 250
+            overrides: {}
+            gas_limit: 60000000
+            eip1559_elasticity: 6
+            eip1559_denominator: 50
+            eip1559_denominator_canyon: 250
 workflow:
     disable_k8s_merge: true
