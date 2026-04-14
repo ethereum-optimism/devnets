@@ -1,0 +1,96 @@
+name: interop-jnt-v1
+type: alphanet
+status: pending
+description: |
+    * interop-jnt-v1 network for joint sequencing
+    * interop activated 60s after genesis
+features:
+    - p2p-cluster-local
+    - interop
+cluster:
+    name: oplabs-dev-infra-primary
+l1:
+    name: sepolia
+    chain_id: 11155111
+    eth_rpc: https://proxyd-l1-sepolia.primary.client.dev.oplabs.cloud
+    beacon_rpc: https://beacon-api-proxy-sepolia.primary.client.dev.oplabs.cloud
+    blob_archiver_rpc: https://blob-api-sepolia.primary.client.dev.oplabs.cloud
+    owner_safe_address: 0xe934Dc97E347C6aCef74364B50125bb8689c40ff
+l2:
+    deployment:
+        op-deployer:
+            version: 0.6.0-rc.3
+        l1-contracts:
+            locator: ""
+        l2-contracts:
+            locator: ""
+        overrides:
+            l2GenesisInteropTimeOffset: "0x3C"
+            l2GenesisIsthmusTimeOffset: "0x0"
+            l2GenesisJovianTimeOffset: "0x0"
+        gas_limit: 60000000
+        eip1559_elasticity: 6
+        eip1559_denominator: 50
+        eip1559_denominator_canyon: 250
+    components:
+        flashblocks-websocket-proxy:
+            version: flashblocks-websocket-proxy/v0.7.4
+        kona-node:
+            version: kona-node/v1.2.13
+        op-batcher:
+            version: op-batcher/v1.16.7
+        op-challenger:
+            version: op-challenger/v1.9.0
+        op-conductor:
+            version: op-conductor/v0.9.3
+        op-conductor-mon:
+            version: op-conductor-mon/v0.0.5
+        op-conductor-ops:
+            version: op-conductor-ops/v0.0.2
+        op-dispute-mon:
+            version: op-dispute-mon/v1.5.1
+        op-geth:
+            version: op-geth/v1.101702.1
+        op-interop-filter:
+            version: op-interop-filter/v0.1.0
+        op-node:
+            version: op-node/v1.16.12
+        op-program:
+            version: op-program/v1.7.0-rc.4
+        op-proposer:
+            version: op-proposer/v1.10.2
+        op-rbuilder:
+            version: op-rbuilder/v0.2.13
+        op-reth:
+            version: op-reth/v1.11.3
+        op-supernode:
+            version: op-supernode/v0.1.1
+        peer-mgmt-service:
+            version: peer-mgmt-service/v0.0.3
+        proxyd:
+            version: proxyd/v4.26.0
+        rollup-boost:
+            version: rollup-boost/v0.7.11
+    charts:
+        node:
+            name: ""
+            version: 0.31.1
+    chains:
+        - name: interop-jnt-v1-0
+          chain_id: "420120070"
+          deployment:
+              overrides: {}
+              gas_limit: 60000000
+              eip1559_elasticity: 6
+              eip1559_denominator: 50
+              eip1559_denominator_canyon: 250
+        - name: interop-jnt-v1-1
+          chain_id: "420120071"
+          deployment:
+              overrides: {}
+              gas_limit: 60000000
+              eip1559_elasticity: 6
+              eip1559_denominator: 50
+              eip1559_denominator_canyon: 250
+workflow:
+    disable_k8s_merge: true
