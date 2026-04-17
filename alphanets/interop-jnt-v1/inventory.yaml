@@ -34,12 +34,16 @@ chains:
             name: "sequencer-2"
             spec:
                 kind: "sequencer"
+                lightNode: true
                 el:
                     kind: "op-reth"
                     spec:
                         kind: "full"
                 cl:
                     kind: "op-node"
+                    deps:
+                        services:
+                            - "proxyd-cl"
 
           - kind: "node"
             name: "rpc-0"
@@ -235,12 +239,16 @@ chains:
             name: "sequencer-2"
             spec:
                 kind: "sequencer"
+                lightNode: true
                 el:
                     kind: "op-reth"
                     spec:
                         kind: "full"
                 cl:
                     kind: "op-node"
+                    deps:
+                        services:
+                            - "proxyd-cl"
 
           - kind: "node"
             name: "rpc-0"
