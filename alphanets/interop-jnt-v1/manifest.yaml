@@ -5,7 +5,7 @@ description: |
     * interop-jnt-v1 network for joint sequencing
     * interop activated 60s after genesis
 features:
-    - p2p-cluster-local
+    - per-el-bootnode-gen
     - interop
 cluster:
     name: oplabs-dev-infra-primary
