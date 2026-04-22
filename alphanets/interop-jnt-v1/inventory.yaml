@@ -132,6 +132,14 @@ chains:
                     spec:
                         kind: "archive"
 
+          - kind: "node"
+            name: "sn-3"
+            spec:
+                kind: "supernode-el"
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "archive"
       services:
           - kind: "batcher"
             name: "op-batcher"
@@ -349,6 +357,14 @@ chains:
                     spec:
                         kind: "archive"
 
+          - kind: "node"
+            name: "sn-3"
+            spec:
+                kind: "supernode-el"
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "archive"
       services:
           - kind: "batcher"
             name: "op-batcher"
@@ -449,6 +465,20 @@ services:
       deps:
           nodes:
               - "sn-2"
+
+    - kind: "supernode"
+      name: "op-supernode-3"
+      spec:
+          kind: "op-supernode"
+          values:
+            env:
+              OP_SUPERNODE_VN_420120070_SYNCMODE: "consensus-layer"
+              OP_SUPERNODE_VN_420120071_SYNCMODE: "consensus-layer"
+              OP_SUPERNODE_VN_ALL_SYNCMODE: "consensus-layer"
+      deps:
+          nodes:
+              - "sn-3"
+
 
     - kind: "interop-filter"
       name: "op-interop-filter"
