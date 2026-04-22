@@ -187,6 +187,18 @@ chains:
             - "sequencer-0"
             - "sequencer-1"
             - "sequencer-2"
+            
+      - kind: "proxyd"
+        name: "proxyd-cl"
+        spec:
+            kind: "proxyd"
+            values:
+                consensusLayerMode: true
+        deps:
+            services:
+                - "op-supernode-0"
+                - "op-supernode-1"
+                - "op-supernode-2"
 
   - nodes:
       - kind: "node"
@@ -368,6 +380,18 @@ chains:
         deps:
           nodes:
             - "rpc-0"
+
+      - kind: "proxyd"
+        name: "proxyd-cl"
+        spec:
+            kind: "proxyd"
+            values:
+                consensusLayerMode: true
+        deps:
+            services:
+                - "op-supernode-0"
+                - "op-supernode-1"
+                - "op-supernode-2"
 
 services:
   - kind: "supernode"
