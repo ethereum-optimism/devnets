@@ -49,45 +49,61 @@ chains:
         name: "rpc-0"
         spec:
           kind: "rpc"
+          lightNode: true
           el:
             kind: "op-geth"
             spec:
               kind: "archive"
           cl:
             kind: "op-node"
+            deps:
+              services:
+                - "proxyd-cl"
 
       - kind: "node"
         name: "rpc-1"
         spec:
           kind: "rpc"
+          lightNode: true
           el:
             kind: "op-reth"
             spec:
               kind: "archive"
           cl:
             kind: "op-node"
+            deps:
+              services:
+                - "proxyd-cl"
 
       - kind: "node"
         name: "snapsync-0"
         spec:
           kind: "snapsync"
+          lightNode: true
           el:
             kind: "op-reth"
             spec:
               kind: "full"
           cl:
             kind: "op-node"
+            deps:
+              services:
+                - "proxyd-cl"
 
       - kind: "node"
         name: "snapsync-1"
         spec:
           kind: "snapsync"
+          lightNode: true
           el:
             kind: "op-reth"
             spec:
               kind: "full"
           cl:
             kind: "op-node"
+            deps:
+              services:
+                - "proxyd-cl"
 
       - kind: "node"
         name: "sn-0"
@@ -250,45 +266,61 @@ chains:
         name: "rpc-0"
         spec:
           kind: "rpc"
+          lightNode: true
           el:
             kind: "op-geth"
             spec:
               kind: "archive"
           cl:
             kind: "op-node"
+            deps:
+              services:
+                - "proxyd-cl"
 
       - kind: "node"
         name: "rpc-1"
         spec:
           kind: "rpc"
+          lightNode: true
           el:
             kind: "op-reth"
             spec:
               kind: "archive"
           cl:
             kind: "op-node"
+            deps:
+              services:
+                - "proxyd-cl"
 
       - kind: "node"
         name: "snapsync-0"
         spec:
           kind: "snapsync"
+          lightNode: true
           el:
             kind: "op-reth"
             spec:
               kind: "full"
           cl:
             kind: "op-node"
+            deps:
+              services:
+                - "proxyd-cl"
 
       - kind: "node"
         name: "snapsync-1"
         spec:
           kind: "snapsync"
+          lightNode: true
           el:
             kind: "op-reth"
             spec:
               kind: "full"
           cl:
             kind: "op-node"
+            deps:
+              services:
+                - "proxyd-cl"
 
       - kind: "node"
         name: "sn-0"
