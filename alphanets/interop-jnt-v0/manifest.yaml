@@ -8,6 +8,7 @@ description: |
     * includes: drop unsafe payloads fix, reth interop tx eviction, ETH bridge liquidity funding
 features:
     - interop
+    - per-el-bootnode-gen
 cluster:
     name: oplabs-dev-infra-primary
 l1:
