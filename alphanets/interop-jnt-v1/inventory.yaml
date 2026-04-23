@@ -471,6 +471,8 @@ services:
       spec:
           kind: "op-supernode"
           values:
+            image:
+              tag: "v0.2.1"
             env:
               OP_SUPERNODE_VN_420120070_SYNCMODE: "consensus-layer"
               OP_SUPERNODE_VN_420120071_SYNCMODE: "consensus-layer"
