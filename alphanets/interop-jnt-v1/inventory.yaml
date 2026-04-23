@@ -239,6 +239,13 @@ chains:
                     deps:
                         services:
                             - "proxyd-cl"
+                values:
+                    op-node:
+                        replicaCount: 0
+                    op-geth:
+                        replicaCount: 0
+                    op-conductor:
+                        replicaCount: 0
 
           - kind: "node"
             name: "sequencer-1"
@@ -254,6 +261,13 @@ chains:
                     deps:
                         services:
                             - "proxyd-cl"
+                values:
+                    op-node:
+                        replicaCount: 0
+                    op-reth:
+                        replicaCount: 0
+                    op-conductor:
+                        replicaCount: 0
 
           - kind: "node"
             name: "sequencer-2"
@@ -269,6 +283,13 @@ chains:
                     deps:
                         services:
                             - "proxyd-cl"
+                values:
+                    op-node:
+                        replicaCount: 0
+                    op-reth:
+                        replicaCount: 0
+                    op-conductor:
+                        replicaCount: 0
 
           - kind: "node"
             name: "rpc-0"
@@ -370,6 +391,10 @@ chains:
             name: "op-batcher"
             spec:
                 kind: "op-batcher"
+                values:
+                    env:
+                        OP_BATCHER_L2_ETH_RPC: https://interop-jnt-v1-1-opn-reth-a-rpc-1-op-reth.primary.infra.dev.oplabs.cloud/
+                        OP_BATCHER_ROLLUP_RPC: https://interop-jnt-v1-1-opn-reth-a-rpc-1-op-node.primary.infra.dev.oplabs.cloud/
             deps:
                 nodes:
                     - "sequencer-0"
@@ -446,6 +471,11 @@ services:
       name: "op-supernode-0"
       spec:
           kind: "op-supernode"
+          values:
+              env:
+                  OP_SUPERNODE_VN_420120070_SYNCMODE: "consensus-layer"
+                  OP_SUPERNODE_VN_420120071_SYNCMODE: "consensus-layer"
+                  OP_SUPERNODE_VN_ALL_SYNCMODE: "consensus-layer"
       deps:
           nodes:
               - "sn-0"
@@ -454,6 +484,11 @@ services:
       name: "op-supernode-1"
       spec:
           kind: "op-supernode"
+          values:
+              env:
+                  OP_SUPERNODE_VN_420120070_SYNCMODE: "consensus-layer"
+                  OP_SUPERNODE_VN_420120071_SYNCMODE: "consensus-layer"
+                  OP_SUPERNODE_VN_ALL_SYNCMODE: "consensus-layer"
       deps:
           nodes:
               - "sn-1"
@@ -462,6 +497,11 @@ services:
       name: "op-supernode-2"
       spec:
           kind: "op-supernode"
+          values:
+              env:
+                  OP_SUPERNODE_VN_420120070_SYNCMODE: "consensus-layer"
+                  OP_SUPERNODE_VN_420120071_SYNCMODE: "consensus-layer"
+                  OP_SUPERNODE_VN_ALL_SYNCMODE: "consensus-layer"
       deps:
           nodes:
               - "sn-2"
@@ -471,17 +511,15 @@ services:
       spec:
           kind: "op-supernode"
           values:
-            image:
-              tag: "v0.2.1"
-            env:
-              OP_SUPERNODE_LOG_LEVEL: "debug"
-              OP_SUPERNODE_VN_420120070_SYNCMODE: "consensus-layer"
-              OP_SUPERNODE_VN_420120071_SYNCMODE: "consensus-layer"
-              OP_SUPERNODE_VN_ALL_SYNCMODE: "consensus-layer"
+              image:
+                  tag: "v0.2.1"
+              env:
+                  OP_SUPERNODE_VN_420120070_SYNCMODE: "consensus-layer"
+                  OP_SUPERNODE_VN_420120071_SYNCMODE: "consensus-layer"
+                  OP_SUPERNODE_VN_ALL_SYNCMODE: "consensus-layer"
       deps:
           nodes:
               - "sn-3"
-
 
     - kind: "interop-filter"
       name: "op-interop-filter"
