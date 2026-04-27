@@ -518,7 +518,7 @@ services:
           kind: "op-supernode"
           values:
               image:
-                  tag: "v0.2.1"
+                  tag: "v0.2.2-rc.2"
               env:
                   OP_SUPERNODE_LOG_LEVEL: "debug"
                   OP_SUPERNODE_VN_420120070_SYNCMODE: "consensus-layer"
