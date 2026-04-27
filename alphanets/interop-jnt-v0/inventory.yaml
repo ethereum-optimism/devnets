@@ -113,6 +113,10 @@ chains:
             kind: "op-reth"
             spec:
               kind: "full"
+          values:
+              op-reth:
+                  env: 
+                      RETH_HISTORICAL_PROOFS_ENABLED: "true"
 
       - kind: "node"
         name: "sn-1"
@@ -330,6 +334,10 @@ chains:
             kind: "op-reth"
             spec:
               kind: "full"
+          values:
+              op-reth:
+                  env: 
+                      RETH_HISTORICAL_PROOFS_ENABLED: "true"
 
       - kind: "node"
         name: "sn-1"
@@ -430,25 +438,44 @@ services:
     name: "op-supernode-0"
     spec:
       kind: "op-supernode"
+      values:
+          env:
+            OP_SUPERNODE_VN_ALL_SYNCMODE: "consensus-layer"
+            OP_SUPERNODE_VN_420120063_SYNCMODE: "consensus-layer"
+            OP_SUPERNODE_VN_420120064_SYNCMODE: "consensus-layer"
     deps:
       nodes:
         - "sn-0"
+
 
   - kind: "supernode"
     name: "op-supernode-1"
     spec:
       kind: "op-supernode"
+      values:
+          env:
+            OP_SUPERNODE_VN_ALL_SYNCMODE: "consensus-layer"
+            OP_SUPERNODE_VN_420120063_SYNCMODE: "consensus-layer"
+            OP_SUPERNODE_VN_420120064_SYNCMODE: "consensus-layer"
     deps:
       nodes:
         - "sn-1"
+
+
 
   - kind: "supernode"
     name: "op-supernode-2"
     spec:
       kind: "op-supernode"
+      values:
+          env:
+            OP_SUPERNODE_VN_ALL_SYNCMODE: "consensus-layer"
+            OP_SUPERNODE_VN_420120063_SYNCMODE: "consensus-layer"
+            OP_SUPERNODE_VN_420120064_SYNCMODE: "consensus-layer"
     deps:
       nodes:
         - "sn-2"
+
 
   - kind: "interop-filter"
     name: "op-interop-filter"

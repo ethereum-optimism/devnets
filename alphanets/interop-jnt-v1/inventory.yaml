@@ -122,6 +122,10 @@ chains:
                     kind: "op-reth"
                     spec:
                         kind: "archive"
+                values:
+                    op-reth:
+                        env: 
+                            RETH_HISTORICAL_PROOFS_ENABLED: "true"
 
           - kind: "node"
             name: "sn-2"
@@ -368,6 +372,10 @@ chains:
                     kind: "op-reth"
                     spec:
                         kind: "archive"
+                values:
+                    op-reth:
+                        env: 
+                            RETH_HISTORICAL_PROOFS_ENABLED: "true"
 
           - kind: "node"
             name: "sn-2"
@@ -386,6 +394,7 @@ chains:
                     kind: "op-reth"
                     spec:
                         kind: "archive"
+
       services:
           - kind: "batcher"
             name: "op-batcher"
@@ -465,6 +474,10 @@ chains:
                     - "op-supernode-0"
                     - "op-supernode-1"
                     - "op-supernode-2"
+
+      values:
+        replica-healthcheck:
+            referenceRpcUrl: "https://interop-jnt-v0-1-opn-geth-a-rpc-0-op-geth.primary.infra.dev.oplabs.cloud/"
 
 services:
     - kind: "supernode"
