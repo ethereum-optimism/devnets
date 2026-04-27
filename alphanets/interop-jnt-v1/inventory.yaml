@@ -131,7 +131,7 @@ chains:
                 values:
                     op-reth:
                         env: 
-                            RETH_HISTORICAL_PROOFS_ENABLED: "false"
+                            RETH_HISTORICAL_PROOFS_ENABLED: "true"
 
           - kind: "node"
             name: "sn-2"
@@ -391,7 +391,11 @@ chains:
                 values:
                     op-reth:
                         env: 
+<<<<<<< HEAD
                             RETH_HISTORICAL_PROOFS_ENABLED: "false"
+=======
+                            RETH_HISTORICAL_PROOFS_ENABLED: "true"
+>>>>>>> 07dc2fb (feat: enable historical proofs and update reference healthcheck url)
 
           - kind: "node"
             name: "sn-2"
@@ -493,7 +497,11 @@ chains:
 
       values:
         replica-healthcheck:
+<<<<<<< HEAD
             referenceRpcUrl: "https://interop-jnt-v1-1-opn-reth-a-rpc-0-op-reth.primary.infra.dev.oplabs.cloud/"
+=======
+            referenceRpcUrl: "https://interop-jnt-v0-1-opn-geth-a-rpc-0-op-geth.primary.infra.dev.oplabs.cloud/"
+>>>>>>> 07dc2fb (feat: enable historical proofs and update reference healthcheck url)
 
 services:
     - kind: "supernode"
