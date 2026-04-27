@@ -1,486 +1,482 @@
 chains:
-  - nodes:
-      - kind: "node"
-        name: "sequencer-0"
-        spec:
-          kind: "sequencer"
-          lightNode: true
-          el:
-            kind: "op-reth"
+    - nodes:
+          - kind: "node"
+            name: "sequencer-0"
             spec:
-              kind: "full"
-          cl:
-            kind: "op-node"
+                kind: "sequencer"
+                lightNode: true
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "full"
+                cl:
+                    kind: "op-node"
+                    deps:
+                        services:
+                            - "op-supernode-0"
+
+          - kind: "node"
+            name: "sequencer-1"
+            spec:
+                kind: "sequencer"
+                lightNode: true
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "full"
+                cl:
+                    kind: "op-node"
+                    deps:
+                        services:
+                            - "op-supernode-1"
+
+          - kind: "node"
+            name: "sequencer-2"
+            spec:
+                kind: "sequencer"
+                lightNode: true
+                el:
+                    kind: "op-geth"
+                    spec:
+                        kind: "full"
+                cl:
+                    kind: "op-node"
+                    deps:
+                        services:
+                            - "op-supernode-2"
+
+          - kind: "node"
+            name: "rpc-0"
+            spec:
+                kind: "rpc"
+                lightNode: true
+                el:
+                    kind: "op-geth"
+                    spec:
+                        kind: "archive"
+                cl:
+                    kind: "op-node"
+                    deps:
+                        services:
+                            - "proxyd-cl"
+
+          - kind: "node"
+            name: "rpc-1"
+            spec:
+                kind: "rpc"
+                lightNode: true
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "archive"
+                cl:
+                    kind: "op-node"
+                    deps:
+                        services:
+                            - "proxyd-cl"
+
+          - kind: "node"
+            name: "snapsync-0"
+            spec:
+                kind: "snapsync"
+                lightNode: true
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "full"
+                cl:
+                    kind: "op-node"
+                    deps:
+                        services:
+                            - "proxyd-cl"
+
+          - kind: "node"
+            name: "snapsync-1"
+            spec:
+                kind: "snapsync"
+                lightNode: true
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "full"
+                cl:
+                    kind: "op-node"
+                    deps:
+                        services:
+                            - "proxyd-cl"
+
+          - kind: "node"
+            name: "sn-0"
+            spec:
+                kind: "supernode-el"
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "full"
+                values:
+                    op-reth:
+                        env:
+                            RETH_HISTORICAL_PROOFS_ENABLED: "false"
+
+          - kind: "node"
+            name: "sn-1"
+            spec:
+                kind: "supernode-el"
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "archive"
+
+          - kind: "node"
+            name: "sn-2"
+            spec:
+                kind: "supernode-el"
+                el:
+                    kind: "op-geth"
+                    spec:
+                        kind: "archive"
+
+      services:
+          - kind: "batcher"
+            name: "op-batcher"
+            spec:
+                kind: "op-batcher"
             deps:
-              services:
-                - "op-supernode-0"
+                nodes:
+                    - "sequencer-0"
+                    - "sequencer-1"
+                    - "sequencer-2"
 
-      - kind: "node"
-        name: "sequencer-1"
-        spec:
-          kind: "sequencer"
-          lightNode: true
-          el:
-            kind: "op-reth"
+          - kind: "public-rpc"
+            name: "proxyd-public"
             spec:
-              kind: "full"
-          cl:
-            kind: "op-node"
+                kind: "proxyd"
             deps:
-              services:
-                - "op-supernode-1"
+                nodes:
+                    - "rpc-0"
+                    - "rpc-1"
+                services:
+                    - "op-interop-filter"
 
-      - kind: "node"
-        name: "sequencer-2"
-        spec:
-          kind: "sequencer"
-          lightNode: true
-          el:
-            kind: "op-geth"
+          - kind: "proposer"
+            name: "op-proposer"
             spec:
-              kind: "full"
-          cl:
-            kind: "op-node"
+                kind: "op-proposer"
             deps:
-              services:
-                - "op-supernode-2"
+                nodes:
+                    - "rpc-0"
 
-      - kind: "node"
-        name: "rpc-0"
-        spec:
-          kind: "rpc"
-          lightNode: true
-          el:
-            kind: "op-geth"
+          - kind: "op-dispute-mon"
+            name: "op-dispute-mon"
             spec:
-              kind: "archive"
-          cl:
-            kind: "op-node"
+                kind: "op-dispute-mon"
             deps:
-              services:
-                - "proxyd-cl"
+                nodes:
+                    - "rpc-0"
 
-      - kind: "node"
-        name: "rpc-1"
-        spec:
-          kind: "rpc"
-          lightNode: true
-          el:
-            kind: "op-reth"
+          - kind: "peer-mgmt-service"
+            name: "peer-mgmt-service"
             spec:
-              kind: "archive"
-          cl:
-            kind: "op-node"
+                kind: "peer-mgmt-service"
             deps:
-              services:
-                - "proxyd-cl"
+                nodes:
+                    - "sequencer-0"
+                    - "sequencer-1"
+                    - "sequencer-2"
+                    - "rpc-0"
+                    - "rpc-1"
+                    - "snapsync-0"
+                    - "snapsync-1"
 
-      - kind: "node"
-        name: "snapsync-0"
-        spec:
-          kind: "snapsync"
-          lightNode: true
-          el:
-            kind: "op-reth"
+          - kind: "op-conductor-mon"
+            name: "op-conductor-mon"
             spec:
-              kind: "full"
-          cl:
-            kind: "op-node"
+                kind: "op-conductor-mon"
             deps:
-              services:
-                - "proxyd-cl"
+                nodes:
+                    - "sequencer-0"
+                    - "sequencer-1"
+                    - "sequencer-2"
 
-      - kind: "node"
-        name: "snapsync-1"
-        spec:
-          kind: "snapsync"
-          lightNode: true
-          el:
-            kind: "op-reth"
+          - kind: "op-conductor-ops"
+            name: "op-conductor-ops"
             spec:
-              kind: "full"
-          cl:
-            kind: "op-node"
+                kind: "op-conductor-ops"
             deps:
-              services:
-                - "proxyd-cl"
+                nodes:
+                    - "sequencer-0"
+                    - "sequencer-1"
+                    - "sequencer-2"
 
-      - kind: "node"
-        name: "sn-0"
-        spec:
-          kind: "supernode-el"
-          el:
-            kind: "op-reth"
+          - kind: "proxyd"
+            name: "proxyd-cl"
             spec:
-              kind: "full"
-          values:
-              op-reth:
-                  env: 
-                      RETH_HISTORICAL_PROOFS_ENABLED: "true"
-
-      - kind: "node"
-        name: "sn-1"
-        spec:
-          kind: "supernode-el"
-          el:
-            kind: "op-reth"
-            spec:
-              kind: "archive"
-
-      - kind: "node"
-        name: "sn-2"
-        spec:
-          kind: "supernode-el"
-          el:
-            kind: "op-geth"
-            spec:
-              kind: "archive"
-
-    services:
-      - kind: "batcher"
-        name: "op-batcher"
-        spec:
-          kind: "op-batcher"
-        deps:
-          nodes:
-            - "sequencer-0"
-            - "sequencer-1"
-            - "sequencer-2"
-
-      - kind: "public-rpc"
-        name: "proxyd-public"
-        spec:
-          kind: "proxyd"
-        deps:
-          nodes:
-            - "rpc-0"
-            - "rpc-1"
-          services:
-            - "op-interop-filter"
-
-      - kind: "proposer"
-        name: "op-proposer"
-        spec:
-          kind: "op-proposer"
-        deps:
-          nodes:
-            - "rpc-0"
-
-      - kind: "op-dispute-mon"
-        name: "op-dispute-mon"
-        spec:
-          kind: "op-dispute-mon"
-        deps:
-          nodes:
-            - "rpc-0"
-
-      - kind: "peer-mgmt-service"
-        name: "peer-mgmt-service"
-        spec:
-          kind: "peer-mgmt-service"
-        deps:
-          nodes:
-            - "sequencer-0"
-            - "sequencer-1"
-            - "sequencer-2"
-            - "rpc-0"
-            - "rpc-1"
-            - "snapsync-0"
-            - "snapsync-1"
-
-      - kind: "op-conductor-mon"
-        name: "op-conductor-mon"
-        spec:
-          kind: "op-conductor-mon"
-        deps:
-          nodes:
-            - "sequencer-0"
-            - "sequencer-1"
-            - "sequencer-2"
-
-      - kind: "op-conductor-ops"
-        name: "op-conductor-ops"
-        spec:
-          kind: "op-conductor-ops"
-        deps:
-          nodes:
-            - "sequencer-0"
-            - "sequencer-1"
-            - "sequencer-2"
-            
-      - kind: "proxyd"
-        name: "proxyd-cl"
-        spec:
-            kind: "proxyd"
-            values:
-                consensusLayerMode: true
-        deps:
-            services:
-                - "op-supernode-0"
-                - "op-supernode-1"
-                - "op-supernode-2"
-
-  - nodes:
-      - kind: "node"
-        name: "sequencer-0"
-        lightNode: true
-        spec:
-          kind: "sequencer"
-          el:
-            kind: "op-reth"
-            spec:
-              kind: "full"
-          cl:
-            kind: "op-node"
+                kind: "proxyd"
+                values:
+                    consensusLayerMode: true
             deps:
-              services:
-                - "op-supernode-0"
+                services:
+                    - "op-supernode-0"
+                    - "op-supernode-1"
+                    - "op-supernode-2"
 
-      - kind: "node"
-        name: "sequencer-1"
-        spec:
-          kind: "sequencer"
-          lightNode: true
-          el:
-            kind: "op-reth"
+    - nodes:
+          - kind: "node"
+            name: "sequencer-0"
+            lightNode: true
             spec:
-              kind: "full"
-          cl:
-            kind: "op-node"
+                kind: "sequencer"
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "full"
+                cl:
+                    kind: "op-node"
+                    deps:
+                        services:
+                            - "op-supernode-0"
+
+          - kind: "node"
+            name: "sequencer-1"
+            spec:
+                kind: "sequencer"
+                lightNode: true
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "full"
+                cl:
+                    kind: "op-node"
+                    deps:
+                        services:
+                            - "op-supernode-1"
+
+          - kind: "node"
+            name: "sequencer-2"
+            spec:
+                kind: "sequencer"
+                lightNode: true
+                el:
+                    kind: "op-geth"
+                    spec:
+                        kind: "full"
+                cl:
+                    kind: "op-node"
+                    deps:
+                        services:
+                            - "op-supernode-2"
+
+          - kind: "node"
+            name: "rpc-0"
+            spec:
+                kind: "rpc"
+                lightNode: true
+                el:
+                    kind: "op-geth"
+                    spec:
+                        kind: "archive"
+                cl:
+                    kind: "op-node"
+                    deps:
+                        services:
+                            - "proxyd-cl"
+
+          - kind: "node"
+            name: "rpc-1"
+            spec:
+                kind: "rpc"
+                lightNode: true
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "archive"
+                cl:
+                    kind: "op-node"
+                    deps:
+                        services:
+                            - "proxyd-cl"
+
+          - kind: "node"
+            name: "snapsync-0"
+            spec:
+                kind: "snapsync"
+                lightNode: true
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "full"
+                cl:
+                    kind: "op-node"
+                    deps:
+                        services:
+                            - "proxyd-cl"
+
+          - kind: "node"
+            name: "snapsync-1"
+            spec:
+                kind: "snapsync"
+                lightNode: true
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "full"
+                cl:
+                    kind: "op-node"
+                    deps:
+                        services:
+                            - "proxyd-cl"
+
+          - kind: "node"
+            name: "sn-0"
+            spec:
+                kind: "supernode-el"
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "full"
+                values:
+                    op-reth:
+                        env:
+                            RETH_HISTORICAL_PROOFS_ENABLED: "false"
+
+          - kind: "node"
+            name: "sn-1"
+            spec:
+                kind: "supernode-el"
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "archive"
+
+          - kind: "node"
+            name: "sn-2"
+            spec:
+                kind: "supernode-el"
+                el:
+                    kind: "op-geth"
+                    spec:
+                        kind: "archive"
+
+      services:
+          - kind: "batcher"
+            name: "op-batcher"
+            spec:
+                kind: "op-batcher"
             deps:
-              services:
-                - "op-supernode-1"
+                nodes:
+                    - "sequencer-0"
+                    - "sequencer-1"
+                    - "sequencer-2"
 
-      - kind: "node"
-        name: "sequencer-2"
-        spec:
-          kind: "sequencer"
-          lightNode: true
-          el:
-            kind: "op-geth"
+          - kind: "public-rpc"
+            name: "proxyd-public"
             spec:
-              kind: "full"
-          cl:
-            kind: "op-node"
+                kind: "proxyd"
             deps:
-              services:
-                - "op-supernode-2"
+                nodes:
+                    - "rpc-0"
+                    - "rpc-1"
+                services:
+                    - "op-interop-filter"
 
-      - kind: "node"
-        name: "rpc-0"
-        spec:
-          kind: "rpc"
-          lightNode: true
-          el:
-            kind: "op-geth"
+          - kind: "peer-mgmt-service"
+            name: "peer-mgmt-service"
             spec:
-              kind: "archive"
-          cl:
-            kind: "op-node"
+                kind: "peer-mgmt-service"
             deps:
-              services:
-                - "proxyd-cl"
+                nodes:
+                    - "sequencer-0"
+                    - "sequencer-1"
+                    - "sequencer-2"
+                    - "rpc-0"
+                    - "rpc-1"
+                    - "snapsync-0"
+                    - "snapsync-1"
 
-      - kind: "node"
-        name: "rpc-1"
-        spec:
-          kind: "rpc"
-          lightNode: true
-          el:
-            kind: "op-reth"
+          - kind: "op-conductor-mon"
+            name: "op-conductor-mon"
             spec:
-              kind: "archive"
-          cl:
-            kind: "op-node"
+                kind: "op-conductor-mon"
             deps:
-              services:
-                - "proxyd-cl"
+                nodes:
+                    - "sequencer-0"
+                    - "sequencer-1"
+                    - "sequencer-2"
 
-      - kind: "node"
-        name: "snapsync-0"
-        spec:
-          kind: "snapsync"
-          lightNode: true
-          el:
-            kind: "op-reth"
+          - kind: "op-conductor-ops"
+            name: "op-conductor-ops"
             spec:
-              kind: "full"
-          cl:
-            kind: "op-node"
+                kind: "op-conductor-ops"
             deps:
-              services:
-                - "proxyd-cl"
+                nodes:
+                    - "sequencer-0"
+                    - "sequencer-1"
+                    - "sequencer-2"
 
-      - kind: "node"
-        name: "snapsync-1"
-        spec:
-          kind: "snapsync"
-          lightNode: true
-          el:
-            kind: "op-reth"
+          - kind: "challenger"
+            name: "op-challenger"
             spec:
-              kind: "full"
-          cl:
-            kind: "op-node"
+                kind: "op-challenger"
             deps:
-              services:
-                - "proxyd-cl"
+                nodes:
+                    - "rpc-0"
 
-      - kind: "node"
-        name: "sn-0"
-        spec:
-          kind: "supernode-el"
-          el:
-            kind: "op-reth"
+          - kind: "proxyd"
+            name: "proxyd-cl"
             spec:
-              kind: "full"
-          values:
-              op-reth:
-                  env: 
-                      RETH_HISTORICAL_PROOFS_ENABLED: "true"
-
-      - kind: "node"
-        name: "sn-1"
-        spec:
-          kind: "supernode-el"
-          el:
-            kind: "op-reth"
-            spec:
-              kind: "archive"
-
-      - kind: "node"
-        name: "sn-2"
-        spec:
-          kind: "supernode-el"
-          el:
-            kind: "op-geth"
-            spec:
-              kind: "archive"
-
-    services:
-      - kind: "batcher"
-        name: "op-batcher"
-        spec:
-          kind: "op-batcher"
-        deps:
-          nodes:
-            - "sequencer-0"
-            - "sequencer-1"
-            - "sequencer-2"
-
-      - kind: "public-rpc"
-        name: "proxyd-public"
-        spec:
-          kind: "proxyd"
-        deps:
-          nodes:
-            - "rpc-0"
-            - "rpc-1"
-          services:
-            - "op-interop-filter"
-
-      - kind: "peer-mgmt-service"
-        name: "peer-mgmt-service"
-        spec:
-          kind: "peer-mgmt-service"
-        deps:
-          nodes:
-            - "sequencer-0"
-            - "sequencer-1"
-            - "sequencer-2"
-            - "rpc-0"
-            - "rpc-1"
-            - "snapsync-0"
-            - "snapsync-1"
-
-      - kind: "op-conductor-mon"
-        name: "op-conductor-mon"
-        spec:
-          kind: "op-conductor-mon"
-        deps:
-          nodes:
-            - "sequencer-0"
-            - "sequencer-1"
-            - "sequencer-2"
-
-      - kind: "op-conductor-ops"
-        name: "op-conductor-ops"
-        spec:
-          kind: "op-conductor-ops"
-        deps:
-          nodes:
-            - "sequencer-0"
-            - "sequencer-1"
-            - "sequencer-2"
-
-      - kind: "challenger"
-        name: "op-challenger"
-        spec:
-          kind: "op-challenger"
-        deps:
-          nodes:
-            - "rpc-0"
-
-      - kind: "proxyd"
-        name: "proxyd-cl"
-        spec:
-            kind: "proxyd"
-            values:
-                consensusLayerMode: true
-        deps:
-            services:
-                - "op-supernode-0"
-                - "op-supernode-1"
-                - "op-supernode-2"
+                kind: "proxyd"
+                values:
+                    consensusLayerMode: true
+            deps:
+                services:
+                    - "op-supernode-0"
+                    - "op-supernode-1"
+                    - "op-supernode-2"
 
 services:
-  - kind: "supernode"
-    name: "op-supernode-0"
-    spec:
-      kind: "op-supernode"
-      values:
-          env:
-            OP_SUPERNODE_VN_ALL_SYNCMODE: "consensus-layer"
-            OP_SUPERNODE_VN_420120063_SYNCMODE: "consensus-layer"
-            OP_SUPERNODE_VN_420120064_SYNCMODE: "consensus-layer"
-    deps:
-      nodes:
-        - "sn-0"
+    - kind: "supernode"
+      name: "op-supernode-0"
+      spec:
+          kind: "op-supernode"
+          values:
+              env:
+                  OP_SUPERNODE_VN_ALL_SYNCMODE: "consensus-layer"
+                  OP_SUPERNODE_VN_420120063_SYNCMODE: "consensus-layer"
+                  OP_SUPERNODE_VN_420120064_SYNCMODE: "consensus-layer"
+      deps:
+          nodes:
+              - "sn-0"
 
+    - kind: "supernode"
+      name: "op-supernode-1"
+      spec:
+          kind: "op-supernode"
+          values:
+              env:
+                  OP_SUPERNODE_VN_ALL_SYNCMODE: "consensus-layer"
+                  OP_SUPERNODE_VN_420120063_SYNCMODE: "consensus-layer"
+                  OP_SUPERNODE_VN_420120064_SYNCMODE: "consensus-layer"
+      deps:
+          nodes:
+              - "sn-1"
 
-  - kind: "supernode"
-    name: "op-supernode-1"
-    spec:
-      kind: "op-supernode"
-      values:
-          env:
-            OP_SUPERNODE_VN_ALL_SYNCMODE: "consensus-layer"
-            OP_SUPERNODE_VN_420120063_SYNCMODE: "consensus-layer"
-            OP_SUPERNODE_VN_420120064_SYNCMODE: "consensus-layer"
-    deps:
-      nodes:
-        - "sn-1"
+    - kind: "supernode"
+      name: "op-supernode-2"
+      spec:
+          kind: "op-supernode"
+          values:
+              env:
+                  OP_SUPERNODE_VN_ALL_SYNCMODE: "consensus-layer"
+                  OP_SUPERNODE_VN_420120063_SYNCMODE: "consensus-layer"
+                  OP_SUPERNODE_VN_420120064_SYNCMODE: "consensus-layer"
+      deps:
+          nodes:
+              - "sn-2"
 
-
-
-  - kind: "supernode"
-    name: "op-supernode-2"
-    spec:
-      kind: "op-supernode"
-      values:
-          env:
-            OP_SUPERNODE_VN_ALL_SYNCMODE: "consensus-layer"
-            OP_SUPERNODE_VN_420120063_SYNCMODE: "consensus-layer"
-            OP_SUPERNODE_VN_420120064_SYNCMODE: "consensus-layer"
-    deps:
-      nodes:
-        - "sn-2"
-
-
-  - kind: "interop-filter"
-    name: "op-interop-filter"
-    spec:
-      kind: "op-interop-filter"
-    deps:
-      nodes:
-        - "rpc-0"
+    - kind: "interop-filter"
+      name: "op-interop-filter"
+      spec:
+          kind: "op-interop-filter"
+      deps:
+          nodes:
+              - "rpc-0"

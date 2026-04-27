@@ -124,8 +124,8 @@ chains:
                         kind: "archive"
                 values:
                     op-reth:
-                        env: 
-                            RETH_HISTORICAL_PROOFS_ENABLED: "true"
+                        env:
+                            RETH_HISTORICAL_PROOFS_ENABLED: "false"
 
           - kind: "node"
             name: "sn-2"
@@ -374,8 +374,8 @@ chains:
                         kind: "archive"
                 values:
                     op-reth:
-                        env: 
-                            RETH_HISTORICAL_PROOFS_ENABLED: "true"
+                        env:
+                            RETH_HISTORICAL_PROOFS_ENABLED: "false"
 
           - kind: "node"
             name: "sn-2"
@@ -476,8 +476,8 @@ chains:
                     - "op-supernode-2"
 
       values:
-        replica-healthcheck:
-            referenceRpcUrl: "https://interop-jnt-v0-1-opn-geth-a-rpc-0-op-geth.primary.infra.dev.oplabs.cloud/"
+          replica-healthcheck:
+              referenceRpcUrl: "https://interop-jnt-v0-1-opn-geth-a-rpc-0-op-geth.primary.infra.dev.oplabs.cloud/"
 
 services:
     - kind: "supernode"
