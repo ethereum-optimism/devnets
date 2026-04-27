@@ -116,7 +116,7 @@ chains:
           values:
               op-reth:
                   env: 
-                      RETH_HISTORICAL_PROOFS_ENABLED: "true"
+                      RETH_HISTORICAL_PROOFS_ENABLED: "false"
 
       - kind: "node"
         name: "sn-1"
@@ -337,7 +337,7 @@ chains:
           values:
               op-reth:
                   env: 
-                      RETH_HISTORICAL_PROOFS_ENABLED: "true"
+                      RETH_HISTORICAL_PROOFS_ENABLED: false"
 
       - kind: "node"
         name: "sn-1"
