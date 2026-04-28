@@ -69,6 +69,12 @@ chains:
                     kind: "op-reth"
                     spec:
                         kind: "archive"
+                values:
+                    op-reth:
+                        env:
+                            RETH_HISTORICAL_PROOFS_ENABLED: "true"
+                        image:
+                            tag: "v2.1.0-rc.1"
                 cl:
                     kind: "op-node"
                     deps:
@@ -324,6 +330,12 @@ chains:
                     deps:
                         services:
                             - "proxyd-cl"
+                values:
+                    op-reth:
+                        env:
+                            RETH_HISTORICAL_PROOFS_ENABLED: "true"
+                        image:
+                            tag: "v2.1.0-rc.1"
 
           - kind: "node"
             name: "snapsync-0"
