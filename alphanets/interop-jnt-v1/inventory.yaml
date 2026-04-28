@@ -144,7 +144,9 @@ chains:
                 values:
                     op-reth:
                         env:
-                            RETH_HISTORICAL_PROOFS_ENABLED: "false"
+                            RETH_HISTORICAL_PROOFS_ENABLED: "true"
+                        image:
+                            tag: "v2.1.0-rc.1"
 
           - kind: "node"
             name: "sn-3"
@@ -401,6 +403,12 @@ chains:
                     kind: "op-reth"
                     spec:
                         kind: "archive"
+                values:
+                    op-reth:
+                        env:
+                            RETH_HISTORICAL_PROOFS_ENABLED: "true"
+                        image:
+                            tag: "v2.1.0-rc.1"
 
           - kind: "node"
             name: "sn-3"
@@ -530,11 +538,12 @@ services:
           kind: "op-supernode"
           values:
               image:
-                  tag: "v0.2.1"
+                  tag: "v0.2.2-rc.3"
               env:
-                  OP_SUPERNODE_VN_420120070_SYNCMODE: "consensus-layer"
-                  OP_SUPERNODE_VN_420120071_SYNCMODE: "consensus-layer"
-                  OP_SUPERNODE_VN_ALL_SYNCMODE: "consensus-layer"
+                  OP_SUPERNODE_VN_420120070_SYNCMODE: "execution-layer"
+                  OP_SUPERNODE_VN_420120071_SYNCMODE: "execution-layer"
+                  OP_SUPERNODE_VN_ALL_SYNCMODE: "execution-layer"
+                  OP_SUPERNODE_VN_ALL_SYNCMODE_OFFSET_EL_SAFE: 10m
       deps:
           nodes:
               - "sn-2"
