@@ -545,7 +545,7 @@ services:
           kind: "op-supernode"
           values:
               image:
-                  tag: "v0.2.2-rc.3"
+                  tag: "v0.2.2-rc.4"
               env:
                   OP_SUPERNODE_VN_420120070_SYNCMODE: "consensus-layer"
                   OP_SUPERNODE_VN_420120071_SYNCMODE: "consensus-layer"
