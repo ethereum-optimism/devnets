@@ -119,6 +119,10 @@ chains:
                     kind: "op-reth"
                     spec:
                         kind: "full"
+                values:
+                    op-reth:
+                        env:
+                            RETH_HISTORICAL_PROOFS_ENABLED: "true"
 
           - kind: "node"
             name: "sn-1"
@@ -130,8 +134,8 @@ chains:
                         kind: "archive"
                 values:
                     op-reth:
-                        env: 
-                            RETH_HISTORICAL_PROOFS_ENABLED: "false"
+                        env:
+                            RETH_HISTORICAL_PROOFS_ENABLED: "true"
 
           - kind: "node"
             name: "sn-2"
@@ -379,6 +383,10 @@ chains:
                     kind: "op-reth"
                     spec:
                         kind: "full"
+                values:
+                    op-reth:
+                        env:
+                            RETH_HISTORICAL_PROOFS_ENABLED: "true"
 
           - kind: "node"
             name: "sn-1"
@@ -390,8 +398,8 @@ chains:
                         kind: "archive"
                 values:
                     op-reth:
-                        env: 
-                            RETH_HISTORICAL_PROOFS_ENABLED: "false"
+                        env:
+                            RETH_HISTORICAL_PROOFS_ENABLED: "true"
 
           - kind: "node"
             name: "sn-2"
@@ -401,6 +409,10 @@ chains:
                     kind: "op-reth"
                     spec:
                         kind: "archive"
+                values:
+                    op-reth:
+                        env:
+                            RETH_HISTORICAL_PROOFS_ENABLED: "false"
 
           - kind: "node"
             name: "sn-3"
@@ -492,8 +504,8 @@ chains:
                     - "op-supernode-2"
 
       values:
-        replica-healthcheck:
-            referenceRpcUrl: "https://interop-jnt-v1-1-opn-reth-a-rpc-0-op-reth.primary.infra.dev.oplabs.cloud/"
+          replica-healthcheck:
+              referenceRpcUrl: "https://interop-jnt-v1-1-opn-reth-a-rpc-0-op-reth.primary.infra.dev.oplabs.cloud/"
 
 services:
     - kind: "supernode"
@@ -515,7 +527,7 @@ services:
           kind: "op-supernode"
           values:
               image:
-                  tag: "v0.2.1"
+                  tag: "v0.2.2-rc.6"
               env:
                   OP_SUPERNODE_VN_420120070_SYNCMODE: "consensus-layer"
                   OP_SUPERNODE_VN_420120071_SYNCMODE: "consensus-layer"
@@ -530,7 +542,7 @@ services:
           kind: "op-supernode"
           values:
               image:
-                  tag: "v0.2.1"
+                  tag: "v0.2.2-rc.6"
               env:
                   OP_SUPERNODE_VN_420120070_SYNCMODE: "consensus-layer"
                   OP_SUPERNODE_VN_420120071_SYNCMODE: "consensus-layer"
