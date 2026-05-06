@@ -1,7 +1,7 @@
 name: u19-beta
 type: betanet
 scope: https://github.com/ethereum-optimism/devnets/issues/316
-status: pending
+status: online
 description: |
     * U19 Betanet
       * Osaka on L2
