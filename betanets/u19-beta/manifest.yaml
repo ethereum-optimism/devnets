@@ -2,84 +2,72 @@ name: u19-beta
 type: betanet
 scope: https://github.com/ethereum-optimism/devnets/issues/316
 status: pending
+deployed_on: ""
 description: |
-    * U19 Betanet
-      * Osaka on L2
-      * L2CM
-      * CANNON_KONA fault proofs
+  * U19 Betanet
+    * Osaka on L2
+    * L2CM
+    * CANNON_KONA fault proofs
+metadata:
+  domain: op-enterprise
+  team: core
+  tenant_id: u19-beta
+  tenant_name: u19-beta
+  tier_id: "100"
+  features:
+    mission_critical: false
 features:
-    - skip-ci
+  - p2p-cluster-local
+  - gateway-api
 cluster:
-    name: oplabs-dev-infra-primary
+    name: oplabs-dev-ent-networks-us-ue1-0
 l1:
-    name: sepolia
-    chain_id: 11155111
-    genesis_locator: ""
-    eth_rpc: https://proxyd-l1-sepolia.primary.client.dev.oplabs.cloud
-    beacon_rpc: https://beacon-api-proxy-sepolia.primary.client.dev.oplabs.cloud
-    blob_archiver_rpc: https://blob-api-sepolia.primary.client.dev.oplabs.cloud
-    owner_safe_address: 0xe934Dc97E347C6aCef74364B50125bb8689c40ff
-    celestia_auth_token: ""
-    celestia_rpc_url: ""
+  name: sepolia
+  chain_id: 11155111
 l2:
-    deployment:
-        op-deployer:
-            version: 0.6.0
-        l1-contracts:
-            locator: ""
-            version: ""
-        l2-contracts:
-            locator: ""
-            version: ""
-        overrides: {}
-        gas_limit: 60000000
-        eip1559_elasticity: 6
-        eip1559_denominator: 50
-        eip1559_denominator_canyon: 250
-    components:
-        kona-program:
-            version: kona-node/v1.2.7
-        op-batcher:
-            version: op-batcher/v1.16.7
-        op-challenger:
-            version: op-challenger/v1.9.1
-        op-conductor:
-            version: op-conductor/v0.9.3
-        op-dispute-mon:
-            version: op-dispute-mon/v1.5.1
-        op-node:
-            version: op-node/v1.17.0
-        op-program:
-            version: op-program/v1.9.0
-        op-proposer:
-            version: op-proposer/v1.16.2
-        op-rbuilder:
-            version: op-rbuilder/v0.2.13
-        op-reth:
-            version: op-reth/v2.2.0
-        proxyd:
-            version: proxyd/v4.27.1
-        rollup-boost:
-            version: v0.7.11
-    charts: {}
-    chains:
-        - name: u19-beta-0
-          chain_id: "420120035"
-          features: []
-          deployment:
-            overrides: {}
-            gas_limit: 60000000
-            eip1559_elasticity: 6
-            eip1559_denominator: 50
-            eip1559_denominator_canyon: 250
-        - name: u19-beta-1
-          chain_id: "420120036"
-          features:
-            - fp-permissionless
-            - kona
-          deployment:
-            overrides: {}
-            gas_limit: 60000000
-            eip1559_elasticity: 6
-            eip1559_denominator: 50
-            eip1559_denominator_canyon: 250
+  deployment:
+    op-deployer:
+        version: 0.6.0-rc.3
+    overrides:
+      l2GenesisJovianTimeOffset: "0x0"
+    gas_limit: 60000000
+  components:
+    flashblocks-websocket-proxy:
+        version: flashblocks-websocket-proxy/v0.7.4
+    kona-node:
+        version: kona-node/v1.2.15
+    op-batcher:
+        version: op-batcher/v1.16.7
+    op-conductor:
+        version: op-conductor/v0.9.3
+    op-conductor-mon:
+        version: op-conductor-mon/v0.0.5
+    op-conductor-ops:
+        version: op-conductor-ops/v0.0.2
+    op-geth:
+        version: op-geth/v1.101702.1
+    op-node:
+        version: op-node/v1.16.12
+    op-program:
+        version: op-program/v1.9.0-rc.1
+    op-rbuilder:
+        version: op-rbuilder/v0.3.2-rc5
+    op-reth:
+        version: op-reth/v2.0.0
+    peer-mgmt-service:
+        version: peer-mgmt-service/v0.0.4
+    proxyd:
+        version: proxyd/v4.27.0
+    rollup-boost:
+        version: rollup-boost/v0.7.11
+  charts: {}
+  chains:
+    - name: u19-beta-0
+      chain_id: "420120035"
+      features: []
+    - name: u19-beta-1
+      chain_id: "420120036"
+      features:
+        - fp-permissionless
+workflow:
+  disable_k8s_merge: true
