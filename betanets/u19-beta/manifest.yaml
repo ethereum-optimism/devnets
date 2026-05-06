@@ -38,32 +38,40 @@ l2:
         eip1559_denominator: 50
         eip1559_denominator_canyon: 250
     components:
+        balance-mon:
+            version: balance-mon/v1.2.1
         flashblocks-websocket-proxy:
             version: flashblocks-websocket-proxy/v0.7.4
         kona-node:
-            version: kona-node/v1.2.15
+            version: kona-node/v1.4.0
         op-batcher:
             version: op-batcher/v1.16.7
+        op-challenger:
+            version: op-challenger/v1.9.3-rc.1
         op-conductor:
             version: op-conductor/v0.9.3
         op-conductor-mon:
             version: op-conductor-mon/v0.0.5
         op-conductor-ops:
             version: op-conductor-ops/v0.0.2
+        op-dispute-mon:
+            version: op-dispute-mon/v1.5.2-rc.1
         op-geth:
-            version: op-geth/v1.101702.1
+            version: op-geth/v1.101702.2-rc.3
         op-node:
-            version: op-node/v1.16.12
+            version: op-node/v1.17.0
         op-program:
             version: op-program/v1.9.0-rc.1
+        op-proposer:
+            version: op-proposer/v1.16.3-rc.1
         op-rbuilder:
             version: op-rbuilder/v0.3.2-rc5
         op-reth:
-            version: op-reth/v2.0.0
+            version: op-reth/v2.2.1
         peer-mgmt-service:
             version: peer-mgmt-service/v0.0.4
         proxyd:
-            version: proxyd/v4.27.0
+            version: proxyd/v4.27.1
         rollup-boost:
             version: rollup-boost/v0.7.11
     chains:
