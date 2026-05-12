@@ -1,5 +1,5 @@
 name: interop-jnt-v2
-type: alphanet
+type: betanet
 status: pending
 description: |
     * interop network testing SuperDisputeGame with op-deployer v0.7.0-alpha.2
