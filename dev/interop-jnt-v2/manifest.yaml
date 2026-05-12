@@ -43,6 +43,8 @@ l2:
             version: flashblocks-websocket-proxy/v0.7.4
         kona-node:
             version: kona-node/v1.2.13
+        kona-program:
+            version: e005020e77e9b6a0a4b0486ae4ba54ecbbd8b22f
         op-batcher:
             version: op-batcher/v1.16.8
         op-challenger:
@@ -77,8 +79,6 @@ l2:
             version: proxyd/v4.27.1
         rollup-boost:
             version: rollup-boost/v0.7.11
-        kona-program:
-            version: e005020e77e9b6a0a4b0486ae4ba54ecbbd8b22f
     charts:
         node:
             name: ""
@@ -86,27 +86,25 @@ l2:
     chains:
         - name: interop-jnt-v2-0
           chain_id: "420120102"
-          deployment:
-              overrides:
-                  l2BlockTime: 2
-              gas_limit: 60000000
-              eip1559_elasticity: 6
-              eip1559_denominator: 50
-              eip1559_denominator_canyon: 250
           features:
-              - fp-interop
-              - fp-permissionless
+            - fp-interop
+            - fp-permissionless
+          deployment:
+            overrides:
+                l2BlockTime: 2
+            gas_limit: 60000000
+            eip1559_elasticity: 6
+            eip1559_denominator: 50
+            eip1559_denominator_canyon: 250
         - name: interop-jnt-v2-1
           chain_id: "420120103"
-          deployment:
-              overrides:
-                  l2BlockTime: 1
-              gas_limit: 60000000
-              eip1559_elasticity: 6
-              eip1559_denominator: 50
-              eip1559_denominator_canyon: 250
           features:
-              - fp-interop
-              - fp-permissionless
-workflow:
-    disable_k8s_merge: true
+            - fp-interop
+            - fp-permissionless
+          deployment:
+            overrides:
+                l2BlockTime: 1
+            gas_limit: 60000000
+            eip1559_elasticity: 6
+            eip1559_denominator: 50
+            eip1559_denominator_canyon: 250
