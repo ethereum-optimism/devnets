@@ -1,0 +1,25 @@
+# managed-by:netchef,network:interop-jnt-v2
+organization:
+  - name: '' # TODO: fill in by ecosystems team
+    external_org_id: '' # TODO: fill in by ecosystems team once auth0_organization tf resource is created
+    chains:
+      - chain_id: '420120102'
+        metadata:
+          chain_name: 'interop-jnt-v2-0'
+          chain_symbol: 'ETH'
+          block_explorer_url: '' # TODO: fill in by ecosystems team
+          rpc_url: 'https://interop-jnt-v2-0.optimism.io'
+          proxyd_instance: 'bn-interop-jnt-v2-0-proxyd-public'
+          network_namespace: 'bn-interop-jnt-v2-0-opn-geth-f-seq-0'
+          cluster: 'oplabs-dev-ent-networks-us-ue1-0'
+          network_label: 'interop-jnt-v2'
+      - chain_id: '420120103'
+        metadata:
+          chain_name: 'interop-jnt-v2-1'
+          chain_symbol: 'ETH'
+          block_explorer_url: '' # TODO: fill in by ecosystems team
+          rpc_url: 'https://interop-jnt-v2-1.optimism.io'
+          proxyd_instance: 'bn-interop-jnt-v2-1-proxyd-public'
+          network_namespace: 'bn-interop-jnt-v2-1-opn-geth-f-seq-0'
+          cluster: 'oplabs-dev-ent-networks-us-ue1-0'
+          network_label: 'interop-jnt-v2'
