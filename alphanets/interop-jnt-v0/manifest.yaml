@@ -1,7 +1,7 @@
 name: interop-jnt-v0
 type: alphanet
 scope: https://github.com/ethereum-optimism/devnets/issues/276
-status: online
+status: offline
 description: |
     * interop joint network v2 (gs/temp-hacky-devnet-interop branch)
     * interop activated 60s after genesis
@@ -82,16 +82,16 @@ l2:
         - name: interop-jnt-v0-0
           chain_id: "420120063"
           deployment:
-            overrides: {}
-            gas_limit: 60000000
-            eip1559_elasticity: 6
-            eip1559_denominator: 50
-            eip1559_denominator_canyon: 250
+              overrides: {}
+              gas_limit: 60000000
+              eip1559_elasticity: 6
+              eip1559_denominator: 50
+              eip1559_denominator_canyon: 250
         - name: interop-jnt-v0-1
           chain_id: "420120064"
           deployment:
-            overrides: {}
-            gas_limit: 60000000
-            eip1559_elasticity: 6
-            eip1559_denominator: 50
-            eip1559_denominator_canyon: 250
+              overrides: {}
+              gas_limit: 60000000
+              eip1559_elasticity: 6
+              eip1559_denominator: 50
+              eip1559_denominator_canyon: 250
