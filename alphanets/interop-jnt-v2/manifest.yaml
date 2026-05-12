@@ -1,0 +1,112 @@
+name: sdg-v2
+type: alphanet
+status: offline
+description: |
+    * interop network testing SuperDisputeGame with op-deployer v0.7.0-alpha.2
+    * interop activated 60s after genesis
+    * uses SUPER_ROOT_GAMES_MIGRATION dev feature flag
+features:
+    - per-el-bootnode-gen
+    - interop
+cluster:
+    name: oplabs-dev-infra-primary
+l1:
+    name: sepolia
+    chain_id: 11155111
+    eth_rpc: https://proxyd-l1-sepolia.primary.client.dev.oplabs.cloud
+    beacon_rpc: https://beacon-api-proxy-sepolia.primary.client.dev.oplabs.cloud
+    blob_archiver_rpc: https://blob-api-sepolia.primary.client.dev.oplabs.cloud
+    owner_safe_address: 0xe934Dc97E347C6aCef74364B50125bb8689c40ff
+l2:
+    deployment:
+        op-deployer:
+            version: 0.7.0-alpha.2
+        l1-contracts:
+            locator: ""
+        l2-contracts:
+            locator: ""
+        overrides:
+            l2GenesisInteropTimeOffset: "0x3C"
+            l2GenesisIsthmusTimeOffset: "0x0"
+            l2GenesisJovianTimeOffset: "0x0"
+            l2GenesisKarstTimeOffset: "0x0"
+            mipsVersion: 8
+        gas_limit: 60000000
+        eip1559_elasticity: 6
+        eip1559_denominator: 50
+        eip1559_denominator_canyon: 250
+        dev_feature_bitmaps:
+            - "0x0000000000000000000000000000000000000000000000000000000000000001"
+            - "0x0000000000000000000000000000000000000000000000000000000010000000"
+    components:
+        flashblocks-websocket-proxy:
+            version: flashblocks-websocket-proxy/v0.7.4
+        kona-node:
+            version: kona-node/v1.2.13
+        op-batcher:
+            version: op-batcher/v1.16.8
+        op-challenger:
+            version: op-challenger/v1.9.3-rc.1
+        op-conductor:
+            version: op-conductor/v0.9.3
+        op-conductor-mon:
+            version: op-conductor-mon/v0.0.5
+        op-conductor-ops:
+            version: op-conductor-ops/v0.0.2
+        op-dispute-mon:
+            version: op-dispute-mon/v1.5.2-rc.1
+        op-geth:
+            version: op-geth/v1.101702.1
+        op-interop-filter:
+            version: op-interop-filter/v0.1.2
+        op-node:
+            version: op-node/v1.18.0
+        op-program:
+            version: e005020e77e9b6a0a4b0486ae4ba54ecbbd8b22f
+        op-proposer:
+            version: op-proposer/v1.16.3-rc.1
+        op-rbuilder:
+            version: op-rbuilder/v0.3.2-rc5
+        op-reth:
+            version: op-reth/v2.2.2
+        op-supernode:
+            version: op-supernode/v0.2.2-rc.8
+        peer-mgmt-service:
+            version: peer-mgmt-service/v0.0.3
+        proxyd:
+            version: proxyd/v4.27.1
+        rollup-boost:
+            version: rollup-boost/v0.7.11
+        kona-program:
+            version: e005020e77e9b6a0a4b0486ae4ba54ecbbd8b22f
+    charts:
+        node:
+            name: ""
+            version: 0.35.0
+    chains:
+        - name: sdg-v2-0
+          chain_id: "420120102"
+          deployment:
+              overrides:
+                  l2BlockTime: 2
+              gas_limit: 60000000
+              eip1559_elasticity: 6
+              eip1559_denominator: 50
+              eip1559_denominator_canyon: 250
+          features:
+              - fp-interop
+              - fp-permissionless
+        - name: sdg-v2-1
+          chain_id: "420120103"
+          deployment:
+              overrides:
+                  l2BlockTime: 1
+              gas_limit: 60000000
+              eip1559_elasticity: 6
+              eip1559_denominator: 50
+              eip1559_denominator_canyon: 250
+          features:
+              - fp-interop
+              - fp-permissionless
+workflow:
+    disable_k8s_merge: true
