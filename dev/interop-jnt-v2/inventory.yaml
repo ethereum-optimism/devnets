@@ -54,9 +54,6 @@ chains:
                     rollup-boost:
                         env:
                             EXECUTION_MODE: "dry-run"
-                    op-node:
-                        env:
-                            OP_NODE_SYNCMODE: "consensus-layer"
 
           - kind: "node"
             name: "seq-2"
@@ -83,9 +80,6 @@ chains:
                     rollup-boost:
                         env:
                             EXECUTION_MODE: "dry-run"
-                    op-node:
-                        env:
-                            OP_NODE_SYNCMODE: "consensus-layer"
 
           - kind: "node"
             name: "rpc-0"
@@ -342,7 +336,7 @@ chains:
             name: "seq-1"
             spec:
                 kind: "sequencer"
-                lightNode: false
+                lightNode: true
                 el:
                     kind: "op-reth"
                     spec:
@@ -363,15 +357,12 @@ chains:
                     rollup-boost:
                         env:
                             EXECUTION_MODE: "dry-run"
-                    op-node:
-                        env:
-                            OP_NODE_SYNCMODE: "consensus-layer"
 
           - kind: "node"
             name: "seq-2"
             spec:
                 kind: "sequencer"
-                lightNode: false
+                lightNode: true
                 el:
                     kind: "op-reth"
                     spec:
@@ -392,9 +383,6 @@ chains:
                     rollup-boost:
                         env:
                             EXECUTION_MODE: "dry-run"
-                    op-node:
-                        env:
-                            OP_NODE_SYNCMODE: "consensus-layer"
 
           - kind: "node"
             name: "rpc-0"
