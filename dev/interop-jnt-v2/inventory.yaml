@@ -611,6 +611,12 @@ services:
       name: "op-supernode-0"
       spec:
           kind: "op-supernode"
+          values:
+              env:
+                  OP_SUPERNODE_VN_ALL_P2P_LISTEN_TCP_PORT: "0"
+                  OP_SUPERNODE_VN_ALL_P2P_LISTEN_UDP_PORT: "0"
+                  OP_SUPERNODE_VN_ALL_P2P_ADVERTISE_TCP: "0"
+                  OP_SUPERNODE_VN_ALL_P2P_ADVERTISE_UDP: "0"
       deps:
           nodes:
               - "sn-0"
@@ -620,6 +626,11 @@ services:
       spec:
           kind: "op-supernode"
           values:
+              env:
+                  OP_SUPERNODE_VN_ALL_P2P_LISTEN_TCP_PORT: "0"
+                  OP_SUPERNODE_VN_ALL_P2P_LISTEN_UDP_PORT: "0"
+                  OP_SUPERNODE_VN_ALL_P2P_ADVERTISE_TCP: "0"
+                  OP_SUPERNODE_VN_ALL_P2P_ADVERTISE_UDP: "0"
       deps:
           nodes:
               - "sn-1"
@@ -628,6 +639,12 @@ services:
       name: "op-supernode-2"
       spec:
           kind: "op-supernode"
+          values:
+              env:
+                  OP_SUPERNODE_VN_ALL_P2P_LISTEN_TCP_PORT: "0"
+                  OP_SUPERNODE_VN_ALL_P2P_LISTEN_UDP_PORT: "0"
+                  OP_SUPERNODE_VN_ALL_P2P_ADVERTISE_TCP: "0"
+                  OP_SUPERNODE_VN_ALL_P2P_ADVERTISE_UDP: "0"
       deps:
           nodes:
               - "sn-2"
@@ -636,6 +653,12 @@ services:
       name: "op-supernode-3"
       spec:
           kind: "op-supernode"
+          values:
+              env:
+                  OP_SUPERNODE_VN_ALL_P2P_LISTEN_TCP_PORT: "0"
+                  OP_SUPERNODE_VN_ALL_P2P_LISTEN_UDP_PORT: "0"
+                  OP_SUPERNODE_VN_ALL_P2P_ADVERTISE_TCP: "0"
+                  OP_SUPERNODE_VN_ALL_P2P_ADVERTISE_UDP: "0"
       deps:
           nodes:
               - "sn-3"
