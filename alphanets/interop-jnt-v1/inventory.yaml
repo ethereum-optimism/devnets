@@ -517,6 +517,10 @@ services:
                   OP_SUPERNODE_VN_420120070_SYNCMODE: "consensus-layer"
                   OP_SUPERNODE_VN_420120071_SYNCMODE: "consensus-layer"
                   OP_SUPERNODE_VN_ALL_SYNCMODE: "consensus-layer"
+                  OP_SUPERNODE_VN_ALL_P2P_LISTEN_TCP_PORT: "0"
+                  OP_SUPERNODE_VN_ALL_P2P_LISTEN_UDP_PORT: "0"
+                  OP_SUPERNODE_VN_ALL_P2P_ADVERTISE_TCP: "0"
+                  OP_SUPERNODE_VN_ALL_P2P_ADVERTISE_UDP: "0"
       deps:
           nodes:
               - "sn-0"
@@ -527,11 +531,15 @@ services:
           kind: "op-supernode"
           values:
               image:
-                  tag: "v0.2.2-rc.6"
+                  tag: "v0.2.2-rc.8"
               env:
-                  OP_SUPERNODE_VN_420120070_SYNCMODE: "consensus-layer"
-                  OP_SUPERNODE_VN_420120071_SYNCMODE: "consensus-layer"
-                  OP_SUPERNODE_VN_ALL_SYNCMODE: "consensus-layer"
+                  OP_SUPERNODE_VN_ALL_SYNCMODE: "execution-layer"
+                  OP_SUPERNODE_INTEROP_LOG_BACKFILL_DEPTH: "7h"
+                  OP_SUPERNODE_VN_ALL_SYNCMODE_OFFSET_EL_SAFE: "12h"
+                  OP_SUPERNODE_VN_ALL_P2P_LISTEN_TCP_PORT: "0"
+                  OP_SUPERNODE_VN_ALL_P2P_LISTEN_UDP_PORT: "0"
+                  OP_SUPERNODE_VN_ALL_P2P_ADVERTISE_TCP: "0"
+                  OP_SUPERNODE_VN_ALL_P2P_ADVERTISE_UDP: "0"
       deps:
           nodes:
               - "sn-1"
@@ -542,11 +550,15 @@ services:
           kind: "op-supernode"
           values:
               image:
-                  tag: "v0.2.2-rc.6"
+                  tag: "v0.2.2-rc.8"
               env:
-                  OP_SUPERNODE_VN_420120070_SYNCMODE: "consensus-layer"
-                  OP_SUPERNODE_VN_420120071_SYNCMODE: "consensus-layer"
-                  OP_SUPERNODE_VN_ALL_SYNCMODE: "consensus-layer"
+                  OP_SUPERNODE_VN_ALL_SYNCMODE: "execution-layer"
+                  OP_SUPERNODE_INTEROP_LOG_BACKFILL_DEPTH: "7h"
+                  OP_SUPERNODE_VN_ALL_SYNCMODE_OFFSET_EL_SAFE: "12h"
+                  OP_SUPERNODE_VN_ALL_P2P_LISTEN_TCP_PORT: "0"
+                  OP_SUPERNODE_VN_ALL_P2P_LISTEN_UDP_PORT: "0"
+                  OP_SUPERNODE_VN_ALL_P2P_ADVERTISE_TCP: "0"
+                  OP_SUPERNODE_VN_ALL_P2P_ADVERTISE_UDP: "0"
       deps:
           nodes:
               - "sn-2"
@@ -557,11 +569,10 @@ services:
           kind: "op-supernode"
           values:
               image:
-                  tag: "v0.2.2-rc.6"
+                  tag: "v0.2.2-rc.8"
               env:
-                  OP_SUPERNODE_VN_420120070_SYNCMODE: "consensus-layer"
-                  OP_SUPERNODE_VN_420120071_SYNCMODE: "consensus-layer"
-                  OP_SUPERNODE_VN_ALL_SYNCMODE: "consensus-layer"
+                  OP_SUPERNODE_VN_420120070_SYNCMODE: "execution-layer"
+                  OP_SUPERNODE_VN_420120071_SYNCMODE: "execution-layer"
       deps:
           nodes:
               - "sn-3"
