@@ -1,6 +1,6 @@
 name: interop-jnt-v2
 type: betanet
-status: pending
+status: online
 description: |
     * interop network testing SuperDisputeGame with op-deployer v0.7.0-alpha.2
     * interop activated 60s after genesis
