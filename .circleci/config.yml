@@ -7,7 +7,7 @@ jobs:
   docs-build:
     docker:
       - image: cimg/rust:1.84.0
-    resource_class: medium
+    resource_class: medium.gen2
     steps:
       - utils/checkout-with-mise:
           checkout-method: blobless
@@ -27,7 +27,7 @@ jobs:
   docs-deploy:
     docker:
       - image: cimg/rust:1.84.0
-    resource_class: medium
+    resource_class: medium.gen2
     steps:
       - attach_workspace:
           at: /tmp/workspace
