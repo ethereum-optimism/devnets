@@ -156,6 +156,7 @@ chains:
                 values:
                     op-reth:
                         env:
+                            RETH_FULL: "false"
                             RETH_HISTORICAL_PROOFS_ENABLED: "true"
 
           - kind: "node"
@@ -486,6 +487,7 @@ chains:
                 values:
                     op-reth:
                         env:
+                            RETH_FULL: "false"
                             RETH_HISTORICAL_PROOFS_ENABLED: "true"
 
           - kind: "node"
@@ -603,7 +605,7 @@ chains:
                 nodes:
                     - "sn-0"
                 services:
-                    - "op-supernode-0"
+                    - "op-supernode-3"
 
           - kind: "op-dispute-mon"
             name: "op-dispute-mon"
@@ -648,7 +650,9 @@ services:
                   OP_SUPERNODE_VN_ALL_P2P_LISTEN_UDP_PORT: "0"
                   OP_SUPERNODE_VN_ALL_P2P_ADVERTISE_TCP: "0"
                   OP_SUPERNODE_VN_ALL_P2P_ADVERTISE_UDP: "0"
+                  OP_SUPERNODE_INTEROP_LOG_BACKFILL_DEPTH: "1h"
                   OP_SUPERNODE_INTEROP_ACTIVATION_TIMESTAMP: "1778603980"
+                  OP_SUPERNODE_VN_ALL_SYNCMODE: "execution-layer"
       deps:
           nodes:
               - "sn-0"
@@ -664,6 +668,7 @@ services:
                   OP_SUPERNODE_VN_ALL_P2P_ADVERTISE_TCP: "0"
                   OP_SUPERNODE_VN_ALL_P2P_ADVERTISE_UDP: "0"
                   OP_SUPERNODE_INTEROP_ACTIVATION_TIMESTAMP: "1778603980"
+                  OP_SUPERNODE_VN_ALL_SYNCMODE: "execution-layer"
       deps:
           nodes:
               - "sn-1"
@@ -674,6 +679,8 @@ services:
           kind: "op-supernode"
           values:
               env:
+                  OP_SUPERNODE_VN_ALL_SYNCMODE: "execution-layer"
+                  OP_SUPERNODE_INTEROP_LOG_BACKFILL_DEPTH: "10m"
                   OP_SUPERNODE_VN_ALL_P2P_LISTEN_TCP_PORT: "0"
                   OP_SUPERNODE_VN_ALL_P2P_LISTEN_UDP_PORT: "0"
                   OP_SUPERNODE_VN_ALL_P2P_ADVERTISE_TCP: "0"
