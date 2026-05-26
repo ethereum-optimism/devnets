@@ -1,6 +1,13 @@
 chains:
   # Chain 0 - Permissioned
-  - nodes:
+  - values:
+      op-reth:
+        env:
+          RETH_GENESIS_REDOWNLOAD: "true"
+      op-geth:
+        env:
+          GETH_GENESIS_REDOWNLOAD: "true"
+    nodes:
       - kind: "node"
         name: "seq-0"
         spec:
@@ -224,7 +231,14 @@ chains:
             - "seq-2"
 
   # Chain 1 - Permissionless
-  - nodes:
+  - values:
+      op-reth:
+        env:
+          RETH_GENESIS_REDOWNLOAD: "true"
+      op-geth:
+        env:
+          GETH_GENESIS_REDOWNLOAD: "true"
+    nodes:
       - kind: "node"
         name: "seq-0"
         spec:

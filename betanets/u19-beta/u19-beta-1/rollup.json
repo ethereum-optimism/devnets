@@ -35,6 +35,7 @@
   "holocene_time": 0,
   "isthmus_time": 0,
   "jovian_time": 0,
+  "karst_time": 1779937200,
   "batch_inbox_address": "0x00140afbb03e2269295f9fb742a9534a2d6d3a81",
   "deposit_contract_address": "0x2403133ff0bf25119e6aec10ec5609a81f99d2b7",
   "l1_system_config_address": "0x84a95b22c5c0a056f3089a4b1e2ea49b250ff1da",
