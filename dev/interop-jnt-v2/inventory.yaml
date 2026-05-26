@@ -659,6 +659,8 @@ services:
       spec:
           kind: "op-supernode"
           values:
+              image:
+                  tag: "develop@sha256:1d38746eb0aaf83f47acaa3f45352bb2dac402ab9b8de2df0d6d57f82c0775c8"
               env:
                   OP_SUPERNODE_VN_ALL_P2P_LISTEN_TCP_PORT: "0"
                   OP_SUPERNODE_VN_ALL_P2P_LISTEN_UDP_PORT: "0"
@@ -666,6 +668,8 @@ services:
                   OP_SUPERNODE_VN_ALL_P2P_ADVERTISE_UDP: "0"
                   OP_SUPERNODE_INTEROP_LOG_BACKFILL_DEPTH: "1h"
                   OP_SUPERNODE_INTEROP_ACTIVATION_TIMESTAMP: "1778603980"
+                  OP_SUPERNODE_VN_420120102_SYNCMODE: "consensus-layer"
+                  OP_SUPERNODE_VN_420120103_SYNCMODE: "consensus-layer"
                   OP_SUPERNODE_VN_ALL_SYNCMODE: "consensus-layer"
       deps:
           nodes:
@@ -676,12 +680,16 @@ services:
       spec:
           kind: "op-supernode"
           values:
+              image:
+                  tag: "develop@sha256:1d38746eb0aaf83f47acaa3f45352bb2dac402ab9b8de2df0d6d57f82c0775c8"
               env:
                   OP_SUPERNODE_VN_ALL_P2P_LISTEN_TCP_PORT: "0"
                   OP_SUPERNODE_VN_ALL_P2P_LISTEN_UDP_PORT: "0"
                   OP_SUPERNODE_VN_ALL_P2P_ADVERTISE_TCP: "0"
                   OP_SUPERNODE_VN_ALL_P2P_ADVERTISE_UDP: "0"
                   OP_SUPERNODE_INTEROP_ACTIVATION_TIMESTAMP: "1778603980"
+                  OP_SUPERNODE_VN_420120102_SYNCMODE: "consensus-layer"
+                  OP_SUPERNODE_VN_420120103_SYNCMODE: "consensus-layer"
                   OP_SUPERNODE_VN_ALL_SYNCMODE: "execution-layer"
       deps:
           nodes:
@@ -692,6 +700,8 @@ services:
       spec:
           kind: "op-supernode"
           values:
+              image:
+                  tag: "develop@sha256:1d38746eb0aaf83f47acaa3f45352bb2dac402ab9b8de2df0d6d57f82c0775c8"
               env:
                   OP_SUPERNODE_INTEROP_LOG_BACKFILL_DEPTH: "10m"
                   OP_SUPERNODE_VN_ALL_P2P_LISTEN_TCP_PORT: "0"
@@ -699,6 +709,8 @@ services:
                   OP_SUPERNODE_VN_ALL_P2P_ADVERTISE_TCP: "0"
                   OP_SUPERNODE_VN_ALL_P2P_ADVERTISE_UDP: "0"
                   OP_SUPERNODE_INTEROP_ACTIVATION_TIMESTAMP: "1778603980"
+                  OP_SUPERNODE_VN_420120102_SYNCMODE: "consensus-layer"
+                  OP_SUPERNODE_VN_420120103_SYNCMODE: "consensus-layer"
                   OP_SUPERNODE_VN_ALL_SYNCMODE: "execution-layer"
       deps:
           nodes:
@@ -709,12 +721,16 @@ services:
       spec:
           kind: "op-supernode"
           values:
+              image:
+                  tag: "develop@sha256:1d38746eb0aaf83f47acaa3f45352bb2dac402ab9b8de2df0d6d57f82c0775c8"
               env:
                   OP_SUPERNODE_VN_ALL_P2P_LISTEN_TCP_PORT: "0"
                   OP_SUPERNODE_VN_ALL_P2P_LISTEN_UDP_PORT: "0"
                   OP_SUPERNODE_VN_ALL_P2P_ADVERTISE_TCP: "0"
                   OP_SUPERNODE_VN_ALL_P2P_ADVERTISE_UDP: "0"
                   OP_SUPERNODE_INTEROP_ACTIVATION_TIMESTAMP: "1778603980"
+                  OP_SUPERNODE_VN_420120102_SYNCMODE: "consensus-layer"
+                  OP_SUPERNODE_VN_420120103_SYNCMODE: "consensus-layer"
                   OP_SUPERNODE_VN_ALL_SYNCMODE: "execution-layer"
       deps:
           nodes:
