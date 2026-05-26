@@ -70,9 +70,9 @@ l2:
         op-rbuilder:
             version: op-rbuilder/v0.3.2-rc5
         op-reth:
-            version: op-reth/v2.2.3
+            version: op-reth/v2.2.5-rc.1
         op-supernode:
-            version: op-supernode/v0.3.1-rc.1
+            version: op-supernode/v0.3.1-rc.2
         peer-mgmt-service:
             version: peer-mgmt-service/v0.0.3
         proxyd:
