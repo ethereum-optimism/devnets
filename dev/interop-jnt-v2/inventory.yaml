@@ -9,7 +9,7 @@ chains:
                 kind: "sequencer"
                 lightNode: true
                 el:
-                    kind: "op-geth"
+                    kind: "op-reth"
                     spec:
                         kind: "full"
                 cl:
@@ -17,17 +17,21 @@ chains:
                     deps:
                         services:
                             - "proxyd-cl"
-                builder:
-                    kind: "op-rbuilder"
-                flashblocks:
-                    builder:
-                        kind: "op-rbuilder"
-                    rollup-boost:
-                        kind: "rollup-boost"
                 values:
-                    rollup-boost:
+                    op-node:
                         env:
-                            EXECUTION_MODE: "dry-run"
+                            OP_NODE_SYNCMODE: "execution-layer"
+                # builder:
+                #     kind: "op-rbuilder"
+                # flashblocks:
+                #     builder:
+                #         kind: "op-rbuilder"
+                #     rollup-boost:
+                #         kind: "rollup-boost"
+                # values:
+                #     rollup-boost:
+                #         env:
+                #             EXECUTION_MODE: "dry-run"
 
           - kind: "node"
             name: "seq-1"
@@ -121,7 +125,7 @@ chains:
                 kind: "snapsync"
                 lightNode: true
                 el:
-                    kind: "op-geth"
+                    kind: "op-reth"
                     spec:
                         kind: "full"
                 cl:
@@ -458,7 +462,7 @@ chains:
                 kind: "snapsync"
                 lightNode: true
                 el:
-                    kind: "op-geth"
+                    kind: "op-reth"
                     spec:
                         kind: "full"
                 cl:
