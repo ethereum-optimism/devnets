@@ -1,7 +1,7 @@
 name: u19-alpha
 type: alphanet
 scope: https://github.com/ethereum-optimism/devnets/issues/339
-status: online
+status: pending
 description: |
     * U19 Alphanet
       * Osaka on L2
