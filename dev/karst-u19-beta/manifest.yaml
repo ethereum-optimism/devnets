@@ -1,0 +1,92 @@
+name: karst-u19-beta
+type: betanet
+status: pending
+deployed_on: ""
+description: |
+  * Karst U19 Betanet
+    * Jovian activated at genesis
+    * karst-u19-beta-0: permissioned fault proofs
+    * karst-u19-beta-1: permissionless fault proofs (fp-permissionless)
+    * Fresh replacement for u19-beta
+metadata:
+  domain: op-enterprise
+  team: core
+  tenant_id: karst-u19-beta
+  tenant_name: karst-u19-beta
+  tier_id: "100"
+  features:
+    mission_critical: false
+features:
+  - p2p-cluster-local
+  - gateway-api
+  - service-mesh
+cluster:
+    name: oplabs-dev-ent-networks-us-ue1-0
+l1:
+  name: sepolia
+  chain_id: 11155111
+l2:
+  deployment:
+    op-deployer:
+        version: 0.6.0-rc.3
+    fund_dev_accounts: false
+    overrides:
+      l2GenesisJovianTimeOffset: "0x0"
+      l2GenesisKarstTimeOffset: "0x8ca0" # 36000s = 10h after L2 genesis (deploy) time
+    gas_limit: 60000000
+    superchain_roles:
+      superchain_proxy_admin_owner: "0x8E851F7d8bAeaD95F592847a020cAC7A062dafd9"
+      protocol_versions_owner: "0x8E851F7d8bAeaD95F592847a020cAC7A062dafd9"
+      superchain_guardian: "0x8E851F7d8bAeaD95F592847a020cAC7A062dafd9"
+  components:
+    flashblocks-websocket-proxy:
+        version: flashblocks-websocket-proxy/v0.7.4
+    kona-node:
+        version: kona-node/v1.5.2
+    op-batcher:
+        version: op-batcher/v1.16.9
+    op-conductor:
+        version: op-conductor/v0.9.4
+    op-conductor-mon:
+        version: op-conductor-mon/v0.0.5
+    op-conductor-ops:
+        version: op-conductor-ops/v0.0.2
+    op-geth:
+        version: op-geth/v1.101702.1
+    op-interop-filter:
+        version: op-interop-filter/v0.2.0-rc.1
+    op-node:
+        version: op-node/v1.18.2
+    op-program:
+        version: op-program/v1.9.0-rc.1
+    op-rbuilder:
+        version: op-rbuilder/v0.3.2-rc5
+    op-reth:
+        version: op-reth/v2.2.3
+    op-supernode:
+        version: op-supernode/v0.3.1-rc.1
+    peer-mgmt-service:
+        version: peer-mgmt-service/v0.0.4
+    proxyd:
+        version: proxyd/v4.27.1
+    rollup-boost:
+        version: rollup-boost/v0.7.11
+  charts: {}
+  chains:
+    - name: karst-u19-beta-0
+      chain_id: "420110023"
+      features: []
+      deployment:
+        roles:
+          l1_proxy_admin_owner: "0x8E851F7d8bAeaD95F592847a020cAC7A062dafd9"
+          l2_proxy_admin_owner: "0x9F961F7d8BAEAd95f592847a020cAC7A062Dc0EA"
+    - name: karst-u19-beta-1
+      chain_id: "420110024"
+      features:
+        - fp-permissionless
+      deployment:
+        roles:
+          l1_proxy_admin_owner: "0x8E851F7d8bAeaD95F592847a020cAC7A062dafd9"
+          l2_proxy_admin_owner: "0x9F961F7d8BAEAd95f592847a020cAC7A062Dc0EA"
+workflow:
+  disable_k8s_merge: true
