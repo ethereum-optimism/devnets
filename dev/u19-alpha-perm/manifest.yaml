@@ -1,7 +1,7 @@
 name: u19-alpha-perm
 type: alphanet
 scope: https://github.com/ethereum-optimism/devnets/issues/343
-status: offline
+status: online
 description: |
     * U19 Alphanet (Permissioned baseline)
       * Karst activated at genesis (Osaka EIPs, L2CM, CANNON_KONA)
