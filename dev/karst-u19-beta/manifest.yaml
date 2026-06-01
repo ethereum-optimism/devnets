@@ -19,7 +19,6 @@ metadata:
 features:
   - p2p-cluster-local
   - gateway-api
-  - service-mesh
 cluster:
     name: oplabs-dev-ent-networks-us-ue1-0
 l1:
