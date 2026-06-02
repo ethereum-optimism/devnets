@@ -8,6 +8,11 @@ chains:
       op-reth:
         persistentVolume:
           size: 64Gi
+        env:
+          RETH_GENESIS_REDOWNLOAD: "true"
+      op-geth:
+        env:
+          GETH_GENESIS_REDOWNLOAD: "true"
       op-rbuilder:
         persistentVolume:
           size: 64Gi
@@ -243,6 +248,11 @@ chains:
       op-reth:
         persistentVolume:
           size: 64Gi
+        env:
+          RETH_GENESIS_REDOWNLOAD: "true"
+      op-geth:
+        env:
+          GETH_GENESIS_REDOWNLOAD: "true"
       op-rbuilder:
         persistentVolume:
           size: 64Gi
