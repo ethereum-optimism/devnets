@@ -82,7 +82,7 @@ l2:
         proxyd:
             version: proxyd/v4.27.4
         rollup-boost:
-            version: rollup-boost/v0.7.11
+            version: rollup-boost/v0.7.15
     chains:
         - name: karst-u19-alpha-0
           chain_id: "420100010"
