@@ -1,6 +1,6 @@
 name: karst-u19-alpha
 type: alphanet
-status: pending
+status: online
 description: |
     * Karst U19 Alphanet
       * Karst activated at genesis (Osaka EIPs, L2CM, CANNON_KONA)
