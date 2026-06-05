@@ -75,7 +75,7 @@ l2:
             repository: us-docker.pkg.dev/oplabs-tools-artifacts/dev-images/op-rbuilder
             version: josh-karst
         op-reth:
-            version: op-reth/v2.3.0
+            version: op-reth/v2.3.1-rc.1
         op-supernode:
             version: op-supernode/v0.3.1-rc.1
         peer-mgmt-service:
