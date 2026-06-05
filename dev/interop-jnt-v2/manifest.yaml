@@ -1,6 +1,6 @@
 name: interop-jnt-v2
 type: betanet
-status: online
+status: offline
 description: |
     * interop network testing SuperDisputeGame with op-deployer v0.7.0-alpha.2
     * interop activated 60s after genesis
@@ -88,24 +88,24 @@ l2:
         - name: interop-jnt-v2-0
           chain_id: "420120102"
           features:
-            - fp-interop
-            - fp-permissionless
+              - fp-interop
+              - fp-permissionless
           deployment:
-            overrides:
-                l2BlockTime: 2
-            gas_limit: 60000000
-            eip1559_elasticity: 6
-            eip1559_denominator: 50
-            eip1559_denominator_canyon: 250
+              overrides:
+                  l2BlockTime: 2
+              gas_limit: 60000000
+              eip1559_elasticity: 6
+              eip1559_denominator: 50
+              eip1559_denominator_canyon: 250
         - name: interop-jnt-v2-1
           chain_id: "420120103"
           features:
-            - fp-interop
-            - fp-permissionless
+              - fp-interop
+              - fp-permissionless
           deployment:
-            overrides:
-                l2BlockTime: 1
-            gas_limit: 60000000
-            eip1559_elasticity: 6
-            eip1559_denominator: 50
-            eip1559_denominator_canyon: 250
+              overrides:
+                  l2BlockTime: 1
+              gas_limit: 60000000
+              eip1559_elasticity: 6
+              eip1559_denominator: 50
+              eip1559_denominator_canyon: 250
