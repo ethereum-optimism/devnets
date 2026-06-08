@@ -83,21 +83,21 @@ l2:
         - name: interop-jnt-v3-0
           chain_id: "420120137"
           features:
-              - fp-interop
+            - fp-interop
           deployment:
-              overrides: {}
-              gas_limit: 60000000
-              eip1559_elasticity: 6
-              eip1559_denominator: 50
-              eip1559_denominator_canyon: 250
+            overrides: {}
+            gas_limit: 60000000
+            eip1559_elasticity: 6
+            eip1559_denominator: 50
+            eip1559_denominator_canyon: 250
         - name: interop-jnt-v3-1
           chain_id: "420120138"
           features:
-              - fp-interop
+            - fp-interop
           deployment:
-              overrides:
-                  l2BlockTime: 1
-              gas_limit: 60000000
-              eip1559_elasticity: 6
-              eip1559_denominator: 50
-              eip1559_denominator_canyon: 250
+            overrides:
+                l2BlockTime: 1
+            gas_limit: 60000000
+            eip1559_elasticity: 6
+            eip1559_denominator: 50
+            eip1559_denominator_canyon: 250
