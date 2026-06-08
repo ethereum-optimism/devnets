@@ -353,6 +353,12 @@ chains:
             kind: "op-reth"
             spec:
               kind: "archive"
+            values:
+              op-reth:
+                env:
+                  RETH_HISTORICAL_PROOFS_ENABLED: "true"
+                  RETH_HISTORICAL_PROOFS_V2: "true"
+                  RETH_HISTORICAL_PROOFS_PRUNE_DEPTH: "2419200"
           cl:
             kind: "op-node"
 
@@ -429,7 +435,7 @@ chains:
           kind: "op-challenger"
         deps:
           nodes:
-            - "rpc-0"
+            - "rpc-1"
 
       - kind: "public-rpc"
         name: "proxyd-public"
@@ -491,7 +497,7 @@ chains:
           kind: "op-challenger-runner"
         deps:
           nodes:
-            - "rpc-0"
+            - "rpc-1"
 
       - kind: "faucet"
         name: "op-faucet"
