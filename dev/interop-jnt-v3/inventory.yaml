@@ -1,0 +1,645 @@
+chains:
+    - values:
+          op-node:
+              safeHeadDb:
+                  persistentVolume:
+                      size: 1Gi
+              resources:
+                  requests:
+                      cpu: 500m
+                      memory: 2Gi
+          op-reth:
+              persistentVolume:
+                  size: 64Gi
+              resources:
+                  requests:
+                      cpu: 2
+                      memory: 4Gi
+              env:
+                  RETH_HISTORICAL_PROOFS_ENABLED: "true"
+          rollup-boost:
+              env:
+                  EXECUTION_MODE: "dry-run"
+          op-rbuilder:
+              persistentVolume:
+                  size: 64Gi
+              blockTime: 1000
+      nodes:
+          - kind: "node"
+            name: "seq-0"
+            spec:
+                kind: "sequencer"
+                lightNode: true
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "full"
+                cl:
+                    kind: "op-node"
+                    deps:
+                        services:
+                            - "proxyd-cl"
+                builder:
+                    kind: "op-rbuilder"
+                flashblocks:
+                    builder:
+                        kind: "op-rbuilder"
+                    rollup-boost:
+                        kind: "rollup-boost"
+                values:
+                    op-reth:
+                        env:
+                            RETH_HISTORICAL_PROOFS_ENABLED: "false"
+
+          - kind: "node"
+            name: "seq-1"
+            spec:
+                kind: "sequencer"
+                lightNode: true
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "full"
+                cl:
+                    kind: "op-node"
+                    deps:
+                        services:
+                            - "proxyd-cl"
+                builder:
+                    kind: "op-rbuilder"
+                flashblocks:
+                    builder:
+                        kind: "op-rbuilder"
+                    rollup-boost:
+                        kind: "rollup-boost"
+                values:
+                    op-reth:
+                        env:
+                            RETH_HISTORICAL_PROOFS_ENABLED: "false"
+
+          - kind: "node"
+            name: "seq-2"
+            spec:
+                kind: "sequencer"
+                lightNode: true
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "full"
+                cl:
+                    kind: "op-node"
+                    deps:
+                        services:
+                            - "proxyd-cl"
+                builder:
+                    kind: "op-rbuilder"
+                flashblocks:
+                    builder:
+                        kind: "op-rbuilder"
+                    rollup-boost:
+                        kind: "rollup-boost"
+                values:
+                    op-reth:
+                        env:
+                            RETH_HISTORICAL_PROOFS_ENABLED: "false"
+
+          - kind: "node"
+            name: "rpc-0"
+            spec:
+                kind: "rpc"
+                lightNode: true
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "archive"
+                cl:
+                    kind: "op-node"
+                    deps:
+                        services:
+                            - "proxyd-cl"
+
+          - kind: "node"
+            name: "rpc-1"
+            spec:
+                kind: "rpc"
+                lightNode: true
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "archive"
+                cl:
+                    kind: "op-node"
+                    deps:
+                        services:
+                            - "proxyd-cl"
+
+          - kind: "node"
+            name: "snapsync-0"
+            spec:
+                kind: "snapsync"
+                lightNode: true
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "full"
+                cl:
+                    kind: "op-node"
+                    deps:
+                        services:
+                            - "proxyd-cl"
+
+          - kind: "node"
+            name: "snapsync-1"
+            spec:
+                kind: "snapsync"
+                lightNode: true
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "full"
+                cl:
+                    kind: "op-node"
+                    deps:
+                        services:
+                            - "proxyd-cl"
+
+          - kind: "node"
+            name: "sn-0"
+            spec:
+                kind: "supernode-el"
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "archive"
+
+          - kind: "node"
+            name: "sn-1"
+            spec:
+                kind: "supernode-el"
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "archive"
+
+          - kind: "node"
+            name: "sn-2"
+            spec:
+                kind: "supernode-el"
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "archive"
+
+      services:
+          - kind: "batcher"
+            name: "op-batcher"
+            spec:
+                kind: "op-batcher"
+            deps:
+                nodes:
+                    - "seq-0"
+                    - "seq-1"
+                    - "seq-2"
+
+          - kind: "public-rpc"
+            name: "proxyd-public"
+            spec:
+                kind: "proxyd"
+            deps:
+                nodes:
+                    - "rpc-0"
+                    - "rpc-1"
+                services:
+                    - "op-interop-filter"
+
+          - kind: "consensus-layer-rpc"
+            name: "proxyd-cl"
+            spec:
+                kind: "proxyd"
+                values:
+                    consensusLayerMode: true
+            deps:
+                services:
+                    - "op-supernode-0"
+                    - "op-supernode-1"
+                    - "op-supernode-2"
+
+          - kind: "peer-mgmt-service"
+            name: "peer-mgmt-service"
+            spec:
+                kind: "peer-mgmt-service"
+            deps:
+                nodes:
+                    - "seq-0"
+                    - "seq-1"
+                    - "seq-2"
+                    - "rpc-0"
+                    - "rpc-1"
+                    - "snapsync-0"
+                    - "snapsync-1"
+
+          - kind: "op-conductor-mon"
+            name: "op-conductor-mon"
+            spec:
+                kind: "op-conductor-mon"
+            deps:
+                nodes:
+                    - "seq-0"
+                    - "seq-1"
+                    - "seq-2"
+
+          - kind: "op-conductor-ops"
+            name: "op-conductor-ops"
+            spec:
+                kind: "op-conductor-ops"
+            deps:
+                nodes:
+                    - "seq-0"
+                    - "seq-1"
+                    - "seq-2"
+
+          - kind: "proposer"
+            name: "op-proposer"
+            spec:
+                kind: "op-proposer"
+            deps:
+                nodes:
+                    - "rpc-0"
+                services:
+                    - "op-supernode-0"
+
+          - kind: "challenger"
+            name: "op-challenger"
+            spec:
+                kind: "op-challenger"
+            deps:
+                nodes:
+                    - "rpc-0"
+                services:
+                    - "op-supernode-0"
+
+          - kind: "op-dispute-mon"
+            name: "op-dispute-mon"
+            spec:
+                kind: "op-dispute-mon"
+            deps:
+                nodes:
+                    - "rpc-0"
+                services:
+                    - "op-supernode-0"
+
+          - kind: "flashblocks-websocket-proxy"
+            name: "fb-ws-proxy"
+            spec:
+                kind: "flashblocks-websocket-proxy"
+            deps:
+                nodes:
+                    - "seq-0"
+                    - "seq-1"
+                    - "seq-2"
+    - values:
+          op-node:
+              safeHeadDb:
+                  persistentVolume:
+                      size: 1Gi
+              resources:
+                  requests:
+                      cpu: 500m
+                      memory: 2Gi
+          op-reth:
+              persistentVolume:
+                  size: 64Gi
+              resources:
+                  requests:
+                      cpu: 2
+                      memory: 4Gi
+              env:
+                  RETH_HISTORICAL_PROOFS_ENABLED: "true"
+          rollup-boost:
+              env:
+                  EXECUTION_MODE: "dry-run"
+          op-rbuilder:
+              persistentVolume:
+                  size: 64Gi
+              blockTime: 2000
+      nodes:
+          - kind: "node"
+            name: "seq-0"
+            spec:
+                kind: "sequencer"
+                lightNode: true
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "full"
+                cl:
+                    kind: "op-node"
+                    deps:
+                        services:
+                            - "proxyd-cl"
+                builder:
+                    kind: "op-rbuilder"
+                flashblocks:
+                    builder:
+                        kind: "op-rbuilder"
+                    rollup-boost:
+                        kind: "rollup-boost"
+                values:
+                    op-reth:
+                        env:
+                            RETH_HISTORICAL_PROOFS_ENABLED: "false"
+
+          - kind: "node"
+            name: "seq-1"
+            spec:
+                kind: "sequencer"
+                lightNode: true
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "full"
+                cl:
+                    kind: "op-node"
+                    deps:
+                        services:
+                            - "proxyd-cl"
+                builder:
+                    kind: "op-rbuilder"
+                flashblocks:
+                    builder:
+                        kind: "op-rbuilder"
+                    rollup-boost:
+                        kind: "rollup-boost"
+                values:
+                    op-reth:
+                        env:
+                            RETH_HISTORICAL_PROOFS_ENABLED: "false"
+
+          - kind: "node"
+            name: "seq-2"
+            spec:
+                kind: "sequencer"
+                lightNode: true
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "full"
+                cl:
+                    kind: "op-node"
+                    deps:
+                        services:
+                            - "proxyd-cl"
+                builder:
+                    kind: "op-rbuilder"
+                flashblocks:
+                    builder:
+                        kind: "op-rbuilder"
+                    rollup-boost:
+                        kind: "rollup-boost"
+                values:
+                    op-reth:
+                        env:
+                            RETH_HISTORICAL_PROOFS_ENABLED: "false"
+
+          - kind: "node"
+            name: "rpc-0"
+            spec:
+                kind: "rpc"
+                lightNode: true
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "archive"
+                cl:
+                    kind: "op-node"
+                    deps:
+                        services:
+                            - "proxyd-cl"
+
+          - kind: "node"
+            name: "rpc-1"
+            spec:
+                kind: "rpc"
+                lightNode: true
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "archive"
+                cl:
+                    kind: "op-node"
+                    deps:
+                        services:
+                            - "proxyd-cl"
+
+          - kind: "node"
+            name: "snapsync-0"
+            spec:
+                kind: "snapsync"
+                lightNode: true
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "full"
+                cl:
+                    kind: "op-node"
+                    deps:
+                        services:
+                            - "proxyd-cl"
+
+          - kind: "node"
+            name: "snapsync-1"
+            spec:
+                kind: "snapsync"
+                lightNode: true
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "full"
+                cl:
+                    kind: "op-node"
+                    deps:
+                        services:
+                            - "proxyd-cl"
+
+          - kind: "node"
+            name: "sn-0"
+            spec:
+                kind: "supernode-el"
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "archive"
+
+          - kind: "node"
+            name: "sn-1"
+            spec:
+                kind: "supernode-el"
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "archive"
+
+          - kind: "node"
+            name: "sn-2"
+            spec:
+                kind: "supernode-el"
+                el:
+                    kind: "op-reth"
+                    spec:
+                        kind: "archive"
+
+      services:
+          - kind: "batcher"
+            name: "op-batcher"
+            spec:
+                kind: "op-batcher"
+            deps:
+                nodes:
+                    - "seq-0"
+                    - "seq-1"
+                    - "seq-2"
+
+          - kind: "public-rpc"
+            name: "proxyd-public"
+            spec:
+                kind: "proxyd"
+            deps:
+                nodes:
+                    - "rpc-0"
+                    - "rpc-1"
+                services:
+                    - "op-interop-filter"
+
+          - kind: "consensus-layer-rpc"
+            name: "proxyd-cl"
+            spec:
+                kind: "proxyd"
+                values:
+                    consensusLayerMode: true
+            deps:
+                services:
+                    - "op-supernode-0"
+                    - "op-supernode-1"
+                    - "op-supernode-2"
+
+          - kind: "peer-mgmt-service"
+            name: "peer-mgmt-service"
+            spec:
+                kind: "peer-mgmt-service"
+            deps:
+                nodes:
+                    - "seq-0"
+                    - "seq-1"
+                    - "seq-2"
+                    - "rpc-0"
+                    - "rpc-1"
+                    - "snapsync-0"
+                    - "snapsync-1"
+
+          - kind: "op-conductor-mon"
+            name: "op-conductor-mon"
+            spec:
+                kind: "op-conductor-mon"
+            deps:
+                nodes:
+                    - "seq-0"
+                    - "seq-1"
+                    - "seq-2"
+
+          - kind: "op-conductor-ops"
+            name: "op-conductor-ops"
+            spec:
+                kind: "op-conductor-ops"
+            deps:
+                nodes:
+                    - "seq-0"
+                    - "seq-1"
+                    - "seq-2"
+
+          - kind: "proposer"
+            name: "op-proposer"
+            spec:
+                kind: "op-proposer"
+            deps:
+                nodes:
+                    - "rpc-0"
+                services:
+                    - "op-supernode-1"
+
+          - kind: "challenger"
+            name: "op-challenger"
+            spec:
+                kind: "op-challenger"
+            deps:
+                nodes:
+                    - "rpc-0"
+                services:
+                    - "op-supernode-1"
+
+          - kind: "op-dispute-mon"
+            name: "op-dispute-mon"
+            spec:
+                kind: "op-dispute-mon"
+            deps:
+                nodes:
+                    - "rpc-0"
+                services:
+                    - "op-supernode-1"
+
+          - kind: "flashblocks-websocket-proxy"
+            name: "fb-ws-proxy"
+            spec:
+                kind: "flashblocks-websocket-proxy"
+            deps:
+                nodes:
+                    - "seq-0"
+                    - "seq-1"
+                    - "seq-2"
+
+services:
+    - kind: "supernode"
+      name: "op-supernode-0"
+      spec:
+          kind: "op-supernode"
+          values:
+              resources:
+                  requests:
+                      cpu: 500m
+                      memory: 2Gi
+      deps:
+          nodes:
+              - "sn-0"
+
+    - kind: "supernode"
+      name: "op-supernode-1"
+      spec:
+          kind: "op-supernode"
+          values:
+              resources:
+                  requests:
+                      cpu: 500m
+                      memory: 2Gi
+      deps:
+          nodes:
+              - "sn-1"
+
+    - kind: "supernode"
+      name: "op-supernode-2"
+      spec:
+          kind: "op-supernode"
+          values:
+              resources:
+                  requests:
+                      cpu: 500m
+                      memory: 2Gi
+      deps:
+          nodes:
+              - "sn-2"
+
+    - kind: "interop-filter"
+      name: "op-interop-filter"
+      spec:
+          kind: "op-interop-filter"
+      deps:
+          nodes:
+              - "rpc-0"
