@@ -1,0 +1,25 @@
+# managed-by:netchef,network:interop-jnt-v3
+organization:
+  - name: 'interop-jnt-v3' # TODO: fill in by ecosystems team
+    external_org_id: '' # TODO: fill in by ecosystems team once auth0_organization tf resource is created
+    metadata:
+      logo_url: '' # TODO: fill in by ecosystems team
+    email_domains:
+      - '' # TODO: fill in by ecosystems team
+    chains:
+      - chain_id: '420120137'
+        metadata:
+          chain_name: 'interop-jnt-v3-0'
+          chain_symbol: 'ETH'
+          block_explorer_url: '' # TODO: fill in by ecosystems team
+          rpc_url: 'https://interop-jnt-v3-0.optimism.io'
+          network: 'interop-jnt-v3'
+          network_type: 'alphanet'
+      - chain_id: '420120138'
+        metadata:
+          chain_name: 'interop-jnt-v3-1'
+          chain_symbol: 'ETH'
+          block_explorer_url: '' # TODO: fill in by ecosystems team
+          rpc_url: 'https://interop-jnt-v3-1.optimism.io'
+          network: 'interop-jnt-v3'
+          network_type: 'alphanet'
