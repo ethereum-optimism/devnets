@@ -166,7 +166,7 @@ chains:
           kind: "op-challenger"
         deps:
           nodes:
-            - "rpc-0"
+            - "rpc-1"
 
       - kind: "public-rpc"
         name: "proxyd-public"
@@ -391,7 +391,7 @@ chains:
           kind: "op-challenger"
         deps:
           nodes:
-            - "rpc-0"
+            - "rpc-1"
 
       - kind: "public-rpc"
         name: "proxyd-public"
@@ -453,7 +453,7 @@ chains:
           kind: "op-challenger-runner"
         deps:
           nodes:
-            - "rpc-0"
+            - "rpc-1"
 
       - kind: "faucet"
         name: "op-faucet"
