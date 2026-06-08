@@ -101,6 +101,8 @@ l2:
           chain_id: "420100011"
           features:
             - fp-permissionless
+            - kona
+            - fp-kona
           deployment:
             overrides: {}
             gas_limit: 60000000
