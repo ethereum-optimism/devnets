@@ -72,7 +72,7 @@ l2:
         op-proposer:
             version: op-proposer/v1.16.3
         op-rbuilder:
-            repository: ghcr.io/flashbots/op-rbuilder
+            repository: us-docker.pkg.dev/oplabs-tools-artifacts/mirrors/ghcr.io/flashbots
             version: v0.4.8
         op-reth:
             version: op-reth/v2.3.1-rc.1
