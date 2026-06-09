@@ -72,7 +72,8 @@ l2:
         op-proposer:
             version: op-proposer/v1.16.3
         op-rbuilder:
-            version: op-rbuilder/v0.4.8
+            repository: ghcr.io/flashbots/op-rbuilder
+            version: v0.4.8
         op-reth:
             version: op-reth/v2.3.1-rc.1
         op-supernode:
