@@ -643,3 +643,11 @@ services:
       deps:
           nodes:
               - "rpc-0"
+
+    - kind: "interop-filter"
+      name: "op-interop-filter-1"
+      spec:
+          kind: "op-interop-filter"
+      deps:
+          nodes:
+              - "rpc-1"
