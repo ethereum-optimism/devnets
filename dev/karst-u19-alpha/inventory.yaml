@@ -353,12 +353,13 @@ chains:
             kind: "op-reth"
             spec:
               kind: "archive"
-            values:
-              op-reth:
-                env:
-                  RETH_HISTORICAL_PROOFS_ENABLED: "true"
-                  RETH_HISTORICAL_PROOFS_V2: "true"
-                  RETH_HISTORICAL_PROOFS_PRUNE_DEPTH: "2419200"
+          values:
+            op-reth:
+              env:
+                # Useless comment to trigger a rerun alpha UpdateNetwork after previous manifest push race
+                RETH_HISTORICAL_PROOFS_ENABLED: "true"
+                RETH_HISTORICAL_PROOFS_V2: "true"
+                RETH_HISTORICAL_PROOFS_PRUNE_DEPTH: "2419200"
           cl:
             kind: "op-node"
 

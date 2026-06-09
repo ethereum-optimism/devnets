@@ -29,7 +29,7 @@ chains:
             name: "seq-0"
             spec:
                 kind: "sequencer"
-                lightNode: true
+                lightNode: false
                 el:
                     kind: "op-reth"
                     spec:
@@ -353,7 +353,7 @@ chains:
             name: "seq-1"
             spec:
                 kind: "sequencer"
-                lightNode: true
+                lightNode: false
                 el:
                     kind: "op-reth"
                     spec:
