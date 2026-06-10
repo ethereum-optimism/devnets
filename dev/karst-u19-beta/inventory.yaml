@@ -34,6 +34,9 @@ chains:
               kind: "op-rbuilder"
             rollup-boost:
               kind: "rollup-boost"
+            values:
+              op-rbuilder:
+                FLASHBLOCK_SEND_OFFSET_MS: "-250"
 
       - kind: "node"
         name: "seq-1"
@@ -52,6 +55,9 @@ chains:
               kind: "op-rbuilder"
             rollup-boost:
               kind: "rollup-boost"
+            values:
+              op-rbuilder:
+                FLASHBLOCK_SEND_OFFSET_MS: "-250"
 
       - kind: "node"
         name: "seq-2"
@@ -70,6 +76,9 @@ chains:
               kind: "op-rbuilder"
             rollup-boost:
               kind: "rollup-boost"
+            values:
+              op-rbuilder:
+                FLASHBLOCK_SEND_OFFSET_MS: "-250"
 
       - kind: "node"
         name: "rpc-0"
@@ -274,6 +283,9 @@ chains:
               kind: "op-rbuilder"
             rollup-boost:
               kind: "rollup-boost"
+            values:
+              op-rbuilder:
+                FLASHBLOCK_SEND_OFFSET_MS: "-250"
 
       - kind: "node"
         name: "seq-1"
@@ -292,6 +304,9 @@ chains:
               kind: "op-rbuilder"
             rollup-boost:
               kind: "rollup-boost"
+            values:
+              op-rbuilder:
+                FLASHBLOCK_SEND_OFFSET_MS: "-250"
 
       - kind: "node"
         name: "seq-2"
@@ -310,6 +325,9 @@ chains:
               kind: "op-rbuilder"
             rollup-boost:
               kind: "rollup-boost"
+            values:
+              op-rbuilder:
+                FLASHBLOCK_SEND_OFFSET_MS: "-250"
 
       - kind: "node"
         name: "rpc-0"
