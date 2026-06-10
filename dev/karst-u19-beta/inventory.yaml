@@ -267,6 +267,13 @@ chains:
               kind: "full"
           cl:
             kind: "op-node"
+          builder:
+            kind: "op-rbuilder"
+          flashblocks:
+            builder:
+              kind: "op-rbuilder"
+            rollup-boost:
+              kind: "rollup-boost"
 
       - kind: "node"
         name: "seq-1"
@@ -278,6 +285,13 @@ chains:
               kind: "full"
           cl:
             kind: "op-node"
+          builder:
+            kind: "op-rbuilder"
+          flashblocks:
+            builder:
+              kind: "op-rbuilder"
+            rollup-boost:
+              kind: "rollup-boost"
 
       - kind: "node"
         name: "seq-2"
@@ -289,6 +303,13 @@ chains:
               kind: "full"
           cl:
             kind: "op-node"
+          builder:
+            kind: "op-rbuilder"
+          flashblocks:
+            builder:
+              kind: "op-rbuilder"
+            rollup-boost:
+              kind: "rollup-boost"
 
       - kind: "node"
         name: "rpc-0"
