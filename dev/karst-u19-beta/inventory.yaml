@@ -451,6 +451,10 @@ chains:
         name: "op-challenger-runner"
         spec:
           kind: "op-challenger-runner"
+          values:
+            env:
+              OP_CHALLENGER_RUN: "cannon-kona"
+              OP_CHALLENGER_TRACE_TYPE: "cannon-kona"
         deps:
           nodes:
             - "rpc-1"

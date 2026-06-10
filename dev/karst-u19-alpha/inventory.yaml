@@ -414,7 +414,7 @@ chains:
           kind: "op-proposer"
         deps:
           nodes:
-            - "rpc-0"
+            - "rpc-1"
 
       - kind: "batcher"
         name: "op-batcher"
@@ -496,6 +496,10 @@ chains:
         name: "op-challenger-runner"
         spec:
           kind: "op-challenger-runner"
+          values:
+            env:
+              OP_CHALLENGER_RUN: "cannon-kona"
+              OP_CHALLENGER_TRACE_TYPE: "cannon-kona"
         deps:
           nodes:
             - "rpc-1"
