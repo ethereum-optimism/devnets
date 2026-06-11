@@ -320,6 +320,7 @@ chains:
                       memory: 4Gi
               env:
                   RETH_HISTORICAL_PROOFS_ENABLED: "true"
+                  RETH_HISTORICAL_PROOFS_V2: "true"
           rollup-boost:
               env:
                   EXECUTION_MODE: "dry-run"
