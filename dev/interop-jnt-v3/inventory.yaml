@@ -17,6 +17,7 @@ chains:
                       memory: 4Gi
               env:
                   RETH_HISTORICAL_PROOFS_ENABLED: "true"
+                  RETH_HISTORICAL_PROOFS_V2: "true"
           rollup-boost:
               env:
                   EXECUTION_MODE: "dry-run"
@@ -205,6 +206,10 @@ chains:
             name: "proxyd-public"
             spec:
                 kind: "proxyd"
+                values:
+                    template: "standard"
+                    rate_limit:
+                        base_rate: 30000
             deps:
                 nodes:
                     - "rpc-0"
@@ -503,6 +508,10 @@ chains:
             name: "proxyd-public"
             spec:
                 kind: "proxyd"
+                values:
+                    template: "standard"
+                    rate_limit:
+                        base_rate: 30000
             deps:
                 nodes:
                     - "rpc-0"

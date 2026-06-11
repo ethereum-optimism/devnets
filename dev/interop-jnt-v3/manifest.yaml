@@ -66,19 +66,19 @@ l2:
         op-rbuilder:
             version: us-docker.pkg.dev/oplabs-tools-artifacts/internal-images/op-rbuilder:v0.2.13.6-rc.2
         op-reth:
-            version: op-reth/v2.3.1
+            version: 6a18ed347ba8e11d78117bf2f53653e1d0c65dbd
         op-supernode:
             version: op-supernode/v1.0.0-rc.1
         peer-mgmt-service:
             version: peer-mgmt-service/v0.0.4
         proxyd:
-            version: proxyd/v4.27.5
+            version: proxyd/v4.28.0
         rollup-boost:
             version: us-docker.pkg.dev/oplabs-tools-artifacts/mirrors/ghcr.io/flashbots/rollup-boost:v0.7.15
     charts:
         node:
             name: ""
-            version: 0.42.1
+            version: 0.42.7
     chains:
         - name: interop-jnt-v3-0
           chain_id: "420120137"
