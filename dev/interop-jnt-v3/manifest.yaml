@@ -78,7 +78,7 @@ l2:
     charts:
         node:
             name: ""
-            version: 0.42.1
+            version: 0.42.7
     chains:
         - name: interop-jnt-v3-0
           chain_id: "420120137"
