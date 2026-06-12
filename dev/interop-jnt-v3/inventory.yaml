@@ -25,6 +25,10 @@ chains:
               persistentVolume:
                   size: 64Gi
               blockTime: 1000
+              interop:
+                  useLegacySupervisorFlag: true
+                  interopFilterUrls:
+                      - "https://an-interop-jnt-v3-op-interop-filter.us.networks.ent.dev.oplabs.cloud"
       nodes:
           - kind: "node"
             name: "seq-0"
@@ -328,6 +332,10 @@ chains:
               persistentVolume:
                   size: 64Gi
               blockTime: 2000
+              interop:
+                  useLegacySupervisorFlag: true
+                  interopFilterUrls:
+                      - "https://an-interop-jnt-v3-op-interop-filter.us.networks.ent.dev.oplabs.cloud"
       nodes:
           - kind: "node"
             name: "seq-0"
