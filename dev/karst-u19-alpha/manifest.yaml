@@ -66,16 +66,16 @@ l2:
         op-interop-filter:
             version: op-interop-filter/v0.2.0-rc.1
         op-node:
-            version: op-node/v1.19.1-rc.1
+            version: op-node/v1.19.0
         op-program:
             version: op-program/v1.9.0-rc.1
         op-proposer:
             version: op-proposer/v1.16.3
         op-rbuilder:
-            repository: us-docker.pkg.dev/oplabs-tools-artifacts/dev-images
-            version: flashblocks-v5.2
+            repository: us-docker.pkg.dev/oplabs-tools-artifacts/mirrors/ghcr.io/flashbots
+            version: v0.4.8
         op-reth:
-            version: op-reth/v2.3.2-rc.2
+            version: op-reth/v2.3.1
         op-supernode:
             version: op-supernode/v0.3.1-rc.1
         peer-mgmt-service:
@@ -83,8 +83,8 @@ l2:
         proxyd:
             version: proxyd/v4.27.4
         rollup-boost:
-            repository: us-docker.pkg.dev/oplabs-tools-artifacts/dev-images
-            version: flashblocks-v5.2
+            repository: us-docker.pkg.dev/oplabs-tools-artifacts/mirrors/ghcr.io/flashbots
+            version: v0.7.15
     chains:
         - name: karst-u19-alpha-0
           chain_id: "420100010"

@@ -67,14 +67,14 @@ l2:
         op-interop-filter:
             version: op-interop-filter/v0.2.0-rc.1
         op-node:
-            version: op-node/v1.19.1-rc.1
+            version: op-node/v1.19.0
         op-program:
             version: op-program/v1.9.0-rc.1
         op-proposer:
             version: op-proposer/v1.16.3
         op-rbuilder:
             repository: us-docker.pkg.dev/oplabs-tools-artifacts/mirrors/ghcr.io/flashbots
-            version: flashblocks-v5.2
+            version: v0.4.8
         op-reth:
             version: op-reth/v2.3.1
         op-supernode:
@@ -85,7 +85,7 @@ l2:
             version: proxyd/v4.27.4
         rollup-boost:
             repository: us-docker.pkg.dev/oplabs-tools-artifacts/mirrors/ghcr.io/flashbots
-            version: flashblocks-v5.2
+            version: v0.7.15
     chains:
         - name: karst-u19-beta-0
           chain_id: "420110023"
