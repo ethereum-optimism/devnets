@@ -3,101 +3,101 @@ type: alphanet
 status: online
 deployed_on: 06-08-2026
 description: |
-    interop-jnt-v3
+  interop-jnt-v3
 metadata:
-    domain: op-enterprise
-    team: core
-    tenant_id: interop-jnt-v3
-    tenant_name: interop-jnt-v3
-    tier_id: "100"
-    features:
-        mission_critical: false
+  domain: op-enterprise
+  team: core
+  tenant_id: interop-jnt-v3
+  tenant_name: interop-jnt-v3
+  tier_id: "100"
+  features:
+    mission_critical: false
 features:
-    - per-el-bootnode-gen
-    - interop
+  - per-el-bootnode-gen
+  - interop
 cluster:
-    name: oplabs-dev-ent-networks-us-ue1-0
+  name: oplabs-dev-ent-networks-us-ue1-0
 l1:
-    name: sepolia
-    chain_id: 11155111
+  name: sepolia
+  chain_id: 11155111
 l2:
-    deployment:
-        op-deployer:
-            version: 0.7.0-rc.1
-        l1-contracts:
-            locator: ""
-        l2-contracts:
-            locator: ""
-        overrides:
-            l2GenesisInteropTimeOffset: "0x0"
-            l2GenesisJovianTimeOffset: "0x0"
-            l2GenesisKarstTimeOffset: "0x0"
-        fund_dev_accounts: true
+  deployment:
+    op-deployer:
+      version: 0.7.0-rc.1
+    l1-contracts:
+      locator: ""
+    l2-contracts:
+      locator: ""
+    overrides:
+      l2GenesisInteropTimeOffset: "0x0"
+      l2GenesisJovianTimeOffset: "0x0"
+      l2GenesisKarstTimeOffset: "0x0"
+    fund_dev_accounts: true
+    gas_limit: 60000000
+    eip1559_elasticity: 6
+    eip1559_denominator: 50
+    eip1559_denominator_canyon: 250
+    dev_feature_bitmaps:
+      - "0x0000000000000000000000000000000000000000000000000000000000000001"
+      - "0x0000000000000000000000000000000000000000000000000000000010000000"
+  components:
+    flashblocks-websocket-proxy:
+      version: flashblocks-websocket-proxy/v0.7.4
+    kona-node:
+      version: kona-node/v1.5.2
+    kona-program:
+      version: kona-node/v1.2.15
+    op-batcher:
+      version: op-batcher/v1.16.9
+    op-conductor:
+      version: op-conductor/v0.9.4
+    op-conductor-mon:
+      version: op-conductor-mon/v0.0.5
+    op-conductor-ops:
+      version: op-conductor-ops/v0.0.2
+    op-geth:
+      version: op-geth/v1.101702.1
+    op-interop-filter:
+      version: op-interop-filter/v0.2.1-rc.2
+    op-node:
+      version: op-node/v1.19.0
+    op-program:
+      version: op-program/v1.9.0-rc.1
+    op-rbuilder:
+      version: us-docker.pkg.dev/oplabs-tools-artifacts/internal-images/op-rbuilder:v0.2.13.6-rc.2
+    op-reth:
+      version: op-reth/v2.3.2-rc.2
+    op-supernode:
+      version: op-supernode/v1.0.0-rc.2
+    peer-mgmt-service:
+      version: peer-mgmt-service/v0.0.4
+    proxyd:
+      version: proxyd/v4.29.0
+    rollup-boost:
+      version: us-docker.pkg.dev/oplabs-tools-artifacts/mirrors/ghcr.io/flashbots/rollup-boost:v0.7.15
+  charts:
+    node:
+      name: ""
+      version: 0.42.7
+  chains:
+    - name: interop-jnt-v3-0
+      chain_id: "420120137"
+      features:
+        - fp-interop
+      deployment:
+        overrides: {}
         gas_limit: 60000000
         eip1559_elasticity: 6
         eip1559_denominator: 50
         eip1559_denominator_canyon: 250
-        dev_feature_bitmaps:
-            - "0x0000000000000000000000000000000000000000000000000000000000000001"
-            - "0x0000000000000000000000000000000000000000000000000000000010000000"
-    components:
-        flashblocks-websocket-proxy:
-            version: flashblocks-websocket-proxy/v0.7.4
-        kona-node:
-            version: kona-node/v1.5.2
-        kona-program:
-            version: kona-node/v1.2.15
-        op-batcher:
-            version: op-batcher/v1.16.9
-        op-conductor:
-            version: op-conductor/v0.9.4
-        op-conductor-mon:
-            version: op-conductor-mon/v0.0.5
-        op-conductor-ops:
-            version: op-conductor-ops/v0.0.2
-        op-geth:
-            version: op-geth/v1.101702.1
-        op-interop-filter:
-            version: op-interop-filter/v0.2.1-rc.2
-        op-node:
-            version: op-node/v1.19.0
-        op-program:
-            version: op-program/v1.9.0-rc.1
-        op-rbuilder:
-            version: us-docker.pkg.dev/oplabs-tools-artifacts/internal-images/op-rbuilder:v0.2.13.6-rc.2
-        op-reth:
-            version: 6a18ed347ba8e11d78117bf2f53653e1d0c65dbd
-        op-supernode:
-            version: op-supernode/v1.0.0-rc.1
-        peer-mgmt-service:
-            version: peer-mgmt-service/v0.0.4
-        proxyd:
-            version: proxyd/v4.29.0
-        rollup-boost:
-            version: us-docker.pkg.dev/oplabs-tools-artifacts/mirrors/ghcr.io/flashbots/rollup-boost:v0.7.15
-    charts:
-        node:
-            name: ""
-            version: 0.42.7
-    chains:
-        - name: interop-jnt-v3-0
-          chain_id: "420120137"
-          features:
-              - fp-interop
-          deployment:
-              overrides: {}
-              gas_limit: 60000000
-              eip1559_elasticity: 6
-              eip1559_denominator: 50
-              eip1559_denominator_canyon: 250
-        - name: interop-jnt-v3-1
-          chain_id: "420120138"
-          features:
-              - fp-interop
-          deployment:
-              overrides:
-                  l2BlockTime: 1
-              gas_limit: 60000000
-              eip1559_elasticity: 6
-              eip1559_denominator: 50
-              eip1559_denominator_canyon: 250
+    - name: interop-jnt-v3-1
+      chain_id: "420120138"
+      features:
+        - fp-interop
+      deployment:
+        overrides:
+          l2BlockTime: 1
+        gas_limit: 60000000
+        eip1559_elasticity: 6
+        eip1559_denominator: 50
+        eip1559_denominator_canyon: 250
