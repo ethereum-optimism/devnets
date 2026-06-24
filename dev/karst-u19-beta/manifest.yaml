@@ -74,9 +74,9 @@ l2:
             version: op-proposer/v1.16.3
         op-rbuilder:
             repository: us-docker.pkg.dev/oplabs-tools-artifacts/mirrors/ghcr.io/flashbots
-            version: v0.4.8
+            version: v0.4.9
         op-reth:
-            version: op-reth/v2.3.1
+            version: op-reth/v2.3.2-rc.2
         op-supernode:
             version: op-supernode/v0.3.1-rc.1
         peer-mgmt-service:
@@ -85,7 +85,7 @@ l2:
             version: proxyd/v4.27.4
         rollup-boost:
             repository: us-docker.pkg.dev/oplabs-tools-artifacts/mirrors/ghcr.io/flashbots
-            version: v0.7.15
+            version: v0.7.16
     chains:
         - name: karst-u19-beta-0
           chain_id: "420110023"
