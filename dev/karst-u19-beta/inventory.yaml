@@ -268,6 +268,8 @@ chains:
         safeHeadDb:
           persistentVolume:
             size: 1Gi
+        env:
+          OP_NODE_OVERRIDE_KEEP_KARST_UPGRADE_GAS: "true"
       op-reth:
         persistentVolume:
           size: 64Gi
@@ -379,6 +381,10 @@ chains:
             kind: "op-reth"
             spec:
               kind: "archive"
+          values:
+            kona-node:
+              env:
+                KONA_OVERRIDE_KEEP_KARST_UPGRADE_GAS: "true"
           cl:
             kind: "kona-node"
 
@@ -401,6 +407,10 @@ chains:
             kind: "op-reth"
             spec:
               kind: "full"
+          values:
+            op-node:
+              env:
+                OP_NODE_OVERRIDE_KEEP_KARST_UPGRADE_GAS: "false"
           cl:
             kind: "op-node"
 
@@ -412,6 +422,10 @@ chains:
             kind: "op-geth"
             spec:
               kind: "full"
+          values:
+            kona-node:
+              env:
+                KONA_OVERRIDE_KEEP_KARST_UPGRADE_GAS: "false"
           cl:
             kind: "kona-node"
 
