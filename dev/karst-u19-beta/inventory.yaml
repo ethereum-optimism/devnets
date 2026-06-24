@@ -115,6 +115,13 @@ chains:
             kind: "op-reth"
             spec:
               kind: "archive"
+          values:
+            kona-node:
+              env:
+                KONA_NODE_P2P_NO_DISCOVERY: "true"
+            op-reth:
+              env:
+                RETH_DISABLE_DISCOVERY: "true"
           cl:
             kind: "kona-node"
 
@@ -141,6 +148,11 @@ chains:
             op-node:
               env:
                 OP_NODE_OVERRIDE_KEEP_KARST_UPGRADE_GAS: "false"
+                OP_NODE_SYNCMODE: consensus-layer
+                OP_NODE_P2P_DISABLE: "true"
+            op-reth:
+              env:
+                RETH_DISABLE_DISCOVERY: "true"
           cl:
             kind: "op-node"
 
@@ -156,6 +168,10 @@ chains:
             kona-node:
               env:
                 KONA_NODE_OVERRIDE_KEEP_KARST_UPGRADE_GAS: "false"
+                KONA_NODE_P2P_NO_DISCOVERY: "true"
+            op-reth:
+              env:
+                RETH_DISABLE_DISCOVERY: "true"
           cl:
             kind: "kona-node"
 
@@ -383,6 +399,13 @@ chains:
             kind: "op-reth"
             spec:
               kind: "archive"
+          values:
+            kona-node:
+              env:
+                KONA_NODE_P2P_NO_DISCOVERY: "true"
+            op-reth:
+              env:
+                RETH_DISABLE_DISCOVERY: "true"
           cl:
             kind: "kona-node"
 
@@ -409,6 +432,11 @@ chains:
             op-node:
               env:
                 OP_NODE_OVERRIDE_KEEP_KARST_UPGRADE_GAS: "false"
+                OP_NODE_SYNCMODE: consensus-layer
+                OP_NODE_P2P_DISABLE: "true"
+            op-reth:
+              env:
+                RETH_DISABLE_DISCOVERY: "true"
           cl:
             kind: "op-node"
 
