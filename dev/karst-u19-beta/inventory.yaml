@@ -5,6 +5,11 @@ chains:
         safeHeadDb:
           persistentVolume:
             size: 1Gi
+        env:
+          OP_NODE_OVERRIDE_KEEP_KARST_UPGRADE_GAS: "true"
+      kona-node:
+        env:
+          KONA_NODE_OVERRIDE_KEEP_KARST_UPGRADE_GAS: "true"
       op-reth:
         persistentVolume:
           size: 64Gi
@@ -101,6 +106,14 @@ chains:
               kind: "archive"
           cl:
             kind: "op-node"
+          values:
+            op-reth:
+              env:
+                RETH_DISABLE_DISCOVERY: "true"
+            op-node:
+              env:
+                OP_NODE_SYNCMODE: consensus-layer
+                OP_NODE_P2P_DISABLE: "true"
 
       - kind: "node"
         name: "rpc-2"
@@ -110,6 +123,13 @@ chains:
             kind: "op-reth"
             spec:
               kind: "archive"
+          values:
+            kona-node:
+              env:
+                KONA_NODE_P2P_NO_DISCOVERY: "true"
+            op-reth:
+              env:
+                RETH_DISABLE_DISCOVERY: "true"
           cl:
             kind: "kona-node"
 
@@ -132,6 +152,15 @@ chains:
             kind: "op-reth"
             spec:
               kind: "full"
+          values:
+            op-node:
+              env:
+                OP_NODE_OVERRIDE_KEEP_KARST_UPGRADE_GAS: "false"
+                OP_NODE_SYNCMODE: consensus-layer
+                OP_NODE_P2P_DISABLE: "true"
+            op-reth:
+              env:
+                RETH_DISABLE_DISCOVERY: "true"
           cl:
             kind: "op-node"
 
@@ -143,6 +172,10 @@ chains:
             kind: "op-reth"
             spec:
               kind: "full"
+          values:
+            kona-node:
+              env:
+                KONA_NODE_OVERRIDE_KEEP_KARST_UPGRADE_GAS: "false"
           cl:
             kind: "kona-node"
 
@@ -254,6 +287,11 @@ chains:
         safeHeadDb:
           persistentVolume:
             size: 1Gi
+        env:
+          OP_NODE_OVERRIDE_KEEP_KARST_UPGRADE_GAS: "true"
+      kona-node:
+        env:
+          KONA_NODE_OVERRIDE_KEEP_KARST_UPGRADE_GAS: "true"
       op-reth:
         persistentVolume:
           size: 64Gi
@@ -365,6 +403,13 @@ chains:
             kind: "op-reth"
             spec:
               kind: "archive"
+          values:
+            kona-node:
+              env:
+                KONA_NODE_P2P_NO_DISCOVERY: "true"
+            op-reth:
+              env:
+                RETH_DISABLE_DISCOVERY: "true"
           cl:
             kind: "kona-node"
 
@@ -387,6 +432,15 @@ chains:
             kind: "op-reth"
             spec:
               kind: "full"
+          values:
+            op-node:
+              env:
+                OP_NODE_OVERRIDE_KEEP_KARST_UPGRADE_GAS: "false"
+                OP_NODE_SYNCMODE: consensus-layer
+                OP_NODE_P2P_DISABLE: "true"
+            op-reth:
+              env:
+                RETH_DISABLE_DISCOVERY: "true"
           cl:
             kind: "op-node"
 
@@ -398,6 +452,10 @@ chains:
             kind: "op-geth"
             spec:
               kind: "full"
+          values:
+            kona-node:
+              env:
+                KONA_NODE_OVERRIDE_KEEP_KARST_UPGRADE_GAS: "false"
           cl:
             kind: "kona-node"
 
