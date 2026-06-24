@@ -106,6 +106,14 @@ chains:
               kind: "archive"
           cl:
             kind: "op-node"
+          values:
+            op-reth:
+              env:
+                RETH_DISABLE_DISCOVERY: "true"
+            op-node:
+              env:
+                OP_NODE_SYNCMODE: consensus-layer
+                OP_NODE_P2P_DISABLE: "true"
 
       - kind: "node"
         name: "rpc-2"
@@ -168,10 +176,6 @@ chains:
             kona-node:
               env:
                 KONA_NODE_OVERRIDE_KEEP_KARST_UPGRADE_GAS: "false"
-                KONA_NODE_P2P_NO_DISCOVERY: "true"
-            op-reth:
-              env:
-                RETH_DISABLE_DISCOVERY: "true"
           cl:
             kind: "kona-node"
 
