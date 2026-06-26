@@ -42,6 +42,11 @@ chains:
             values:
               op-rbuilder:
                 FLASHBLOCK_SEND_OFFSET_MS: "-250"
+          values:
+            op-reth:
+              image:
+                # op-reth from optimism PR #21574 (fix tx_gas_limit_cap for Osaka / eth_estimateGas under Karst)
+                tag: "6c7fe2a98aab058d891c4b2590136eadf249fcfb@sha256:527be550a6ae7c336c8bafb1b857d1c56aac3e873d527222bc9bb9e40d60915e"
 
       - kind: "node"
         name: "seq-1"
