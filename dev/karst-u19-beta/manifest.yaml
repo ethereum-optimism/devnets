@@ -70,6 +70,8 @@ l2:
             version: op-node/v1.19.1-rc.2
         op-program:
             version: op-program/v1.9.0-rc.1
+        kona-program:
+            version: kona-node/v1.6.0
         op-proposer:
             version: op-proposer/v1.16.3
         op-rbuilder:
