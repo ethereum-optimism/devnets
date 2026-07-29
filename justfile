@@ -106,3 +106,11 @@ create-devnet net_type name preset:
     echo "Next steps:"
     echo "  1. Edit $TARGET_DIR/manifest.yaml to configure your devnet"
     echo "  2. Edit $TARGET_DIR/inventory.yaml to configure nodes and services"
+
+# Format all YAML files in place.
+fmt-yaml:
+    yamlfmt .
+
+# Check all YAML formatting without writing changes.
+lint-yaml:
+    yamlfmt -lint .
