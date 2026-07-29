@@ -21,6 +21,19 @@ steps:
     volumes:
     - name: 'ssh'
       path: /root/.ssh
+
+  - name: alpine:3.23
+    entrypoint: /bin/sh
+    args:
+      - -c
+      - |
+        set -eu
+        apk add --no-cache mise
+        mise trust
+        mise install just yamlfmt
+        eval "$(mise activate --shims)"
+        just lint-yaml
+
   - name: us-docker.pkg.dev/oplabs-tools-artifacts/internal-images/netchef:main
     args: ["ci", "validate", "--devnets-dir", "."]
     env:

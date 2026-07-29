@@ -1,4 +1,6 @@
 [tools]
+just = "1.57.0"
 mdbook = "v0.4.43"
 uv = "0.9.5"
 "pipx:cookiecutter" = "2.6.0"
+yamlfmt = "0.21.0"
