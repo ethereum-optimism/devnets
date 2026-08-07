@@ -8,7 +8,7 @@ metadata:
   team: solutions
   tenant_id: dev-preview-v2
   tenant_name: dev-preview-v2
-  tier_id: "300"
+  tier_id: "100"
   features:
     mission_critical: false
 features:
