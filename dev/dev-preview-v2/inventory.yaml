@@ -447,6 +447,133 @@ chains:
             env:
               OP_DISPUTE_MON_SUPERNODE_RPC: https://dm-dev-preview-v2-supernode-0-op-supernode.us.networks.ent.dev.oplabs.cloud/420120207
 
+  - values:
+      op-node:
+        safeHeadDb:
+          persistentVolume:
+            size: 1Gi
+        resources:
+          requests:
+            cpu: 500m
+            memory: 2Gi
+      op-reth:
+        persistentVolume:
+          size: 64Gi
+        resources:
+          requests:
+            cpu: 2
+            memory: 4Gi
+        env:
+          RETH_HISTORICAL_PROOFS_ENABLED: "false"
+          RETH_GENESIS_REDOWNLOAD: "true"
+      op-rbuilder:
+        env:
+          GENESIS_REDOWNLOAD: "true"
+
+    nodes:
+      - kind: "node"
+        name: "seq-0"
+        spec:
+          kind: "sequencer"
+          lightNode: true
+          el:
+            kind: "op-reth"
+            spec:
+              kind: "full"
+          cl:
+            kind: "op-node"
+            deps:
+              services:
+                - "proxyd-cl"
+      - kind: "node"
+        name: "seq-1"
+        spec:
+          kind: "sequencer"
+          lightNode: true
+          el:
+            kind: "op-reth"
+            spec:
+              kind: "full"
+          cl:
+            kind: "op-node"
+            deps:
+              services:
+                - "proxyd-cl"
+      - kind: "node"
+        name: "seq-2"
+        spec:
+          kind: "sequencer"
+          lightNode: true
+          el:
+            kind: "op-reth"
+            spec:
+              kind: "full"
+          cl:
+            kind: "op-node"
+            deps:
+              services:
+                - "proxyd-cl"
+      - kind: "node"
+        name: "rpc-0"
+        spec:
+          kind: "rpc"
+          lightNode: true
+          el:
+            kind: "op-reth"
+            spec:
+              kind: "archive"
+          cl:
+            kind: "op-node"
+            deps:
+              services:
+                - "proxyd-cl"
+      - kind: "node"
+        name: "snapsync-0"
+        spec:
+          kind: "snapsync"
+          lightNode: true
+          el:
+            kind: "op-reth"
+            spec:
+              kind: "full"
+          cl:
+            kind: "op-node"
+            deps:
+              services:
+                - "proxyd-cl"
+      - kind: "node"
+        name: "sn-0"
+        spec:
+          kind: "supernode-el"
+          el:
+            kind: "op-reth"
+            spec:
+              kind: "archive"
+          values:
+            op-reth:
+              env:
+                RETH_HISTORICAL_PROOFS_V2: "false"
+      - kind: "node"
+        name: "sn-1"
+        spec:
+          kind: "supernode-el"
+          el:
+            kind: "op-reth"
+            spec:
+              kind: "archive"
+          values:
+            op-reth:
+              env:
+                RETH_HISTORICAL_PROOFS_V2: "false"
+      - kind: "node"
+        name: "sn-2"
+        spec:
+          kind: "supernode-el"
+          el:
+            kind: "op-reth"
+            spec:
+              kind: "archive"
+
     services:
       - kind: "batcher"
         name: "op-batcher"
