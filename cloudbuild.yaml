@@ -12,6 +12,7 @@ steps:
     - name: 'ssh'
       path: /root/.ssh
   - name: gcr.io/cloud-builders/git
+    id: 'git-history'
     entrypoint: 'bash'
     args:
       - '-c'
@@ -21,17 +22,53 @@ steps:
     volumes:
     - name: 'ssh'
       path: /root/.ssh
+
+  # The three netchef steps below are mutually independent — two read the
+  # worktree, one writes PR context to Firestore — so they run concurrently
+  # once the full git history is available, rather than in sequence.
+  # waitFor pins each to git-history only; without it Cloud Build would
+  # serialize them in file order.
   - name: us-docker.pkg.dev/oplabs-tools-artifacts/internal-images/netchef:main
+    waitFor: ['git-history']
     args: ["ci", "validate", "--devnets-dir", "."]
     env:
       - NETCHEF_GCP_PROJECT_DEV=oplabs-dev-ent-infra-us
       - NETCHEF_GCP_PROJECT_PROD=oplabs-prod-ent-infra-us
       - NETCHEF_GCP_PROJECT_STG=oplabs-stg-ent-infra-us
       - NETCHEF_REPO_URL=https://github.com/ethereum-optimism/devnets.git
+
+  # Check that every image the changed devnets pin actually exists in its
+  # registry, and — on stg and prod only — that it carries an
+  # ethereum-optimism build attestation.
+  #
+  # Scoped to the devnets this PR touches: ci-command-on-devnet-changes.sh
+  # diffs against origin/main and invokes the command once per changed devnet.
+  # Offline and skip-ci devnets are skipped by netchef itself.
+  #
+  # Needs no NETCHEF_GCP_PROJECT_* or NETCHEF_REPO_URL — this command reads no
+  # Firestore state. GH_TOKEN is required by `gh attestation verify` even
+  # though --bundle-from-oci reads the attestation from the registry rather
+  # than the GitHub API; netchef defaults it to a dummy value, but it is set
+  # explicitly here so the dependency is visible in the build config.
   - name: us-docker.pkg.dev/oplabs-tools-artifacts/internal-images/netchef:main
+    waitFor: ['git-history']
+    entrypoint: "ci-command-on-devnet-changes.sh"
+    args: ["validate-images", ".", "--base"]
+    env:
+      # Read-only git alongside the other concurrent steps: all three share
+      # /workspace, and `git diff` will opportunistically refresh and rewrite
+      # .git/index, so two of them can collide on index.lock and hard-fail the
+      # build. GIT_OPTIONAL_LOCKS=0 tells git to skip locks it only needs for
+      # that refresh.
+      - GIT_OPTIONAL_LOCKS=0
+      - GH_TOKEN=dummy
+
+  - name: us-docker.pkg.dev/oplabs-tools-artifacts/internal-images/netchef:main
+    waitFor: ['git-history']
     entrypoint: "ci-command-on-devnet-changes.sh"
     args: ["store-pr-context", ".", "--base"]
     env:
+      - GIT_OPTIONAL_LOCKS=0
       - NETCHEF_GCP_PROJECT_DEV=oplabs-dev-ent-infra-us
       - NETCHEF_GCP_PROJECT_PROD=oplabs-prod-ent-infra-us
       - NETCHEF_GCP_PROJECT_STG=oplabs-stg-ent-infra-us
