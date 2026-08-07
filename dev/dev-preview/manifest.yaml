@@ -1,0 +1,101 @@
+name: dev-preview
+type: demo
+status: pending
+description: |
+    dev-preview
+metadata:
+    domain: op-enterprise
+    team: solutions
+    tenant_id: dev-preview
+    tenant_name: dev-preview
+    tier_id: "300"
+    features:
+        mission_critical: false
+features:
+    - p2p-cluster-local
+    - gateway-api
+    - port-migration
+    - app-protocol
+    - interop
+cluster:
+    name: oplabs-dev-ent-networks-us-ue1-0
+l1:
+    name: sepolia
+    chain_id: 11155111
+l2:
+    deployment:
+        op-deployer:
+            version: 0.7.1
+        l1-contracts:
+            locator: ""
+        l2-contracts:
+            locator: ""
+        overrides:
+            l2GenesisKarstTimeOffset: "0x0"
+        fund_dev_accounts: true
+        gas_limit: 60000000
+        eip1559_elasticity: 6
+        eip1559_denominator: 50
+        eip1559_denominator_canyon: 250
+        dev_feature_bitmaps:
+            - "0x0000000000000000000000000000000000000000000000000000000000000001"
+            - "0x0000000000000000000000000000000000000000000000000000000010000000"
+    components:
+        kona-node:
+            version: kona-node/v1.6.1-rc.3
+        kona-program:
+            version: kona-node/v1.6.0
+        op-batcher:
+            version: op-batcher/v1.16.10
+        op-challenger:
+            version: op-challenger/v1.9.2-rc.2
+        op-conductor:
+            version: op-conductor/v0.9.4
+        op-conductor-mon:
+            version: op-conductor-mon/v0.0.5
+        op-conductor-ops:
+            version: op-conductor-ops/v0.1.0
+        op-dispute-mon:
+            version: op-dispute-mon/v1.5.3-rc.1
+        op-interop-filter:
+            version: op-interop-filter/v0.2.2
+        op-interop-mon:
+            version: op-interop-mon/v0.1.0
+        op-node:
+            version: op-node/v1.19.4
+        op-program:
+            version: op-program/v1.9.0-rc.1
+        op-proposer:
+            version: op-proposer/v1.16.3
+        op-reth:
+            version: op-reth/v2.4.1
+        op-supernode:
+            version: op-supernode/v1.0.0
+        peer-mgmt-service:
+            version: peer-mgmt-service/v0.0.4
+        proxyd:
+            version: proxyd/v4.30.0
+        screening-service:
+            version: screening-service/v0.2.0
+    chains:
+        - name: dev-preview-0
+          chain_id: "420120204"
+          features:
+            - fp-interop
+          deployment:
+            overrides: {}
+            gas_limit: 60000000
+            eip1559_elasticity: 6
+            eip1559_denominator: 50
+            eip1559_denominator_canyon: 250
+        - name: dev-preview-1
+          chain_id: "420120205"
+          features:
+            - fp-interop
+          deployment:
+            overrides:
+                l2BlockTime: 1
+            gas_limit: 60000000
+            eip1559_elasticity: 6
+            eip1559_denominator: 50
+            eip1559_denominator_canyon: 250
