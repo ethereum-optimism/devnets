@@ -200,24 +200,6 @@ chains:
             - "rpc-0"
           services:
             - "op-supernode-0"
-      - kind: "challenger"
-        name: "op-challenger"
-        spec:
-          kind: "op-challenger"
-        deps:
-          nodes:
-            - "rpc-0"
-          services:
-            - "op-supernode-0"
-      - kind: "op-dispute-mon"
-        name: "op-dispute-mon"
-        spec:
-          kind: "op-dispute-mon"
-        deps:
-          nodes:
-            - "rpc-0"
-          services:
-            - "op-supernode-0"
   - values:
       op-node:
         safeHeadDb:
@@ -410,24 +392,6 @@ chains:
         name: "op-proposer"
         spec:
           kind: "op-proposer"
-        deps:
-          nodes:
-            - "rpc-0"
-          services:
-            - "op-supernode-1"
-      - kind: "challenger"
-        name: "op-challenger"
-        spec:
-          kind: "op-challenger"
-        deps:
-          nodes:
-            - "rpc-0"
-          services:
-            - "op-supernode-1"
-      - kind: "op-dispute-mon"
-        name: "op-dispute-mon"
-        spec:
-          kind: "op-dispute-mon"
         deps:
           nodes:
             - "rpc-0"
