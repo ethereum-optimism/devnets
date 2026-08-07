@@ -1,0 +1,97 @@
+configType = "custom"
+opDeployerVersion = "0.7.1-75254822-2026-05-27T13:58:19Z"
+l1ChainID = 11155111
+fundDevAccounts = true
+l1ContractsLocator = "embedded"
+l2ContractsLocator = "embedded"
+useInterop = true
+
+[superchainRoles]
+  SuperchainProxyAdminOwner = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
+  SuperchainGuardian = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
+  Challenger = "0x211bfecbd97928b62fcda435d3aabe2b870adf0a"
+
+[[chains]]
+  id = "0x00000000000000000000000000000000000000000000000000000000190a868e"
+  baseFeeVaultRecipient = "0x533073d4353f388afad691a5d0fb45947577bbba"
+  l1FeeVaultRecipient = "0x533073d4353f388afad691a5d0fb45947577bbba"
+  sequencerFeeVaultRecipient = "0x533073d4353f388afad691a5d0fb45947577bbba"
+  operatorFeeVaultRecipient = "0x533073d4353f388afad691a5d0fb45947577bbba"
+  eip1559DenominatorCanyon = 250
+  eip1559Denominator = 50
+  eip1559Elasticity = 6
+  gasLimit = 60000000
+  operatorFeeScalar = 0
+  operatorFeeConstant = 0
+  minBaseFee = 0
+  daFootprintGasScalar = 0
+  [chains.roles]
+    l1ProxyAdminOwner = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
+    l2ProxyAdminOwner = "0xb17bc84149caaa6f7cf403b84267e18df5e1ef98"
+    systemConfigOwner = "0xadb3bfceb0f73c7cda145bf5ad7dd8f485372d4b"
+    unsafeBlockSigner = "0x603210a5cba6adce8f22c54362efff071843ce9f"
+    batcher = "0xf0bcb235daba78b8ab020d51f495c8b6ab44e345"
+    proposer = "0x5b3b130d6ca7df5eb01a704b3f01d47a017e4bb5"
+    challenger = "0x211bfecbd97928b62fcda435d3aabe2b870adf0a"
+  [chains.deployOverrides]
+  [chains.customGasToken]
+    liquidityControllerOwner = "0x0000000000000000000000000000000000000000"
+
+[[chains]]
+  id = "0x00000000000000000000000000000000000000000000000000000000190a868f"
+  baseFeeVaultRecipient = "0x05bb5dfc159334b08ccdb8b8b64e8e2f7068919a"
+  l1FeeVaultRecipient = "0x05bb5dfc159334b08ccdb8b8b64e8e2f7068919a"
+  sequencerFeeVaultRecipient = "0x05bb5dfc159334b08ccdb8b8b64e8e2f7068919a"
+  operatorFeeVaultRecipient = "0x05bb5dfc159334b08ccdb8b8b64e8e2f7068919a"
+  eip1559DenominatorCanyon = 250
+  eip1559Denominator = 50
+  eip1559Elasticity = 6
+  gasLimit = 60000000
+  operatorFeeScalar = 0
+  operatorFeeConstant = 0
+  minBaseFee = 0
+  daFootprintGasScalar = 0
+  [chains.roles]
+    l1ProxyAdminOwner = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
+    l2ProxyAdminOwner = "0xfddbb8628dedd71ce29a35d8cf351164f4319864"
+    systemConfigOwner = "0x39b986d14779622cf0e527390a9ed64cb693fef3"
+    unsafeBlockSigner = "0xeb054880e025857fbf93e52f8da2e530d1d3e404"
+    batcher = "0xfeeb8b1822d17513b4e85c7471958cb62b68b72e"
+    proposer = "0x2979a2afcfa15d5f59daba7ed9b5a12ee95899d7"
+    challenger = "0x23b199bdd7b7f73c0f31aea4ccc4f4013a207b4a"
+  [chains.deployOverrides]
+    l2BlockTime = 1
+  [chains.customGasToken]
+    liquidityControllerOwner = "0x0000000000000000000000000000000000000000"
+
+[[chains]]
+  id = "0x00000000000000000000000000000000000000000000000000000000190a8690"
+  baseFeeVaultRecipient = "0x341d2300a00cae1fd5bb896dbbb0fa068cb9d626"
+  l1FeeVaultRecipient = "0x341d2300a00cae1fd5bb896dbbb0fa068cb9d626"
+  sequencerFeeVaultRecipient = "0x341d2300a00cae1fd5bb896dbbb0fa068cb9d626"
+  operatorFeeVaultRecipient = "0x341d2300a00cae1fd5bb896dbbb0fa068cb9d626"
+  eip1559DenominatorCanyon = 250
+  eip1559Denominator = 50
+  eip1559Elasticity = 6
+  gasLimit = 60000000
+  operatorFeeScalar = 0
+  operatorFeeConstant = 0
+  minBaseFee = 0
+  daFootprintGasScalar = 0
+  [chains.roles]
+    l1ProxyAdminOwner = "0xe934dc97e347c6acef74364b50125bb8689c40ff"
+    l2ProxyAdminOwner = "0x070c2f72a0b98dad30b77fc43fb7d3f18e87cae6"
+    systemConfigOwner = "0xc338ca9fa88df2b609dba6776243663a7243fbf2"
+    unsafeBlockSigner = "0xd43c814a5d7c25ee863f98599a1bf1bdc6b04812"
+    batcher = "0xf52cd1129f99a9f011d11bbda62e3ae1196efeca"
+    proposer = "0xa04646ed794553a49a35ceb387604e3f64492115"
+    challenger = "0xfb1145adf977daa4d66fd854229e173c031c05aa"
+  [chains.deployOverrides]
+    l2BlockTime = 1
+  [chains.customGasToken]
+    liquidityControllerOwner = "0x0000000000000000000000000000000000000000"
+
+[globalDeployOverrides]
+  devFeatureBitmap = "0x0000000000000000000000000000000000000000000000000000000010000001"
+  l2GenesisKarstTimeOffset = "0x0"
+
