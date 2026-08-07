@@ -18,9 +18,13 @@ chains:
         env:
           RETH_HISTORICAL_PROOFS_ENABLED: "true"
           RETH_GENESIS_REDOWNLOAD: "true"
+        podAnnotations:
+          netchef.optimism.io/hardfork: "lagoon:1786136520"
       op-rbuilder:
         env:
           GENESIS_REDOWNLOAD: "true"
+        podAnnotations:
+          netchef.optimism.io/hardfork: "lagoon:1786136520"
     nodes:
       - kind: "node"
         name: "seq-0"
@@ -244,9 +248,13 @@ chains:
         env:
           RETH_HISTORICAL_PROOFS_ENABLED: "true"
           RETH_GENESIS_REDOWNLOAD: "true"
+        podAnnotations:
+          netchef.optimism.io/hardfork: "lagoon:1786136520"
       op-rbuilder:
         env:
           GENESIS_REDOWNLOAD: "true"
+        podAnnotations:
+          netchef.optimism.io/hardfork: "lagoon:1786136520"
     nodes:
       - kind: "node"
         name: "seq-0"
