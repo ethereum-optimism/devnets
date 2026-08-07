@@ -18,9 +18,13 @@ chains:
         env:
           RETH_HISTORICAL_PROOFS_ENABLED: "true"
           RETH_GENESIS_REDOWNLOAD: "true"
+        podAnnotations:
+          netchef.optimism.io/hardfork: "lagoon:1786136520"
       op-rbuilder:
         env:
           GENESIS_REDOWNLOAD: "true"
+        podAnnotations:
+          netchef.optimism.io/hardfork: "lagoon:1786136520"
     nodes:
       - kind: "node"
         name: "seq-0"
@@ -209,6 +213,9 @@ chains:
             - "rpc-0"
           services:
             - "op-supernode-0"
+          values:
+            env:
+              OP_CHALLENGER_SUPERNODE_RPC: https://dm-dev-preview-supernode-0-op-supernode.us.networks.ent.dev.oplabs.cloud/420120204
       - kind: "op-dispute-mon"
         name: "op-dispute-mon"
         spec:
@@ -218,6 +225,10 @@ chains:
             - "rpc-0"
           services:
             - "op-supernode-0"
+          values:
+            env:
+              OP_DISPUTE_MON_SUPERNODE_RPC: https://dm-dev-preview-supernode-0-op-supernode.us.networks.ent.dev.oplabs.cloud/420120204
+
   - values:
       op-node:
         safeHeadDb:
@@ -237,9 +248,13 @@ chains:
         env:
           RETH_HISTORICAL_PROOFS_ENABLED: "true"
           RETH_GENESIS_REDOWNLOAD: "true"
+        podAnnotations:
+          netchef.optimism.io/hardfork: "lagoon:1786136520"
       op-rbuilder:
         env:
           GENESIS_REDOWNLOAD: "true"
+        podAnnotations:
+          netchef.optimism.io/hardfork: "lagoon:1786136520"
     nodes:
       - kind: "node"
         name: "seq-0"
@@ -424,6 +439,9 @@ chains:
             - "rpc-0"
           services:
             - "op-supernode-1"
+          values:
+            env:
+              OP_CHALLENGER_SUPERNODE_RPC: https://dm-dev-preview-supernode-0-op-supernode.us.networks.ent.dev.oplabs.cloud/420120205
       - kind: "op-dispute-mon"
         name: "op-dispute-mon"
         spec:
@@ -433,6 +451,9 @@ chains:
             - "rpc-0"
           services:
             - "op-supernode-1"
+          values:
+            env:
+              OP_DISPUTE_MON_SUPERNODE_RPC: https://dm-dev-preview-supernode-0-op-supernode.us.networks.ent.dev.oplabs.cloud/420120205
 services:
   - kind: "supernode"
     name: "op-supernode-0"
