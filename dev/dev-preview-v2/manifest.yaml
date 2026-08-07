@@ -17,6 +17,7 @@ features:
   - port-migration
   - app-protocol
   - interop
+  - trusted-peer-gen
 cluster:
   name: oplabs-dev-ent-networks-us-ue1-0
 l1:
