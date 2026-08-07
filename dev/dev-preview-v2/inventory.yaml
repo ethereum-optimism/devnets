@@ -204,26 +204,27 @@ chains:
         name: "op-challenger"
         spec:
           kind: "op-challenger"
+        values:
+          env:
+            OP_CHALLENGER_SUPERNODE_RPC: https://dm-dev-preview-v2-supernode-0-op-supernode.us.networks.ent.dev.oplabs.cloud/420120206
         deps:
           nodes:
             - "rpc-0"
           services:
             - "op-supernode-0"
-          values:
-            env:
-              OP_CHALLENGER_SUPERNODE_RPC: https://dm-dev-preview-v2-supernode-0-op-supernode.us.networks.ent.dev.oplabs.cloud/420120206
+
       - kind: "op-dispute-mon"
         name: "op-dispute-mon"
         spec:
           kind: "op-dispute-mon"
+        values:
+          env:
+            OP_DISPUTE_MON_SUPERNODE_RPC: https://dm-dev-preview-v2-supernode-0-op-supernode.us.networks.ent.dev.oplabs.cloud/420120206
         deps:
           nodes:
             - "rpc-0"
           services:
             - "op-supernode-0"
-          values:
-            env:
-              OP_DISPUTE_MON_SUPERNODE_RPC: https://dm-dev-preview-v2-supernode-0-op-supernode.us.networks.ent.dev.oplabs.cloud/420120206
 
   - values:
       op-node:
@@ -426,26 +427,27 @@ chains:
         name: "op-challenger"
         spec:
           kind: "op-challenger"
+        values:
+          env:
+            OP_CHALLENGER_SUPERNODE_RPC: https://dm-dev-preview-v2-supernode-0-op-supernode.us.networks.ent.dev.oplabs.cloud/420120207
         deps:
           nodes:
             - "rpc-0"
           services:
             - "op-supernode-1"
-          values:
-            env:
-              OP_CHALLENGER_SUPERNODE_RPC: https://dm-dev-preview-v2-supernode-0-op-supernode.us.networks.ent.dev.oplabs.cloud/420120207
+
       - kind: "op-dispute-mon"
         name: "op-dispute-mon"
         spec:
           kind: "op-dispute-mon"
+        values:
+          env:
+            OP_DISPUTE_MON_SUPERNODE_RPC: https://dm-dev-preview-v2-supernode-0-op-supernode.us.networks.ent.dev.oplabs.cloud/420120207
         deps:
           nodes:
             - "rpc-0"
           services:
             - "op-supernode-1"
-          values:
-            env:
-              OP_DISPUTE_MON_SUPERNODE_RPC: https://dm-dev-preview-v2-supernode-0-op-supernode.us.networks.ent.dev.oplabs.cloud/420120207
 
   - values:
       op-node:
@@ -650,26 +652,26 @@ chains:
         name: "op-challenger"
         spec:
           kind: "op-challenger"
+        values:
+          env:
+            OP_CHALLENGER_SUPERNODE_RPC: https://dm-dev-preview-v2-supernode-0-op-supernode.us.networks.ent.dev.oplabs.cloud/420120208
         deps:
           nodes:
             - "rpc-0"
           services:
             - "op-supernode-1"
-          values:
-            env:
-              OP_CHALLENGER_SUPERNODE_RPC: https://dm-dev-preview-v2-supernode-0-op-supernode.us.networks.ent.dev.oplabs.cloud/420120208
       - kind: "op-dispute-mon"
         name: "op-dispute-mon"
         spec:
           kind: "op-dispute-mon"
+        values:
+          env:
+            OP_DISPUTE_MON_SUPERNODE_RPC: https://dm-dev-preview-v2-supernode-0-op-supernode.us.networks.ent.dev.oplabs.cloud/420120208
         deps:
           nodes:
             - "rpc-0"
           services:
             - "op-supernode-1"
-          values:
-            env:
-              OP_DISPUTE_MON_SUPERNODE_RPC: https://dm-dev-preview-v2-supernode-0-op-supernode.us.networks.ent.dev.oplabs.cloud/420120208
 services:
   - kind: "supernode"
     name: "op-supernode-0"
