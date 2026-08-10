@@ -28,6 +28,7 @@
     "isthmusTime": 0,
     "jovianTime": 0,
     "karstTime": 0,
+    "lagoonTime": 1786388400,
     "terminalTotalDifficulty": 0,
     "depositContractAddress": "0x0000000000000000000000000000000000000000",
     "optimism": {

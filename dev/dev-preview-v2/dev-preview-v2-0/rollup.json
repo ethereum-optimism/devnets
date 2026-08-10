@@ -36,6 +36,7 @@
   "isthmus_time": 0,
   "jovian_time": 0,
   "karst_time": 0,
+  "lagoon_time": 1786388400,
   "batch_inbox_address": "0x00485efaa9f45bc082137151bbb8947fda13b1eb",
   "deposit_contract_address": "0x3e51c1ee4f87a27c97ce1f4021b11c890736d29d",
   "l1_system_config_address": "0x85fa050ac45b6897ca9eed3b0adb0e89455e663a",
