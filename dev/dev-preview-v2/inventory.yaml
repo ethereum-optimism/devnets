@@ -10,7 +10,7 @@ chains:
             memory: 2Gi
       op-reth:
         persistentVolume:
-          size: 64Gi
+          size: 128Gi
         resources:
           requests:
             cpu: 2
@@ -241,7 +241,7 @@ chains:
             memory: 2Gi
       op-reth:
         persistentVolume:
-          size: 64Gi
+          size: 128Gi
         resources:
           requests:
             cpu: 2
@@ -468,7 +468,7 @@ chains:
             memory: 2Gi
       op-reth:
         persistentVolume:
-          size: 64Gi
+          size: 128Gi
         resources:
           requests:
             cpu: 2
