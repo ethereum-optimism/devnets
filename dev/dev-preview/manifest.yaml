@@ -48,7 +48,7 @@ l2:
     op-batcher:
       version: op-batcher/v1.16.10
     op-challenger:
-      version: op-challenger/v1.9.2-rc.2
+      version: op-challenger/v1.9.5
     op-conductor:
       version: op-conductor/v0.9.4
     op-conductor-mon:
@@ -56,7 +56,7 @@ l2:
     op-conductor-ops:
       version: op-conductor-ops/v0.1.0
     op-dispute-mon:
-      version: op-dispute-mon/v1.5.3-rc.1
+      version: op-dispute-mon/v1.6.0
     op-interop-filter:
       version: op-interop-filter/v0.2.2
     op-interop-mon:
@@ -66,7 +66,7 @@ l2:
     op-program:
       version: op-program/v1.9.0-rc.1
     op-proposer:
-      version: op-proposer/v1.16.3
+      version: op-proposer/v1.16.4
     op-reth:
       version: op-reth/v2.4.1
     op-supernode:
