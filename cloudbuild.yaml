@@ -62,6 +62,9 @@ steps:
       # that refresh.
       - GIT_OPTIONAL_LOCKS=0
       - GH_TOKEN=dummy
+      # Temporarily skip `gh attestation verify`, which fails on Cloud Build
+      # ("public good verifier is not available"). Remove to re-enable.
+      - NETCHEF_SKIP_ATTESTATION=true
 
   - name: us-docker.pkg.dev/oplabs-tools-artifacts/internal-images/netchef:main
     waitFor: ['git-history']
